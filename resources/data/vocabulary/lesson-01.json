@@ -24,7 +24,8 @@
         "speaker": "female"
       },
       "related_words": ["mnn-01-002", "mnn-01-003"],
-      "tags": ["occupation", "school"]
+      "tags": ["occupation", "school"],
+      "include_in_kanji_worksheet": true
     },
     {
       "id": "mnn-01-002",
@@ -50,7 +51,8 @@
         "speaker": "male"
       },
       "related_words": ["mnn-01-001"],
-      "tags": ["occupation", "respect", "school"]
+      "tags": ["occupation", "respect", "school"],
+      "include_in_kanji_worksheet": true
     },
     {
       "id": "mnn-01-003",
@@ -73,7 +75,8 @@
         "duration": 2.1,
         "speaker": "female"
       },
-      "tags": ["greeting", "polite", "introduction"]
+      "tags": ["greeting", "polite", "introduction"],
+      "include_in_kanji_worksheet": false
     },
     {
       "id": "mnn-01-004",
@@ -106,7 +109,8 @@
           "english": "I am Japanese."
         }
       ],
-      "tags": ["copula", "polite", "essential"]
+      "tags": ["copula", "polite", "essential"],
+      "include_in_kanji_worksheet": false
     },
     {
       "id": "mnn-01-005",
@@ -130,7 +134,8 @@
         "duration": 0.8,
         "speaker": "male"
       },
-      "tags": ["location", "geography"]
+      "tags": ["location", "geography"],
+      "include_in_kanji_worksheet": true
     }
   ]
 } 

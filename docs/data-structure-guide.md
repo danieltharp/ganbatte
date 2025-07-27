@@ -103,7 +103,8 @@ Contains all vocabulary items for a lesson.
       "frequency_rank": 856,
       "example_sentences": [...],
       "audio": {...},
-      "tags": ["occupation", "school"]
+      "tags": ["occupation", "school"],
+      "include_in_kanji_worksheet": true
     }
   ]
 }

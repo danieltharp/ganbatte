@@ -72,7 +72,8 @@ Comprehensive vocabulary storage with linguistic information:
     "duration": 1.2,
     "speaker": "female"
   },
-  "tags": ["occupation", "school"]
+  "tags": ["occupation", "school"],
+  "include_in_kanji_worksheet": true
 }
 ```
 
@@ -82,6 +83,7 @@ Comprehensive vocabulary storage with linguistic information:
 - Audio pronunciation files
 - Example sentences with context
 - Mnemonic devices and related words
+- Kanji worksheet filtering via `include_in_kanji_worksheet` boolean (excludes hiragana/katakana-only words)
 
 ### 2. Grammar Points
 

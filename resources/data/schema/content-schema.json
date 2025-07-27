@@ -7,7 +7,7 @@
       "type": "object",
       "properties": {
         "japanese": {"type": "string", "description": "Primary Japanese text (kanji, hiragana, katakana, or romaji)"},
-        "furigana": {"type": "string", "description": "Furigana format: {学生|がく|せい}"},
+        "furigana": {"type": "string", "description": "Furigana format: {学生|がく|せい}, {時計|とけい}"},
         "english": {"type": "string", "description": "English translation"}
       },
       "required": ["english"]
@@ -96,6 +96,10 @@
           "tags": {
             "type": "array",
             "items": {"type": "string"}
+          },
+          "include_in_kanji_worksheet": {
+            "type": "boolean",
+            "description": "Whether this vocabulary item should be included in kanji handwriting practice worksheets"
           }
         },
         "required": ["id", "lesson_id", "word", "part_of_speech"]

@@ -71,6 +71,7 @@ You can remove entire sections if not needed:
 | `example_sentences` | ❌ | array | Example sentences using the word |
 | `audio` | ❌ | object | Audio pronunciation file info |
 | `tags` | ❌ | array | Categorization tags |
+| `include_in_kanji_worksheet` | ❌ | boolean | Whether to include in kanji handwriting practice worksheets |
 
 ### Question Types
 
