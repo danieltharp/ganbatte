@@ -1,0 +1,42 @@
+{
+  "worksheets": [
+    {
+      "id": "mnn-XX-hiragana-ws",
+      "name": "Lesson XX Hiragana Practice",
+      "type": "hiragana_practice",
+      "lesson_id": "mnn-lesson-XX",
+      "content_ids": [],
+      "template": "hiragana_grid_template",
+      "print_settings": {
+        "paper_size": "A4",
+        "orientation": "portrait",
+        "margins": {
+          "top": 25,
+          "bottom": 25,
+          "left": 20,
+          "right": 20
+        }
+      }
+    },
+    {
+      "id": "mnn-XX-vocab-ws",
+      "name": "Lesson XX Vocabulary Review",
+      "type": "vocabulary_review",
+      "lesson_id": "mnn-lesson-XX",
+      "content_ids": [],
+      "template": "vocabulary_matching_template"
+    },
+    {
+      "id": "mnn-XX-kanji-ws",
+      "name": "Lesson XX Kanji Practice",
+      "type": "kanji_practice",
+      "lesson_id": "mnn-lesson-XX",
+      "content_ids": [],
+      "template": "kanji_stroke_template",
+      "print_settings": {
+        "paper_size": "A4",
+        "orientation": "portrait"
+      }
+    }
+  ]
+} 

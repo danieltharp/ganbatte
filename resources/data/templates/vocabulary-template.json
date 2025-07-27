@@ -1,0 +1,56 @@
+{
+  "vocabulary": [
+    {
+      "id": "mnn-XX-001",
+      "lesson_id": "mnn-lesson-XX",
+      "word": {
+        "japanese": "",
+        "furigana": "",
+        "english": ""
+      },
+      "part_of_speech": "noun",
+      "verb_type": "",
+      "adjective_type": "",
+      "conjugations": {
+        "past": {
+          "japanese": "",
+          "furigana": "",
+          "english": ""
+        },
+        "negative": {
+          "japanese": "",
+          "furigana": "",
+          "english": ""
+        },
+        "past_negative": {
+          "japanese": "",
+          "furigana": "",
+          "english": ""
+        },
+        "te_form": {
+          "japanese": "",
+          "furigana": "",
+          "english": ""
+        }
+      },
+      "pitch_accent": "",
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "",
+          "furigana": "",
+          "english": ""
+        }
+      ],
+      "audio": {
+        "filename": "",
+        "duration": 0,
+        "speaker": "female"
+      },
+      "mnemonics": "",
+      "related_words": [],
+      "tags": []
+    }
+  ]
+} 

@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "id": "mnn-lesson-XX-test",
+      "name": "Lesson XX Completion Test",
+      "description": "",
+      "lesson_ids": ["mnn-lesson-XX"],
+      "question_ids": [],
+      "time_limit_minutes": 10,
+      "passing_score": 70,
+      "randomize_questions": true,
+      "randomize_options": true,
+      "allow_retakes": true,
+      "show_results_immediately": false
+    }
+  ]
+} 

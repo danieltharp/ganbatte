@@ -1,0 +1,15 @@
+{
+  "lesson": {
+    "id": "mnn-lesson-01",
+    "chapter": 1,
+    "title": {
+      "japanese": "第一課",
+      "furigana": "{第一課|だいいっか}",
+      "english": "Lesson 1"
+    },
+    "description": "Introduction to basic Japanese greetings and self-introduction",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 45,
+    "prerequisites": []
+  }
+} 

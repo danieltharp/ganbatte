@@ -1,0 +1,136 @@
+{
+  "vocabulary": [
+    {
+      "id": "mnn-01-001",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "学生",
+        "furigana": "{学生|がく|せい}",
+        "english": "student"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "frequency_rank": 856,
+      "example_sentences": [
+        {
+          "japanese": "私は学生です。",
+          "furigana": "{私|わたし}は{学生|がく|せい}です。",
+          "english": "I am a student."
+        }
+      ],
+      "audio": {
+        "filename": "gakusei.mp3",
+        "duration": 1.2,
+        "speaker": "female"
+      },
+      "related_words": ["mnn-01-002", "mnn-01-003"],
+      "tags": ["occupation", "school"]
+    },
+    {
+      "id": "mnn-01-002",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "先生",
+        "furigana": "{先生|せん|せい}",
+        "english": "teacher"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "frequency_rank": 445,
+      "example_sentences": [
+        {
+          "japanese": "田中先生です。",
+          "furigana": "{田中|たなか}{先生|せん|せい}です。",
+          "english": "This is Teacher Tanaka."
+        }
+      ],
+      "audio": {
+        "filename": "sensei.mp3",
+        "duration": 1.5,
+        "speaker": "male"
+      },
+      "related_words": ["mnn-01-001"],
+      "tags": ["occupation", "respect", "school"]
+    },
+    {
+      "id": "mnn-01-003",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "はじめまして",
+        "english": "nice to meet you"
+      },
+      "part_of_speech": "expression",
+      "jlpt_level": "N5",
+      "frequency_rank": 1250,
+      "example_sentences": [
+        {
+          "japanese": "はじめまして。よろしくお願いします。",
+          "english": "Nice to meet you. Please treat me favorably."
+        }
+      ],
+      "audio": {
+        "filename": "hajimemashite.mp3",
+        "duration": 2.1,
+        "speaker": "female"
+      },
+      "tags": ["greeting", "polite", "introduction"]
+    },
+    {
+      "id": "mnn-01-004",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "です",
+        "english": "to be (polite form)"
+      },
+      "part_of_speech": "verb",
+      "verb_type": "irregular",
+      "jlpt_level": "N5",
+      "frequency_rank": 15,
+      "conjugations": {
+        "negative": {
+                      "japanese": "ではありません",
+            "english": "is not"
+        },
+        "past": {
+                      "japanese": "でした",
+            "english": "was"
+        },
+        "past_negative": {
+            "japanese": "ではありませんでした",
+            "english": "was not"
+        }
+      },
+      "example_sentences": [
+        {
+          "japanese": "私は日本人です。",
+          "english": "I am Japanese."
+        }
+      ],
+      "tags": ["copula", "polite", "essential"]
+    },
+    {
+      "id": "mnn-01-005",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "国",
+        "furigana": "{国|くに}",
+        "english": "country"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "frequency_rank": 234,
+      "example_sentences": [
+        {
+          "japanese": "どちらの国からいらっしゃいましたか。",
+          "english": "Which country are you from?"
+        }
+      ],
+      "audio": {
+        "filename": "kuni.mp3",
+        "duration": 0.8,
+        "speaker": "male"
+      },
+      "tags": ["location", "geography"]
+    }
+  ]
+} 

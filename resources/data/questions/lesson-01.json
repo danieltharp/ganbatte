@@ -1,0 +1,131 @@
+{
+  "questions": [
+    {
+      "id": "mnn-01-q001",
+      "lesson_id": "mnn-lesson-01",
+      "type": "multiple_choice",
+      "difficulty": "beginner",
+      "points": 5,
+      "time_limit_seconds": 30,
+      "question": {
+        "english": "How do you say 'student' in Japanese?"
+      },
+      "options": [
+        {
+          "japanese": "がくせい",
+          "english": "gakusei",
+          "explanation": "Correct! がくせい (gakusei) means 'student'."
+        },
+        {
+          "japanese": "せんせい",
+          "english": "sensei",
+          "explanation": "Incorrect. せんせい (sensei) means 'teacher', not 'student'."
+        },
+        {
+          "japanese": "かいしゃいん",
+          "english": "kaishain",
+          "explanation": "Incorrect. かいしゃいん (kaishain) means 'company employee'."
+        },
+        {
+          "japanese": "いしゃ",
+          "english": "isha",
+          "explanation": "Incorrect. いしゃ (isha) means 'doctor'."
+        }
+      ],
+      "correct_answer": 0,
+      "explanation": {
+        "english": "がくせい (gakusei) means 'student'. せんせい (sensei) means 'teacher'."
+      },
+      "vocabulary_ids": ["mnn-01-001", "mnn-01-002"],
+      "tags": ["vocabulary", "occupation"]
+    },
+    {
+      "id": "mnn-01-q002",
+      "lesson_id": "mnn-lesson-01", 
+      "type": "translation_e_to_j",
+      "difficulty": "beginner",
+      "points": 10,
+      "time_limit_seconds": 45,
+      "question": {
+        "english": "Translate to Japanese: 'I am a student.'"
+      },
+      "correct_answer": [
+        "私は学生です。",
+        "わたしはがくせいです。",
+        "Watashi wa gakusei desu."
+      ],
+      "explanation": {
+        "english": "私/わたし (watashi) = I, は (wa) = topic particle, 学生/がくせい (gakusei) = student, です (desu) = polite copula 'to be'"
+      },
+      "hints": [
+        "Remember to use the topic particle は (wa)",
+        "です (desu) makes the sentence polite"
+      ],
+      "vocabulary_ids": ["mnn-01-001", "mnn-01-004"],
+      "grammar_ids": ["mnn-01-grammar-001"],
+      "tags": ["translation", "grammar", "self-introduction"]
+    },
+    {
+      "id": "mnn-01-q003",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner", 
+      "points": 7,
+      "time_limit_seconds": 30,
+      "question": {
+        "japanese": "私は学生______。",
+        "english": "I am a student ______."
+      },
+      "correct_answer": [
+        "です",
+        "desu"
+      ],
+      "explanation": {
+        "english": "です (desu) is the polite form of the copula 'to be' used in formal situations."
+      },
+      "vocabulary_ids": ["mnn-01-004"],
+      "grammar_ids": ["mnn-01-grammar-001"],
+      "tags": ["grammar", "copula", "fill-blank"]
+    },
+    {
+      "id": "mnn-01-q004",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 8,
+      "time_limit_seconds": 60,
+      "question": {
+        "english": "Listen and choose the correct meaning:"
+      },
+      "audio": {
+        "filename": "hajimemashite_question.mp3",
+        "duration": 2.5,
+        "speaker": "female"
+      },
+      "options": [
+        {
+          "english": "Nice to meet you",
+          "explanation": "Correct! はじめまして (hajimemashite) is used when meeting someone for the first time."
+        },
+        {
+          "english": "Thank you",
+          "explanation": "Incorrect. 'Thank you' is ありがとうございます (arigatou gozaimasu)."
+        },
+        {
+          "english": "Excuse me",
+          "explanation": "Incorrect. 'Excuse me' is すみません (sumimasen) or しつれいします (shitsurei shimasu)."
+        },
+        {
+          "english": "Good morning",
+          "explanation": "Incorrect. 'Good morning' is おはようございます (ohayou gozaimasu)."
+        }
+      ],
+      "correct_answer": 0,
+      "explanation": {
+        "english": "はじめまして (hajimemashite) means 'Nice to meet you' and is used when meeting someone for the first time."
+      },
+      "vocabulary_ids": ["mnn-01-003"],
+      "tags": ["listening", "greeting", "politeness"]
+    }
+  ]
+} 
