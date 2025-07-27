@@ -10,6 +10,28 @@ The seeder uses Laravel's `updateOrCreate()` method, which means:
 - **No duplicate records** or constraint violations
 - **Referential integrity** is maintained
 
+## 🚀 Quick Start with `lessons:push`
+
+The `php artisan lessons:push` command provides a user-friendly way to update your lesson content:
+
+```bash
+# Interactive update (recommended for first-time users)
+php artisan lessons:push
+
+# Preview what will be updated without making changes
+php artisan lessons:push --dry-run
+
+# Update without confirmation prompt (useful for scripts)
+php artisan lessons:push --force
+```
+
+**Features:**
+- ✅ **User-friendly output** with clear progress indicators
+- ✅ **Dry-run mode** to preview changes before applying
+- ✅ **Safety confirmation** to prevent accidental updates  
+- ✅ **Error handling** with helpful error messages
+- ✅ **File discovery** automatically finds all lesson content
+
 ## ✅ Safe Update Process
 
 ### 1. **Edit JSON Files**
@@ -22,10 +44,19 @@ nano resources/data/questions/lesson-02.json
 ```
 
 ### 2. **Import Updates**
-Run the seeder to apply changes:
+Run the content update command to apply changes:
 
 ```bash
-# Import all lessons
+# Recommended: Use the convenient alias command
+php artisan lessons:push
+
+# Preview changes without applying them
+php artisan lessons:push --dry-run
+
+# Skip confirmation prompt
+php artisan lessons:push --force
+
+# Alternative: Use the seeder directly
 php artisan db:seed --class=LessonContentSeeder
 
 # Or refresh everything
@@ -159,8 +190,11 @@ php artisan tinker
 
 ### After Updates
 ```bash
+php artisan lessons:push
+# Check output for "✓" indicators showing what was processed
+
+# Alternative: Use seeder directly
 php artisan db:seed --class=LessonContentSeeder
-# Check logs for "✓" indicators showing what was processed
 
 php artisan tinker
 >>> App\Models\Vocabulary::count();  // Should be same or higher
@@ -225,11 +259,11 @@ For large updates, process by content type:
 ```bash
 # Update vocabulary first
 edit resources/data/vocabulary/lesson-*.json
-php artisan db:seed --class=LessonContentSeeder
+php artisan lessons:push
 
 # Then update questions that reference vocabulary
 edit resources/data/questions/lesson-*.json  
-php artisan db:seed --class=LessonContentSeeder
+php artisan lessons:push
 ```
 
 ### 4. **Quality Assurance**
@@ -246,7 +280,7 @@ php artisan db:seed --class=LessonContentSeeder
 find resources/data/vocabulary/ -name "*.json" -exec sed -i 's/"beginner"/"elementary"/g' {} \;
 
 # Then import all changes
-php artisan db:seed --class=LessonContentSeeder
+php artisan lessons:push
 ```
 
 ### Content Migration
@@ -260,7 +294,7 @@ When restructuring content:
 Since upsert overwrites data:
 1. Keep git history of JSON files
 2. Revert JSON files to previous version
-3. Re-run seeder to restore previous state
+3. Re-run `php artisan lessons:push` to restore previous state
 
 ---
 
