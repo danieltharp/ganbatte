@@ -36,6 +36,7 @@ class Vocabulary extends Model
         'mnemonics',
         'related_words',
         'tags',
+        'include_in_kanji_worksheet',
     ];
 
     protected $casts = [
@@ -45,6 +46,7 @@ class Vocabulary extends Model
         'tags' => 'array',
         'frequency_rank' => 'integer',
         'audio_duration' => 'float',
+        'include_in_kanji_worksheet' => 'boolean',
     ];
 
     /**
@@ -127,5 +129,13 @@ class Vocabulary extends Model
         return $query->where(function ($q) use ($term) {
             $q->where('word_japanese', 'like', "%{$term}%");
         });
+    }
+
+    /**
+     * Scope to get vocabulary suitable for kanji worksheets
+     */
+    public function scopeForKanjiWorksheet($query)
+    {
+        return $query->where('include_in_kanji_worksheet', true);
     }
 } 

@@ -17,6 +17,7 @@ return new class extends Migration
             
             // Japanese word form
             $table->string('word_japanese')->nullable();
+            $table->string('word_furigana')->nullable();
             $table->string('word_english');
             
             // Linguistic information
@@ -39,6 +40,7 @@ return new class extends Migration
             $table->text('mnemonics')->nullable();
             $table->json('related_words')->nullable(); // Array of vocabulary IDs
             $table->json('tags')->nullable();
+            $table->boolean('include_in_kanji_worksheet')->default(false);
             
             $table->timestamps();
 
