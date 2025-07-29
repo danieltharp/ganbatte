@@ -5,13 +5,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 8,
       "book_reference": "textbook",
-      "title": "First Meeting",
-      "description": "Introduction to basic greetings and self-introduction patterns",
-      "learning_objectives": [
-        "Learn basic greeting vocabulary",
-        "Practice formal introductions",
-        "Understand the です sentence pattern"
-      ],
       "content": [
         {
           "type": "section",
@@ -28,13 +21,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 9,
       "book_reference": "textbook",
-      "title": "Vocabulary Practice",
-      "description": "Core vocabulary for introductions and occupations",
-      "learning_objectives": [
-        "Master pronunciation of key vocabulary",
-        "Learn occupation-related terms",
-        "Practice word recognition"
-      ],
       "content": [
         {
           "type": "section",
@@ -47,13 +33,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 18,
       "book_reference": "workbook",
-      "title": "Practice Problems",
-      "description": "Additional practice exercises for lesson reinforcement",
-      "learning_objectives": [
-        "Reinforce lesson vocabulary",
-        "Practice hiragana reading",
-        "Apply grammar patterns"
-      ],
       "content": [
         {
           "type": "exercise",

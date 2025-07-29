@@ -335,7 +335,6 @@
             "type": "string",
             "enum": ["textbook", "workbook"]
           },
-          "title": {"type": "string"},
           "description": {"type": "string"},
           "learning_objectives": {
             "type": "array",

@@ -16,9 +16,6 @@ return new class extends Migration
             $table->string('lesson_id');
             $table->integer('page_number');
             $table->enum('book_reference', ['textbook', 'workbook']);
-            $table->string('title')->nullable();
-            $table->text('description')->nullable();
-            $table->json('learning_objectives')->nullable(); // Array of learning objectives
             $table->json('content_list')->nullable(); // Array of content items {type, id}
             $table->timestamps();
 

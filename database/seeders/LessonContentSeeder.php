@@ -338,9 +338,6 @@ class LessonContentSeeder extends Seeder
                 'lesson_id' => $data['lesson_id'],
                 'page_number' => $data['page_number'],
                 'book_reference' => $data['book_reference'],
-                'title' => $data['title'] ?? null,
-                'description' => $data['description'] ?? null,
-                'learning_objectives' => $data['learning_objectives'] ?? [],
                 'content_list' => $data['content'] ?? [],
             ]
         );

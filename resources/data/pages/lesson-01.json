@@ -1,17 +1,10 @@
 {
   "pages": [
     {
-      "id": "page-mnn-lesson-01-textbook-8",
+      "id": "page-mnn-lesson-01-textbook-6",
       "lesson_id": "mnn-lesson-01",
-      "page_number": 8,
+      "page_number": 6,
       "book_reference": "textbook",
-      "title": "First Meeting",
-      "description": "Introduction to basic greetings and self-introduction patterns. Students learn how Japanese people typically meet and introduce themselves.",
-      "learning_objectives": [
-        "Understand formal introduction patterns",
-        "Learn basic greeting vocabulary",
-        "Practice listening to natural conversation"
-      ],
       "content": [
         {
           "type": "section",
@@ -24,13 +17,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 9,
       "book_reference": "textbook",
-      "title": "Vocabulary Introduction",
-      "description": "Core vocabulary for introductions, occupations, and basic personal information.",
-      "learning_objectives": [
-        "Master pronunciation of key vocabulary",
-        "Learn occupation-related terms",
-        "Practice word recognition and recall"
-      ],
       "content": [
         {
           "type": "section",
@@ -43,13 +29,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 10,
       "book_reference": "textbook",
-      "title": "Grammar: です Pattern",
-      "description": "Introduction to the です sentence pattern, the foundation of polite Japanese conversation.",
-      "learning_objectives": [
-        "Understand the です sentence structure",
-        "Practice forming polite statements",
-        "Learn when to use formal language"
-      ],
       "content": [
         {
           "type": "section",
@@ -62,13 +41,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 11,
       "book_reference": "textbook",
-      "title": "Cultural Context",
-      "description": "Understanding Japanese business culture and the role of formal introductions.",
-      "learning_objectives": [
-        "Learn about Japanese business customs",
-        "Understand cultural context of language choices",
-        "Connect language to cultural practices"
-      ],
       "content": [
         {
           "type": "section",
@@ -81,13 +53,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 12,
       "book_reference": "textbook",
-      "title": "Pronunciation & Practice",
-      "description": "Focused pronunciation practice and conversation exercises using lesson vocabulary.",
-      "learning_objectives": [
-        "Master long vowel pronunciation",
-        "Practice conversation patterns",
-        "Apply vocabulary in context"
-      ],
       "content": [
         {
           "type": "section",
@@ -104,13 +69,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 13,
       "book_reference": "textbook",
-      "title": "Listening Practice",
-      "description": "Listening comprehension exercises to reinforce lesson content.",
-      "learning_objectives": [
-        "Improve listening comprehension",
-        "Identify key vocabulary in context",
-        "Practice with natural speech speed"
-      ],
       "content": [
         {
           "type": "exercise",
@@ -123,13 +81,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 14,
       "book_reference": "textbook",
-      "title": "Reading Comprehension",
-      "description": "Short reading passages to practice vocabulary and grammar in context.",
-      "learning_objectives": [
-        "Practice reading comprehension",
-        "Apply grammar patterns",
-        "Expand vocabulary recognition"
-      ],
       "content": [
         {
           "type": "exercise",
@@ -142,13 +93,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 15,
       "book_reference": "textbook",
-      "title": "Lesson Review",
-      "description": "Comprehensive review combining all lesson elements for reinforcement.",
-      "learning_objectives": [
-        "Integrate all lesson components",
-        "Practice natural conversation flow",
-        "Prepare for lesson assessment"
-      ],
       "content": [
         {
           "type": "section",
@@ -161,13 +105,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 18,
       "book_reference": "workbook",
-      "title": "Additional Practice",
-      "description": "Extra practice exercises for vocabulary and hiragana recognition.",
-      "learning_objectives": [
-        "Reinforce lesson vocabulary",
-        "Practice hiragana reading",
-        "Build confidence with patterns"
-      ],
       "content": [
         {
           "type": "exercise",
@@ -180,13 +117,6 @@
       "lesson_id": "mnn-lesson-01",
       "page_number": 19,
       "book_reference": "workbook",
-      "title": "Writing Practice",
-      "description": "Written exercises focusing on character formation and vocabulary application.",
-      "learning_objectives": [
-        "Practice Japanese character writing",
-        "Apply vocabulary in written form",
-        "Develop writing confidence"
-      ],
       "content": [
         {
           "type": "exercise",
