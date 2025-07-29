@@ -13,6 +13,7 @@ use App\Models\Test;
 use App\Models\Worksheet;
 use App\Models\Exercise;
 use App\Models\Section;
+use App\Models\Page;
 
 class LessonContentSeeder extends Seeder
 {
@@ -142,6 +143,20 @@ class LessonContentSeeder extends Seeder
                     $section = $this->createSection($sectionData);
                     $audioInfo = $section->hasAudio() ? " 🔊" : "";
                     $this->command->info("  ✓ Section: {$section->name} (p.{$section->page_number}){$audioInfo}");
+                }
+            }
+        }
+
+        // Import pages
+        $pagesFile = resource_path("data/pages/lesson-{$paddedNumber}.json");
+        if (File::exists($pagesFile)) {
+            $pagesData = json_decode(File::get($pagesFile), true);
+            if (isset($pagesData['pages'])) {
+                foreach ($pagesData['pages'] as $pageData) {
+                    $page = $this->createPage($pageData);
+                    $bookRef = ucfirst($page->book_reference);
+                    $contentCount = count($pageData['content'] ?? []);
+                    $this->command->info("  ✓ Page: {$bookRef} p.{$page->page_number} ({$contentCount} items)");
                 }
             }
         }
@@ -311,6 +326,22 @@ class LessonContentSeeder extends Seeder
                 'related_vocabulary_ids' => $data['related_vocabulary_ids'] ?? [],
                 'related_grammar_ids' => $data['related_grammar_ids'] ?? [],
                 'completion_trackable' => $data['completion_trackable'] ?? true,
+            ]
+        );
+    }
+
+    private function createPage($data)
+    {
+        return Page::updateOrCreate(
+            ['id' => $data['id']], // Unique identifier
+            [
+                'lesson_id' => $data['lesson_id'],
+                'page_number' => $data['page_number'],
+                'book_reference' => $data['book_reference'],
+                'title' => $data['title'] ?? null,
+                'description' => $data['description'] ?? null,
+                'learning_objectives' => $data['learning_objectives'] ?? [],
+                'content_list' => $data['content'] ?? [],
             ]
         );
     }

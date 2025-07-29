@@ -322,6 +322,42 @@
         },
         "required": ["id", "name", "lesson_id", "page_number", "section_type"]
       }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "page_number": {"type": "integer", "minimum": 1},
+          "book_reference": {
+            "type": "string",
+            "enum": ["textbook", "workbook"]
+          },
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "learning_objectives": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "content": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["section", "exercise"]
+                },
+                "id": {"type": "string"}
+              },
+              "required": ["type", "id"]
+            }
+          }
+        },
+        "required": ["id", "lesson_id", "page_number", "book_reference", "content"]
+      }
     }
   },
   "required": ["lesson"]

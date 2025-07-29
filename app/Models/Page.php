@@ -23,11 +23,13 @@ class Page extends Model
         'title',
         'description',
         'learning_objectives',
+        'content_list',
     ];
 
     protected $casts = [
         'page_number' => 'integer',
         'learning_objectives' => 'array',
+        'content_list' => 'array',
     ];
 
     /**
@@ -69,8 +71,42 @@ class Page extends Model
 
     /**
      * Get all content (sections and exercises) on this page in order
+     * Uses the content_list from JSON data if available, otherwise falls back to dynamic discovery
      */
     public function getContentAttribute(): Collection
+    {
+        // If we have a content_list from JSON data, use that for ordering
+        if (!empty($this->content_list)) {
+            return collect($this->content_list)->map(function ($item, $index) {
+                $content = null;
+                
+                if ($item['type'] === 'section') {
+                    $content = Section::find($item['id']);
+                } else if ($item['type'] === 'exercise') {
+                    $content = Exercise::find($item['id']);
+                }
+
+                return (object) [
+                    'type' => $item['type'],
+                    'id' => $item['id'],
+                    'order_weight' => $index + 1, // Use array position as order
+                    'page_section' => $content ? ($content->page_section ?? 'full') : 'full',
+                    'content' => $content,
+                ];
+            })->filter(function ($item) {
+                return $item->content !== null; // Filter out any missing content
+            });
+        }
+
+        // Fallback to dynamic discovery (legacy behavior)
+        return $this->discovered_content;
+    }
+
+    /**
+     * Get content by dynamically discovering sections and exercises
+     * This is the original behavior, kept for backward compatibility
+     */
+    public function getDiscoveredContentAttribute(): Collection
     {
         $sections = $this->sections->map(function ($section) {
             return (object) [

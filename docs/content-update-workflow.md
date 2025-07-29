@@ -131,6 +131,8 @@ Each content item has a unique string ID:
 - **Tests**: `mnn-lesson-01-test`
 - **Worksheets**: `mnn-01-hiragana-ws`
 - **Exercises**: `mnn-01-ex001`, `mnn-01-ex002`
+- **Sections**: `mnn-01-sec001`, `mnn-01-sec002`
+- **Pages**: `page-mnn-lesson-01-textbook-8`, `page-mnn-lesson-01-workbook-18`
 
 ### Update Logic
 ```php
@@ -169,6 +171,34 @@ Vocabulary::updateOrCreate(
 - **Page-based**: Tied to specific textbook/workbook pages
 - **Ordered display**: Use `order_weight` for correct page ordering
 - **Question references**: Links to existing questions in the system
+
+## 📄 Page Content Type
+
+**Pages** organize sections and exercises by textbook/workbook page, providing complete control over content structure and ordering.
+
+### Page Structure
+```json
+{
+  "id": "page-mnn-lesson-01-textbook-12",
+  "lesson_id": "mnn-lesson-01",
+  "page_number": 12,
+  "book_reference": "textbook",           // "textbook" or "workbook"
+  "title": "Pronunciation & Practice",
+  "description": "Focused pronunciation practice...",
+  "learning_objectives": ["Master long vowels", "Practice patterns"],
+  "content": [
+    {"type": "section", "id": "mnn-01-sec005"},    // Order inferred from array position
+    {"type": "exercise", "id": "mnn-01-ex001"}
+  ]
+}
+```
+
+### Page Features
+- **Content organization**: Combines sections and exercises in defined order
+- **Order from structure**: No weight fields needed - array position determines order
+- **Learning objectives**: Clear goals for each page
+- **Book differentiation**: Separate textbook and workbook pages
+- **Rich metadata**: Titles and descriptions for each page
 
 ## 🚨 Important Considerations
 
