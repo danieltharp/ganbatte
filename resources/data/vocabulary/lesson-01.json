@@ -74,7 +74,7 @@
       "part_of_speech": "suffix",
       "jlpt_level": "N5",
       "tags": ["suffix"],
-      "include_in_kanji_worksheet": false
+      "include_in_kanji_worksheet": true
     },
     {
       "id": "mnn-01-007",
@@ -251,10 +251,10 @@
         "japanese": "はい",
         "english": "yes"
       },
-      "part_of_speech": "expression",
+      "part_of_speech": "interjection",
       "jlpt_level": "N5",
       "tags": ["yes"],
-      "include_in_kanji_worksheet": true
+      "include_in_kanji_worksheet": false
     },
     {
       "id": "mnn-01-021",
@@ -263,7 +263,7 @@
         "japanese": "いいえ",
         "english": "no"
       },
-      "part_of_speech": "expression",
+      "part_of_speech": "interjection",
       "jlpt_level": "N5",
       "tags": ["no"],
       "include_in_kanji_worksheet": false
@@ -275,10 +275,10 @@
         "japanese": "初めまして",
         "english": "How do you do?"
       },
-      "part_of_speech": "phrase",
+      "part_of_speech": "expression",
       "jlpt_level": "N5",
       "tags": ["greetings"],
-      "include_in_kanji_worksheet": false
+      "include_in_kanji_worksheet": true
     },
     {
       "id": "mnn-01-023",
@@ -290,7 +290,7 @@
       "part_of_speech": "expression",
       "jlpt_level": "N5",
       "tags": ["location"],
-      "include_in_kanji_worksheet": false
+      "include_in_kanji_worksheet": true
     },
     {
       "id": "mnn-01-024",
@@ -303,6 +303,358 @@
       "part_of_speech": "expression",
       "jlpt_level": "N5",
       "tags": ["greetings"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-025",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "失礼ですが",
+        "furigana": "{失礼|しつ|れい}ですが",
+        "english": "Excuse me, but..."
+      },
+      "part_of_speech": "expression",
+      "jlpt_level": "N5",
+      "tags": ["polite"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-026",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "お名前は？",
+        "furigana": "お{名前|な|まえ}は？",
+        "english": "May I have your name?"
+      },
+      "part_of_speech": "expression",
+      "jlpt_level": "N5",
+      "tags": ["polite", "question"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-027",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "こちらは〜さんです。",
+        "english": "This is Mr./Ms. 〜."
+      },
+      "part_of_speech": "expression",
+      "jlpt_level": "N5",
+      "tags": ["polite"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-028",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "アメリカ",
+        "english": "America"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-029",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "イギリス",
+        "english": "England"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-030",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "インド",
+        "english": "India"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-031",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "インドネシア",
+        "english": "Indonesia"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-032",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "韓国",
+        "furigana": "{韓国|かん|こく}",
+        "english": "Korea"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-033",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "タイ",
+        "english": "Thailand"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-034",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "中国",
+        "furigana": "{中国|ちゅう|ごく}",
+        "english": "China"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-035",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "ドイツ",
+        "english": "Germany"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-036",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "日本",
+        "english": "Japan"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-037",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "ブラジル",
+        "english": "Brazil"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-038",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "イタリア",
+        "english": "Italy"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-039",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "イラン",
+        "english": "Iran"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-040",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "エジプト",
+        "english": "Egypt"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-041",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "オーストラリア",
+        "english": "Australia"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-042",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "カナダ",
+        "english": "Canada"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-043",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "サウジアラビア",
+        "english": "Saudi Arabia"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-044",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "シンガポール",
+        "english": "Singapore"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-045",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "スペイン",
+        "english": "Spain"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-046",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "フランス",
+        "english": "France"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-047",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "フィリピン",
+        "english": "Philippines"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-048",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "ベトナム",
+        "english": "Vietnam"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-049",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "マレーシア",
+        "english": "Malaysia"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-050",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "メキシコ",
+        "english": "Mexico"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-051",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "ロシア",
+        "english": "Russia"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "country"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-052",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "ペルシア語",
+        "english": "Persian"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["language"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-053",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "ポルトガル語",
+        "english": "Portuguese"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["language"],
       "include_in_kanji_worksheet": false
     }
   ]
