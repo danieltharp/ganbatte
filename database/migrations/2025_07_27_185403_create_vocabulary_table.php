@@ -16,17 +16,18 @@ return new class extends Migration
             $table->foreignId('lesson_id')->constrained()->onDelete('cascade');
             
             // Japanese word form
-            $table->string('word_japanese')->nullable();
+            $table->string('word_japanese');
             $table->string('word_furigana')->nullable();
             $table->string('word_english');
             
             // Linguistic information
             $table->enum('part_of_speech', [
                 'noun', 'verb', 'adjective', 'adverb', 'particle', 
-                'conjunction', 'interjection', 'counter', 'expression'
+                'conjunction', 'interjection', 'counter', 'expression',
+                'affix'
             ]);
-            $table->enum('verb_type', ['ichidan', 'godan', 'irregular', 'suru', 'kuru'])->nullable();
-            $table->enum('adjective_type', ['i_adjective', 'na_adjective'])->nullable();
+            $table->enum('verb_type', ['ichidan', 'godan', 'irregular', 'suru'])->nullable();
+            $table->enum('adjective_type', ['i_adjective', 'na_adjective', 'no_adjective'])->nullable();
             $table->json('conjugations')->nullable();
             $table->string('pitch_accent')->nullable();
             $table->enum('jlpt_level', ['N5', 'N4', 'N3', 'N2', 'N1'])->nullable();
@@ -44,8 +45,8 @@ return new class extends Migration
             
             $table->timestamps();
 
-            $table->index(['lesson_id', 'part_of_speech']);
-            $table->index(['jlpt_level', 'frequency_rank']);
+            $table->index('lesson_id');
+            $table->index('jlpt_level');
             $table->index('word_japanese');
         });
     }

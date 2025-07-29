@@ -16,11 +16,6 @@ return new class extends Migration
             $table->text('title_furigana')->nullable()->after('title_japanese');
         });
 
-        // Add furigana field to vocabulary table
-        Schema::table('vocabulary', function (Blueprint $table) {
-            $table->text('word_furigana')->nullable()->after('word_japanese');
-        });
-
         // Add furigana field to grammar_points table
         Schema::table('grammar_points', function (Blueprint $table) {
             $table->text('name_furigana')->nullable()->after('name_japanese');

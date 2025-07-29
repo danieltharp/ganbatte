@@ -47,7 +47,7 @@
         "japanese": "〜さん",
         "english": "Mr., Ms., Mrs. 〜"
       },
-      "part_of_speech": "suffix",
+      "part_of_speech": "affix",
       "jlpt_level": "N5",
       "tags": ["suffix", "honorific"],
       "include_in_kanji_worksheet": false
@@ -59,7 +59,7 @@
         "japanese": "〜ちゃん",
         "english": "suffix for child's name"
       },
-      "part_of_speech": "suffix",
+      "part_of_speech": "affix",
       "jlpt_level": "N5",
       "tags": ["suffix"],
       "include_in_kanji_worksheet": false
@@ -71,7 +71,7 @@
         "japanese": "〜人",
         "english": "suffix for nationality"
       },
-      "part_of_speech": "suffix",
+      "part_of_speech": "affix",
       "jlpt_level": "N5",
       "tags": ["suffix"],
       "include_in_kanji_worksheet": true
@@ -226,7 +226,7 @@
         "japanese": "〜歳",
         "english": "suffix for age"
       },
-      "part_of_speech": "suffix",
+      "part_of_speech": "affix",
       "jlpt_level": "N5",
       "tags": ["suffix", "age"],
       "include_in_kanji_worksheet": true
@@ -239,7 +239,7 @@
         "furigana": "{何|なん}{歳|さい}",
         "english": "how old"
       },
-      "part_of_speech": "adjective",
+      "part_of_speech": "expression",
       "jlpt_level": "N5",
       "tags": ["age"],
       "include_in_kanji_worksheet": true
@@ -667,9 +667,9 @@
         "furigana": "〜{語|ご}",
         "english": "〜 language"
       },
-      "part_of_speech": "suffix",
+      "part_of_speech": "affix",
       "jlpt_level": "N5",
-      "tags": ["language"],
+      "tags": ["language", "suffix"],
       "include_in_kanji_worksheet": true
     }
   ]
