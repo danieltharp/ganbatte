@@ -638,6 +638,7 @@
       "lesson_id": "mnn-lesson-01",
       "word": {
         "japanese": "ペルシア語",
+        "furigana": "ペルシア{語|ご}",
         "english": "Persian"
       },
       "part_of_speech": "noun",
@@ -650,12 +651,26 @@
       "lesson_id": "mnn-lesson-01",
       "word": {
         "japanese": "ポルトガル語",
+        "furigana": "ポルトガル{語|ご}",
         "english": "Portuguese"
       },
       "part_of_speech": "noun",
       "jlpt_level": "N5",
       "tags": ["language"],
       "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-x-001",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "〜語",
+        "furigana": "〜{語|ご}",
+        "english": "〜 language"
+      },
+      "part_of_speech": "suffix",
+      "jlpt_level": "N5",
+      "tags": ["language"],
+      "include_in_kanji_worksheet": true
     }
   ]
 }
