@@ -4,138 +4,306 @@
       "id": "mnn-01-001",
       "lesson_id": "mnn-lesson-01",
       "word": {
-        "japanese": "学生",
-        "furigana": "{学生|がく|せい}",
-        "english": "student"
+        "japanese": "私",
+        "furigana": "{私|わたし}",
+        "english": "I"
       },
       "part_of_speech": "noun",
       "jlpt_level": "N5",
-      "frequency_rank": 856,
-      "example_sentences": [
-        {
-          "japanese": "私は学生です。",
-          "furigana": "{私|わたし}は{学生|がく|せい}です。",
-          "english": "I am a student."
-        }
-      ],
-      "audio": {
-        "filename": "gakusei.mp3",
-        "duration": 1.2,
-        "speaker": "female"
-      },
-      "related_words": ["mnn-01-002", "mnn-01-003"],
-      "tags": ["occupation", "school"],
+      "frequency_rank": 42,
+      "tags": ["pronoun", "first-person"],
       "include_in_kanji_worksheet": true
     },
     {
       "id": "mnn-01-002",
       "lesson_id": "mnn-lesson-01",
       "word": {
-        "japanese": "先生",
-        "furigana": "{先生|せん|せい}",
-        "english": "teacher"
+        "japanese": "あなた",
+        "english": "you"
       },
       "part_of_speech": "noun",
       "jlpt_level": "N5",
-      "frequency_rank": 445,
-      "example_sentences": [
-        {
-          "japanese": "田中先生です。",
-          "furigana": "{田中|たなか}{先生|せん|せい}です。",
-          "english": "This is Teacher Tanaka."
-        }
-      ],
-      "audio": {
-        "filename": "sensei.mp3",
-        "duration": 1.5,
-        "speaker": "male"
-      },
-      "related_words": ["mnn-01-001"],
-      "tags": ["occupation", "respect", "school"],
-      "include_in_kanji_worksheet": true
+      "frequency_rank": 226,
+      "tags": ["pronoun", "second-person"],
+      "include_in_kanji_worksheet": false
     },
     {
       "id": "mnn-01-003",
       "lesson_id": "mnn-lesson-01",
       "word": {
-        "japanese": "はじめまして",
-        "english": "nice to meet you"
+        "japanese": "あの人",
+        "furigana": "あの{人|ひと}",
+        "english": "that person"
       },
-      "part_of_speech": "expression",
+      "part_of_speech": "noun",
       "jlpt_level": "N5",
-      "frequency_rank": 1250,
-      "example_sentences": [
-        {
-          "japanese": "はじめまして。よろしくお願いします。",
-          "english": "Nice to meet you. Please treat me favorably."
-        }
-      ],
-      "audio": {
-        "filename": "hajimemashite.mp3",
-        "duration": 2.1,
-        "speaker": "female"
-      },
-      "tags": ["greeting", "polite", "introduction"],
+      "tags": ["pronoun", "third-person"],
       "include_in_kanji_worksheet": false
     },
     {
       "id": "mnn-01-004",
       "lesson_id": "mnn-lesson-01",
       "word": {
-        "japanese": "です",
-        "english": "to be (polite form)"
+        "japanese": "〜さん",
+        "english": "Mr., Ms., Mrs. 〜"
       },
-      "part_of_speech": "verb",
-      "verb_type": "irregular",
+      "part_of_speech": "suffix",
       "jlpt_level": "N5",
-      "frequency_rank": 15,
-      "conjugations": {
-        "negative": {
-                      "japanese": "ではありません",
-            "english": "is not"
-        },
-        "past": {
-                      "japanese": "でした",
-            "english": "was"
-        },
-        "past_negative": {
-            "japanese": "ではありませんでした",
-            "english": "was not"
-        }
-      },
-      "example_sentences": [
-        {
-          "japanese": "私は日本人です。",
-          "english": "I am Japanese."
-        }
-      ],
-      "tags": ["copula", "polite", "essential"],
+      "tags": ["suffix", "honorific"],
       "include_in_kanji_worksheet": false
     },
     {
       "id": "mnn-01-005",
       "lesson_id": "mnn-lesson-01",
       "word": {
-        "japanese": "国",
-        "furigana": "{国|くに}",
-        "english": "country"
+        "japanese": "〜ちゃん",
+        "english": "suffix for child's name"
+      },
+      "part_of_speech": "suffix",
+      "jlpt_level": "N5",
+      "tags": ["suffix"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-006",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "〜人",
+        "english": "suffix for nationality"
+      },
+      "part_of_speech": "suffix",
+      "jlpt_level": "N5",
+      "tags": ["suffix"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-007",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "先生",
+        "furigana": "{先生|せん|せい}",
+        "english": "teacher, instructor; (medical) doctor, medic"
       },
       "part_of_speech": "noun",
       "jlpt_level": "N5",
-      "frequency_rank": 234,
-      "example_sentences": [
-        {
-          "japanese": "どちらの国からいらっしゃいましたか。",
-          "english": "Which country are you from?"
-        }
-      ],
-      "audio": {
-        "filename": "kuni.mp3",
-        "duration": 0.8,
-        "speaker": "male"
-      },
-      "tags": ["location", "geography"],
+      "tags": ["occupation", "school"],
       "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-008",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "教師",
+        "furigana": "{教師|きょう|し}",
+        "english": "teacher, instructor (referring to own job)"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["occupation", "school"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-009",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "学生",
+        "furigana": "{学生|がく|せい}",
+        "english": "student"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["occupation", "school"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-010",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "会社員",
+        "furigana": "{会社員|かい|しゃ|いん}",
+        "english": "company employee"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["occupation", "company"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-011",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "社員",
+        "furigana": "{社員|しゃ|いん}",
+        "english": "company employee"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["occupation", "company"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-012",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "銀行員",
+        "furigana": "{銀行員|ぎん|こう|いん}",
+        "english": "bank employee"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["occupation", "bank"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-013",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "医者",
+        "furigana": "{医者|い|しゃ}",
+        "english": "doctor, medic"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["occupation", "medical"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-014",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "研究者",
+        "furigana": "{研究者|けん|きゅう|しゃ}",
+        "english": "researcher"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["occupation"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-015",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "大学",
+        "furigana": "{大学|だい|がく}",
+        "english": "university"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "school"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-016",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "病院",
+        "furigana": "{病院|びょう|いん}",
+        "english": "hospital"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["location", "medical"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-017",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "誰",
+        "furigana": "{誰|だれ}",
+        "english": "who"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["pronoun", "third-person"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-018",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "〜歳",
+        "english": "suffix for age"
+      },
+      "part_of_speech": "suffix",
+      "jlpt_level": "N5",
+      "tags": ["suffix", "age"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-019",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "何歳",
+        "furigana": "{何|なん}{歳|さい}",
+        "english": "how old"
+      },
+      "part_of_speech": "adjective",
+      "jlpt_level": "N5",
+      "tags": ["age"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-020",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "はい",
+        "english": "yes"
+      },
+      "part_of_speech": "expression",
+      "jlpt_level": "N5",
+      "tags": ["yes"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-021",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "いいえ",
+        "english": "no"
+      },
+      "part_of_speech": "expression",
+      "jlpt_level": "N5",
+      "tags": ["no"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-022",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "初めまして",
+        "english": "How do you do?"
+      },
+      "part_of_speech": "phrase",
+      "jlpt_level": "N5",
+      "tags": ["greetings"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-023",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "〜から来ました",
+        "english": "I'm from 〜 (country)."
+      },
+      "part_of_speech": "expression",
+      "jlpt_level": "N5",
+      "tags": ["location"],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-024",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "「どうぞ」よろしく「お願いします」。",
+        "furigana": "「どうぞ」よろしく「お{願|ねが}いします」。",
+        "english": "Pleased to meet you."
+      },
+      "part_of_speech": "expression",
+      "jlpt_level": "N5",
+      "tags": ["greetings"],
+      "include_in_kanji_worksheet": false
     }
   ]
-} 
+}
