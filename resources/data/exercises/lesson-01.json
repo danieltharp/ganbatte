@@ -1,0 +1,69 @@
+{
+  "exercises": [
+    {
+      "id": "mnn-01-ex001",
+      "name": "Exercise A",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 12,
+      "book_reference": "textbook",
+      "order_weight": 1,
+      "overview": "Practice basic greetings and introductions. Complete the conversation using the vocabulary learned in this lesson.",
+      "question_ids": [
+        "mnn-01-q001",
+        "mnn-01-q002",
+        "mnn-01-q003"
+      ]
+    },
+    {
+      "id": "mnn-01-ex002",
+      "name": "Exercise B",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 13,
+      "book_reference": "textbook",
+      "order_weight": 2,
+      "overview": "Listening comprehension exercise. Listen to the audio and answer the questions about what you heard.",
+      "question_ids": [
+        "mnn-01-q004",
+        "mnn-01-q005"
+      ]
+    },
+    {
+      "id": "mnn-01-ex003",
+      "name": "Exercise C",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 14,
+      "book_reference": "textbook",
+      "order_weight": 3,
+      "overview": "Reading comprehension. Read the short passages and answer questions about the content.",
+      "question_ids": [
+        "mnn-01-q006"
+      ]
+    },
+    {
+      "id": "mnn-01-ex004",
+      "name": "Practice Problems 1",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 18,
+      "book_reference": "workbook",
+      "order_weight": 1,
+      "overview": "Additional practice with hiragana reading and vocabulary recognition. Fill in the blanks with the correct hiragana.",
+      "question_ids": [
+        "mnn-01-q007",
+        "mnn-01-q008"
+      ]
+    },
+    {
+      "id": "mnn-01-ex005",
+      "name": "Practice Problems 2",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 19,
+      "book_reference": "workbook",
+      "order_weight": 2,
+      "overview": "Writing practice. Write the correct Japanese characters for the given English words.",
+      "question_ids": [
+        "mnn-01-q009",
+        "mnn-01-q010"
+      ]
+    }
+  ]
+} 
