@@ -9,15 +9,7 @@
         {
           "type": "section",
           "id": "mnn-01-sec001"
-        }
-      ]
-    },
-    {
-      "id": "page-mnn-lesson-01-textbook-9",
-      "lesson_id": "mnn-lesson-01",
-      "page_number": 9,
-      "book_reference": "textbook",
-      "content": [
+        },
         {
           "type": "section",
           "id": "mnn-01-sec002"
@@ -25,9 +17,9 @@
       ]
     },
     {
-      "id": "page-mnn-lesson-01-textbook-10",
+      "id": "page-mnn-lesson-01-textbook-7",
       "lesson_id": "mnn-lesson-01",
-      "page_number": 10,
+      "page_number": 7,
       "book_reference": "textbook",
       "content": [
         {
@@ -37,9 +29,21 @@
       ]
     },
     {
-      "id": "page-mnn-lesson-01-textbook-11",
+      "id": "page-mnn-lesson-01-textbook-8",
       "lesson_id": "mnn-lesson-01",
-      "page_number": 11,
+      "page_number": 8,
+      "book_reference": "textbook",
+      "content": [
+        {
+          "type": "section",
+          "id": "mnn-01-sec004"
+        }
+      ]
+    },
+    {
+      "id": "page-mnn-lesson-01-textbook-9",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 9,
       "book_reference": "textbook",
       "content": [
         {
