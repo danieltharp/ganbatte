@@ -259,6 +259,29 @@
         },
         "required": ["id", "name", "type", "lesson_id"]
       }
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "page_number": {"type": "integer", "minimum": 1},
+          "book_reference": {
+            "type": "string",
+            "enum": ["textbook", "workbook"]
+          },
+          "order_weight": {"type": "integer", "minimum": 0, "default": 0},
+          "overview": {"type": "string"},
+          "question_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "required": ["id", "name", "lesson_id", "page_number", "book_reference", "question_ids"]
+      }
     }
   },
   "required": ["lesson"]

@@ -89,6 +89,48 @@ return new class extends Migration
             $table->unique(['worksheet_id', 'question_id']);
             $table->index(['worksheet_id', 'order']);
         });
+
+        // Exercise-Question relationship
+        Schema::create('exercise_questions', function (Blueprint $table) {
+            $table->id();
+            $table->string('exercise_id');
+            $table->string('question_id');
+            $table->integer('order')->default(0);
+            $table->decimal('weight', 3, 2)->default(1.0);
+            $table->timestamps();
+
+            $table->unique(['exercise_id', 'question_id']);
+            $table->index(['exercise_id', 'order']);
+
+            $table->foreign('exercise_id')->references('id')->on('exercises')->onDelete('cascade');
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+        });
+
+        // Exercise-Vocabulary relationship
+        Schema::create('exercise_vocabulary', function (Blueprint $table) {
+            $table->id();
+            $table->string('exercise_id');
+            $table->string('vocabulary_id');
+            $table->timestamps();
+
+            $table->unique(['exercise_id', 'vocabulary_id']);
+
+            $table->foreign('exercise_id')->references('id')->on('exercises')->onDelete('cascade');
+            $table->foreign('vocabulary_id')->references('id')->on('vocabulary')->onDelete('cascade');
+        });
+
+        // Exercise-Grammar relationship
+        Schema::create('exercise_grammar', function (Blueprint $table) {
+            $table->id();
+            $table->string('exercise_id');
+            $table->string('grammar_point_id');
+            $table->timestamps();
+
+            $table->unique(['exercise_id', 'grammar_point_id']);
+
+            $table->foreign('exercise_id')->references('id')->on('exercises')->onDelete('cascade');
+            $table->foreign('grammar_point_id')->references('id')->on('grammar_points')->onDelete('cascade');
+        });
     }
 
     /**
@@ -96,6 +138,9 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('exercise_grammar');
+        Schema::dropIfExists('exercise_vocabulary');
+        Schema::dropIfExists('exercise_questions');
         Schema::dropIfExists('worksheet_questions');
         Schema::dropIfExists('worksheet_grammar');
         Schema::dropIfExists('worksheet_vocabulary');

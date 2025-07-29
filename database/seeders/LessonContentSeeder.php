@@ -11,6 +11,7 @@ use App\Models\GrammarPoint;
 use App\Models\Question;
 use App\Models\Test;
 use App\Models\Worksheet;
+use App\Models\Exercise;
 
 class LessonContentSeeder extends Seeder
 {
@@ -115,6 +116,18 @@ class LessonContentSeeder extends Seeder
                 foreach ($worksheetsData['worksheets'] as $worksheetData) {
                     $worksheet = $this->createWorksheet($worksheetData);
                     $this->command->info("  ✓ Worksheet: {$worksheet->name}");
+                }
+            }
+        }
+
+        // Import exercises
+        $exercisesFile = resource_path("data/exercises/lesson-{$paddedNumber}.json");
+        if (File::exists($exercisesFile)) {
+            $exercisesData = json_decode(File::get($exercisesFile), true);
+            if (isset($exercisesData['exercises'])) {
+                foreach ($exercisesData['exercises'] as $exerciseData) {
+                    $exercise = $this->createExercise($exerciseData);
+                    $this->command->info("  ✓ Exercise: {$exercise->name} (p.{$exercise->page_number})");
                 }
             }
         }
@@ -245,6 +258,22 @@ class LessonContentSeeder extends Seeder
                 'content_ids' => $data['content_ids'] ?? [],
                 'template' => $data['template'] ?? null,
                 'print_settings' => $data['print_settings'] ?? null,
+            ]
+        );
+    }
+
+    private function createExercise($data)
+    {
+        return Exercise::updateOrCreate(
+            ['id' => $data['id']], // Unique identifier
+            [
+                'name' => $data['name'],
+                'lesson_id' => $data['lesson_id'],
+                'page_number' => $data['page_number'],
+                'book_reference' => $data['book_reference'],
+                'order_weight' => $data['order_weight'] ?? 0,
+                'overview' => $data['overview'] ?? null,
+                'question_ids' => $data['question_ids'] ?? [],
             ]
         );
     }

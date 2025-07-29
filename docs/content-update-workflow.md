@@ -130,6 +130,7 @@ Each content item has a unique string ID:
 - **Questions**: `mnn-01-q001`, `mnn-01-q002`
 - **Tests**: `mnn-lesson-01-test`
 - **Worksheets**: `mnn-01-hiragana-ws`
+- **Exercises**: `mnn-01-ex001`, `mnn-01-ex002`
 
 ### Update Logic
 ```php
@@ -144,6 +145,30 @@ Vocabulary::updateOrCreate(
 - **Keep existing IDs** to update content
 - **Create new IDs** to add content
 - **Remove from JSON** to orphan content (manual cleanup needed)
+
+## 📚 Exercise Content Type
+
+**Exercises** are static content that comes directly from source textbooks, unlike worksheets and tests which may be dynamically generated. They represent specific exercises found on textbook pages.
+
+### Exercise Structure
+```json
+{
+  "id": "mnn-01-ex001",
+  "name": "Exercise A",
+  "lesson_id": "mnn-lesson-01",
+  "page_number": 12,
+  "book_reference": "textbook",     // "textbook" or "workbook"
+  "order_weight": 1,                // Display order on the page
+  "overview": "Practice basic greetings...",
+  "question_ids": ["mnn-01-q001", "mnn-01-q002"]
+}
+```
+
+### Exercise Features
+- **Static content**: Comes directly from textbook, not generated
+- **Page-based**: Tied to specific textbook/workbook pages
+- **Ordered display**: Use `order_weight` for correct page ordering
+- **Question references**: Links to existing questions in the system
 
 ## 🚨 Important Considerations
 
