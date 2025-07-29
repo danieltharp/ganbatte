@@ -12,6 +12,7 @@ use App\Models\Question;
 use App\Models\Test;
 use App\Models\Worksheet;
 use App\Models\Exercise;
+use App\Models\Section;
 
 class LessonContentSeeder extends Seeder
 {
@@ -128,6 +129,19 @@ class LessonContentSeeder extends Seeder
                 foreach ($exercisesData['exercises'] as $exerciseData) {
                     $exercise = $this->createExercise($exerciseData);
                     $this->command->info("  ✓ Exercise: {$exercise->name} (p.{$exercise->page_number})");
+                }
+            }
+        }
+
+        // Import sections
+        $sectionsFile = resource_path("data/sections/lesson-{$paddedNumber}.json");
+        if (File::exists($sectionsFile)) {
+            $sectionsData = json_decode(File::get($sectionsFile), true);
+            if (isset($sectionsData['sections'])) {
+                foreach ($sectionsData['sections'] as $sectionData) {
+                    $section = $this->createSection($sectionData);
+                    $audioInfo = $section->hasAudio() ? " 🔊" : "";
+                    $this->command->info("  ✓ Section: {$section->name} (p.{$section->page_number}){$audioInfo}");
                 }
             }
         }
@@ -274,6 +288,29 @@ class LessonContentSeeder extends Seeder
                 'order_weight' => $data['order_weight'] ?? 0,
                 'overview' => $data['overview'] ?? null,
                 'question_ids' => $data['question_ids'] ?? [],
+            ]
+        );
+    }
+
+    private function createSection($data)
+    {
+        return Section::updateOrCreate(
+            ['id' => $data['id']], // Unique identifier
+            [
+                'name' => $data['name'],
+                'lesson_id' => $data['lesson_id'],
+                'page_number' => $data['page_number'],
+                'page_section' => $data['page_section'] ?? 'full',
+                'section_type' => $data['section_type'],
+                'order_weight' => $data['order_weight'] ?? 0,
+                'purpose' => $data['purpose'] ?? null,
+                'instructions' => $data['instructions'] ?? null,
+                'audio_filename' => $data['audio_filename'] ?? null,
+                'estimated_duration_minutes' => $data['estimated_duration_minutes'] ?? null,
+                'prerequisites' => $data['prerequisites'] ?? [],
+                'related_vocabulary_ids' => $data['related_vocabulary_ids'] ?? [],
+                'related_grammar_ids' => $data['related_grammar_ids'] ?? [],
+                'completion_trackable' => $data['completion_trackable'] ?? true,
             ]
         );
     }

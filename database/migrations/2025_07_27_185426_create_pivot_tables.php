@@ -131,6 +131,32 @@ return new class extends Migration
             $table->foreign('exercise_id')->references('id')->on('exercises')->onDelete('cascade');
             $table->foreign('grammar_point_id')->references('id')->on('grammar_points')->onDelete('cascade');
         });
+
+        // Section-Vocabulary relationship
+        Schema::create('section_vocabulary', function (Blueprint $table) {
+            $table->id();
+            $table->string('section_id');
+            $table->string('vocabulary_id');
+            $table->timestamps();
+
+            $table->unique(['section_id', 'vocabulary_id']);
+
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
+            $table->foreign('vocabulary_id')->references('id')->on('vocabulary')->onDelete('cascade');
+        });
+
+        // Section-Grammar relationship
+        Schema::create('section_grammar', function (Blueprint $table) {
+            $table->id();
+            $table->string('section_id');
+            $table->string('grammar_point_id');
+            $table->timestamps();
+
+            $table->unique(['section_id', 'grammar_point_id']);
+
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
+            $table->foreign('grammar_point_id')->references('id')->on('grammar_points')->onDelete('cascade');
+        });
     }
 
     /**
@@ -138,6 +164,8 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('section_grammar');
+        Schema::dropIfExists('section_vocabulary');
         Schema::dropIfExists('exercise_grammar');
         Schema::dropIfExists('exercise_vocabulary');
         Schema::dropIfExists('exercise_questions');

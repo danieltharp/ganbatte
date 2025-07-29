@@ -1,0 +1,140 @@
+{
+  "sections": [
+    {
+      "id": "mnn-01-sec001",
+      "name": "Opening Dialogue: First Meeting",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 8,
+      "page_section": "top",
+      "section_type": "dialogue",
+      "order_weight": 1,
+      "purpose": "This dialogue shows a typical first meeting between Japanese people. You'll hear natural pronunciation and polite conversation patterns used in formal introductions.",
+      "instructions": "1. Listen to the entire dialogue twice without looking at the book. 2. Open your textbook to page 8 and follow along. 3. Practice reading along with the audio. 4. Try to identify the key vocabulary words you've learned.",
+      "audio_filename": "lesson-01-dialogue-01.mp3",
+      "estimated_duration_minutes": 5,
+      "prerequisites": [],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002", 
+        "mnn-01-003",
+        "mnn-01-004"
+      ],
+      "related_grammar_ids": [
+        "mnn-01-grammar-001"
+      ],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec002",
+      "name": "Vocabulary Practice",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 9,
+      "page_section": "full",
+      "section_type": "vocabulary_intro",
+      "order_weight": 1,
+      "purpose": "Practice the pronunciation of key vocabulary for introductions and occupations. Focus on correct accent patterns and clear pronunciation.",
+      "instructions": "Listen to each word carefully and repeat it 3 times. Pay special attention to long vowels and the pronunciation of 'r' sounds. Don't worry about speed - focus on accuracy.",
+      "audio_filename": "lesson-01-vocabulary.mp3",
+      "estimated_duration_minutes": 8,
+      "prerequisites": ["mnn-01-sec001"],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002",
+        "mnn-01-003",
+        "mnn-01-008",
+        "mnn-01-009",
+        "mnn-01-010"
+      ],
+      "related_grammar_ids": [],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec003",
+      "name": "Grammar Point: です (desu)",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 10,
+      "page_section": "middle",
+      "section_type": "grammar_intro",
+      "order_weight": 1,
+      "purpose": "Understanding how です works as the polite copula 'to be' and its role in formal Japanese sentences. This is fundamental to polite conversation.",
+      "instructions": "Read the explanation carefully. The です pattern is used constantly in polite Japanese. Practice saying the example sentences with proper intonation.",
+      "audio_filename": "lesson-01-grammar-desu.mp3",
+      "estimated_duration_minutes": 6,
+      "prerequisites": ["mnn-01-sec002"],
+      "related_vocabulary_ids": [
+        "mnn-01-008",
+        "mnn-01-009",
+        "mnn-01-010"
+      ],
+      "related_grammar_ids": [
+        "mnn-01-grammar-001"
+      ],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec004",
+      "name": "Cultural Note: Business Cards",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 11,
+      "page_section": "bottom",
+      "section_type": "cultural_note",
+      "order_weight": 1,
+      "purpose": "Learn about the importance of business cards (名刺 - meishi) in Japanese business culture and how they relate to the language of introductions.",
+      "instructions": "Consider how the formality of language in the dialogue connects to Japanese business customs. This cultural context helps explain why certain phrases are used.",
+      "audio_filename": null,
+      "estimated_duration_minutes": 3,
+      "prerequisites": ["mnn-01-sec001"],
+      "related_vocabulary_ids": [
+        "mnn-01-010",
+        "mnn-01-011"
+      ],
+      "related_grammar_ids": [],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec005",
+      "name": "Pronunciation Focus: Long Vowels",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 12,
+      "page_section": "top",
+      "section_type": "pronunciation",
+      "order_weight": 1,
+      "purpose": "Master the pronunciation of long vowels in Japanese, which can change the meaning of words completely. This is essential for clear communication.",
+      "instructions": "Listen to each pair of words (short vs. long vowel). The difference is crucial! Practice until you can clearly distinguish and produce both sounds.",
+      "audio_filename": "lesson-01-pronunciation-vowels.mp3",
+      "estimated_duration_minutes": 7,
+      "prerequisites": ["mnn-01-sec002"],
+      "related_vocabulary_ids": [
+        "mnn-01-008",
+        "mnn-01-014"
+      ],
+      "related_grammar_ids": [],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec006",
+      "name": "Review: Putting It Together",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 15,
+      "page_section": "full",
+      "section_type": "review",
+      "order_weight": 1,
+      "purpose": "Combine everything you've learned in this lesson: vocabulary, grammar, and pronunciation. Practice introducing yourself naturally.",
+      "instructions": "Use the vocabulary and grammar patterns to introduce yourself. Record yourself and compare to the model dialogue. Focus on natural rhythm and polite language.",
+      "audio_filename": "lesson-01-review.mp3",
+      "estimated_duration_minutes": 10,
+      "prerequisites": ["mnn-01-sec003", "mnn-01-sec005"],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002",
+        "mnn-01-008",
+        "mnn-01-009",
+        "mnn-01-010"
+      ],
+      "related_grammar_ids": [
+        "mnn-01-grammar-001"
+      ],
+      "completion_trackable": true
+    }
+  ]
+} 

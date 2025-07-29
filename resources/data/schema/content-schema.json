@@ -282,6 +282,46 @@
         },
         "required": ["id", "name", "lesson_id", "page_number", "book_reference", "question_ids"]
       }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "page_number": {"type": "integer", "minimum": 1},
+          "page_section": {
+            "type": "string",
+            "enum": ["full", "top", "middle", "bottom", "left", "right", "center"],
+            "default": "full"
+          },
+          "section_type": {
+            "type": "string",
+            "enum": ["dialogue", "vocabulary_intro", "grammar_intro", "listening", "pronunciation", "cultural_note", "review", "practice"]
+          },
+          "order_weight": {"type": "integer", "minimum": 0, "default": 0},
+          "purpose": {"type": "string"},
+          "instructions": {"type": "string"},
+          "audio_filename": {"type": "string"},
+          "estimated_duration_minutes": {"type": "integer", "minimum": 1},
+          "prerequisites": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "related_vocabulary_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "related_grammar_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "completion_trackable": {"type": "boolean", "default": true}
+        },
+        "required": ["id", "name", "lesson_id", "page_number", "section_type"]
+      }
     }
   },
   "required": ["lesson"]
