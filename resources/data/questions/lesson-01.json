@@ -628,6 +628,230 @@
         "mnn-01-019"
       ],
       "tags": ["vocabulary", "age", "grammar"]
+    },
+    {
+      "id": "mnn-01-q029",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 1. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "あなたはサントスさんですか。",
+        "あなたはサントスさんですか？"
+      ]
+    },
+    {
+      "id": "mnn-01-q030",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 2. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "お名前は？",
+        "お名前は。",
+        "お名前は"
+      ]
+    },
+    {
+      "id": "mnn-01-q031",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 3. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "何歳ですか？",
+        "何歳ですか。"
+      ]
+    },
+    {
+      "id": "mnn-01-q032",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 4. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "アメリカ人ですか。",
+        "アメリカ人ですか？"
+      ]
+    },
+    {
+      "id": "mnn-01-q033",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 5. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "会社員ですか。",
+        "会社員ですか？"
+      ]
+    },
+    {
+      "id": "mnn-01-q034",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_003.mp3",
+        "duration_seconds": 30
+      },
+      "question": {
+        "english": "Listen to the audio and choose the correct picture that matches the context of the audio. 6-7 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "A",
+          "explanation": "Correct. こちらは is used to introduce somebody near the speaker."
+        },
+        {
+          "english": "B",
+          "explanation": "Incorrect. こちらは is used to introduce somebody near the speaker to another person or people, but there are only two people in the picture."
+        },
+        {
+          "english": "C",
+          "explanation": "Incorrect. こちらは is used to introduce somebody near the speaker, and in this picture the person being introduced is far away, where you might use あの人 or あの方."
+        }
+      ],
+      "correct_answer": 0
+    },
+    {
+      "id": "mnn-01-q035",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_003.mp3",
+        "duration_seconds": 30
+      },
+      "question": {
+        "english": "Listen to the audio and choose the correct picture that matches the context of the audio. 6-7 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "A",
+          "explanation": "Incorrect. Wan-san is 29, not 21."
+        },
+        {
+          "english": "B",
+          "explanation": "Incorrect. His name is Wan-san, not An-san, and he is 29, not 28."
+        },
+        {
+          "english": "C",
+          "explanation": "Correct. Wan-san is 29 years old."
+        }
+      ],
+      "correct_answer": 2
+    },
+    {
+      "id": "mnn-01-q036",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_004.mp3",
+        "duration_seconds": 77
+      },
+      "question": {
+        "english": "Listen to the audio carefully. There will first be a statement or question, then a beep, then a statement that's true or false based on the context of the first statement or question. Select ○ if the second statement is true, or ✕ if it's false. 8-10 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "○",
+          "explanation": "Correct. Miller-san is American."
+        },
+        {
+          "english": "✕",
+          "explanation": "Incorrect. Miller-san is American."
+        }
+      ],
+      "correct_answer": 0
+    },
+    {
+      "id": "mnn-01-q037",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_004.mp3",
+        "duration_seconds": 77
+      },
+      "question": {
+        "english": "Listen to the audio carefully. There will first be a statement or question, then a beep, then a statement that's true or false based on the context of the first statement or question. Select ○ if the second statement is true, or ✕ if it's false. 8-10 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "○",
+          "explanation": "Incorrect. Karina-san is a student, not a teacher."
+        },
+        {
+          "english": "✕",
+          "explanation": "Correct. Karina-san is a student, not a teacher."
+        }
+      ],
+      "correct_answer": 1
+    },
+    {
+      "id": "mnn-01-q038",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_004.mp3",
+        "duration_seconds": 77
+      },
+      "question": {
+        "english": "Listen to the audio carefully. There will first be a statement or question, then a beep, then a statement that's true or false based on the context of the first statement or question. Select ○ if the second statement is true, or ✕ if it's false. 8-10 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "○",
+          "explanation": "Correct. Wan-san is not a researcher."
+        },
+        {
+          "english": "✕",
+          "explanation": "Incorrect. Wan-san is not a researcher."
+        }
+      ],
+      "correct_answer": 0
     }
   ]
 } 

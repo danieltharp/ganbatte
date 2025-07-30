@@ -112,22 +112,26 @@
     },
     {
       "id": "mnn-01-sec005",
-      "name": "Pronunciation Focus: Long Vowels",
+      "name": "練習C",
       "lesson_id": "mnn-lesson-01",
-      "page_number": 12,
-      "page_section": "top",
-      "section_type": "pronunciation",
+      "page_number": 11,
+      "page_section": "full",
+      "section_type": "dialogue",
       "order_weight": 1,
-      "purpose": "Master the pronunciation of long vowels in Japanese, which can change the meaning of words completely. This is essential for clear communication.",
-      "instructions": "Listen to each pair of words (short vs. long vowel). The difference is crucial! Practice until you can clearly distinguish and produce both sounds.",
-      "audio_filename": "lesson-01-pronunciation-vowels.mp3",
+      "purpose": "This page is intended to demonstrate introductions, as well as correcting an introduction. It is meant to be done with two or three people, but you can also do it by yourself.",
+      "instructions": "Either alone or with partners, read the sentences aloud. Replace underlined words with your own information to create a new introduction. If you have a partner, switch roles after each sentence. If you don't have a partner, read the sentences to yourself. Note that words in square brackets are optional. Feel free to repeat the sentences as many times as you need to understand them and pronounce them correctly.",
       "estimated_duration_minutes": 7,
       "prerequisites": ["mnn-01-sec002"],
       "related_vocabulary_ids": [
-        "mnn-01-008",
-        "mnn-01-014"
+        "mnn-01-004",
+        "mnn-01-022",
+        "mnn-01-023",
+        "mnn-01-024",
+        "mnn-01-025",
+        "mnn-01-026",
+        "mnn-01-027"
       ],
-      "related_grammar_ids": [],
+      "related_grammar_ids": ["mnn-01-grammar-001"],
       "completion_trackable": true
     },
     {
