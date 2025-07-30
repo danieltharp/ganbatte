@@ -2,16 +2,20 @@
   "exercises": [
     {
       "id": "mnn-01-ex001",
-      "name": "Exercise A",
+      "name": "練習B",
       "lesson_id": "mnn-lesson-01",
-      "page_number": 12,
+      "page_number": 9,
       "book_reference": "textbook",
-      "order_weight": 1,
-      "overview": "Practice basic greetings and introductions. Complete the conversation using the vocabulary learned in this lesson.",
+      "order_weight": 10,
+      "overview": "Use the table at the top of page 9 to answer the questions. Answer in complete sentences as shown in the example, and end with a Japanese period (。).",
       "question_ids": [
         "mnn-01-q001",
         "mnn-01-q002",
-        "mnn-01-q003"
+        "mnn-01-q003",
+        "mnn-01-q004",
+        "mnn-01-q005",
+        "mnn-01-q006",
+        "mnn-01-q007"
       ]
     },
     {

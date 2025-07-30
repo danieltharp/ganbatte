@@ -3,129 +3,363 @@
     {
       "id": "mnn-01-q001",
       "lesson_id": "mnn-lesson-01",
-      "type": "multiple_choice",
+      "type": "fill_blank",
       "difficulty": "beginner",
-      "points": 5,
-      "time_limit_seconds": 30,
+      "points": 1,
       "question": {
-        "english": "How do you say 'student' in Japanese?"
+        "english": "What nationality is Yamada (山田)-san? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
       },
-      "options": [
-        {
-          "japanese": "がくせい",
-          "english": "gakusei",
-          "explanation": "Correct! がくせい (gakusei) means 'student'."
-        },
-        {
-          "japanese": "せんせい",
-          "english": "sensei",
-          "explanation": "Incorrect. せんせい (sensei) means 'teacher', not 'student'."
-        },
-        {
-          "japanese": "かいしゃいん",
-          "english": "kaishain",
-          "explanation": "Incorrect. かいしゃいん (kaishain) means 'company employee'."
-        },
-        {
-          "japanese": "いしゃ",
-          "english": "isha",
-          "explanation": "Incorrect. いしゃ (isha) means 'doctor'."
-        }
+      "correct_answer": [
+        "山田さんは日本人です。"
       ],
-      "correct_answer": 0,
       "explanation": {
-        "english": "がくせい (gakusei) means 'student'. せんせい (sensei) means 'teacher'."
+        "english": "The table shows Yamada-san as a Japanese person."
       },
-      "vocabulary_ids": ["mnn-01-001", "mnn-01-002"],
-      "tags": ["vocabulary", "occupation"]
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-036"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
     },
     {
       "id": "mnn-01-q002",
-      "lesson_id": "mnn-lesson-01", 
-      "type": "translation_e_to_j",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
       "difficulty": "beginner",
-      "points": 10,
-      "time_limit_seconds": 45,
+      "points": 1,
       "question": {
-        "english": "Translate to Japanese: 'I am a student.'"
+        "english": "What nationality is Watt (ワット)-san? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
       },
       "correct_answer": [
-        "私は学生です。",
-        "わたしはがくせいです。",
-        "Watashi wa gakusei desu."
+        "ワットさんはイギリス人です。"
       ],
       "explanation": {
-        "english": "私/わたし (watashi) = I, は (wa) = topic particle, 学生/がくせい (gakusei) = student, です (desu) = polite copula 'to be'"
+        "english": "The table shows Watt-san as a British person."
       },
-      "hints": [
-        "Remember to use the topic particle は (wa)",
-        "です (desu) makes the sentence polite"
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-029"
       ],
-      "vocabulary_ids": ["mnn-01-001", "mnn-01-004"],
-      "grammar_ids": ["mnn-01-grammar-001"],
-      "tags": ["translation", "grammar", "self-introduction"]
+      "tags": ["vocabulary", "nationality", "grammar"]
     },
     {
       "id": "mnn-01-q003",
       "lesson_id": "mnn-lesson-01",
       "type": "fill_blank",
-      "difficulty": "beginner", 
-      "points": 7,
-      "time_limit_seconds": 30,
+      "difficulty": "beginner",
+      "points": 1,
       "question": {
-        "japanese": "私は学生______。",
-        "english": "I am a student ______."
+        "english": "What nationality is Thawaphon (タワポン)-san? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
       },
       "correct_answer": [
-        "です",
-        "desu"
+        "タワポンさんはタイ人です。"
       ],
       "explanation": {
-        "english": "です (desu) is the polite form of the copula 'to be' used in formal situations."
+        "english": "The table shows Thawaphon-san as a Thai person."
       },
-      "vocabulary_ids": ["mnn-01-004"],
-      "grammar_ids": ["mnn-01-grammar-001"],
-      "tags": ["grammar", "copula", "fill-blank"]
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-033"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
     },
     {
       "id": "mnn-01-q004",
       "lesson_id": "mnn-lesson-01",
-      "type": "listening",
+      "type": "fill_blank",
       "difficulty": "beginner",
-      "points": 8,
-      "time_limit_seconds": 60,
+      "points": 1,
       "question": {
-        "english": "Listen and choose the correct meaning:"
+        "english": "What nationality is Schmidt (シュミット)-san? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
       },
-      "audio": {
-        "filename": "hajimemashite_question.mp3",
-        "duration": 2.5,
-        "speaker": "female"
-      },
-      "options": [
-        {
-          "english": "Nice to meet you",
-          "explanation": "Correct! はじめまして (hajimemashite) is used when meeting someone for the first time."
-        },
-        {
-          "english": "Thank you",
-          "explanation": "Incorrect. 'Thank you' is ありがとうございます (arigatou gozaimasu)."
-        },
-        {
-          "english": "Excuse me",
-          "explanation": "Incorrect. 'Excuse me' is すみません (sumimasen) or しつれいします (shitsurei shimasu)."
-        },
-        {
-          "english": "Good morning",
-          "explanation": "Incorrect. 'Good morning' is おはようございます (ohayou gozaimasu)."
-        }
+      "correct_answer": [
+        "シュミットさんはドイツ人です。"
       ],
-      "correct_answer": 0,
       "explanation": {
-        "english": "はじめまして (hajimemashite) means 'Nice to meet you' and is used when meeting someone for the first time."
+        "english": "The table shows Schmidt-san as a German person."
       },
-      "vocabulary_ids": ["mnn-01-003"],
-      "tags": ["listening", "greeting", "politeness"]
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-035"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q005",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What occupation does Yamada (山田)-san have? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "山田さんは銀行員です。"
+      ],
+      "explanation": {
+        "english": "The table shows Yamada-san as a bank employee."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-012"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q006",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What occupation does Watt (ワット)-san have? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "ワットさんは先生です。"
+      ],
+      "explanation": {
+        "english": "The table shows Watt-san as a teacher."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-007"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q007",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What occupation does Thawaphon (タワポン)-san have? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "タワポンさんは学生です。"
+      ],
+      "explanation": {
+        "english": "The table shows Thawaphon-san as a student."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-009"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q008",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What occupation does Schmidt (シュミット)-san have? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "シュミットさんは会社員です。"
+      ],
+      "explanation": {
+        "english": "The table shows Schmidt-san as a company employee."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-010"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q009",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Is Yamada (山田)-san a student? Answer in a complete Japanese sentence in polite negative form, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "山田さんは学生ではありません。",
+        "山田さんは学生じゃありません。",
+        "いいえ、山田さんは学生ではありません。",
+        "いいえ、山田さんは学生じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Yamada-san as a bank employee."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-012"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q010",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Is Watt (ワット)-san German? Answer in a complete Japanese sentence in polite negative form, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "ワットさんはドイツ人ではありません。",
+        "ワットさんはドイツ人じゃありません。",
+        "いいえ、ワットさんはドイツ人ではありません。",
+        "いいえ、ワットさんはドイツ人じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Watt-san as a British person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-035"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q011",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Is Thawaphon (タワポン)-san a teacher? Answer in a complete Japanese sentence in polite negative form, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "タワポンさんは先生ではありません。",
+        "タワポンさんは先生じゃありません。",
+        "いいえ、タワポンさんは先生ではありません。",
+        "いいえ、タワポンさんは先生じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Thawaphon-san as a student."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-007"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q012",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Is Schmidt (シュミット)-san American? Answer in a complete Japanese sentence in polite negative form, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "シュミットさんはアメリカ人ではありません。",
+        "シュミットさんはアメリカ人じゃありません。",
+        "いいえ、シュミットさんはアメリカ人ではありません。",
+        "いいえ、シュミットさんはアメリカ人じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Schmidt-san as a German person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-028"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q013",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "japanese": "山田さんは銀行員ですか。",
+        "english": "Is Yamada (山田)-san a bank employee? Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "はい、銀行員です。"
+      ],
+      "explanation": {
+        "english": "The table shows Yamada-san as a bank employee."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-012"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q014",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "japanese": "ワットさんは会社員ですか。",
+        "english": "Is Watt (ワット)-san a company employee? Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "いいえ、会社員ではありません。",
+        "いいえ、会社員じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Watt-san as a teacher."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-010"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q015",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "japanese": "タワポンさんは先生ですか。",
+        "english": "Is Thawaphon (タワポン)-san a teacher? Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "いいえ、先生ではありません。",
+        "いいえ、先生じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Thawaphon-san as a student."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-007"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q016",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "japanese": "シュミットさんはドイツ人ですか。",
+        "english": "Is Schmidt (シュミット)-san German? Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "はい、ドイツ人です。"
+      ],
+      "explanation": {
+        "english": "The table shows Schmidt-san as a German person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-035"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
     }
   ]
 } 
