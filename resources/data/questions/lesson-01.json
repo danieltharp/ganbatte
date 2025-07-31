@@ -852,6 +852,180 @@
         }
       ],
       "correct_answer": 0
+    },
+    {
+      "id": "mnn-01-q039",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.1. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "ミラーさん",
+        "ミラー"
+      ],
+      "explanation": {
+        "english": "The second part of the sentence confirms it is Miller-san."
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q040",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.2. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "アメリカ人"
+      ],
+      "explanation": {
+        "english": "The second part of the sentence confirms Miller-san is American."
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q041",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.3. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "アメリカ人"
+      ],
+      "explanation": {
+        "english": "The second part of the sentence states that Watt-san is English, not American."
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q042",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.4. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "誰",
+        "何方"
+      ],
+      "explanation": {
+        "english": "The question being answered is 'Who is that person?'"
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q043",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.5. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "何歳",
+        "お幾つ"
+      ],
+      "explanation": {
+        "english": "The question being answered is 'How old is Teresa-chan?'"
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q044",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate particle for 5.1. Enter only the particle, no other characters."
+      },
+      "correct_answer": [
+        "は"
+      ],
+      "explanation": {
+        "english": "We use は particle to establish Wan-san as the topic of the sentence."
+      },
+      "tags": ["particles", "grammar"]
+    },
+    {
+      "id": "mnn-01-q045",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate particles for 5.2. Separate the particles with a space."
+      },
+      "correct_answer": [
+        "は　か",
+        "は か"
+      ],
+      "explanation": {
+        "english": "The XはYですか is a common format for questions in Japanese."
+      },
+      "tags": ["particles", "grammar"]
+    },
+    {
+      "id": "mnn-01-q046",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate particle for 5.3. Enter only the particle, no other characters."
+      },
+      "correct_answer": [
+        "の"
+      ],
+      "explanation": {
+        "english": "We use the の particle to establish Miller-san as an employee of IMC Corporation."
+      },
+      "tags": ["particles", "grammar"]
+    },
+    {
+      "id": "mnn-01-q047",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate particle for 5.4. Enter only the particle, no other characters."
+      },
+      "correct_answer": [
+        "も"
+      ],
+      "explanation": {
+        "english": "We use the も particle to establish that Santos-san is also an employee of IMC Corporation."
+      },
+      "tags": ["particles", "grammar"]
+    },
+    {
+      "id": "mnn-01-q048",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 0,
+      "question": {
+        "english": "This is an unscored free response. Fill in the blanks with your name in katakana and the country you are from, separated by either a space or a Japanese dot (・), which is made by hitting the forward slash key on your keyboard."
+      },
+      "correct_answer": [
+        
+      ],
+      "explanation": {
+        "english": "Your answer should look something like this: ダニエル・アメリカ"
+      },
+      "tags": ["free_response"]
     }
   ]
 } 
