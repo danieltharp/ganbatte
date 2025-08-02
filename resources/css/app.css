@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Make sure furigana hiding takes precedence */
+.furigana.no-furigana rt,
+ruby.furigana.no-furigana rt {
+    display: none !important;
+}
+
+/* Japanese Text Styling */
 .japanese-text {
     color: white;
 }

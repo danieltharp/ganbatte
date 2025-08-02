@@ -14,27 +14,27 @@
 
 <script>
 function toggleFurigana() {
-    const furiganaElements = document.querySelectorAll('.furigana-text');
+    // Use the same logic as the original furigana.js script
+    var rubies = document.querySelectorAll(".furigana");
+    for(let ruby of rubies) {
+        ruby.classList.toggle("no-furigana");
+    }
+    
+    // Update button appearance - check if ANY furigana elements have no-furigana class
     const toggleButton = document.getElementById('furigana-toggle');
+    const hiddenFurigana = document.querySelectorAll(".furigana.no-furigana");
+    const allFurigana = document.querySelectorAll(".furigana");
     
-    furiganaElements.forEach(element => {
-        const isEnabled = element.getAttribute('data-furigana-enabled') === 'true';
-        
-        if (isEnabled) {
-            // Hide furigana by hiding rt elements
-            element.querySelectorAll('rt').forEach(rt => rt.style.display = 'none');
-            element.setAttribute('data-furigana-enabled', 'false');
-            toggleButton.classList.add('opacity-50');
-        } else {
-            // Show furigana
-            element.querySelectorAll('rt').forEach(rt => rt.style.display = '');
-            element.setAttribute('data-furigana-enabled', 'true');
-            toggleButton.classList.remove('opacity-50');
-        }
-    });
+    // If all furigana elements have no-furigana class, then furigana is hidden
+    const furiganaHidden = hiddenFurigana.length === allFurigana.length && allFurigana.length > 0;
     
-    // Store preference in localStorage
-    localStorage.setItem('furigana-enabled', !furiganaElements[0] || furiganaElements[0].getAttribute('data-furigana-enabled') === 'true');
+    if (furiganaHidden) {
+        toggleButton.classList.add('opacity-50');
+        localStorage.setItem('furigana-enabled', 'false');
+    } else {
+        toggleButton.classList.remove('opacity-50');
+        localStorage.setItem('furigana-enabled', 'true');
+    }
 }
 
 // Initialize furigana state from localStorage on page load
@@ -43,12 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('furigana-toggle');
     
     if (furiganaEnabled === 'false') {
-        // Hide furigana on load
-        document.querySelectorAll('.furigana-text').forEach(element => {
-            element.querySelectorAll('rt').forEach(rt => rt.style.display = 'none');
-            element.setAttribute('data-furigana-enabled', 'false');
+        // Hide furigana on load by adding no-furigana class
+        document.querySelectorAll('.furigana').forEach(element => {
+            element.classList.add('no-furigana');
         });
-        toggleButton.classList.add('opacity-50');
+        if (toggleButton) {
+            toggleButton.classList.add('opacity-50');
+        }
     }
 });
 </script>
