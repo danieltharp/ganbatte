@@ -17,13 +17,24 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Resource routes for our main models
-Route::resource('lessons', LessonController::class);
-Route::resource('vocabulary', VocabularyController::class);
-Route::resource('grammar', GrammarController::class);
-Route::resource('questions', QuestionController::class);
-Route::resource('tests', TestController::class);
-Route::resource('worksheets', WorksheetController::class);
+// Read-only routes for content display
+Route::get('/lessons', [LessonController::class, 'index'])->name('lessons.index');
+Route::get('/lessons/{lesson}', [LessonController::class, 'show'])->name('lessons.show');
+
+Route::get('/vocabulary', [VocabularyController::class, 'index'])->name('vocabulary.index');
+Route::get('/vocabulary/{vocabulary}', [VocabularyController::class, 'show'])->name('vocabulary.show');
+
+Route::get('/grammar', [GrammarController::class, 'index'])->name('grammar.index');
+Route::get('/grammar/{grammar}', [GrammarController::class, 'show'])->name('grammar.show');
+
+Route::get('/questions', [QuestionController::class, 'index'])->name('questions.index');
+Route::get('/questions/{question}', [QuestionController::class, 'show'])->name('questions.show');
+
+Route::get('/tests', [TestController::class, 'index'])->name('tests.index');
+Route::get('/tests/{test}', [TestController::class, 'show'])->name('tests.show');
+
+Route::get('/worksheets', [WorksheetController::class, 'index'])->name('worksheets.index');
+Route::get('/worksheets/{worksheet}', [WorksheetController::class, 'show'])->name('worksheets.show');
 
 // Custom routes
 Route::get('/vocabulary/kanji-worksheet', [VocabularyController::class, 'kanjiWorksheet'])->name('vocabulary.kanji-worksheet');

@@ -35,12 +35,6 @@
                 <p class="text-gray-600 dark:text-gray-400 mt-2">{{ $lesson->description }}</p>
             @endif
         </div>
-        
-        <div class="flex space-x-2">
-            <a href="{{ route('lessons.edit', $lesson) }}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
-                Edit Lesson
-            </a>
-        </div>
     </div>
 
     @if($lesson->estimated_time_minutes)

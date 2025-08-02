@@ -24,7 +24,7 @@
                         <!-- Logo -->
                         <div class="shrink-0 flex items-center">
                             <a href="{{ route('dashboard') }}" class="text-xl font-bold text-gray-900 dark:text-white">
-                                頑張って <span class="text-sm text-gray-600 dark:text-gray-400">Ganbatte</span>
+                                がんばって <span class="text-sm text-gray-600 dark:text-gray-400">Ganbatte</span>
                             </a>
                         </div>
 

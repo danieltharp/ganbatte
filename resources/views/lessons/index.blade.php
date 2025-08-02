@@ -5,9 +5,6 @@
 @section('content')
 <div class="flex items-center justify-between mb-6">
     <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">Lessons</h1>
-    <a href="{{ route('lessons.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Add New Lesson
-    </a>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -51,12 +48,9 @@
                     <span>📚 {{ $lesson->vocabulary->count() }} words</span>
                 </div>
 
-                <div class="flex space-x-2">
-                    <a href="{{ route('lessons.show', $lesson) }}" class="flex-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center text-sm">
-                        Study
-                    </a>
-                    <a href="{{ route('lessons.edit', $lesson) }}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-3 rounded text-sm">
-                        Edit
+                <div class="flex">
+                    <a href="{{ route('lessons.show', $lesson) }}" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center text-sm">
+                        Study Lesson
                     </a>
                 </div>
             </div>
@@ -65,11 +59,8 @@
         <div class="col-span-full">
             <div class="text-center py-12">
                 <div class="text-6xl mb-4">📚</div>
-                <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">No lessons yet</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Get started by creating your first lesson.</p>
-                <a href="{{ route('lessons.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Create First Lesson
-                </a>
+                <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">No lessons available</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">Lessons will be added through the content management system.</p>
             </div>
         </div>
     @endforelse
