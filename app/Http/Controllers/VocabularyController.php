@@ -35,7 +35,7 @@ class VocabularyController extends Controller
             $query->forKanjiWorksheet();
         }
         
-        $vocabulary = $query->orderBy('lesson_id')->orderBy('frequency_rank')->get();
+        $vocabulary = $query->orderBy('lesson_id')->orderBy('id')->get();
         $lessons = Lesson::orderBy('chapter')->get();
         
         return view('vocabulary.index', compact('vocabulary', 'lessons'));
