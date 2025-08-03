@@ -238,7 +238,7 @@
       "lesson_id": "mnn-lesson-01",
       "word": {
         "japanese": "何歳",
-        "furigana": "{何|なん}{歳|さい}",
+        "furigana": "{何歳|なん|さい}",
         "english": "how old"
       },
       "part_of_speech": "expression",
@@ -275,6 +275,7 @@
       "lesson_id": "mnn-lesson-01",
       "word": {
         "japanese": "初めまして",
+        "furigana": "{初|はじ}めまして",
         "english": "How do you do?"
       },
       "part_of_speech": "expression",
