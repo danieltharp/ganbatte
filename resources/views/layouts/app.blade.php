@@ -193,5 +193,7 @@
     <div class="fixed bottom-4 right-4">
         <x-furigana-toggle />
     </div>
+
+    <x-footer />
 </body>
 </html>

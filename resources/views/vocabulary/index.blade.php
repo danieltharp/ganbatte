@@ -13,11 +13,11 @@
         <form method="GET" action="{{ route('vocabulary.index') }}" class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div>
                 <label for="lesson_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Lesson</label>
-                <select name="lesson_id" id="lesson_id" class="block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
+                <select name="lesson_id" id="lesson_id" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
                     <option value="">All Lessons</option>
                     @foreach($lessons as $lesson)
                         <option value="{{ $lesson->id }}" {{ request('lesson_id') == $lesson->id ? 'selected' : '' }}>
-                            Chapter {{ $lesson->chapter }}: {{ $lesson->title_english }}
+                            {{ $lesson->title_english }}
                         </option>
                     @endforeach
                 </select>
@@ -25,7 +25,7 @@
             
             <div>
                 <label for="part_of_speech" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Part of Speech</label>
-                <select name="part_of_speech" id="part_of_speech" class="block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
+                <select name="part_of_speech" id="part_of_speech" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
                     <option value="">All Types</option>
                     <option value="noun" {{ request('part_of_speech') == 'noun' ? 'selected' : '' }}>Noun</option>
                     <option value="verb" {{ request('part_of_speech') == 'verb' ? 'selected' : '' }}>Verb</option>
@@ -33,12 +33,14 @@
                     <option value="adverb" {{ request('part_of_speech') == 'adverb' ? 'selected' : '' }}>Adverb</option>
                     <option value="particle" {{ request('part_of_speech') == 'particle' ? 'selected' : '' }}>Particle</option>
                     <option value="expression" {{ request('part_of_speech') == 'expression' ? 'selected' : '' }}>Expression</option>
+                    <option value="affix" {{ request('part_of_speech') == 'affix' ? 'selected' : '' }}>Prefix/Suffix</option>
+                    <option value="counter" {{ request('part_of_speech') == 'counter' ? 'selected' : '' }}>Counter</option>
                 </select>
             </div>
             
             <div>
                 <label for="jlpt_level" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">JLPT Level</label>
-                <select name="jlpt_level" id="jlpt_level" class="block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
+                <select name="jlpt_level" id="jlpt_level" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
                     <option value="">All Levels</option>
                     <option value="N5" {{ request('jlpt_level') == 'N5' ? 'selected' : '' }}>N5</option>
                     <option value="N4" {{ request('jlpt_level') == 'N4' ? 'selected' : '' }}>N4</option>
@@ -78,7 +80,7 @@
             <div class="p-6">
                 <div class="flex items-start justify-between mb-3">
                     <div class="flex-1">
-                        <div class="japanese-text text-xl font-bold mb-2">
+                        <div class="japanese-text text-gray-900 dark:text-gray-100 text-xl font-bold mb-2">
                             @if($vocab->word_furigana)
                                 <x-furigana-text>{{ $vocab->furigana_word }}</x-furigana-text>
                             @else
@@ -115,7 +117,7 @@
                 @endif
                 
                 <div class="mt-3 text-xs text-gray-500 dark:text-gray-400">
-                    Lesson {{ $vocab->lesson->chapter }}: {{ $vocab->lesson->title_english }}
+                    Lesson {{ $vocab->lesson->chapter }}
                 </div>
             </div>
         </div>

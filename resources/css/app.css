@@ -7,8 +7,3 @@
 ruby.furigana.no-furigana rt {
     display: none !important;
 }
-
-/* Japanese Text Styling */
-.japanese-text {
-    color: white;
-}

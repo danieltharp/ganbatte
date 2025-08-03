@@ -16,7 +16,7 @@
                 <div class="flex justify-between items-center h-16">
                     <div class="flex items-center">
                         <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
-                            <span class="text-3xl">頑張って</span>
+                            <span class="text-3xl">がんばって</span>
                             <span class="text-blue-600 dark:text-blue-400 ml-2">Ganbatte</span>
                         </h1>
                     </div>
@@ -49,10 +49,10 @@
                 <div class="mb-8">
                     <h2 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
                         Learn Japanese with
-                        <span class="text-blue-600 dark:text-blue-400">頑張って</span>
+                        <span class="text-blue-600 dark:text-blue-400">がんばって</span>
                     </h2>
                     <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                        Your comprehensive companion for studying Minna No Nihongo textbook series
+                        Your comprehensive companion for studying the Minna No Nihongo textbook series.
                     </p>
                 </div>
 
@@ -119,14 +119,7 @@
             </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                <div class="text-center text-gray-600 dark:text-gray-400">
-                    <p>&copy; {{ date('Y') }} Ganbatte. A companion site for Minna No Nihongo learners.</p>
-                </div>
-            </div>
-        </footer>
+        <x-footer />
     </div>
 </body>
 </html>

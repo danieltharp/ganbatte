@@ -16,17 +16,17 @@ class VocabularyController extends Controller
         $query = Vocabulary::with('lesson');
         
         // Filter by lesson if provided
-        if ($request->has('lesson_id')) {
+        if ($request->has('lesson_id') && $request->lesson_id != '') {
             $query->where('lesson_id', $request->lesson_id);
         }
         
         // Filter by part of speech if provided
-        if ($request->has('part_of_speech')) {
+        if ($request->has('part_of_speech') && $request->part_of_speech != '') {
             $query->where('part_of_speech', $request->part_of_speech);
         }
         
         // Filter by JLPT level if provided
-        if ($request->has('jlpt_level')) {
+        if ($request->has('jlpt_level') && $request->jlpt_level != '') {
             $query->where('jlpt_level', $request->jlpt_level);
         }
         
