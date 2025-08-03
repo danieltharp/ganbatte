@@ -48,6 +48,88 @@
 <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
     <!-- Main Content -->
     <div class="lg:col-span-3 space-y-6">
+        <!-- Section Pages -->
+        @if($lesson->pages->count() > 0)
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Section Pages ({{ $lesson->pages->count() }})</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        @foreach($lesson->pages as $page)
+                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                                            {{ $page->display_name }}
+                                        </h3>
+                                        @if($page->title && $page->title !== $page->display_name)
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">{{ $page->title }}</p>
+                                        @endif
+                                        @if($page->description)
+                                            <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">{{ $page->description }}</p>
+                                        @endif
+                                    </div>
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium ml-3
+                                        @if($page->isFromTextbook()) bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200
+                                        @else bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 @endif">
+                                        {{ ucfirst($page->book_reference) }}
+                                    </span>
+                                </div>
+                                
+                                @if($page->content && $page->content->count() > 0)
+                                    <div class="space-y-2">
+                                        @foreach($page->content->take(3) as $contentItem)
+                                            @if($contentItem->content)
+                                                <div class="text-sm">
+                                                    @if($contentItem->type === 'section')
+                                                        <span class="text-blue-600 dark:text-blue-400">📄</span>
+                                                        <a href="{{ route('sections.show', $contentItem->content->id) }}" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200">
+                                                            {{ $contentItem->content->name }}
+                                                        </a>
+                                                    @elseif($contentItem->type === 'exercise')
+                                                        <span class="text-green-600 dark:text-green-400">✏️</span>
+                                                        <a href="{{ route('exercises.show', $contentItem->content->id) }}" class="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-200">
+                                                            {{ $contentItem->content->name ?? $contentItem->content->title ?? 'Exercise' }}
+                                                        </a>
+                                                    @elseif($contentItem->type === 'worksheet')
+                                                        <span class="text-purple-600 dark:text-purple-400">📋</span>
+                                                        @if($contentItem->content->id)
+                                                            <a href="{{ route('worksheets.show', $contentItem->content->id) }}" class="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-200">
+                                                                {{ $contentItem->content->title }}
+                                                            </a>
+                                                        @else
+                                                            <span class="text-gray-700 dark:text-gray-300">{{ $contentItem->content->title }}</span>
+                                                        @endif
+                                                    @endif
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                        
+                                        @if($page->content->count() > 3)
+                                            <div class="text-xs text-gray-500 dark:text-gray-500">
+                                                ... and {{ $page->content->count() - 3 }} more {{ $page->content->count() - 3 > 1 ? 'items' : 'item' }}
+                                            </div>
+                                        @endif
+                                    </div>
+                                @endif
+                                
+                                @if($page->learning_objectives && count($page->learning_objectives) > 0)
+                                    <div class="mt-3 text-xs text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-600 pt-2">
+                                        <strong>Objectives:</strong> {{ implode(', ', array_slice($page->learning_objectives, 0, 2)) }}
+                                        @if(count($page->learning_objectives) > 2)
+                                            <span class="text-gray-500">... +{{ count($page->learning_objectives) - 2 }} more</span>
+                                        @endif
+                                    </div>
+                                @endif
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endif
+
         <!-- Vocabulary Section -->
         @if($lesson->vocabulary->count() > 0)
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -198,20 +280,26 @@
                 <div class="space-y-3">
                     <div class="flex justify-between">
                         <span class="text-gray-600 dark:text-gray-400">Vocabulary</span>
-                        <span class="font-semibold">{{ $lesson->vocabulary->count() }}</span>
+                        <span class="font-semibold dark:text-white">{{ $lesson->vocabulary->count() }}</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="text-gray-600 dark:text-gray-400">Kanji Items</span>
-                        <span class="font-semibold">{{ $lesson->vocabulary->where('include_in_kanji_worksheet', true)->count() }}</span>
+                        <span class="font-semibold dark:text-white">{{ $lesson->vocabulary->where('include_in_kanji_worksheet', true)->count() }}</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="text-gray-600 dark:text-gray-400">Grammar Points</span>
-                        <span class="font-semibold">{{ $lesson->grammarPoints->count() }}</span>
+                        <span class="font-semibold dark:text-white">{{ $lesson->grammarPoints->count() }}</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="text-gray-600 dark:text-gray-400">Questions</span>
-                        <span class="font-semibold">{{ $lesson->questions->count() }}</span>
+                        <span class="font-semibold dark:text-white">{{ $lesson->questions->count() }}</span>
                     </div>
+                    @if($lesson->pages->count() > 0)
+                        <div class="flex justify-between">
+                            <span class="text-gray-600 dark:text-gray-400">Pages</span>
+                            <span class="font-semibold dark:text-white">{{ $lesson->pages->count() }}</span>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
