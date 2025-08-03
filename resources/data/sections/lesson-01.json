@@ -133,31 +133,6 @@
       ],
       "related_grammar_ids": ["mnn-01-grammar-001"],
       "completion_trackable": true
-    },
-    {
-      "id": "mnn-01-sec006",
-      "name": "Review: Putting It Together",
-      "lesson_id": "mnn-lesson-01",
-      "page_number": 15,
-      "page_section": "full",
-      "section_type": "review",
-      "order_weight": 1,
-      "purpose": "Combine everything you've learned in this lesson: vocabulary, grammar, and pronunciation. Practice introducing yourself naturally.",
-      "instructions": "Use the vocabulary and grammar patterns to introduce yourself. Record yourself and compare to the model dialogue. Focus on natural rhythm and polite language.",
-      "audio_filename": "lesson-01-review.mp3",
-      "estimated_duration_minutes": 10,
-      "prerequisites": ["mnn-01-sec003", "mnn-01-sec005"],
-      "related_vocabulary_ids": [
-        "mnn-01-001",
-        "mnn-01-002",
-        "mnn-01-008",
-        "mnn-01-009",
-        "mnn-01-010"
-      ],
-      "related_grammar_ids": [
-        "mnn-01-grammar-001"
-      ],
-      "completion_trackable": true
     }
   ]
 } 
