@@ -1,61 +1,209 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Ganbatte v2 - Minna No Nihongo Companion Site
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+An e-learning platform for Japanese language learners, designed as a companion to the Minna No Nihongo textbook series. Built with Laravel and featuring comprehensive furigana support, interactive assessments, and printable worksheets.
 
-## About Laravel
+## 🎌 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Structured Learning**: 50 lessons following Minna No Nihongo curriculum
+- **Interactive Assessments**: Multiple question types with rich feedback
+- **Furigana Support**: Toggle-able reading aids with `{kanji|reading}` format
+- **Progress Tracking**: User progress and test attempt history
+- **Printable Worksheets**: Handwriting practice and vocabulary review
+- **Content Management**: Flexible JSON-based content system
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Quick Start
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Prerequisites
+- PHP 8.1+
+- Composer
+- Node.js & NPM
+- SQLite (default) or MySQL/PostgreSQL
 
-## Learning Laravel
+### Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **Clone and Install**
+   ```bash
+   git clone https://github.com/your-repo/ganbatte-v2.git
+   cd ganbatte-v2
+   composer install
+   npm install
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. **Environment Setup**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. **Database Setup**
+   ```bash
+   php artisan migrate:fresh --seed
+   ```
 
-## Laravel Sponsors
+4. **Build Assets**
+   ```bash
+   npm run build
+   # or for development
+   npm run dev
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+5. **Start Server**
+   ```bash
+   php artisan serve
+   ```
 
-### Premium Partners
+Visit `http://localhost:8000` to see the application!
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 📁 Content Structure
 
-## Contributing
+Content is organized by type for efficient management:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+resources/data/
+├── lessons/           # Lesson metadata
+├── vocabulary/        # Vocabulary items  
+├── grammar/           # Grammar points
+├── questions/         # Assessment questions
+├── tests/             # Test definitions
+├── worksheets/        # Printable worksheets
+└── templates/         # Empty templates
+```
 
-## Code of Conduct
+### Adding New Content
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Copy Templates**
+   ```bash
+   cp resources/data/templates/lesson-template.json resources/data/lessons/lesson-02.json
+   cp resources/data/templates/vocabulary-template.json resources/data/vocabulary/lesson-02.json
+   ```
 
-## Security Vulnerabilities
+2. **Edit Content**
+   - Replace `XX` with lesson number (e.g., `02`)
+   - Fill in Japanese text, English translations
+   - Add furigana using `{kanji|reading}` format
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. **Import to Database**
+   ```bash
+   php artisan migrate:fresh --seed
+   
+   # Or for updates to existing content
+   php artisan db:seed --class=LessonContentSeeder
+   ```
 
-## License
+## 🎯 Furigana Format
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Two patterns for maximum flexibility:
+
+- **Individual Kanji**: `{学生|がく|せい}` - each kanji gets its reading
+- **Compound Reading**: `{時計|とけい}` - reading spans multiple kanji
+
+Toggle furigana with the button or `toggleFurigana()` JavaScript function.
+
+## 📚 Documentation
+
+- **[Data Structure Guide](docs/data-structure-guide.md)** - Complete file organization
+- **[Template Usage Guide](docs/template-usage-guide.md)** - Content creation workflow  
+- **[Content Update Workflow](docs/content-update-workflow.md)** - Safe content updates with upsert
+- **[Furigana Integration](docs/furigana-integration.md)** - Implementation details
+- **[Option Explanations Guide](docs/option-explanations-guide.md)** - Question feedback system
+
+## 🧪 Testing Content
+
+### Demo Pages
+- `/demo` - Interactive lesson with furigana
+- `/lesson/{lesson}` - Specific lesson view
+
+### Validation
+```bash
+# Check imported data
+php artisan tinker
+>>> \App\Models\Lesson::with(['vocabulary', 'questions'])->count();
+
+# Test specific lesson
+>>> $lesson = \App\Models\Lesson::with('vocabulary')->first();
+>>> $lesson->vocabulary->count();
+```
+
+## 🏗️ Architecture
+
+### Database Models
+- **Lesson** - Lesson metadata and organization
+- **Vocabulary** - Words with readings, audio, examples
+- **GrammarPoint** - Patterns, explanations, examples
+- **Question** - Assessments with rich feedback
+- **Test** - Structured question collections
+- **Worksheet** - Printable practice materials
+
+### Frontend Components
+- **Furigana Rendering** - `resources/js/furigana.js`
+- **Toggle Button** - `resources/views/components/furigana-toggle.blade.php`
+- **Text Display** - `resources/views/components/furigana-text.blade.php`
+
+### Content Pipeline
+1. **JSON Files** → Seeder → **Database** → **Views** → **User Interface**
+2. Supports incremental updates and type-specific deployment
+3. Maintains referential integrity across content types
+
+## 🎮 Example Usage
+
+### Content Creation
+```json
+// vocabulary/lesson-01.json
+{
+  "vocabulary": [
+    {
+      "id": "mnn-01-001",
+      "lesson_id": "mnn-lesson-01", 
+      "word": {
+        "japanese": "学生",
+        "furigana": "{学生|がく|せい}",
+        "english": "student"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5"
+    }
+  ]
+}
+```
+
+### Frontend Display
+```blade
+<x-furigana-toggle />
+<h1><x-furigana-text :text="$lesson->furigana_title" /></h1>
+```
+
+### JavaScript Integration
+```javascript
+// Render furigana on page load
+document.addEventListener('DOMContentLoaded', function() {
+    renderFurigana(document.body);
+});
+```
+
+## 🤝 Contributing
+
+1. **Content Contributors**: Use templates in `resources/data/templates/`
+2. **Developers**: Follow Laravel conventions and maintain tests
+3. **Translators**: Focus on accuracy and cultural context
+4. **Reviewers**: Validate content before import
+
+### Content Guidelines
+- Use consistent furigana format
+- Include example sentences for vocabulary
+- Provide explanations for all question options
+- Test import process before committing
+
+## 📄 License
+
+This project is open-source software licensed under the [MIT license](LICENSE).
+
+## 🆘 Support
+
+- **Documentation**: See `docs/` directory
+- **Issues**: Submit GitHub issues for bugs
+- **Content Questions**: Check template guides first
+- **Development**: Follow Laravel documentation
+
+---
+
+**Ganbatte** (頑張って) - Do your best! 🎌✨

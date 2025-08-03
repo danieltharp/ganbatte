@@ -1,0 +1,163 @@
+{
+  "sections": [
+    {
+      "id": "mnn-01-sec001",
+      "name": "文型",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 6,
+      "page_section": "top",
+      "section_type": "dialogue",
+      "order_weight": 10,
+      "purpose": "This section provides examples of introductions and occupations. It also introduces questions using ですか.",
+      "instructions": "Read each of the four sentences carefully. Note that furigana is provided for the kanji characters. For the second sentence, note that the (では) is given as an alternative to じゃ, both ではありません and じゃありません are acceptable for 'is not'. For the third sentence, note that the ending is ですか and should have a rising tone. Feel free to repeat the sentences as many times as you need to understand them and pronounce them correctly.",
+      "estimated_duration_minutes": 1,
+      "prerequisites": [],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-004",
+        "mnn-01-009", 
+        "mnn-01-010"
+      ],
+      "related_grammar_ids": [
+        "mnn-01-grammar-001"
+      ],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec002",
+      "name": "例文",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 6,
+      "page_section": "bottom",
+      "section_type": "dialogue",
+      "order_weight": 20,
+      "purpose": "This exercise is meant to be done in pairs, with one person reading the top sentences and the other reading the bottom sentences. If you don't have a partner, you can read the sentences to yourself. It is a series of questions about people, their occupation, and their age.",
+      "instructions": "Either with a partner or by yourself, read the sentences aloud. If you have a partner, switch roles after each sentence. If you don't have a partner, read the sentences to yourself. Note that words in square brackets are optional. Feel free to repeat the sentences as many times as you need to understand them and pronounce them correctly.",
+      "estimated_duration_minutes": 3,
+      "prerequisites": ["mnn-01-sec001"],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002",
+        "mnn-01-003",
+        "mnn-01-004",
+        "mnn-01-007",
+        "mnn-01-009",
+        "mnn-01-012",
+        "mnn-01-013",
+        "mnn-01-015",
+        "mnn-01-018",
+        "mnn-01-019"
+      ],
+      "related_grammar_ids": ["mnn-01-grammar-001"],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec003",
+      "name": "会話：初めまして",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 7,
+      "page_section": "full",
+      "section_type": "listening",
+      "order_weight": 10,
+      "purpose": "Listen to introductions between Satou Keiko, Yamada-san, and Mike Miller. Note that the speaker is not necessarily the person being introduced.",
+      "instructions": "Listen to the audio while reading the sentences. If needed, use the slow playback button as they speak fairly rapidly. Finally, listen to the audio without reading the sentences to see if you can understand it. You can also attempt to shadow the speakers, speaking along with them.",
+      "audio_filename": "minna_shokyu_1_001.mp3",
+      "estimated_duration_minutes": 3,
+      "prerequisites": ["mnn-01-sec002"],
+      "related_vocabulary_ids": [
+        "mnn-01-027",
+        "mnn-01-022",
+        "mnn-01-023",
+        "mnn-01-024"
+      ],
+      "related_grammar_ids": [
+        "mnn-01-grammar-001"
+      ],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec004",
+      "name": "練習A",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 8,
+      "page_section": "full",
+      "section_type": "practice",
+      "order_weight": 10,
+      "purpose": "Combine various vocabulary to practice introducing yourself and others, as well as asking about their occupations and ages.",
+      "instructions": "For each number, the tan boxes feature interchangeable nouns, with the white sections being fixed parts of the sentences. For example, the first sentence might introduce yourself either as Mike Miller or as a company employee. Try various combinations to practice the sentences for five minutes.",
+      "estimated_duration_minutes": 5,
+      "prerequisites": ["mnn-01-sec001"],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-003",
+        "mnn-01-004",
+        "mnn-01-005",
+        "mnn-01-006",
+        "mnn-01-007",
+        "mnn-01-008",
+        "mnn-01-009",
+        "mnn-01-010",
+        "mnn-01-011",
+        "mnn-01-013",
+        "mnn-01-015",
+        "mnn-01-017",
+        "mnn-01-018",
+        "mnn-01-019",
+        "mnn-01-028",
+        "mnn-01-034",
+        "mnn-01-037"
+      ],
+      "related_grammar_ids": ["mnn-01-grammar-001"],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec005",
+      "name": "練習C",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 11,
+      "page_section": "full",
+      "section_type": "dialogue",
+      "order_weight": 1,
+      "purpose": "This page is intended to demonstrate introductions, as well as correcting an introduction. It is meant to be done with two or three people, but you can also do it by yourself.",
+      "instructions": "Either alone or with partners, read the sentences aloud. Replace underlined words with your own information to create a new introduction. If you have a partner, switch roles after each sentence. If you don't have a partner, read the sentences to yourself. Note that words in square brackets are optional. Feel free to repeat the sentences as many times as you need to understand them and pronounce them correctly.",
+      "estimated_duration_minutes": 7,
+      "prerequisites": ["mnn-01-sec002"],
+      "related_vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-022",
+        "mnn-01-023",
+        "mnn-01-024",
+        "mnn-01-025",
+        "mnn-01-026",
+        "mnn-01-027"
+      ],
+      "related_grammar_ids": ["mnn-01-grammar-001"],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec006",
+      "name": "Review: Putting It Together",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 15,
+      "page_section": "full",
+      "section_type": "review",
+      "order_weight": 1,
+      "purpose": "Combine everything you've learned in this lesson: vocabulary, grammar, and pronunciation. Practice introducing yourself naturally.",
+      "instructions": "Use the vocabulary and grammar patterns to introduce yourself. Record yourself and compare to the model dialogue. Focus on natural rhythm and polite language.",
+      "audio_filename": "lesson-01-review.mp3",
+      "estimated_duration_minutes": 10,
+      "prerequisites": ["mnn-01-sec003", "mnn-01-sec005"],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002",
+        "mnn-01-008",
+        "mnn-01-009",
+        "mnn-01-010"
+      ],
+      "related_grammar_ids": [
+        "mnn-01-grammar-001"
+      ],
+      "completion_trackable": true
+    }
+  ]
+} 

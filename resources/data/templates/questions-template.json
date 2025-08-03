@@ -1,0 +1,182 @@
+{
+  "questions": [
+    {
+      "id": "mnn-XX-q001",
+      "lesson_id": "mnn-lesson-XX",
+      "type": "multiple_choice",
+      "difficulty": "beginner",
+      "points": 5,
+      "time_limit_seconds": 30,
+      "question": {
+        "japanese": "",
+        "furigana": "",
+        "english": ""
+      },
+      "context": "",
+      "audio": {
+        "filename": "",
+        "duration": 0,
+        "speaker": "female"
+      },
+      "image": "",
+      "options": [
+        {
+          "japanese": "",
+          "furigana": "",
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "japanese": "",
+          "furigana": "",
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "japanese": "",
+          "furigana": "",
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "japanese": "",
+          "furigana": "",
+          "english": "",
+          "explanation": ""
+        }
+      ],
+      "correct_answer": 0,
+      "explanation": {
+        "japanese": "",
+        "furigana": "",
+        "english": ""
+      },
+      "hints": [],
+      "vocabulary_ids": [],
+      "grammar_ids": [],
+      "tags": []
+    },
+    {
+      "id": "mnn-XX-q002",
+      "lesson_id": "mnn-lesson-XX",
+      "type": "translation_e_to_j",
+      "difficulty": "beginner",
+      "points": 10,
+      "time_limit_seconds": 45,
+      "question": {
+        "english": ""
+      },
+      "correct_answer": [],
+      "explanation": {
+        "english": ""
+      },
+      "hints": [],
+      "vocabulary_ids": [],
+      "grammar_ids": [],
+      "tags": []
+    },
+    {
+      "id": "mnn-XX-q003",
+      "lesson_id": "mnn-lesson-XX",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 7,
+      "time_limit_seconds": 30,
+      "question": {
+        "japanese": "",
+        "furigana": "",
+        "english": ""
+      },
+      "correct_answer": [],
+      "explanation": {
+        "english": ""
+      },
+      "vocabulary_ids": [],
+      "grammar_ids": [],
+      "tags": []
+    },
+    {
+      "id": "mnn-XX-q004",
+      "lesson_id": "mnn-lesson-XX",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 8,
+      "time_limit_seconds": 60,
+      "question": {
+        "english": ""
+      },
+      "audio": {
+        "filename": "",
+        "duration": 0,
+        "speaker": "female"
+      },
+      "image": "",
+      "options": [
+        {
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "english": "",
+          "explanation": ""
+        }
+      ],
+      "correct_answer": 0,
+      "explanation": {
+        "english": ""
+      },
+      "hints": [],
+      "vocabulary_ids": [],
+      "grammar_ids": [],
+      "tags": []
+    },
+    {
+      "id": "mnn-XX-q005",
+      "lesson_id": "mnn-lesson-XX",
+      "type": "reading_comprehension",
+      "difficulty": "beginner",
+      "points": 15,
+      "time_limit_seconds": 120,
+      "question": {
+        "english": ""
+      },
+      "context": "",
+      "audio": null,
+      "image": "",
+      "options": [
+        {
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "english": "",
+          "explanation": ""
+        },
+        {
+          "english": "",
+          "explanation": ""
+        }
+      ],
+      "correct_answer": 0,
+      "explanation": {
+        "english": ""
+      },
+      "hints": [],
+      "vocabulary_ids": [],
+      "grammar_ids": [],
+      "tags": []
+    }
+  ]
+} 

@@ -1,0 +1,112 @@
+{
+  "exercises": [
+    {
+    "id": "mnn-01-ex001",
+    "name": "練習B",
+    "lesson_id": "mnn-lesson-01",
+    "page_number": 9,
+    "book_reference": "textbook",
+    "order_weight": 10,
+    "overview": "Use the table at the top of page 9 to answer questions 1-16, the table at the top of page 10 to answer questions 17-20, and the table in the middle of page 10 to answer questions 21-28. Answer in the format as shown in the examples, and end with a Japanese period (。).",
+    "question_ids": [
+      "mnn-01-q001",
+      "mnn-01-q002",
+      "mnn-01-q003",
+      "mnn-01-q004",
+      "mnn-01-q005",
+      "mnn-01-q006",
+      "mnn-01-q007",
+      "mnn-01-q008",
+      "mnn-01-q009",
+      "mnn-01-q010",
+      "mnn-01-q011",
+      "mnn-01-q012",
+      "mnn-01-q013",
+      "mnn-01-q014",
+      "mnn-01-q015",
+      "mnn-01-q016",
+      "mnn-01-q017",
+      "mnn-01-q018",
+      "mnn-01-q019",
+      "mnn-01-q020",
+      "mnn-01-q021",
+      "mnn-01-q022",
+      "mnn-01-q023",
+      "mnn-01-q024",
+      "mnn-01-q025",
+      "mnn-01-q026",
+      "mnn-01-q027",
+      "mnn-01-q028"
+    ]
+  },
+    {
+      "id": "mnn-01-ex002",
+      "name": "問題",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 12,
+      "book_reference": "textbook",
+      "order_weight": 10,
+      "overview": "Listen to the audio and write what you hear for questions 1-10. Fill in the blanks for questions 11-19. Question 20 is unscored and an opportunity to write your name in katakana. Be sure to use proper kanji, katakana, and punctuation.",
+      "question_ids": [
+        "mnn-01-q029",
+        "mnn-01-q030",
+        "mnn-01-q031",
+        "mnn-01-q032",
+        "mnn-01-q033",
+        "mnn-01-q034",
+        "mnn-01-q035",
+        "mnn-01-q036",
+        "mnn-01-q037",
+        "mnn-01-q038",
+        "mnn-01-q039",
+        "mnn-01-q040",
+        "mnn-01-q041",
+        "mnn-01-q042",
+        "mnn-01-q043",
+        "mnn-01-q044",
+        "mnn-01-q045",
+        "mnn-01-q046",
+        "mnn-01-q047",
+        "mnn-01-q048"
+      ]
+    },
+    {
+      "id": "mnn-01-ex003",
+      "name": "Exercise C",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 14,
+      "book_reference": "textbook",
+      "order_weight": 3,
+      "overview": "Reading comprehension. Read the short passages and answer questions about the content.",
+      "question_ids": [
+        "mnn-01-q006"
+      ]
+    },
+    {
+      "id": "mnn-01-ex004",
+      "name": "Practice Problems 1",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 18,
+      "book_reference": "workbook",
+      "order_weight": 1,
+      "overview": "Additional practice with hiragana reading and vocabulary recognition. Fill in the blanks with the correct hiragana.",
+      "question_ids": [
+        "mnn-01-q007",
+        "mnn-01-q008"
+      ]
+    },
+    {
+      "id": "mnn-01-ex005",
+      "name": "Practice Problems 2",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 19,
+      "book_reference": "workbook",
+      "order_weight": 2,
+      "overview": "Writing practice. Write the correct Japanese characters for the given English words.",
+      "question_ids": [
+        "mnn-01-q009",
+        "mnn-01-q010"
+      ]
+    }
+  ]
+} 

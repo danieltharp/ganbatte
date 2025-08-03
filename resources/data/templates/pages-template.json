@@ -1,0 +1,48 @@
+{
+  "pages": [
+    {
+      "id": "page-mnn-lesson-01-textbook-8",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 8,
+      "book_reference": "textbook",
+      "content": [
+        {
+          "type": "section",
+          "id": "mnn-01-sec001"
+        },
+        {
+          "type": "exercise",
+          "id": "mnn-01-ex001"
+        }
+      ]
+    },
+    {
+      "id": "page-mnn-lesson-01-textbook-9",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 9,
+      "book_reference": "textbook",
+      "content": [
+        {
+          "type": "section",
+          "id": "mnn-01-sec002"
+        }
+      ]
+    },
+    {
+      "id": "page-mnn-lesson-01-workbook-18",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 18,
+      "book_reference": "workbook",
+      "content": [
+        {
+          "type": "exercise",
+          "id": "mnn-01-ex004"
+        },
+        {
+          "type": "exercise",
+          "id": "mnn-01-ex005"
+        }
+      ]
+    }
+  ]
+} 

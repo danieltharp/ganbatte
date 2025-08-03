@@ -1,0 +1,1031 @@
+{
+  "questions": [
+    {
+      "id": "mnn-01-q001",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What nationality is Yamada (山田)-san? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "山田さんは日本人です。"
+      ],
+      "explanation": {
+        "english": "The table shows Yamada-san as a Japanese person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-036"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q002",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What nationality is Watt (ワット)-san? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "ワットさんはイギリス人です。"
+      ],
+      "explanation": {
+        "english": "The table shows Watt-san as a British person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-029"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q003",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What nationality is Thawaphon (タワポン)-san? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "タワポンさんはタイ人です。"
+      ],
+      "explanation": {
+        "english": "The table shows Thawaphon-san as a Thai person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-033"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q004",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What nationality is Schmidt (シュミット)-san? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "シュミットさんはドイツ人です。"
+      ],
+      "explanation": {
+        "english": "The table shows Schmidt-san as a German person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-035"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q005",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What occupation does Yamada (山田)-san have? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "山田さんは銀行員です。"
+      ],
+      "explanation": {
+        "english": "The table shows Yamada-san as a bank employee."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-012"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q006",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What occupation does Watt (ワット)-san have? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "ワットさんは先生です。"
+      ],
+      "explanation": {
+        "english": "The table shows Watt-san as a teacher."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-007"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q007",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What occupation does Thawaphon (タワポン)-san have? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "タワポンさんは学生です。"
+      ],
+      "explanation": {
+        "english": "The table shows Thawaphon-san as a student."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-009"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q008",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "What occupation does Schmidt (シュミット)-san have? Answer in a complete Japanese sentence, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "シュミットさんは会社員です。"
+      ],
+      "explanation": {
+        "english": "The table shows Schmidt-san as a company employee."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-010"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q009",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Is Yamada (山田)-san a student? Answer in a complete Japanese sentence in polite negative form, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "山田さんは学生ではありません。",
+        "山田さんは学生じゃありません。",
+        "いいえ、山田さんは学生ではありません。",
+        "いいえ、山田さんは学生じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Yamada-san as a bank employee."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-012"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q010",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Is Watt (ワット)-san German? Answer in a complete Japanese sentence in polite negative form, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "ワットさんはドイツ人ではありません。",
+        "ワットさんはドイツ人じゃありません。",
+        "いいえ、ワットさんはドイツ人ではありません。",
+        "いいえ、ワットさんはドイツ人じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Watt-san as a British person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-035"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q011",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Is Thawaphon (タワポン)-san a teacher? Answer in a complete Japanese sentence in polite negative form, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "タワポンさんは先生ではありません。",
+        "タワポンさんは先生じゃありません。",
+        "いいえ、タワポンさんは先生ではありません。",
+        "いいえ、タワポンさんは先生じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Thawaphon-san as a student."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-007"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q012",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Is Schmidt (シュミット)-san American? Answer in a complete Japanese sentence in polite negative form, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "シュミットさんはアメリカ人ではありません。",
+        "シュミットさんはアメリカ人じゃありません。",
+        "いいえ、シュミットさんはアメリカ人ではありません。",
+        "いいえ、シュミットさんはアメリカ人じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Schmidt-san as a German person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-028"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q013",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "japanese": "山田さんは銀行員ですか。",
+        "english": "Is Yamada (山田)-san a bank employee? Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "はい、銀行員です。"
+      ],
+      "explanation": {
+        "english": "The table shows Yamada-san as a bank employee."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-012"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q014",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "japanese": "ワットさんは会社員ですか。",
+        "english": "Is Watt (ワット)-san a company employee? Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "いいえ、会社員ではありません。",
+        "いいえ、会社員じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Watt-san as a teacher."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-010"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q015",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "japanese": "タワポンさんは先生ですか。",
+        "english": "Is Thawaphon (タワポン)-san a teacher? Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "いいえ、先生ではありません。",
+        "いいえ、先生じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Thawaphon-san as a student."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-007"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q016",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "japanese": "シュミットさんはドイツ人ですか。",
+        "english": "Is Schmidt (シュミット)-san German? Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "はい、ドイツ人です。"
+      ],
+      "explanation": {
+        "english": "The table shows Schmidt-san as a German person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-035"
+      ],
+      "tags": ["vocabulary", "nationality", "grammar"]
+    },
+    {
+      "id": "mnn-01-q017",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Introduce the person in the table for question 5, box 1. Give their name and occupation. Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "イーさんです。AKCの研究者です。"
+      ],
+      "explanation": {
+        "english": "The table shows Ie-san as a researcher at AKC."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-014"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q018",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Introduce the person in the table for question 5, box 2. Give their name and occupation. Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "ワンさんです。神戸病院の医者です。"
+      ],
+      "explanation": {
+        "english": "The table shows Wan-san as a doctor at Kobe Hospital."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-013"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q019",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Introduce the person in the table for question 5, box 3. Give their name and occupation. Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "カリナさんです。富士大学の学生です。"
+      ],
+      "explanation": {
+        "english": "The table shows Karina-san as a student at Fuji University."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-015"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q020",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Introduce the person in the table for question 5, box 4. Give their name and occupation. Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "サントスさんです。ブラジルエアーの社員です。"
+      ],
+      "explanation": {
+        "english": "The table shows Santos-san as a company employee at Brazil Air."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-011"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q021",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "山田さんは錦江員です。イーさんも銀行員ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "いいえ、イーさんは銀行員ではありません。",
+        "いいえ、イーさんは銀行員じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Ie-san as a researcher."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-014"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q022",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "ワットさんは先生です。ワンさんも先生ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "いいえ、ワンさんは先生ではありません。",
+        "いいえ、ワンさんは先生じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Wan-san as a doctor."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-007"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q023",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "タワポンさんは学生です。カリナさんも学生ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "はい、カリナさんも学生です。"
+      ],
+      "explanation": {
+        "english": "The table shows Karina-san as a student."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-009"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q024",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "シュミットさんはドイツ人です。サントスさんもドイツ人ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "いいえ、サントスさんはドイツ人ではありません。",
+        "いいえ、サントスさんはドイツ人じゃありません。"
+      ],
+      "explanation": {
+        "english": "The table shows Santos-san as a Brazilian person."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-006",
+        "mnn-01-037"
+      ],
+      "tags": ["vocabulary", "occupation", "grammar"]
+    },
+    {
+      "id": "mnn-01-q025",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "山田さんは何歳ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "３８歳です。",
+        "38歳です。",
+        "三十八歳です。"
+      ],
+      "explanation": {
+        "english": "The table shows Yamada-san as 38 years old."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-018",
+        "mnn-01-019"
+      ],
+      "tags": ["vocabulary", "age", "grammar"]
+    },
+    {
+      "id": "mnn-01-q026",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "ワットさんは何歳ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "４５歳です。",
+        "45歳です。",
+        "四十五歳です。"
+      ],
+      "explanation": {
+        "english": "The table shows Watt-san as 45 years old."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-018",
+        "mnn-01-019"
+      ],
+      "tags": ["vocabulary", "age", "grammar"]
+    },
+    {
+      "id": "mnn-01-q027",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "タワポンさんは何歳ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "１９歳です。",
+        "19歳です。",
+        "十九歳です。"
+      ],
+      "explanation": {
+        "english": "The table shows Thawaphon-san as 19 years old."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-018",
+        "mnn-01-019"
+      ],
+      "tags": ["vocabulary", "age", "grammar"]
+    },
+    {
+      "id": "mnn-01-q028",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "シュミットさんは何歳ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+      },
+      "correct_answer": [
+        "５２歳です。",
+        "52歳です。",
+        "五十二歳です。"
+      ],
+      "explanation": {
+        "english": "The table shows Schmidt-san as 52 years old."
+      },
+      "vocabulary_ids": [
+        "mnn-01-004",
+        "mnn-01-018",
+        "mnn-01-019"
+      ],
+      "tags": ["vocabulary", "age", "grammar"]
+    },
+    {
+      "id": "mnn-01-q029",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 1. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "あなたはサントスさんですか。",
+        "あなたはサントスさんですか？"
+      ]
+    },
+    {
+      "id": "mnn-01-q030",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 2. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "お名前は？",
+        "お名前は。",
+        "お名前は"
+      ]
+    },
+    {
+      "id": "mnn-01-q031",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 3. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "何歳ですか？",
+        "何歳ですか。"
+      ]
+    },
+    {
+      "id": "mnn-01-q032",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 4. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "アメリカ人ですか。",
+        "アメリカ人ですか？"
+      ]
+    },
+    {
+      "id": "mnn-01-q033",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_002.mp3",
+        "duration_seconds": 31
+      },
+      "question": {
+        "english": "Listen to the audio and write what you hear for 5. 1-5 contain the same audio. Be sure to use proper kanji, katakana, and punctuation."
+      },
+      "correct_answer": [
+        "会社員ですか。",
+        "会社員ですか？"
+      ]
+    },
+    {
+      "id": "mnn-01-q034",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_003.mp3",
+        "duration_seconds": 30
+      },
+      "question": {
+        "english": "Listen to the audio and choose the correct picture that matches the context of the audio. 6-7 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "A",
+          "explanation": "Correct. こちらは is used to introduce somebody near the speaker."
+        },
+        {
+          "english": "B",
+          "explanation": "Incorrect. こちらは is used to introduce somebody near the speaker to another person or people, but there are only two people in the picture."
+        },
+        {
+          "english": "C",
+          "explanation": "Incorrect. こちらは is used to introduce somebody near the speaker, and in this picture the person being introduced is far away, where you might use あの人 or あの方."
+        }
+      ],
+      "correct_answer": 0
+    },
+    {
+      "id": "mnn-01-q035",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_003.mp3",
+        "duration_seconds": 30
+      },
+      "question": {
+        "english": "Listen to the audio and choose the correct picture that matches the context of the audio. 6-7 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "A",
+          "explanation": "Incorrect. Wan-san is 29, not 21."
+        },
+        {
+          "english": "B",
+          "explanation": "Incorrect. His name is Wan-san, not An-san, and he is 29, not 28."
+        },
+        {
+          "english": "C",
+          "explanation": "Correct. Wan-san is 29 years old."
+        }
+      ],
+      "correct_answer": 2
+    },
+    {
+      "id": "mnn-01-q036",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_004.mp3",
+        "duration_seconds": 77
+      },
+      "question": {
+        "english": "Listen to the audio carefully. There will first be a statement or question, then a beep, then a statement that's true or false based on the context of the first statement or question. Select ○ if the second statement is true, or ✕ if it's false. 8-10 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "○",
+          "explanation": "Correct. Miller-san is American."
+        },
+        {
+          "english": "✕",
+          "explanation": "Incorrect. Miller-san is American."
+        }
+      ],
+      "correct_answer": 0
+    },
+    {
+      "id": "mnn-01-q037",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_004.mp3",
+        "duration_seconds": 77
+      },
+      "question": {
+        "english": "Listen to the audio carefully. There will first be a statement or question, then a beep, then a statement that's true or false based on the context of the first statement or question. Select ○ if the second statement is true, or ✕ if it's false. 8-10 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "○",
+          "explanation": "Incorrect. Karina-san is a student, not a teacher."
+        },
+        {
+          "english": "✕",
+          "explanation": "Correct. Karina-san is a student, not a teacher."
+        }
+      ],
+      "correct_answer": 1
+    },
+    {
+      "id": "mnn-01-q038",
+      "lesson_id": "mnn-lesson-01",
+      "type": "listening",
+      "difficulty": "beginner",
+      "points": 1,
+      "audio": {
+        "filename": "minna_shokyu_1_004.mp3",
+        "duration_seconds": 77
+      },
+      "question": {
+        "english": "Listen to the audio carefully. There will first be a statement or question, then a beep, then a statement that's true or false based on the context of the first statement or question. Select ○ if the second statement is true, or ✕ if it's false. 8-10 contain the same audio."
+      },
+      "options": [
+        {
+          "english": "○",
+          "explanation": "Correct. Wan-san is not a researcher."
+        },
+        {
+          "english": "✕",
+          "explanation": "Incorrect. Wan-san is not a researcher."
+        }
+      ],
+      "correct_answer": 0
+    },
+    {
+      "id": "mnn-01-q039",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.1. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "ミラーさん",
+        "ミラー"
+      ],
+      "explanation": {
+        "english": "The second part of the sentence confirms it is Miller-san."
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q040",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.2. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "アメリカ人"
+      ],
+      "explanation": {
+        "english": "The second part of the sentence confirms Miller-san is American."
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q041",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.3. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "アメリカ人"
+      ],
+      "explanation": {
+        "english": "The second part of the sentence states that Watt-san is English, not American."
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q042",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.4. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "誰",
+        "何方"
+      ],
+      "explanation": {
+        "english": "The question being answered is 'Who is that person?'"
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q043",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate word for 4.5. Use katakana and kanji when appropriate."
+      },
+      "correct_answer": [
+        "何歳",
+        "お幾つ"
+      ],
+      "explanation": {
+        "english": "The question being answered is 'How old is Teresa-chan?'"
+      },
+      "tags": ["vocabulary", "grammar"]
+    },
+    {
+      "id": "mnn-01-q044",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate particle for 5.1. Enter only the particle, no other characters."
+      },
+      "correct_answer": [
+        "は"
+      ],
+      "explanation": {
+        "english": "We use は particle to establish Wan-san as the topic of the sentence."
+      },
+      "tags": ["particles", "grammar"]
+    },
+    {
+      "id": "mnn-01-q045",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate particles for 5.2. Separate the particles with a space."
+      },
+      "correct_answer": [
+        "は　か",
+        "は か"
+      ],
+      "explanation": {
+        "english": "The XはYですか is a common format for questions in Japanese."
+      },
+      "tags": ["particles", "grammar"]
+    },
+    {
+      "id": "mnn-01-q046",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate particle for 5.3. Enter only the particle, no other characters."
+      },
+      "correct_answer": [
+        "の"
+      ],
+      "explanation": {
+        "english": "We use the の particle to establish Miller-san as an employee of IMC Corporation."
+      },
+      "tags": ["particles", "grammar"]
+    },
+    {
+      "id": "mnn-01-q047",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Fill in the blank with the appropriate particle for 5.4. Enter only the particle, no other characters."
+      },
+      "correct_answer": [
+        "も"
+      ],
+      "explanation": {
+        "english": "We use the も particle to establish that Santos-san is also an employee of IMC Corporation."
+      },
+      "tags": ["particles", "grammar"]
+    },
+    {
+      "id": "mnn-01-q048",
+      "lesson_id": "mnn-lesson-01",
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "points": 0,
+      "question": {
+        "english": "This is an unscored free response. Fill in the blanks with your name in katakana and the country you are from, separated by either a space or a Japanese dot (・), which is made by hitting the forward slash key on your keyboard."
+      },
+      "correct_answer": [
+        
+      ],
+      "explanation": {
+        "english": "Your answer should look something like this: ダニエル・アメリカ"
+      },
+      "tags": ["free_response"]
+    }
+  ]
+} 

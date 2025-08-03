@@ -1,0 +1,30 @@
+{
+  "worksheets": [
+    {
+      "id": "mnn-01-hiragana-ws",
+      "name": "Lesson 1 Hiragana Practice",
+      "type": "hiragana_practice",
+      "lesson_id": "mnn-lesson-01",
+      "content_ids": ["mnn-01-001", "mnn-01-002", "mnn-01-003", "mnn-01-004", "mnn-01-005"],
+      "template": "hiragana_grid_template",
+      "print_settings": {
+        "paper_size": "A4",
+        "orientation": "portrait",
+        "margins": {
+          "top": 25,
+          "bottom": 25,
+          "left": 20,
+          "right": 20
+        }
+      }
+    },
+    {
+      "id": "mnn-01-vocab-ws",
+      "name": "Lesson 1 Vocabulary Review",
+      "type": "vocabulary_review",
+      "lesson_id": "mnn-lesson-01",
+      "content_ids": ["mnn-01-001", "mnn-01-002", "mnn-01-003", "mnn-01-004", "mnn-01-005"],
+      "template": "vocabulary_matching_template"
+    }
+  ]
+} 

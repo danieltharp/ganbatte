@@ -1,0 +1,49 @@
+{
+  "exercises": [
+    {
+      "id": "mnn-01-ex001",
+      "name": "練習B",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 9,
+      "book_reference": "textbook",
+      "order_weight": 10,
+      "overview": "Use the table at the top of page 9 to answer the questions. Answer in complete sentences as shown in the example, and end with a Japanese period (。).",
+      "question_ids": [
+        "mnn-01-q001",
+        "mnn-01-q002",
+        "mnn-01-q003",
+        "mnn-01-q004",
+        "mnn-01-q005",
+        "mnn-01-q006",
+        "mnn-01-q007"
+      ]
+    },
+    {
+      "id": "mnn-01-ex002",
+      "name": "Exercise B",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 12,
+      "book_reference": "textbook",
+      "order_weight": 2,
+      "overview": "Listening comprehension exercise. Listen to the audio and answer the questions about what you heard.",
+      "question_ids": [
+        "mnn-01-q004",
+        "mnn-01-q005"
+      ]
+    },
+    {
+      "id": "mnn-01-ex003",
+      "name": "Practice Problems",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 24,
+      "book_reference": "workbook",
+      "order_weight": 1,
+      "overview": "Additional practice with hiragana reading and vocabulary recognition.",
+      "question_ids": [
+        "mnn-01-q006",
+        "mnn-01-q007",
+        "mnn-01-q008"
+      ]
+    }
+  ]
+} 

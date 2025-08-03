@@ -1,0 +1,88 @@
+{
+  "sections": [
+    {
+      "id": "mnn-01-sec001",
+      "name": "Dialogue: Meeting Someone New",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 8,
+      "page_section": "top",
+      "section_type": "dialogue",
+      "order_weight": 1,
+      "purpose": "This dialogue demonstrates how to introduce yourself politely in Japanese. Listen to the natural rhythm and intonation patterns of native speakers.",
+      "instructions": "1. Listen to the audio twice without looking at the book. 2. Follow along in your textbook on page 8. 3. Practice the pronunciation by repeating after the audio. 4. Try to memorize the key phrases.",
+      "audio_filename": "lesson-01-dialogue-01.mp3",
+      "estimated_duration_minutes": 5,
+      "prerequisites": [],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002",
+        "mnn-01-003"
+      ],
+      "related_grammar_ids": [
+        "mnn-01-grammar-001"
+      ],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec002",
+      "name": "Vocabulary Introduction",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 9,
+      "page_section": "full",
+      "section_type": "vocabulary_intro",
+      "order_weight": 1,
+      "purpose": "Introduction to basic vocabulary for greetings and personal introductions. Learn the correct pronunciation and usage context.",
+      "instructions": "Review each vocabulary item carefully. Pay attention to the audio pronunciation and practice saying each word aloud.",
+      "audio_filename": "lesson-01-vocabulary.mp3",
+      "estimated_duration_minutes": 10,
+      "prerequisites": ["mnn-01-sec001"],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002",
+        "mnn-01-004",
+        "mnn-01-005"
+      ],
+      "related_grammar_ids": [],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec003",
+      "name": "Cultural Note: Bowing",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 10,
+      "page_section": "bottom",
+      "section_type": "cultural_note",
+      "order_weight": 1,
+      "purpose": "Understanding the cultural significance of bowing in Japanese society and when to use different levels of formality.",
+      "instructions": "Read about the cultural context of bowing. Consider how this affects the language choices in the dialogue you just studied.",
+      "audio_filename": null,
+      "estimated_duration_minutes": 3,
+      "prerequisites": ["mnn-01-sec001"],
+      "related_vocabulary_ids": [],
+      "related_grammar_ids": [],
+      "completion_trackable": true
+    },
+    {
+      "id": "mnn-01-sec004",
+      "name": "Pronunciation Practice",
+      "lesson_id": "mnn-lesson-01",
+      "page_number": 11,
+      "page_section": "full",
+      "section_type": "pronunciation",
+      "order_weight": 1,
+      "purpose": "Focus on correct pronunciation of Japanese sounds that are challenging for English speakers, particularly long vowels and the 'r' sound.",
+      "instructions": "Listen carefully to each word and repeat multiple times. Record yourself and compare to the audio. Focus on clarity rather than speed.",
+      "audio_filename": "lesson-01-pronunciation.mp3",
+      "estimated_duration_minutes": 8,
+      "prerequisites": ["mnn-01-sec002"],
+      "related_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002",
+        "mnn-01-003",
+        "mnn-01-004"
+      ],
+      "related_grammar_ids": [],
+      "completion_trackable": true
+    }
+  ]
+} 

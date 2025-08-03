@@ -1,0 +1,358 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Japanese Learning Content Schema",
+  "description": "Schema for Minna No Nihongo companion site content",
+  "definitions": {
+    "japanese_text": {
+      "type": "object",
+      "properties": {
+        "japanese": {"type": "string", "description": "Primary Japanese text (kanji, hiragana, katakana, or romaji)"},
+        "furigana": {"type": "string", "description": "Furigana format: {学生|がく|せい}, {時計|とけい}"},
+        "english": {"type": "string", "description": "English translation"}
+      },
+      "required": ["english"]
+    },
+    "audio_file": {
+      "type": "object",
+      "properties": {
+        "filename": {"type": "string"},
+        "duration": {"type": "number"},
+        "speaker": {"type": "string", "enum": ["male", "female", "child"]}
+      },
+      "required": ["filename"]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["beginner", "elementary", "intermediate", "advanced"]
+    },
+    "jlpt_level": {
+      "type": "string",
+      "enum": ["N5", "N4", "N3", "N2", "N1"]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "lesson": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "string"},
+        "chapter": {"type": "integer", "minimum": 1, "maximum": 50},
+        "title": {"$ref": "#/definitions/japanese_text"},
+        "description": {"type": "string"},
+        "difficulty": {"$ref": "#/definitions/difficulty"},
+        "estimated_time_minutes": {"type": "integer"},
+        "prerequisites": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "required": ["id", "chapter", "title"]
+    },
+    "vocabulary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "word": {"$ref": "#/definitions/japanese_text"},
+          "part_of_speech": {
+            "type": "string",
+            "enum": ["noun", "verb", "adjective", "adverb", "particle", "conjunction", "interjection", "counter", "expression"]
+          },
+          "verb_type": {
+            "type": "string",
+            "enum": ["ichidan", "godan", "irregular", "suru", "kuru"]
+          },
+          "adjective_type": {
+            "type": "string",
+            "enum": ["i_adjective", "na_adjective"]
+          },
+          "conjugations": {
+            "type": "object",
+            "properties": {
+              "past": {"$ref": "#/definitions/japanese_text"},
+              "negative": {"$ref": "#/definitions/japanese_text"},
+              "past_negative": {"$ref": "#/definitions/japanese_text"},
+              "te_form": {"$ref": "#/definitions/japanese_text"},
+              "potential": {"$ref": "#/definitions/japanese_text"},
+              "passive": {"$ref": "#/definitions/japanese_text"},
+              "causative": {"$ref": "#/definitions/japanese_text"}
+            }
+          },
+          "pitch_accent": {"type": "string"},
+          "jlpt_level": {"$ref": "#/definitions/jlpt_level"},
+          "frequency_rank": {"type": "integer"},
+          "example_sentences": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/japanese_text"}
+          },
+          "audio": {"$ref": "#/definitions/audio_file"},
+          "mnemonics": {"type": "string"},
+          "related_words": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "tags": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "include_in_kanji_worksheet": {
+            "type": "boolean",
+            "description": "Whether this vocabulary item should be included in kanji handwriting practice worksheets"
+          }
+        },
+        "required": ["id", "lesson_id", "word", "part_of_speech"]
+      }
+    },
+    "grammar_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "name": {"$ref": "#/definitions/japanese_text"},
+          "pattern": {"type": "string"},
+          "usage": {"type": "string"},
+          "explanation": {"type": "string"},
+          "jlpt_level": {"$ref": "#/definitions/jlpt_level"},
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sentence": {"$ref": "#/definitions/japanese_text"},
+                "context": {"type": "string"},
+                "notes": {"type": "string"}
+              },
+              "required": ["sentence"]
+            }
+          },
+          "related_grammar": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "required": ["id", "lesson_id", "name", "pattern", "usage"]
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "type": {
+            "type": "string",
+            "enum": ["multiple_choice", "fill_blank", "translation_j_to_e", "translation_e_to_j", "reading_comprehension", "listening", "handwriting", "sentence_ordering", "particle_choice", "conjugation"]
+          },
+          "difficulty": {"$ref": "#/definitions/difficulty"},
+          "points": {"type": "integer", "minimum": 1},
+          "time_limit_seconds": {"type": "integer"},
+          "question": {"$ref": "#/definitions/japanese_text"},
+          "context": {"type": "string"},
+          "audio": {"$ref": "#/definitions/audio_file"},
+          "image": {"type": "string"},
+          "options": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {"$ref": "#/definitions/japanese_text"},
+                {
+                  "type": "object",
+                  "properties": {
+                    "explanation": {"type": "string", "description": "Explanation for selecting this option"}
+                  }
+                }
+              ]
+            }
+          },
+          "correct_answer": {
+            "oneOf": [
+              {"type": "string"},
+              {"type": "integer"},
+              {"type": "array", "items": {"type": "string"}}
+            ]
+          },
+          "explanation": {"$ref": "#/definitions/japanese_text"},
+          "hints": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "vocabulary_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "grammar_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "tags": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "required": ["id", "lesson_id", "type", "question", "correct_answer"]
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "lesson_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "question_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "time_limit_minutes": {"type": "integer"},
+          "passing_score": {"type": "integer", "minimum": 0, "maximum": 100},
+          "randomize_questions": {"type": "boolean", "default": true},
+          "randomize_options": {"type": "boolean", "default": true},
+          "allow_retakes": {"type": "boolean", "default": true},
+          "show_results_immediately": {"type": "boolean", "default": false}
+        },
+        "required": ["id", "name", "question_ids"]
+      }
+    },
+    "worksheets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "type": {
+            "type": "string",
+            "enum": ["kanji_practice", "hiragana_practice", "katakana_practice", "vocabulary_review", "grammar_exercises", "reading_comprehension"]
+          },
+          "lesson_id": {"type": "string"},
+          "content_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "template": {"type": "string"},
+          "print_settings": {
+            "type": "object",
+            "properties": {
+              "paper_size": {"type": "string", "default": "A4"},
+              "orientation": {"type": "string", "enum": ["portrait", "landscape"], "default": "portrait"},
+              "margins": {
+                "type": "object",
+                "properties": {
+                  "top": {"type": "number"},
+                  "bottom": {"type": "number"},
+                  "left": {"type": "number"},
+                  "right": {"type": "number"}
+                }
+              }
+            }
+          }
+        },
+        "required": ["id", "name", "type", "lesson_id"]
+      }
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "page_number": {"type": "integer", "minimum": 1},
+          "book_reference": {
+            "type": "string",
+            "enum": ["textbook", "workbook"]
+          },
+          "order_weight": {"type": "integer", "minimum": 0, "default": 0},
+          "overview": {"type": "string"},
+          "question_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "required": ["id", "name", "lesson_id", "page_number", "book_reference", "question_ids"]
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "page_number": {"type": "integer", "minimum": 1},
+          "page_section": {
+            "type": "string",
+            "enum": ["full", "top", "middle", "bottom", "left", "right", "center"],
+            "default": "full"
+          },
+          "section_type": {
+            "type": "string",
+            "enum": ["dialogue", "vocabulary_intro", "grammar_intro", "listening", "pronunciation", "cultural_note", "review", "practice"]
+          },
+          "order_weight": {"type": "integer", "minimum": 0, "default": 0},
+          "purpose": {"type": "string"},
+          "instructions": {"type": "string"},
+          "audio_filename": {"type": "string"},
+          "estimated_duration_minutes": {"type": "integer", "minimum": 1},
+          "prerequisites": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "related_vocabulary_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "related_grammar_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "completion_trackable": {"type": "boolean", "default": true}
+        },
+        "required": ["id", "name", "lesson_id", "page_number", "section_type"]
+      }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "lesson_id": {"type": "string"},
+          "page_number": {"type": "integer", "minimum": 1},
+          "book_reference": {
+            "type": "string",
+            "enum": ["textbook", "workbook"]
+          },
+          "content": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["section", "exercise"]
+                },
+                "id": {"type": "string"}
+              },
+              "required": ["type", "id"]
+            }
+          }
+        },
+        "required": ["id", "lesson_id", "page_number", "book_reference", "content"]
+      }
+    }
+  },
+  "required": ["lesson"]
+} 

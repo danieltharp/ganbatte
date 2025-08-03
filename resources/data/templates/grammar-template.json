@@ -1,0 +1,29 @@
+{
+  "grammar_points": [
+    {
+      "id": "mnn-XX-grammar-001",
+      "lesson_id": "mnn-lesson-XX",
+      "name": {
+        "japanese": "",
+        "furigana": "",
+        "english": ""
+      },
+      "pattern": "",
+      "usage": "",
+      "explanation": "",
+      "jlpt_level": "N5",
+      "examples": [
+        {
+          "sentence": {
+            "japanese": "",
+            "furigana": "",
+            "english": ""
+          },
+          "context": "",
+          "notes": ""
+        }
+      ],
+      "related_grammar": []
+    }
+  ]
+} 

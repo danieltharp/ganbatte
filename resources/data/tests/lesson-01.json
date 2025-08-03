@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "id": "mnn-lesson-01-test",
+      "name": "Lesson 1 Completion Test",
+      "description": "Test covering basic greetings, self-introduction, and the copula です",
+      "lesson_ids": ["mnn-lesson-01"],
+      "question_ids": ["mnn-01-q001", "mnn-01-q002", "mnn-01-q003", "mnn-01-q004"],
+      "time_limit_minutes": 10,
+      "passing_score": 70,
+      "randomize_questions": true,
+      "randomize_options": true,
+      "allow_retakes": true,
+      "show_results_immediately": false
+    }
+  ]
+} 

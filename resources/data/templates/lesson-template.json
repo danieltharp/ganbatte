@@ -1,0 +1,15 @@
+{
+  "lesson": {
+    "id": "mnn-lesson-XX",
+    "chapter": 1,
+    "title": {
+      "japanese": "",
+      "furigana": "",
+      "english": ""
+    },
+    "description": "",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 45,
+    "prerequisites": []
+  }
+} 
