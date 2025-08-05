@@ -4,10 +4,10 @@
       "id": "mnn-01-grammar-001",
       "lesson_id": "mnn-lesson-01",
       "name": {
-        "japanese": "Xは Yです",
-        "english": "X is Y"
+        "japanese": "N1 は N2 です。",
+        "english": "N1 is N2."
       },
-      "pattern": "X は Y です",
+      "pattern": "N1 は N2 です。",
       "usage": "Basic sentence structure for stating what something is",
       "explanation": "The topic marker は (wa) introduces what we're talking about, and です (desu) is the polite copula meaning 'to be'",
       "jlpt_level": "N5",
@@ -34,10 +34,10 @@
       "id": "mnn-01-grammar-002", 
       "lesson_id": "mnn-lesson-01",
       "name": {
-        "japanese": "Xは Yではありません",
-        "english": "X is not Y"
+        "japanese": "N1 は N2 じゃ (では) ありません",
+        "english": "N1 is not N2."
       },
-      "pattern": "X は Y ではありません",
+      "pattern": "N1 は N2 じゃ (では) ありません",
       "usage": "Negative form of the basic 'X is Y' pattern",
       "explanation": "ではありません (dewa arimasen) is the polite negative form of です (desu)",
       "jlpt_level": "N5",
@@ -48,6 +48,94 @@
             "english": "I am not a teacher."
           },
           "context": "Correcting or clarifying information"
+        }
+      ],
+      "related_grammar": ["mnn-01-grammar-001"]
+    },
+    {
+      "id": "mnn-01-grammar-003",
+      "lesson_id": "mnn-lesson-01",
+      "name": {
+        "japanese": "N1 は N2 ですか。",
+        "english": "N1 is N2?"
+      },
+      "pattern": "N1 は N2 ですか。",
+      "usage": "Question form of the basic 'X is Y' pattern",
+      "explanation": "ですか (desu ka) is the polite form of です (desu) used in questions",
+      "jlpt_level": "N5",
+      "examples": [
+        {
+          "sentence": {
+            "japanese": "山田さんは先生ですか。",
+            "english": "Is Mr. Yamada a teacher?"
+          },
+          "context": "Asking for confirmation"
+        }
+      ],
+      "related_grammar": ["mnn-01-grammar-001"]
+    },
+    {
+      "id": "mnn-01-grammar-004",
+      "lesson_id": "mnn-lesson-01",
+      "name": {
+        "japanese": "N も",
+        "english": "N also"
+      },
+      "pattern": "N も",
+      "usage": "Adding 'also' to a sentence",
+      "explanation": "も (mo) is used to add 'also' to a sentence",
+      "jlpt_level": "N5",
+      "examples": [
+        {
+          "sentence": {
+            "japanese": "山田さんは先生です。田中さんも先生です。",
+            "english": "Mr. Yamada is a teacher. Mr. Tanaka is also a teacher."
+          },
+          "context": "Adding 'also' to a sentence"
+        }
+      ],
+      "related_grammar": ["mnn-01-grammar-001"]
+    },
+    {
+      "id": "mnn-01-grammar-005",
+      "lesson_id": "mnn-lesson-01",
+      "name": {
+        "japanese": "N1 の N2",
+        "english": "N1's N2"
+      },
+      "pattern": "N1 の N2",
+      "usage": "N1 modifies N2 (N1's N2)",
+      "explanation": "One usage of の is to indicate possession (N1's N2)",
+      "jlpt_level": "N5",
+      "examples": [
+        {
+          "sentence": {
+            "japanese": "山田さんの本",
+            "english": "Mr. Yamada's book"
+          },
+          "context": "Indicating possession"
+        }
+      ],
+      "related_grammar": ["mnn-01-grammar-001"]
+    },
+    {
+      "id": "mnn-01-grammar-006",
+      "lesson_id": "mnn-lesson-01",
+      "name": {
+        "japanese": "〜さん",
+        "english": "Mr. / Ms. / Mrs. / Miss"
+      },
+      "pattern": "〜さん",
+      "usage": "Adding 'Mr.' or 'Ms.' to a name",
+      "explanation": "〜さん (san) is used to add 'Mr.' or 'Ms.' to a name",
+      "jlpt_level": "N5",
+      "examples": [
+        {
+          "sentence": {
+            "japanese": "山田さん",
+            "english": "Mr. Yamada"
+          },
+          "context": "Adding 'Mr.' to a name"
         }
       ],
       "related_grammar": ["mnn-01-grammar-001"]
