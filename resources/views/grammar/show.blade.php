@@ -49,7 +49,7 @@
         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6">
                 <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Pattern</h2>
-                <div class="japanese-text text-2xl font-mono bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500">
+                <div class="japanese-text text-2xl font-mono bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500 text-gray-900 dark:text-gray-100">
                     {{ $grammarPoint->pattern }}
                 </div>
             </div>
@@ -72,7 +72,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Explanation</h2>
-                    <div class="prose dark:prose-invert max-w-none">
+                    <div class="text-gray-700 dark:text-gray-300 leading-relaxed">
                         {!! nl2br(e($grammarPoint->explanation)) !!}
                     </div>
                 </div>
@@ -89,19 +89,19 @@
                     <div class="space-y-4">
                         @foreach($grammarPoint->examples as $example)
                             <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50">
-                                @if(isset($example['japanese']))
-                                    <div class="japanese-text text-lg mb-2 font-medium">
-                                        @if(isset($example['furigana']))
-                                            <x-furigana-text>{{ $example['furigana'] }}</x-furigana-text>
+                                @if(isset($example['sentence']['japanese']))
+                                    <div class="japanese-text text-lg mb-2 font-medium text-gray-900 dark:text-gray-100">
+                                        @if(isset($example['sentence']['furigana']))
+                                            <x-furigana-text>{{ $example['sentence']['furigana'] }}</x-furigana-text>
                                         @else
-                                            {{ $example['japanese'] }}
+                                            {{ $example['sentence']['japanese'] }}
                                         @endif
                                     </div>
                                 @endif
                                 
-                                @if(isset($example['english']))
+                                @if(isset($example['sentence']['english']))
                                     <div class="text-gray-900 dark:text-gray-100 mb-2">
-                                        {{ $example['english'] }}
+                                        {{ $example['sentence']['english'] }}
                                     </div>
                                 @endif
                                 

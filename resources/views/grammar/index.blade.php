@@ -15,9 +15,9 @@
 
     <!-- Filters -->
     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 mb-6">
-        <form method="GET" action="{{ route('grammar.index') }}" class="space-y-4 md:space-y-0 md:flex md:items-end md:space-x-4">
+        <form method="GET" action="{{ route('grammar.index') }}" class="md:space-y-0 md:flex md:items-end md:space-x-4">
             <!-- Search -->
-            <div class="flex-1">
+            <div class="flex-1 px-2">
                 <label for="search" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Search Grammar Points
                 </label>
@@ -30,7 +30,7 @@
             </div>
 
             <!-- Lesson Filter -->
-            <div>
+            <div class="px-2">
                 <label for="lesson_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Lesson
                 </label>
@@ -47,7 +47,7 @@
             </div>
 
             <!-- JLPT Level Filter -->
-            <div>
+            <div class="px-2">
                 <label for="jlpt_level" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     JLPT Level
                 </label>
@@ -68,7 +68,7 @@
                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Filter
                 </button>
-                <a href="{{ route('grammar.index') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                <a href="{{ route('grammar.index') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded content-center">
                     Clear
                 </a>
             </div>
