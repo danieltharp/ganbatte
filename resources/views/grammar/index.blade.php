@@ -117,7 +117,7 @@
                     </div>
 
                     <!-- Pattern -->
-                    <div class="japanese-text text-lg mb-3 font-mono bg-gray-50 dark:bg-gray-700 p-3 rounded border-l-4 border-blue-500">
+                    <div class="japanese-text text-lg mb-3 font-mono bg-gray-50 dark:bg-gray-700 p-3 rounded border-l-4 border-blue-500 text-gray-900 dark:text-gray-100">
                         {{ $grammar->pattern }}
                     </div>
 
