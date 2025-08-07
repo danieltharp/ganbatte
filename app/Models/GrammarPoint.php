@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\LaravelMarkdown\MarkdownRenderer;
+
 
 class GrammarPoint extends Model
 {
@@ -50,6 +52,59 @@ class GrammarPoint extends Model
     }
 
     /**
+     * Check if this grammar point has a markdown explanation file
+     */
+    public function hasMarkdownExplanation(): bool
+    {
+        return file_exists($this->getMarkdownExplanationPath());
+    }
+
+    /**
+     * Get the path to the markdown explanation file
+     */
+    public function getMarkdownExplanationPath(): string
+    {
+        return resource_path("data/grammar/explanations/{$this->id}.md");
+    }
+
+    /**
+     * Get the rendered markdown explanation
+     */
+    public function getMarkdownExplanation(): ?string
+    {
+        if (!$this->hasMarkdownExplanation()) {
+            return null;
+        }
+
+        $renderer = new MarkdownRenderer();
+
+        $markdownContent = file_get_contents($this->getMarkdownExplanationPath());
+        return $renderer->toHtml($markdownContent);
+    }
+
+    /**
+     * Get the explanation content (either markdown or plain text)
+     */
+    public function getExplanationContent(): ?string
+    {
+        // Prefer markdown explanation if available
+        if ($this->hasMarkdownExplanation()) {
+            return $this->getMarkdownExplanation();
+        }
+
+        // Fall back to plain text explanation
+        return $this->explanation ? nl2br(e($this->explanation)) : null;
+    }
+
+    /**
+     * Check if the explanation is markdown format
+     */
+    public function isMarkdownExplanation(): bool
+    {
+        return $this->hasMarkdownExplanation();
+    }
+
+    /**
      * Get the primary name of the grammar point
      */
     public function getDisplayNameAttribute(): string
@@ -72,4 +127,4 @@ class GrammarPoint extends Model
     {
         return $query->where('pattern', 'like', "%{$pattern}%");
     }
-} 
+}

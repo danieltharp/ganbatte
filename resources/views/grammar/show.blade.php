@@ -68,12 +68,26 @@
         @endif
 
         <!-- Explanation -->
-        @if($grammarPoint->explanation)
+        @if($grammarPoint->getExplanationContent())
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Explanation</h2>
-                    <div class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                        {!! nl2br(e($grammarPoint->explanation)) !!}
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Explanation</h2>
+                        @if($grammarPoint->isMarkdownExplanation())
+                            <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                                📝 Rich Format
+                            </span>
+                        @endif
+                    </div>
+                    <div class="prose dark:prose-invert max-w-none 
+                        prose-headings:text-gray-900 dark:prose-headings:text-gray-100
+                        prose-p:text-gray-700 dark:prose-p:text-gray-300
+                        prose-strong:text-gray-900 dark:prose-strong:text-gray-100
+                        prose-code:text-blue-600 dark:prose-code:text-blue-400
+                        prose-code:bg-gray-100 dark:prose-code:bg-gray-800
+                        prose-blockquote:border-blue-500 dark:prose-blockquote:border-blue-400
+                        prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300">
+                        {!! $grammarPoint->getExplanationContent() !!}
                     </div>
                 </div>
             </div>
