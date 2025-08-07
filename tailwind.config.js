@@ -15,6 +15,16 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            typography: {
+                DEFAULT: {
+                  css: {
+                    'blockquote p:first-of-type::before': false,
+                    'blockquote p:first-of-type::after': false,
+                    'code::before': false,
+                    'code::after': false,
+                  },
+                },
+              },
         },
     },
 
