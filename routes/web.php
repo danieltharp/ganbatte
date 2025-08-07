@@ -7,6 +7,8 @@ use App\Http\Controllers\GrammarController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\WorksheetController;
+use App\Http\Controllers\SectionController;
+use App\Http\Controllers\ExerciseController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -35,6 +37,12 @@ Route::get('/tests/{test}', [TestController::class, 'show'])->name('tests.show')
 
 Route::get('/worksheets', [WorksheetController::class, 'index'])->name('worksheets.index');
 Route::get('/worksheets/{worksheet}', [WorksheetController::class, 'show'])->name('worksheets.show');
+
+Route::get('/sections', [SectionController::class, 'index'])->name('sections.index');
+Route::get('/sections/{section}', [SectionController::class, 'show'])->name('sections.show');
+
+Route::get('/exercises', [ExerciseController::class, 'index'])->name('exercises.index');
+Route::get('/exercises/{exercise}', [ExerciseController::class, 'show'])->name('exercises.show');
 
 // Custom routes
 Route::get('/vocabulary/kanji-worksheet', [VocabularyController::class, 'kanjiWorksheet'])->name('vocabulary.kanji-worksheet');

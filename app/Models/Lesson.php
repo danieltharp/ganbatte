@@ -72,6 +72,14 @@ class Lesson extends Model
     }
 
     /**
+     * Get all pages for this lesson
+     */
+    public function pages(): HasMany
+    {
+        return $this->hasMany(Page::class)->orderBy('book_reference')->orderBy('page_number');
+    }
+
+    /**
      * Get the full Japanese title with fallbacks
      */
     public function getJapaneseTitleAttribute(): string

@@ -1,5 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,8 +15,18 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            typography: {
+                DEFAULT: {
+                  css: {
+                    'blockquote p:first-of-type::before': false,
+                    'blockquote p:first-of-type::after': false,
+                    'code::before': false,
+                    'code::after': false,
+                  },
+                },
+              },
         },
     },
 
-    plugins: [forms],
+    plugins: [forms, typography],
 };

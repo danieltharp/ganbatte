@@ -211,8 +211,8 @@
       "id": "mnn-01-017",
       "lesson_id": "mnn-lesson-01",
       "word": {
-        "japanese": "誰",
-        "furigana": "{誰|だれ}",
+        "japanese": "誰, 何方",
+        "furigana": "{誰|だれ}, {何方|どなた}",
         "english": "who"
       },
       "part_of_speech": "noun",
@@ -225,6 +225,7 @@
       "lesson_id": "mnn-lesson-01",
       "word": {
         "japanese": "〜歳",
+        "furigana": "〜{歳|さい}",
         "english": "suffix for age"
       },
       "part_of_speech": "affix",
@@ -237,7 +238,7 @@
       "lesson_id": "mnn-lesson-01",
       "word": {
         "japanese": "何歳",
-        "furigana": "{何|なん}{歳|さい}",
+        "furigana": "{何歳|なん|さい}",
         "english": "how old"
       },
       "part_of_speech": "expression",
@@ -274,6 +275,7 @@
       "lesson_id": "mnn-lesson-01",
       "word": {
         "japanese": "初めまして",
+        "furigana": "{初|はじ}めまして",
         "english": "How do you do?"
       },
       "part_of_speech": "expression",
@@ -286,6 +288,7 @@
       "lesson_id": "mnn-lesson-01",
       "word": {
         "japanese": "〜から来ました",
+        "furigana": "〜から{来|き}ました",
         "english": "I'm from 〜 (country)."
       },
       "part_of_speech": "expression",

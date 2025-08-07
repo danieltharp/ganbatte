@@ -21,7 +21,7 @@ class LessonController extends Controller
      */
     public function show(string $id)
     {
-        $lesson = Lesson::with(['vocabulary', 'grammarPoints', 'questions', 'worksheets'])
+        $lesson = Lesson::with(['vocabulary', 'grammarPoints', 'questions', 'worksheets', 'pages'])
                        ->findOrFail($id);
         
         return view('lessons.show', compact('lesson'));
