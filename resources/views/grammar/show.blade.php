@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $grammarPoint->name_english)
+@section('title', $grammarPoint->name_japanese ?? $grammarPoint->name_english)
 
 @section('content')
 <div class="mb-6">

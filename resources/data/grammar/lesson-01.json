@@ -15,6 +15,7 @@
         {
           "sentence": {
             "japanese": "私は学生です。",
+            "furigana": "{私|わたし}は{学生|がく|せい}です。",
             "english": "I am a student."
           },
           "context": "Self-introduction",
@@ -23,6 +24,7 @@
         {
           "sentence": {
             "japanese": "これは本です。",
+            "furigana": "これは{本|ほん}です。",
             "english": "This is a book."
           },
           "context": "Identifying objects"
@@ -45,6 +47,7 @@
         {
           "sentence": {
             "japanese": "私は先生ではありません。",
+            "furigana": "{私|わたし}は{先生|せん|せい}ではありません。",
             "english": "I am not a teacher."
           },
           "context": "Correcting or clarifying information"
@@ -67,6 +70,7 @@
         {
           "sentence": {
             "japanese": "山田さんは先生ですか。",
+            "furigana": "{山田|やま|だ}さんは{先生|せん|せい}ですか。",
             "english": "Is Mr. Yamada a teacher?"
           },
           "context": "Asking for confirmation"
@@ -89,6 +93,7 @@
         {
           "sentence": {
             "japanese": "山田さんは先生です。田中さんも先生です。",
+            "furigana": "{山田|やま|だ}さんは{先生|せん|せい}です。{田中|た|なか}さんも{先生|せん|せい}です。",
             "english": "Mr. Yamada is a teacher. Mr. Tanaka is also a teacher."
           },
           "context": "Adding 'also' to a sentence"
@@ -111,6 +116,7 @@
         {
           "sentence": {
             "japanese": "山田さんの本",
+            "furigana": "{山田|やま|だ}さんの{本|ほん}",
             "english": "Mr. Yamada's book"
           },
           "context": "Indicating possession"
@@ -133,6 +139,7 @@
         {
           "sentence": {
             "japanese": "山田さん",
+            "furigana": "{山田|やま|だ}さん",
             "english": "Mr. Yamada"
           },
           "context": "Adding 'Mr.' to a name"
