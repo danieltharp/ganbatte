@@ -12,6 +12,10 @@
       "jlpt_level": "N5",
       "frequency_rank": 42,
       "tags": ["pronoun", "first-person"],
+      "also_accepted": {
+        "english": ["me", "myself"],
+        "japanese": ["わたし", "わたくし"]
+      },
       "include_in_kanji_worksheet": true
     },
     {
@@ -88,6 +92,10 @@
       "part_of_speech": "noun",
       "jlpt_level": "N5",
       "tags": ["occupation", "school"],
+      "also_accepted": {
+        "english": ["teacher", "instructor", "doctor", "professor"],
+        "japanese": ["せんせい"]
+      },
       "include_in_kanji_worksheet": true
     },
     {

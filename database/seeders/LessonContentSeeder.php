@@ -202,6 +202,7 @@ class LessonContentSeeder extends Seeder
                 'mnemonics' => $data['mnemonics'] ?? null,
                 'related_words' => $data['related_words'] ?? [],
                 'tags' => $data['tags'] ?? [],
+                'also_accepted' => $data['also_accepted'] ?? null,
                 'include_in_kanji_worksheet' => $data['include_in_kanji_worksheet'] ?? false,
             ]
         );
