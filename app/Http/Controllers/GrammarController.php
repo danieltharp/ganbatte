@@ -34,7 +34,7 @@ class GrammarController extends Controller
             });
         }
 
-        $grammarPoints = $query->orderBy('lesson_id')->orderBy('name_english')->paginate(20);
+        $grammarPoints = $query->orderBy('lesson_id')->orderBy('id')->paginate(20);
 
         // Get unique lessons and JLPT levels for filters
         $lessons = \App\Models\Lesson::orderBy('chapter')->get();

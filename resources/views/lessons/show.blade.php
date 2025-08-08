@@ -146,7 +146,7 @@
                             <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
                                 <div class="flex items-start justify-between">
                                     <div class="flex-1">
-                                        <div class="japanese-text text-lg font-semibold mb-1">
+                                        <div class="japanese-text text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">
                                             @if($vocab->word_furigana)
                                                 <x-furigana-text>{{ $vocab->furigana_word }}</x-furigana-text>
                                             @else
@@ -197,7 +197,7 @@
                                     @endif
                                     {{ $grammar->name_english }}
                                 </h3>
-                                <div class="japanese-text text-lg mb-2 font-mono bg-gray-50 dark:bg-gray-700 p-2 rounded">
+                                <div class="japanese-text text-lg mb-2 font-mono bg-gray-50 dark:bg-gray-700 p-2 rounded text-gray-900 dark:text-gray-100">
                                     {{ $grammar->pattern }}
                                 </div>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm">{{ $grammar->usage }}</p>

@@ -36,6 +36,7 @@ class Vocabulary extends Model
         'mnemonics',
         'related_words',
         'tags',
+        'also_accepted',
         'include_in_kanji_worksheet',
     ];
 
@@ -44,6 +45,7 @@ class Vocabulary extends Model
         'example_sentences' => 'array',
         'related_words' => 'array',
         'tags' => 'array',
+        'also_accepted' => 'array',
         'frequency_rank' => 'integer',
         'audio_duration' => 'float',
         'include_in_kanji_worksheet' => 'boolean',

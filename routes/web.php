@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\VocabularyController;
+use App\Http\Controllers\VocabularyQuizController;
 use App\Http\Controllers\GrammarController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\TestController;
@@ -25,6 +26,12 @@ Route::get('/lessons/{lesson}', [LessonController::class, 'show'])->name('lesson
 
 Route::get('/vocabulary', [VocabularyController::class, 'index'])->name('vocabulary.index');
 Route::get('/vocabulary/{vocabulary}', [VocabularyController::class, 'show'])->name('vocabulary.show');
+
+// Vocabulary Quiz Routes (no authentication required)
+Route::get('/vocabulary-quiz', [VocabularyQuizController::class, 'index'])->name('vocabulary.quiz.index');
+Route::post('/vocabulary-quiz/start', [VocabularyQuizController::class, 'start'])->name('vocabulary.quiz.start');
+Route::get('/vocabulary-quiz/take', [VocabularyQuizController::class, 'take'])->name('vocabulary.quiz.take');
+Route::post('/vocabulary-quiz/submit', [VocabularyQuizController::class, 'submit'])->name('vocabulary.quiz.submit');
 
 Route::get('/grammar', [GrammarController::class, 'index'])->name('grammar.index');
 Route::get('/grammar/{grammar}', [GrammarController::class, 'show'])->name('grammar.show');
