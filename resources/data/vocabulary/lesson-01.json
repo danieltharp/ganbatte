@@ -772,6 +772,9 @@
       "part_of_speech": "affix",
       "jlpt_level": "N5",
       "tags": ["language", "suffix"],
+      "also_accepted":{
+        "english": ["language"]
+      },
       "include_in_kanji_worksheet": true
     }
   ]
