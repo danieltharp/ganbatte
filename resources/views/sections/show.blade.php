@@ -78,13 +78,13 @@
                                 <div class="flex flex-wrap gap-2">
                                     @foreach($section->related_vocabulary_ids as $vocabId)
                                         @php
-                                            $vocab = $section->lesson->vocabulary->where('unique_id', $vocabId)->first();
+                                            $vocab = $section->lesson->vocabulary->where('id', $vocabId)->first();
                                         @endphp
                                         @if($vocab)
                                             <div class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                                                <span class="japanese-text mr-1">{{ $vocab->japanese_word }}</span>
+                                            <a href="{{ route('vocabulary.show', $vocab->id) }}"><span class="japanese-text mr-1">{{ $vocab->japanese_word }}</span>
                                                 {{ $vocab->word_english }}
-                                            </div>
+                                                </a></div>
                                         @endif
                                     @endforeach
                                 </div>
@@ -97,7 +97,7 @@
                                 <div class="flex flex-wrap gap-2">
                                     @foreach($section->related_grammar_ids as $grammarId)
                                         @php
-                                            $grammar = $section->lesson->grammarPoints->where('unique_id', $grammarId)->first();
+                                            $grammar = $section->lesson->grammarPoints->where('id', $grammarId)->first();
                                         @endphp
                                         @if($grammar)
                                             <a href="{{ route('grammar.show', $grammar->id) }}" class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
