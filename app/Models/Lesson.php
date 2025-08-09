@@ -80,6 +80,14 @@ class Lesson extends Model
     }
 
     /**
+     * Get all sections for this lesson
+     */
+    public function sections(): HasMany
+    {
+        return $this->hasMany(Section::class)->orderBy('order_weight');
+    }
+
+    /**
      * Get the full Japanese title with fallbacks
      */
     public function getJapaneseTitleAttribute(): string

@@ -131,7 +131,7 @@ class Section extends Model
             return null;
         }
         
-        return asset('audio/' . $this->audio_filename);
+        return asset('mp3/' . $this->audio_filename);
     }
 
     /**

@@ -21,7 +21,13 @@ class SectionController extends Controller
      */
     public function show(string $id)
     {
-        $section = Section::with(['lesson'])->findOrFail($id);
+        $section = Section::with([
+            'lesson.vocabulary',
+            'lesson.grammarPoints',
+            'lesson.sections' => function ($query) {
+                $query->orderBy('order_weight');
+            }
+        ])->findOrFail($id);
         return view('sections.show', compact('section'));
     }
 }
