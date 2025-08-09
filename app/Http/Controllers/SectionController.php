@@ -24,8 +24,8 @@ class SectionController extends Controller
         $section = Section::with([
             'lesson.vocabulary',
             'lesson.grammarPoints',
-            'lesson.sections' => function ($query) {
-                $query->orderBy('order_weight');
+            'lesson.pages' => function ($query) {
+                $query->orderBy('page_number');
             }
         ])->findOrFail($id);
         return view('sections.show', compact('section'));

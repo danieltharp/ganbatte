@@ -214,32 +214,60 @@
 
         <!-- Navigation -->
         @php
-            $allSections = $section->lesson->sections()->orderBy('order_weight')->get();
-            $currentIndex = $allSections->search(function($item) use ($section) {
-                return $item->id === $section->id;
+            // Build a flat ordered list of all content items from pages
+            $allContent = collect();
+            foreach ($section->lesson->pages->sortBy('page_number') as $page) {
+                foreach ($page->content as $contentItem) {
+                    $allContent->push((object) [
+                        'type' => $contentItem->type,
+                        'id' => $contentItem->id,
+                        'content' => $contentItem->content,
+                        'page_number' => $page->page_number,
+                    ]);
+                }
+            }
+            
+            // Find current item and adjacent items
+            $currentIndex = $allContent->search(function($item) use ($section) {
+                return $item->type === 'section' && $item->id === $section->id;
             });
-            $prevSection = $currentIndex > 0 ? $allSections[$currentIndex - 1] : null;
-            $nextSection = $currentIndex < $allSections->count() - 1 ? $allSections[$currentIndex + 1] : null;
+            
+            $prevItem = $currentIndex !== false && $currentIndex > 0 ? $allContent[$currentIndex - 1] : null;
+            $nextItem = $currentIndex !== false && $currentIndex < $allContent->count() - 1 ? $allContent[$currentIndex + 1] : null;
         @endphp
-        @if($prevSection || $nextSection)
+        @if($prevItem || $nextItem)
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Navigate</h3>
                     <div class="space-y-3">
-                        @if($prevSection)
-                            <a href="{{ route('sections.show', $prevSection->id) }}" class="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200">
+                        @if($prevItem)
+                            @php
+                                $prevUrl = $prevItem->type === 'section' 
+                                    ? route('sections.show', $prevItem->id)
+                                    : route('exercises.show', $prevItem->id);
+                                $prevName = $prevItem->content->name ?? $prevItem->content->title ?? 'Previous Item';
+                                $prevType = ucfirst(str_replace('_', ' ', $prevItem->type));
+                            @endphp
+                            <a href="{{ $prevUrl }}" class="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200">
                                 <span class="mr-2">←</span>
                                 <div>
-                                    <div class="text-sm font-medium">Previous</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">{{ $prevSection->name }}</div>
+                                    <div class="text-sm font-medium">Previous {{ $prevType }}</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400">{{ $prevName }} (p.{{ $prevItem->page_number }})</div>
                                 </div>
                             </a>
                         @endif
-                        @if($nextSection)
-                            <a href="{{ route('sections.show', $nextSection->id) }}" class="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200">
+                        @if($nextItem)
+                            @php
+                                $nextUrl = $nextItem->type === 'section' 
+                                    ? route('sections.show', $nextItem->id)
+                                    : route('exercises.show', $nextItem->id);
+                                $nextName = $nextItem->content->name ?? $nextItem->content->title ?? 'Next Item';
+                                $nextType = ucfirst(str_replace('_', ' ', $nextItem->type));
+                            @endphp
+                            <a href="{{ $nextUrl }}" class="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200">
                                 <div class="flex-1">
-                                    <div class="text-sm font-medium">Next</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">{{ $nextSection->name }}</div>
+                                    <div class="text-sm font-medium">Next {{ $nextType }}</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400">{{ $nextName }} (p.{{ $nextItem->page_number }})</div>
                                 </div>
                                 <span class="ml-2">→</span>
                             </a>
@@ -251,7 +279,6 @@
     </div>
 </div>
 
-@push('scripts')
 <script>
 function markComplete() {
     // This would typically make an AJAX call to mark the section as complete
@@ -264,6 +291,5 @@ function markComplete() {
     // 3. Possibly redirect to the next section
 }
 </script>
-@endpush
 
 @endsection
