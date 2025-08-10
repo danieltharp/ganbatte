@@ -32,6 +32,19 @@
 <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
     <!-- Main Content -->
     <div class="lg:col-span-3 space-y-6">
+        @guest
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <span class="mr-2">🔒</span>
+                        Log In to unlock more functionality
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">
+                        Creating a Ganbatte account is free and allows you to track your progress and get graded results on exercises and tests.
+                    </p>
+                </div>
+            </div>
+        @endguest
         <!-- Audio Player -->
         @if($section->audio_filename)
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -203,11 +216,13 @@
                             Review Grammar
                         </a>
                     @endif
-                    @if($section->completion_trackable)
-                        <button class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center" onclick="markComplete()">
-                            Mark Complete
-                        </button>
-                    @endif
+                    @auth
+                        @if($section->completion_trackable)
+                            <button class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center" onclick="markComplete()">
+                                Mark Complete
+                            </button>
+                        @endif
+                    @endauth
                 </div>
             </div>
         </div>
