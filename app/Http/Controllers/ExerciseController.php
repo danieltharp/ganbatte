@@ -21,7 +21,23 @@ class ExerciseController extends Controller
      */
     public function show(string $id)
     {
-        $exercise = Exercise::with(['lesson'])->findOrFail($id);
-        return view('exercises.show', compact('exercise'));
+        $exercise = Exercise::with([
+            'lesson.pages' => function ($query) {
+                $query->orderBy('page_number');
+            }
+        ])->findOrFail($id);
+        
+        // Load questions based on question_ids
+        $questions = [];
+        if ($exercise->question_ids && count($exercise->question_ids) > 0) {
+            $questions = \App\Models\Question::whereIn('id', $exercise->question_ids)
+                ->get()
+                ->sortBy(function ($question) use ($exercise) {
+                    return array_search($question->id, $exercise->question_ids);
+                })
+                ->values();
+        }
+        
+        return view('exercises.show', compact('exercise', 'questions'));
     }
 }
