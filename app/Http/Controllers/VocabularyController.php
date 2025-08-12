@@ -46,7 +46,11 @@ class VocabularyController extends Controller
      */
     public function show(string $id)
     {
-        $vocabulary = Vocabulary::with('lesson')->findOrFail($id);
+        $vocabulary = Vocabulary::with([
+            'lesson.vocabulary' => function ($query) {
+                $query->orderBy('id');
+            }
+        ])->findOrFail($id);
         return view('vocabulary.show', compact('vocabulary'));
     }
     

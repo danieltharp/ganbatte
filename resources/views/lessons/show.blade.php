@@ -143,26 +143,28 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         @foreach($lesson->vocabulary->take(8) as $vocab)
-                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                                <div class="flex items-start justify-between">
-                                    <div class="flex-1">
-                                        <div class="japanese-text text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">
-                                            @if($vocab->word_furigana)
-                                                <x-furigana-text>{{ $vocab->furigana_word }}</x-furigana-text>
-                                            @else
-                                                {{ $vocab->japanese_word }}
-                                            @endif
+                            <a href="{{ route('vocabulary.show', $vocab->id) }}">
+                                <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                    <div class="flex items-start justify-between">
+                                        <div class="flex-1">
+                                            <div class="japanese-text text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">
+                                                @if($vocab->word_furigana)
+                                                    <x-furigana-text>{{ $vocab->furigana_word }}</x-furigana-text>
+                                                @else
+                                                    {{ $vocab->japanese_word }}
+                                                @endif
+                                            </div>
+                                            <div class="text-gray-900 dark:text-gray-100 font-medium">{{ $vocab->word_english }}</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">{{ $vocab->part_of_speech }}</div>
                                         </div>
-                                        <div class="text-gray-900 dark:text-gray-100 font-medium">{{ $vocab->word_english }}</div>
-                                        <div class="text-sm text-gray-600 dark:text-gray-400">{{ $vocab->part_of_speech }}</div>
+                                        @if($vocab->include_in_kanji_worksheet)
+                                            <span class="text-xs bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded">
+                                                Kanji Practice
+                                            </span>
+                                        @endif
                                     </div>
-                                    @if($vocab->include_in_kanji_worksheet)
-                                        <span class="text-xs bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded">
-                                            Kanji Practice
-                                        </span>
-                                    @endif
                                 </div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                     

@@ -11,6 +11,10 @@
       "part_of_speech": "noun",
       "jlpt_level": "N5",
       "frequency_rank": 42,
+      "audio": {
+        "filename": "MNN_私.mp3",
+        "speaker": "male"
+      },
       "tags": ["pronoun", "first-person"],
       "also_accepted": {
         "english": ["me", "myself"],
