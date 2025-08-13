@@ -192,18 +192,20 @@
                     
                     <div class="space-y-4">
                         @foreach($lesson->grammarPoints->take(3) as $grammar)
-                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                                    @if($grammar->name_japanese)
-                                        <span class="japanese-text">{{ $grammar->name_japanese }}</span> - 
-                                    @endif
-                                    {{ $grammar->name_english }}
-                                </h3>
-                                <div class="japanese-text text-lg mb-2 font-mono bg-gray-50 dark:bg-gray-700 p-2 rounded text-gray-900 dark:text-gray-100">
-                                    {{ $grammar->pattern }}
+                            <a href="{{ route('grammar.show', $grammar->id) }}">
+                                <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+                                    <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                                        @if($grammar->name_japanese)
+                                            <span class="japanese-text">{{ $grammar->name_japanese }}</span> - 
+                                        @endif
+                                        {{ $grammar->name_english }}
+                                    </h3>
+                                    <div class="japanese-text text-lg mb-2 font-mono bg-gray-50 dark:bg-gray-700 p-2 rounded text-gray-900 dark:text-gray-100">
+                                        {{ $grammar->pattern }}
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">{{ $grammar->usage }}</p>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm">{{ $grammar->usage }}</p>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
