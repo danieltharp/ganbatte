@@ -238,9 +238,6 @@
                                     @endif
                                     <div class="practice-grid"></div>
                                 </div>
-                                @if($item['include_readings'])
-                                    <div class="kanji-reading" style="font-family: 'M PLUS 2', 'courier', sans-serif; text-align: center; font-size: 36pt;">{{ $kanjiInfo['character'] }}</div>
-                                @endif
                             </div>
                         </td>
 
@@ -250,7 +247,7 @@
                                 @php
                                     $isLandscape = ($settings['orientation'] ?? 'portrait') === 'landscape';
                                     $firstRowMax = $isLandscape ? 7 : 5;
-                                    $subsequentRowMax = $isLandscape ? 8 : 6;
+                                    $subsequentRowMax = $isLandscape ? 7 : 5;
                                     $totalGrids = $settings['grid_size'];
                                     $currentGrid = 0;
                                     $currentRow = 0;

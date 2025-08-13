@@ -26,20 +26,20 @@
                                 @csrf
                                 
                                 <!-- Paper Settings -->
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-gray-900 mb-3">Paper Settings</h4>
+                                <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-700">
+                                    <h4 class="font-medium text-gray-900 mb-3 dark:text-gray-100">Paper Settings</h4>
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>
-                                            <label for="paper_size" class="block text-sm font-medium text-gray-700">Paper Size</label>
-                                            <select name="paper_size" id="paper_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                            <label for="paper_size" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Paper Size</label>
+                                            <select name="paper_size" id="paper_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100">
                                                 <option value="A4" selected>A4 (210 × 297 mm)</option>
                                                 <option value="Letter">US Letter (8.5 × 11 in)</option>
                                             </select>
                                         </div>
                                         
                                         <div>
-                                            <label for="orientation" class="block text-sm font-medium text-gray-700">Orientation</label>
-                                            <select name="orientation" id="orientation" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                            <label for="orientation" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Orientation</label>
+                                            <select name="orientation" id="orientation" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100">
                                                 <option value="portrait" selected>Portrait</option>
                                                 <option value="landscape">Landscape</option>
                                             </select>
@@ -48,12 +48,12 @@
                                 </div>
 
                                 <!-- Layout Settings -->
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-gray-900 mb-3">Layout Settings</h4>
+                                <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-700">
+                                    <h4 class="font-medium text-gray-900 mb-3 dark:text-gray-100">Layout Settings</h4>
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>
-                                            <label for="grid_size" class="block text-sm font-medium text-gray-700">Practice Cells per Kanji</label>
-                                            <select name="grid_size" id="grid_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                            <label for="grid_size" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Practice Cells per Kanji</label>
+                                            <select name="grid_size" id="grid_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100">
                                                 <option value="5">5 cells</option>
                                                 <option value="10" selected>10 cells</option>
                                                 <option value="15">15 cells</option>
@@ -65,32 +65,32 @@
                                 </div>
 
                                 <!-- Content Settings -->
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-gray-900 mb-3">Content Options</h4>
+                                <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-700">
+                                    <h4 class="font-medium text-gray-900 mb-3 dark:text-gray-100">Content Options</h4>
                                     <div class="space-y-3">
                                         <div class="flex items-center">
                                             <input type="checkbox" name="include_stroke_order" id="include_stroke_order" value="1" checked class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                                            <label for="include_stroke_order" class="ml-2 text-sm text-gray-700">Include stroke order guides</label>
+                                            <label for="include_stroke_order" class="ml-2 text-sm text-gray-700 dark:text-gray-300">Include stroke order guides</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input type="checkbox" name="include_readings" id="include_readings" value="1" checked class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                                            <label for="include_readings" class="ml-2 text-sm text-gray-700">Include character readings</label>
+                                            <label for="include_readings" class="ml-2 text-sm text-gray-700 dark:text-gray-300">Include character readings</label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Vocabulary Selection -->
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-gray-900 mb-3">Vocabulary Selection</h4>
-                                    <p class="text-sm text-gray-600 mb-3">Select which vocabulary items to include in the worksheet:</p>
+                                <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-700">
+                                    <h4 class="font-medium text-gray-900 mb-3 dark:text-gray-100">Vocabulary Selection</h4>
+                                    <p class="text-sm text-gray-600 mb-3 dark:text-gray-400">Select which vocabulary items to include in the worksheet:</p>
                                     
-                                    <div class="max-h-64 overflow-y-auto border border-gray-200 rounded-md bg-white">
+                                    <div class="max-h-64 overflow-y-auto border border-gray-200 rounded-md bg-white dark:bg-gray-700">
                                         @if($vocabulary->count() > 0)
                                             <div class="p-3">
                                                 <label class="flex items-center mb-2">
                                                     <input type="checkbox" id="select_all" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                                                    <span class="ml-2 text-sm font-medium text-gray-700">Select All</span>
+                                                    <span class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">Select All</span>
                                                 </label>
                                             </div>
                                             <div class="border-t border-gray-200"></div>
@@ -101,14 +101,14 @@
                                                         return $kanji['svg_available'];
                                                     });
                                                 @endphp
-                                                <div class="p-3 border-b border-gray-100 {{ !$hasAvailableKanji ? 'bg-gray-50' : '' }}">
+                                                <div class="p-3 border-b border-gray-100 {{ !$hasAvailableKanji ? 'bg-gray-50 dark:bg-gray-700' : '' }}">
                                                     <label class="flex items-center">
                                                         <input type="checkbox" name="vocabulary_ids[]" value="{{ $vocab->id }}" 
                                                                class="vocabulary-checkbox rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                                                                {{ $hasAvailableKanji ? 'checked' : 'disabled' }}>
                                                         <div class="ml-3 flex-1">
                                                             <div class="flex items-center justify-between">
-                                                                <span class="text-sm font-medium text-gray-900">
+                                                                <span class="text-sm font-medium text-gray-900 dark:text-gray-100">
                                                                     {{ $vocab->word_japanese }} - {{ $vocab->word_english }}
                                                                 </span>
                                                                 @if(!$hasAvailableKanji)
@@ -118,7 +118,7 @@
                                                                 @endif
                                                             </div>
                                                             @if($hasAvailableKanji)
-                                                                <div class="text-xs text-gray-500 mt-1">
+                                                                <div class="text-xs text-gray-500 mt-1 dark:text-gray-400">
                                                                     Kanji: 
                                                                     @foreach($kanjiData as $kanji)
                                                                         @if($kanji['svg_available'])
@@ -154,10 +154,10 @@
 
                         <!-- Statistics Sidebar -->
                         <div class="lg:col-span-1">
-                            <h3 class="text-lg font-semibold mb-4">Kanji Statistics</h3>
+                            <h3 class="text-lg font-semibold mb-4 dark:text-gray-100">Kanji Statistics</h3>
                             
                             <div class="bg-blue-50 p-4 rounded-lg mb-4">
-                                <h4 class="font-medium text-blue-900 mb-2">Coverage Overview</h4>
+                                <h4 class="font-medium text-blue-900 mb-2 dark:text-blue-100">Coverage Overview</h4>
                                 <div class="space-y-2">
                                     <div class="flex justify-between">
                                         <span class="text-sm text-blue-700">Total Kanji:</span>
@@ -184,7 +184,7 @@
 
                             @if(!empty($kanjiStats['missing_kanji']))
                                 <div class="bg-yellow-50 p-4 rounded-lg mb-4">
-                                    <h4 class="font-medium text-yellow-900 mb-2">Missing SVGs</h4>
+                                    <h4 class="font-medium text-yellow-900 mb-2 dark:text-yellow-100">Missing SVGs</h4>
                                     <p class="text-sm text-yellow-700 mb-2">These kanji don't have SVG files available:</p>
                                     <div class="flex flex-wrap gap-1">
                                         @foreach(array_slice($kanjiStats['missing_kanji'], 0, 10) as $kanji)
@@ -198,7 +198,7 @@
                             @endif
 
                             <div class="bg-green-50 p-4 rounded-lg">
-                                <h4 class="font-medium text-green-900 mb-2">About KanjiVG</h4>
+                                <h4 class="font-medium text-green-900 mb-2 dark:text-green-100">About KanjiVG</h4>
                                 <p class="text-sm text-green-700">
                                     This worksheet uses stroke order data from the KanjiVG project, providing authentic Japanese writing guidance.
                                 </p>

@@ -63,7 +63,6 @@ class WorksheetController extends Controller
             'lesson_id' => 'required|exists:lessons,id',
             'content_ids' => 'nullable|array',
             'template' => 'nullable|string',
-            'print_settings' => 'nullable|array',
         ]);
 
         $worksheet = Worksheet::create($validated);
@@ -82,7 +81,15 @@ class WorksheetController extends Controller
         // Get kanji coverage statistics if it's a kanji practice worksheet
         $kanjiStats = null;
         if ($worksheet->type === 'kanji_practice') {
-            $vocabulary = $worksheet->vocabulary()->forKanjiWorksheet()->get();
+            if (!empty($worksheet->content_ids)) {
+                // Use content_ids if populated
+                $vocabulary = \App\Models\Vocabulary::whereIn('id', $worksheet->content_ids)
+                    ->forKanjiWorksheet()
+                    ->get();
+            } else {
+                // Fall back to relationship
+                $vocabulary = $worksheet->vocabulary()->forKanjiWorksheet()->get();
+            }
             $kanjiStats = KanjiSvgHelper::getKanjiCoverageStats($vocabulary);
         }
         
@@ -97,7 +104,15 @@ class WorksheetController extends Controller
         $worksheet->load(['lesson', 'vocabulary']);
         
         // Get vocabulary items suitable for kanji worksheets
-        $vocabulary = $worksheet->vocabulary()->forKanjiWorksheet()->get();
+        if (!empty($worksheet->content_ids)) {
+            // Use content_ids if populated
+            $vocabulary = \App\Models\Vocabulary::whereIn('id', $worksheet->content_ids)
+                ->forKanjiWorksheet()
+                ->get();
+        } else {
+            // Fall back to relationship
+            $vocabulary = $worksheet->vocabulary()->forKanjiWorksheet()->get();
+        }
         
         // Get kanji statistics
         $kanjiStats = KanjiSvgHelper::getKanjiCoverageStats($vocabulary);
@@ -122,10 +137,21 @@ class WorksheetController extends Controller
         ]);
 
         // Get vocabulary items
-        $vocabularyQuery = $worksheet->vocabulary()->forKanjiWorksheet();
-        
-        if (!empty($validated['vocabulary_ids'])) {
-            $vocabularyQuery->whereIn('vocabulary.id', $validated['vocabulary_ids']);
+        if (!empty($worksheet->content_ids)) {
+            // Use content_ids if populated
+            $vocabularyQuery = \App\Models\Vocabulary::whereIn('id', $worksheet->content_ids)
+                ->forKanjiWorksheet();
+            
+            if (!empty($validated['vocabulary_ids'])) {
+                $vocabularyQuery->whereIn('id', $validated['vocabulary_ids']);
+            }
+        } else {
+            // Fall back to relationship
+            $vocabularyQuery = $worksheet->vocabulary()->forKanjiWorksheet();
+            
+            if (!empty($validated['vocabulary_ids'])) {
+                $vocabularyQuery->whereIn('vocabulary.id', $validated['vocabulary_ids']);
+            }
         }
         
         $vocabulary = $vocabularyQuery->get();
@@ -156,11 +182,11 @@ class WorksheetController extends Controller
         }
 
         // Prepare settings
-        $settings = array_merge($worksheet->getDefaultPrintSettings(), [
+        $settings = [
             'paper_size' => $validated['paper_size'],
             'orientation' => $validated['orientation'],
             'grid_size' => $validated['grid_size'] ?? 6,
-        ]);
+        ];
 
         // Generate PDF
         $pdf = Pdf::loadView('worksheets.templates.kanji-practice', compact('kanjiData', 'settings', 'worksheet'));
@@ -204,7 +230,6 @@ class WorksheetController extends Controller
             'lesson_id' => 'required|exists:lessons,id',
             'content_ids' => 'nullable|array',
             'template' => 'nullable|string',
-            'print_settings' => 'nullable|array',
             'is_published' => 'boolean',
         ]);
 

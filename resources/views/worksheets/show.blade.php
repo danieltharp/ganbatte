@@ -22,11 +22,11 @@
                                 <h3 class="text-lg font-semibold mb-2">Worksheet Details</h3>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
-                                        <label class="block text-sm font-medium text-gray-700">Name</label>
-                                        <p class="text-sm text-gray-900">{{ $worksheet->name }}</p>
+                                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+                                        <p class="text-sm text-gray-900 dark:text-gray-100">{{ $worksheet->name }}</p>
                                     </div>
                                     <div>
-                                        <label class="block text-sm font-medium text-gray-700">Type</label>
+                                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Type</label>
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
                                             {{ $worksheet->type === 'kanji_practice' ? 'bg-purple-100 text-purple-800' : 
                                                ($worksheet->type === 'hiragana_practice' ? 'bg-blue-100 text-blue-800' : 
@@ -35,41 +35,21 @@
                                         </span>
                                     </div>
                                     <div>
-                                        <label class="block text-sm font-medium text-gray-700">Lesson</label>
-                                        <p class="text-sm text-gray-900">
+                                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Lesson</label>
+                                        <p class="text-sm text-gray-900 dark:text-gray-100">
                                             @if($worksheet->lesson)
-                                                <a href="{{ route('lessons.show', $worksheet->lesson) }}" class="text-indigo-600 hover:text-indigo-900">
-                                                    {{ $worksheet->lesson->title_english }} (Lesson {{ $worksheet->lesson->chapter }})
+                                                <a href="{{ route('lessons.show', $worksheet->lesson) }}" class="text-indigo-600 hover:text-indigo-900 dark:text-gray-400 dark:hover:text-gray-300">
+                                                    <x-furigana-text :text="$worksheet->lesson->title_furigana" /> (Lesson {{ $worksheet->lesson->chapter }})
                                                 </a>
                                             @else
                                                 Custom Worksheet
                                             @endif
                                         </p>
                                     </div>
-                                    <div>
-                                        <label class="block text-sm font-medium text-gray-700">Template</label>
-                                        <p class="text-sm text-gray-900">{{ $worksheet->template ?? 'Default' }}</p>
-                                    </div>
                                 </div>
                             </div>
 
-                            @if($worksheet->print_settings)
-                                <div class="mb-6">
-                                    <h3 class="text-lg font-semibold mb-2">Print Settings</h3>
-                                    <div class="bg-gray-50 p-4 rounded-lg">
-                                        <div class="grid grid-cols-2 gap-4">
-                                            <div>
-                                                <label class="block text-sm font-medium text-gray-700">Paper Size</label>
-                                                <p class="text-sm text-gray-900">{{ $worksheet->print_settings['paper_size'] ?? 'A4' }}</p>
-                                            </div>
-                                            <div>
-                                                <label class="block text-sm font-medium text-gray-700">Orientation</label>
-                                                <p class="text-sm text-gray-900">{{ ucfirst($worksheet->print_settings['orientation'] ?? 'portrait') }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endif
+
 
                             <!-- Actions -->
                             <div class="flex space-x-4">
@@ -83,11 +63,6 @@
                                         Preview & Print
                                     </a>
                                 @endif
-                                
-                                <a href="{{ route('worksheets.edit', $worksheet) }}" 
-                                   class="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-700 focus:bg-indigo-700 active:bg-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                                    Edit Worksheet
-                                </a>
                             </div>
                         </div>
 

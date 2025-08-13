@@ -73,11 +73,6 @@
                 <div class="flex items-center justify-between mb-3">
                     <div class="flex items-center space-x-2">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{{ $worksheet->name }}</h3>
-                        @if(!$worksheet->is_published)
-                            <span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
-                                Draft
-                            </span>
-                        @endif
                     </div>
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium 
                         {{ $worksheet->type === 'kanji_practice' ? 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200' : 
@@ -106,12 +101,6 @@
                             </a>
                         @endif
                     </div>
-                    
-                    @if($worksheet->print_settings)
-                        <span class="text-xs text-gray-500 dark:text-gray-400">
-                            {{ $worksheet->print_settings['paper_size'] ?? 'A4' }}
-                        </span>
-                    @endif
                 </div>
             </div>
         </div>

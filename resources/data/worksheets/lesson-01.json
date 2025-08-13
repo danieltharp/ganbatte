@@ -3,7 +3,7 @@
     {
       "id": "mnn-01-hiragana-ws",
       "name": "Kanji appearing in Lesson 1",
-      "type": "hiragana_practice",
+      "type": "kanji_practice",
       "lesson_id": "mnn-lesson-01",
       "content_ids": [
         "mnn-01-001",
@@ -31,7 +31,7 @@
         "mnn-01-036",
         "mnn-01-x-001"
       ],
-      "template": "hiragana_grid_template",
+      "template": "kanji_stroke_template",
       "print_settings": {
         "paper_size": "letter",
         "orientation": "portrait",
