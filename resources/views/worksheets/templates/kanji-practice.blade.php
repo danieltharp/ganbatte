@@ -239,7 +239,7 @@
                                     <div class="practice-grid"></div>
                                 </div>
                                 @if($item['include_readings'])
-                                    <div class="kanji-reading" style="font-family: 'M PLUS 2', 'courier', sans-serif; text-align: center;">{{ $kanjiInfo['character'] }}</div>
+                                    <div class="kanji-reading" style="font-family: 'M PLUS 2', 'courier', sans-serif; text-align: center; font-size: 36pt;">{{ $kanjiInfo['character'] }}</div>
                                 @endif
                             </div>
                         </td>
@@ -266,7 +266,18 @@
                                         <td style="padding-right: 5px; padding-bottom: 5px;">
                                             <div class="kanji-cell-container">
                                                 <div class="kanji-cell practice">
-                                                    <div class="practice-grid"></div>
+                                                    @if($gridInCurrentRow === 0 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
+                                                        {{-- First grid in row: show SVG at half opacity --}}
+                                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.3; z-index: 1;">
+                                                            <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: 100px; height: 100px;">
+                                                        </div>
+                                                    @elseif($gridInCurrentRow === 1 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
+                                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; z-index: 1;">
+                                                            <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: 100px; height: 100px;">
+                                                        </div>
+                                                    @endif
+                                                    <div class="practice-grid">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </td>
