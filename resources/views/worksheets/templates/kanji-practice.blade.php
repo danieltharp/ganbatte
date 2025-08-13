@@ -36,6 +36,7 @@
 
         .header h1 {
             font-size: 24px;
+            font-weight: normal;
             margin: 0 0 10px 0;
         }
 
@@ -53,8 +54,30 @@
         }
 
         .kanji-section {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             page-break-inside: avoid;
+        }
+        
+        .kanji-row {
+            width: 100%;
+            margin-bottom: 20px;
+            overflow: hidden; /* Clear floats */
+        }
+        
+        .kanji-example {
+            float: left;
+            width: 120px;
+            margin-right: 10px;
+        }
+        
+        .kanji-practice-group {
+            overflow: hidden; /* Contains floated children */
+        }
+        
+        .kanji-practice-group .kanji-cell-container {
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 5px;
         }
 
         .vocabulary-header {
@@ -195,69 +218,77 @@
                 </div>
             @endif
 
-            <div class="kanji-grid">
-                @foreach($item['kanji'] as $kanjiInfo)
-                    @if($kanjiInfo['svg_available'])
-                        {{-- First cell: Example with stroke order --}}
-                        <div class="kanji-cell-container">
-                            <div class="kanji-cell">
-                                @if($item['include_stroke_order'] && $kanjiInfo['svg_content'])
-                                    @php
-                                        $optimizedSvg = \App\Helpers\KanjiSvgHelper::optimizeSvgForPdf($kanjiInfo['svg_content']);
-                                    @endphp
-
-                                    @if(!empty($optimizedSvg))
-                                        {{-- Try SVG first --}}
+            @foreach($item['kanji'] as $kanjiInfo)
+                <table style="width: 100%; margin-bottom: 20px; border-collapse: collapse;">
+                    <tr>
+                        {{-- Example kanji on the left --}}
+                        <td style="width: 120px; vertical-align: top; padding-right: 10px;">
+                            <div class="kanji-cell-container">
+                                <div class="kanji-cell">
+                                    @if($kanjiInfo['svg_available'] && $item['include_stroke_order'] && $kanjiInfo['svg_content'])
+                                        {{-- Show SVG stroke order --}}
                                         <div class="kanji-stroke-order">
                                             <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Stroke Order" style="width: 100px; height: 100px;">
                                         </div>
+                                    @else
+                                        {{-- Show character --}}
+                                        <div class="kanji-character" style="display: table-cell; vertical-align: middle; text-align: center; height: 100px; width: 100px; color: #333; font-size: 36px; font-family: 'M PLUS 2', 'courier', sans-serif;">
+                                            {{ $kanjiInfo['character'] }}
+                                        </div>
                                     @endif
-                                @else
-                                    {{-- No stroke order requested or no SVG --}}
-                                    <div class="kanji-character" style="display: flex; align-items: center; justify-content: center; height: 100%; color: #333; font-size: 36px; font-family: 'M PLUS 2', 'courier', sans-serif;">
-                                        {{ $kanjiInfo['character'] }}
-                                    </div>
+                                    <div class="practice-grid"></div>
+                                </div>
+                                @if($item['include_readings'])
+                                    <div class="kanji-reading" style="font-family: 'M PLUS 2', 'courier', sans-serif; text-align: center;">{{ $kanjiInfo['character'] }}</div>
                                 @endif
-                                <div class="practice-grid"></div>
                             </div>
-                            @if($item['include_readings'])
-                                <div class="kanji-reading" style="font-family: 'M PLUS 2', 'courier', sans-serif;">{{ $kanjiInfo['character'] }}</div>
-                            @endif
-                        </div>
+                        </td>
 
-                        {{-- Additional practice cells (empty) --}}
-                        @for($i = 0; $i < ($settings['grid_size'] - 1); $i++)
-                            <div class="kanji-cell-container">
-                                <div class="kanji-cell practice">
-                                    <div class="practice-grid"></div>
-                                </div>
-                            </div>
-                        @endfor
-                    @else
-                        {{-- Fallback for missing SVG --}}
-                        <div class="kanji-cell-container">
-                            <div class="kanji-cell">
-                                <div class="kanji-character" style="display: flex; align-items: center; justify-content: center; height: 100%; color: #333;">
-                                    {!! \App\Helpers\KanjiSvgHelper::encodeJapaneseForPdf($kanjiInfo['character']) !!}
-                                </div>
-                                <div class="practice-grid"></div>
-                            </div>
-                            @if($item['include_readings'])
-                                <div class="kanji-reading" style="font-family: 'M PLUS 2', 'courier', sans-serif;">{{ $kanjiInfo['character'] }}</div>
-                            @endif
-                        </div>
-
-                        {{-- Practice cells --}}
-                        @for($i = 0; $i < ($settings['grid_size'] - 1); $i++)
-                            <div class="kanji-cell-container">
-                                <div class="kanji-cell practice">
-                                    <div class="practice-grid"></div>
-                                </div>
-                            </div>
-                        @endfor
-                    @endif
-                @endforeach
-            </div>
+                        {{-- Practice grids on the right --}}
+                        <td style="vertical-align: top;">
+                            <table style="border-collapse: collapse;">
+                                @php
+                                    $isLandscape = ($settings['orientation'] ?? 'portrait') === 'landscape';
+                                    $firstRowMax = $isLandscape ? 7 : 5;
+                                    $subsequentRowMax = $isLandscape ? 8 : 6;
+                                    $totalGrids = $settings['grid_size'];
+                                    $currentGrid = 0;
+                                    $currentRow = 0;
+                                @endphp
+                                
+                                <tr>
+                                    @for($i = 0; $i < $totalGrids; $i++)
+                                        @php
+                                            $currentRowMax = ($currentRow === 0) ? $firstRowMax : $subsequentRowMax;
+                                            $gridInCurrentRow = $currentGrid % $currentRowMax;
+                                        @endphp
+                                        
+                                        <td style="padding-right: 5px; padding-bottom: 5px;">
+                                            <div class="kanji-cell-container">
+                                                <div class="kanji-cell practice">
+                                                    <div class="practice-grid"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                        @php $currentGrid++; @endphp
+                                        
+                                        {{-- Break to new row when we hit the limit for current row --}}
+                                        @if($gridInCurrentRow === ($currentRowMax - 1) && $i < ($totalGrids - 1))
+                                </tr>
+                                <tr>
+                                            @php 
+                                                $currentRow++; 
+                                                $currentGrid = 0;
+                                            @endphp
+                                        @endif
+                                    @endfor
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            @endforeach
         </div>
     @endforeach
 

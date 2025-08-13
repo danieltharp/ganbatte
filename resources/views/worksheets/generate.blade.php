@@ -34,7 +34,6 @@
                                             <select name="paper_size" id="paper_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                                                 <option value="A4" selected>A4 (210 × 297 mm)</option>
                                                 <option value="Letter">US Letter (8.5 × 11 in)</option>
-                                                <option value="Legal">US Legal (8.5 × 14 in)</option>
                                             </select>
                                         </div>
                                         
@@ -55,11 +54,10 @@
                                         <div>
                                             <label for="grid_size" class="block text-sm font-medium text-gray-700">Practice Cells per Kanji</label>
                                             <select name="grid_size" id="grid_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                                                <option value="4">4 cells</option>
-                                                <option value="6" selected>6 cells</option>
-                                                <option value="8">8 cells</option>
-                                                <option value="10">10 cells</option>
-                                                <option value="12">12 cells</option>
+                                                <option value="5">5 cells</option>
+                                                <option value="10" selected>10 cells</option>
+                                                <option value="15">15 cells</option>
+                                                <option value="20">20 cells</option>
                                             </select>
                                             <p class="mt-1 text-sm text-gray-500">Includes 1 example + practice cells</p>
                                         </div>
