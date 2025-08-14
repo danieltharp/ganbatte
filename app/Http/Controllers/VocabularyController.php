@@ -13,7 +13,8 @@ class VocabularyController extends Controller
      */
     public function index(Request $request)
     {
-        $query = Vocabulary::with('lesson');
+        $query = Vocabulary::with('lesson')
+        ->where('part_of_speech', '!=', 'kanji');
         
         // Filter by lesson if provided
         if ($request->has('lesson_id') && $request->lesson_id != '') {
