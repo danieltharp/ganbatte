@@ -11,7 +11,7 @@
         body {
             font-family: "M PLUS 2", 'courier', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             font-size: 12px;
             color: #333;
         }
@@ -29,9 +29,9 @@
 
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             border-bottom: 2px solid #333;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
         }
 
         .header h1 {
@@ -54,13 +54,13 @@
         }
 
         .kanji-section {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             page-break-inside: avoid;
         }
         
         .kanji-row {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             overflow: hidden; /* Clear floats */
         }
         
@@ -82,16 +82,16 @@
 
         .vocabulary-header {
             font-size: 16px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #333;
             border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
+            padding-bottom: 4px;
         }
 
         .vocabulary-info {
             font-size: 12px;
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .kanji-cell {
@@ -176,7 +176,8 @@
         }
 
         @page {
-            margin: {{ $settings['margins']['top'] ?? 20 }}mm {{ $settings['margins']['right'] ?? 20 }}mm {{ $settings['margins']['bottom'] ?? 20 }}mm {{ $settings['margins']['left'] ?? 20 }}mm;
+            margin: 15mm 15mm 15mm 15mm;
+            size: {{ $settings['paper_size'] ?? 'A4' }} {{ $settings['orientation'] ?? 'portrait' }};
         }
 
         /* Stroke order styling */
@@ -201,8 +202,33 @@
         <div class="subtitle">Generated on {{ now()->format('F j, Y') }}</div>
     </div>
 
+    @php
+        // Calculate optimal page breaks based on content size
+        $gridSize = $settings['grid_size'] ?? 6;
+        $isLandscape = ($settings['orientation'] ?? 'portrait') === 'landscape';
+        
+        // Estimate heights (in approximate pixels for DomPDF)
+        $headerHeight = 80;
+        $kanjiHeaderHeight = 45; // vocabulary header + info
+        $practiceRowHeight = 110; // 100px grid + margins
+        
+        // Calculate rows needed for grid size
+        $gridsPerRow = $isLandscape ? 7 : 5;
+        $rowsNeeded = ceil($gridSize / $gridsPerRow);
+        
+        // Total height per kanji section
+        $kanjiSectionHeight = $kanjiHeaderHeight + ($practiceRowHeight * $rowsNeeded) + 20; // +margin
+        
+        // Available page height (rough estimates for A4)
+        $pageHeight = $isLandscape ? 520 : 750; // Landscape vs Portrait usable height
+        $availableHeight = $pageHeight - $headerHeight;
+        
+        // How many kanji fit per page
+        $kanjiPerPage = max(1, floor($availableHeight / $kanjiSectionHeight));
+    @endphp
+
     @foreach($kanjiData as $index => $item)
-        <div class="kanji-section {{ $index > 0 && $index % 3 === 0 ? 'page-break' : '' }}">
+        <div class="kanji-section {{ $index > 0 && $index % $kanjiPerPage === 0 ? 'page-break' : '' }}">
             <div class="vocabulary-header">
                 {{ $item['vocabulary']->word_japanese }} - {{ $item['vocabulary']->word_english }}
             </div>
@@ -219,7 +245,7 @@
             @endif
 
             @foreach($item['kanji'] as $kanjiInfo)
-                <table style="width: 100%; margin-bottom: 20px; border-collapse: collapse;">
+                <table style="width: 100%; margin-bottom: 15px; border-collapse: collapse;">
                     <tr>
                         {{-- Example kanji on the left --}}
                         <td style="width: 120px; vertical-align: top; padding-right: 10px;">
@@ -260,7 +286,7 @@
                                             $gridInCurrentRow = $currentGrid % $currentRowMax;
                                         @endphp
                                         
-                                        <td style="padding-right: 5px; padding-bottom: 5px;">
+                                        <td style="padding-right: 4px; padding-bottom: 4px;">
                                             <div class="kanji-cell-container">
                                                 <div class="kanji-cell practice">
                                                     @if($gridInCurrentRow === 0 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])

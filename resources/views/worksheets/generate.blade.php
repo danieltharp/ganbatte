@@ -54,10 +54,10 @@
                                         <div>
                                             <label for="grid_size" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Practice Cells per Kanji</label>
                                             <select name="grid_size" id="grid_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100">
-                                                <option value="5">5 cells</option>
-                                                <option value="10" selected>10 cells</option>
-                                                <option value="15">15 cells</option>
-                                                <option value="20">20 cells</option>
+                                                <option value="5">1 row</option>
+                                                <option value="10" selected>2 rows</option>
+                                                <option value="15">3 rows</option>
+                                                <option value="20">4 rows</option>
                                             </select>
                                             <p class="mt-1 text-sm text-gray-500">Includes 1 example + practice cells</p>
                                         </div>
