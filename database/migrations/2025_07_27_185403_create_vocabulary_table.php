@@ -24,7 +24,7 @@ return new class extends Migration
             $table->enum('part_of_speech', [
                 'noun', 'verb', 'adjective', 'adverb', 'particle', 
                 'conjunction', 'interjection', 'counter', 'expression',
-                'affix'
+                'affix', 'kanji'
             ]);
             $table->enum('verb_type', ['ichidan', 'godan', 'irregular', 'suru'])->nullable();
             $table->enum('adjective_type', ['i_adjective', 'na_adjective', 'no_adjective'])->nullable();

@@ -2,29 +2,44 @@
   "worksheets": [
     {
       "id": "mnn-01-hiragana-ws",
-      "name": "Lesson 1 Hiragana Practice",
-      "type": "hiragana_practice",
+      "name": "Other Kanji appearing in Lesson 1",
+      "type": "kanji_practice",
       "lesson_id": "mnn-lesson-01",
-      "content_ids": ["mnn-01-001", "mnn-01-002", "mnn-01-003", "mnn-01-004", "mnn-01-005"],
-      "template": "hiragana_grid_template",
-      "print_settings": {
-        "paper_size": "A4",
-        "orientation": "portrait",
-        "margins": {
-          "top": 25,
-          "bottom": 25,
-          "left": 20,
-          "right": 20
-        }
-      }
+      "content_ids": [
+        "mnn-01-001",
+        "mnn-01-006",
+        "mnn-01-007",
+        "mnn-01-008",
+        "mnn-01-009",
+        "mnn-01-010",
+        "mnn-01-011",
+        "mnn-01-012",
+        "mnn-01-013",
+        "mnn-01-014",
+        "mnn-01-015",
+        "mnn-01-016",
+        "mnn-01-017",
+        "mnn-01-018",
+        "mnn-01-019",
+        "mnn-01-022",
+        "mnn-01-023",
+        "mnn-01-024",
+        "mnn-01-025",
+        "mnn-01-026",
+        "mnn-01-032",
+        "mnn-01-034",
+        "mnn-01-036",
+        "mnn-01-x-001"
+      ],
+      "template": "kanji_stroke_template"
     },
     {
       "id": "mnn-01-vocab-ws",
-      "name": "Lesson 1 Vocabulary Review",
-      "type": "vocabulary_review",
+      "name": "Unit 1 Kanji, Lesson 1 Content",
+      "type": "kanji_practice",
       "lesson_id": "mnn-lesson-01",
-      "content_ids": ["mnn-01-001", "mnn-01-002", "mnn-01-003", "mnn-01-004", "mnn-01-005"],
-      "template": "vocabulary_matching_template"
+      "content_ids": ["mnn-01-k-001", "mnn-01-k-002", "mnn-01-k-003", "mnn-01-k-004", "mnn-01-k-005", "mnn-01-k-006", "mnn-01-k-007", "mnn-01-k-008", "mnn-01-k-009", "mnn-01-k-010"],
+      "template": "kanji_stroke_template"
     }
   ]
 } 

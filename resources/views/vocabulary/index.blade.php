@@ -84,6 +84,7 @@
 <!-- Vocabulary Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     @forelse($vocabulary as $vocab)
+    <a href="{{ route('vocabulary.show', $vocab->id) }}">
         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg hover:shadow-lg transition-shadow">
             <div class="p-6">
                 <div class="flex items-start justify-between mb-3">
@@ -129,6 +130,7 @@
                 </div>
             </div>
         </div>
+        </a>
     @empty
         <div class="col-span-full">
             <div class="text-center py-12">

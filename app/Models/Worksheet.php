@@ -21,12 +21,10 @@ class Worksheet extends Model
         'lesson_id',
         'template',
         'content_ids',
-        'print_settings',
     ];
 
     protected $casts = [
         'content_ids' => 'array',
-        'print_settings' => 'array',
     ];
 
     /**
@@ -85,22 +83,7 @@ class Worksheet extends Model
         ]);
     }
 
-    /**
-     * Get default print settings
-     */
-    public function getDefaultPrintSettings(): array
-    {
-        return [
-            'paper_size' => 'A4',
-            'orientation' => 'portrait',
-            'margins' => [
-                'top' => 20,
-                'bottom' => 20,
-                'left' => 20,
-                'right' => 20,
-            ],
-        ];
-    }
+
 
     /**
      * Scope to filter by worksheet type

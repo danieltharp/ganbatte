@@ -64,7 +64,7 @@ class GrammarPoint extends Model
      */
     public function getMarkdownExplanationPath(): string
     {
-        return resource_path("data/grammar/explanations/{$this->id}.md");
+        return resource_path("data/notes/grammar/{$this->id}.md");
     }
 
     /**

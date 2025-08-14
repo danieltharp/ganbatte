@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\LaravelMarkdown\MarkdownRenderer;
 
 class Vocabulary extends Model
 {
@@ -139,5 +140,36 @@ class Vocabulary extends Model
     public function scopeForKanjiWorksheet($query)
     {
         return $query->where('include_in_kanji_worksheet', true);
+    }
+
+    /**
+     * Check if this vocabulary item has a markdown note file
+     */
+    public function hasMarkdownNote(): bool
+    {
+        return file_exists($this->getMarkdownNotePath());
+    }
+
+    /**
+     * Get the path to the markdown note file
+     */
+    public function getMarkdownNotePath(): string
+    {
+        return resource_path("data/notes/vocabulary/{$this->id}.md");
+    }
+
+    /**
+     * Get the rendered markdown note
+     */
+    public function getMarkdownNote(): ?string
+    {
+        if (!$this->hasMarkdownNote()) {
+            return null;
+        }
+
+        $renderer = new MarkdownRenderer();
+
+        $markdownContent = file_get_contents($this->getMarkdownNotePath());
+        return $renderer->toHtml($markdownContent);
     }
 } 

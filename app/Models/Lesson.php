@@ -88,6 +88,14 @@ class Lesson extends Model
     }
 
     /**
+     * Get articles associated with this lesson
+     */
+    public function articles(): HasMany
+    {
+        return $this->hasMany(Article::class);
+    }
+
+    /**
      * Get the full Japanese title with fallbacks
      */
     public function getJapaneseTitleAttribute(): string

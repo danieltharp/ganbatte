@@ -10,6 +10,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\WorksheetController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -36,6 +37,8 @@ Route::post('/vocabulary-quiz/submit', [VocabularyQuizController::class, 'submit
 Route::get('/grammar', [GrammarController::class, 'index'])->name('grammar.index');
 Route::get('/grammar/{grammar}', [GrammarController::class, 'show'])->name('grammar.show');
 
+Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
+
 Route::get('/questions', [QuestionController::class, 'index'])->name('questions.index');
 Route::get('/questions/{question}', [QuestionController::class, 'show'])->name('questions.show');
 
@@ -43,7 +46,14 @@ Route::get('/tests', [TestController::class, 'index'])->name('tests.index');
 Route::get('/tests/{test}', [TestController::class, 'show'])->name('tests.show');
 
 Route::get('/worksheets', [WorksheetController::class, 'index'])->name('worksheets.index');
+Route::get('/worksheets/create', [WorksheetController::class, 'create'])->name('worksheets.create');
+Route::post('/worksheets', [WorksheetController::class, 'store'])->name('worksheets.store');
 Route::get('/worksheets/{worksheet}', [WorksheetController::class, 'show'])->name('worksheets.show');
+Route::get('/worksheets/{worksheet}/edit', [WorksheetController::class, 'edit'])->name('worksheets.edit');
+Route::put('/worksheets/{worksheet}', [WorksheetController::class, 'update'])->name('worksheets.update');
+Route::delete('/worksheets/{worksheet}', [WorksheetController::class, 'destroy'])->name('worksheets.destroy');
+Route::get('/worksheets/{worksheet}/generate', [WorksheetController::class, 'generate'])->name('worksheets.generate');
+Route::post('/worksheets/{worksheet}/kanji-pdf', [WorksheetController::class, 'generateKanjiPdf'])->name('worksheets.kanji-pdf');
 
 Route::get('/sections', [SectionController::class, 'index'])->name('sections.index');
 Route::get('/sections/{section}', [SectionController::class, 'show'])->name('sections.show');

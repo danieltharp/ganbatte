@@ -11,6 +11,10 @@
       "part_of_speech": "noun",
       "jlpt_level": "N5",
       "frequency_rank": 42,
+      "audio": {
+        "filename": "MNN_私.mp3",
+        "speaker": "male" 
+      },
       "tags": ["pronoun", "first-person"],
       "also_accepted": {
         "english": ["me", "myself"],
@@ -775,6 +779,136 @@
       "also_accepted":{
         "english": ["language"]
       },
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-001",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "日",
+        "furigana": "{日|にち・ヒ}",
+        "english": "day, sun"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-002",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "月",
+        "furigana": "{月|つき・ゲツ}",
+        "english": "moon, month"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-003",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "火",
+        "furigana": "{火|ひ・カ}",
+        "english": "fire, flame"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-004",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "水",
+        "furigana": "{水|みず・スイ}",
+        "english": "water"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-005",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "木",
+        "furigana": "{木|き・モク}",
+        "english": "tree, wood"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-006",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "金",
+        "furigana": "{金|きん・キン}",
+        "english": "gold, money"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-007",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "土",
+        "furigana": "{土|つち・ドウ}",
+        "english": "earth, soil"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-008",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "山",
+        "furigana": "{山|やま・サン}",
+        "english": "mountain"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-009",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "川",
+        "furigana": "{川|かわ・セン}",
+        "english": "river, stream"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-01-k-010",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "田",
+        "furigana": "{田|た・デン}",
+        "english": "rice paddy"
+      },
+      "part_of_speech": "kanji",
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
       "include_in_kanji_worksheet": true
     }
   ]
