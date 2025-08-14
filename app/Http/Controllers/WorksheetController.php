@@ -125,11 +125,15 @@ class WorksheetController extends Controller
      */
     public function generateKanjiPdf(Request $request, Worksheet $worksheet)
     {
-        // Validate request
+        // Validate request with conditional row limits
+        $practiceSize = $request->input('practice_size', 'large');
+        $maxRows = ($practiceSize === 'mixed') ? 2 : 4;
+        
         $validated = $request->validate([
             'paper_size' => 'required|in:A4,Letter,Legal',
             'orientation' => 'required|in:portrait,landscape',
-            'grid_size' => 'nullable|integer|min:1|max:20',
+            'practice_rows' => "required|integer|min:1|max:$maxRows",
+            'grid_size' => 'nullable|integer|min:1|max:66', // Max: Mixed mode 2 rows × (8+10+15) cells on Letter landscape
             'practice_size' => 'required|in:small,medium,large,mixed',
             'include_stroke_order' => 'boolean',
             'include_readings' => 'boolean',

@@ -52,25 +52,28 @@
                                     <h4 class="font-medium text-gray-900 mb-3 dark:text-gray-100">Layout Settings</h4>
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>
-                                            <label for="grid_size" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Practice Cells per Kanji</label>
-                                            <select name="grid_size" id="grid_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100">
-                                                <option value="5">1 row</option>
-                                                <option value="10" selected>2 rows</option>
-                                                <option value="15">3 rows</option>
-                                                <option value="20">4 rows</option>
+                                            <label for="practice_rows" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Number of Practice Rows</label>
+                                            <select name="practice_rows" id="practice_rows" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100">
+                                                <option value="1">1 row</option>
+                                                <option value="2" selected>2 rows</option>
+                                                <option value="3" class="non-mixed">3 rows</option>
+                                                <option value="4" class="non-mixed">4 rows</option>
                                             </select>
-                                            <p class="mt-1 text-sm text-gray-500">Includes 1 example + practice cells</p>
+                                            <p class="mt-1 text-sm text-gray-500" id="rows-description">Automatically calculates practice cells based on size and orientation</p>
+                                            
+                                            <!-- Hidden field for the calculated grid size -->
+                                            <input type="hidden" name="grid_size" id="grid_size" value="10">
                                         </div>
                                         
                                         <div>
                                             <label for="practice_size" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Practice Cell Size</label>
                                             <select name="practice_size" id="practice_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100">
-                                                <option value="large" selected>Large</option>
-                                                <option value="medium">Medium</option>
-                                                <option value="small">Small</option>
+                                                <option value="large" selected>Large (24mm)</option>
+                                                <option value="medium">Medium (18mm)</option>
+                                                <option value="small">Small (12mm)</option>
                                                 <option value="mixed">Mixed</option>
                                             </select>
-                                            <p class="mt-1 text-sm text-gray-500">Size affects practice space and page layout</p>
+                                            <p class="mt-1 text-sm text-gray-500">Tip: Each quadrant of a small cell is the same size as standard 6mm paper.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -239,5 +242,78 @@
                 selectAllCheckbox.indeterminate = checkedCheckboxes.length > 0 && checkedCheckboxes.length < allCheckboxes.length;
             });
         });
+
+        // Calculate grid size dynamically based on rows, practice size, orientation, and paper size
+        function calculateGridSize() {
+            const practiceRows = parseInt(document.getElementById('practice_rows').value);
+            const practiceSize = document.getElementById('practice_size').value;
+            const orientation = document.getElementById('orientation').value;
+            const paperSize = document.getElementById('paper_size').value;
+            
+            // Grids per row based on practice size, orientation, and paper size
+            const gridsPerRow = {
+                'large': orientation === 'landscape' ? (paperSize === 'Letter' ? 8 : 7) : 5,
+                'medium': orientation === 'landscape' ? (paperSize === 'Letter' ? 10 : 9) : 7,
+                'small': orientation === 'landscape' ? (paperSize === 'Letter' ? 15 : 13) : 10,
+                'mixed': (() => {
+                    // Mixed mode: full rows of each size (large + medium + small)
+                    const large = orientation === 'landscape' ? (paperSize === 'Letter' ? 8 : 7) : 5;
+                    const medium = orientation === 'landscape' ? (paperSize === 'Letter' ? 10 : 9) : 7;
+                    const small = orientation === 'landscape' ? (paperSize === 'Letter' ? 15 : 13) : 10;
+                    return large + medium + small;
+                })()
+            };
+            
+            const cellsPerRow = gridsPerRow[practiceSize];
+            const totalGrids = practiceRows * cellsPerRow;
+            
+            // Update the hidden grid_size field
+            document.getElementById('grid_size').value = totalGrids;
+            
+            // Update the description
+            const description = document.getElementById('rows-description');
+            if (practiceSize === 'mixed') {
+                description.textContent = `${practiceRows} row${practiceRows > 1 ? 's' : ''} each of Large, Medium, Small = ${totalGrids} practice cells`;
+            } else {
+                description.textContent = `${practiceRows} row${practiceRows > 1 ? 's' : ''} × ${cellsPerRow} cells = ${totalGrids} practice cells`;
+            }
+        }
+        
+        // Update row options based on practice size
+        function updateRowOptions() {
+            const practiceSize = document.getElementById('practice_size').value;
+            const practiceRows = document.getElementById('practice_rows');
+            const nonMixedOptions = document.querySelectorAll('.non-mixed');
+            
+            if (practiceSize === 'mixed') {
+                // Hide 3-4 row options for Mixed mode
+                nonMixedOptions.forEach(option => {
+                    option.style.display = 'none';
+                    option.disabled = true;
+                });
+                
+                // If currently selected row is 3 or 4, change to 2
+                if (practiceRows.value === '3' || practiceRows.value === '4') {
+                    practiceRows.value = '2';
+                }
+            } else {
+                // Show all options for other modes
+                nonMixedOptions.forEach(option => {
+                    option.style.display = 'block';
+                    option.disabled = false;
+                });
+            }
+            
+            calculateGridSize();
+        }
+        
+        // Add event listeners to recalculate when inputs change
+        document.getElementById('practice_rows').addEventListener('change', calculateGridSize);
+        document.getElementById('practice_size').addEventListener('change', updateRowOptions);
+        document.getElementById('orientation').addEventListener('change', calculateGridSize);
+        document.getElementById('paper_size').addEventListener('change', calculateGridSize);
+        
+        // Calculate initial value and set up row options
+        updateRowOptions();
 </script>
 @endsection

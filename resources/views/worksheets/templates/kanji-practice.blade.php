@@ -24,6 +24,8 @@
         .kanji-character {
             font-family: 'M PLUS 2', 'courier', sans-serif !important;
             line-height: 1;
+            position: relative;
+            z-index: 10; /* Above practice grid lines */
         }
         
         .kanji-character.size-large {
@@ -120,6 +122,8 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            position: relative;
+            z-index: 10; /* Above practice grid lines */
         }
         
         .kanji-stroke-order.size-large {
@@ -151,6 +155,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
+            z-index: 1; /* Background layer for guide lines */
         }
 
         .practice-grid::before {
@@ -162,6 +167,7 @@
             height: 1px;
             background: #ddd;
             transform: translateY(-50%);
+            z-index: 1; /* Same layer as parent - behind SVG content */
         }
 
         .practice-grid::after {
@@ -173,6 +179,7 @@
             width: 1px;
             background: #ddd;
             transform: translateX(-50%);
+            z-index: 1; /* Same layer as parent - behind SVG content */
         }
 
         .kanji-reading {
@@ -222,20 +229,37 @@
 
 
     @php
+        // Precise DomPDF calculations at 96 DPI
+        $paperSize = $settings['paper_size'] ?? 'A4';
+
         // Calculate optimal page breaks based on content size and practice size
         $gridSize = $settings['grid_size'] ?? 6;
         $isLandscape = ($settings['orientation'] ?? 'portrait') === 'landscape';
         $practiceSize = $settings['practice_size'] ?? 'large';
         
-        // Cell dimensions for different sizes
-        $cellSizes = [
-            'large' => ['width' => 92, 'height' => 92, 'grids_per_row' => $isLandscape ? 7 : 5],
-            'medium' => ['width' => 69, 'height' => 69, 'grids_per_row' => $isLandscape ? 9 : 7],
-            'small' => ['width' => 46, 'height' => 46, 'grids_per_row' => $isLandscape ? 13 : 10],
+        // Cell dimensions for different sizes (matching JavaScript calculation)
+        // Account for Letter paper being wider than A4 in landscape mode
+        $gridsPerRowLandscape = [
+            'large' => ($paperSize === 'Letter') ? 8 : 7,
+            'medium' => ($paperSize === 'Letter') ? 10 : 9,
+            'small' => ($paperSize === 'Letter') ? 15 : 13,
         ];
         
-        // Precise DomPDF calculations at 96 DPI
-        $paperSize = $settings['paper_size'] ?? 'A4';
+        $cellSizes = [
+            'large' => ['width' => 92, 'height' => 92, 'grids_per_row' => $isLandscape ? $gridsPerRowLandscape['large'] : 5],
+            'medium' => ['width' => 69, 'height' => 69, 'grids_per_row' => $isLandscape ? $gridsPerRowLandscape['medium'] : 7], 
+            'small' => ['width' => 46, 'height' => 46, 'grids_per_row' => $isLandscape ? $gridsPerRowLandscape['small'] : 10],
+        ];
+        
+        // Mixed mode uses full rows of each size
+        $mixedTotalGrids = 0;
+        if ($practiceSize === 'mixed') {
+            $largeGridsPerRow = $isLandscape ? $gridsPerRowLandscape['large'] : 5;
+            $mediumGridsPerRow = $isLandscape ? $gridsPerRowLandscape['medium'] : 7;
+            $smallGridsPerRow = $isLandscape ? $gridsPerRowLandscape['small'] : 10;
+            $mixedTotalGrids = $largeGridsPerRow + $mediumGridsPerRow + $smallGridsPerRow;
+        }
+        
         
         // Paper dimensions in inches, then convert to pixels at 96 DPI
         $paperDimensions = [
@@ -268,12 +292,13 @@
         $availableContentHeight = $usableHeight - $footerHeight;
         
         if ($practiceSize === 'mixed') {
-            // Mixed mode: one row of each size
-            $practiceRowHeight = 92 + 69 + 46 + 30; // large + medium + small + margins
+            // Mixed mode: full rows of each size (large + medium + small)
+            $practiceRows = ceil($gridSize / $mixedTotalGrids); // How many practice rows were requested
+            $practiceRowHeight = ($practiceRows * 92) + ($practiceRows * 69) + ($practiceRows * 46) + ($practiceRows * 3 * 10); // Each size + margins
             $kanjiSectionHeight = $kanjiHeaderHeight + $practiceRowHeight + 20;
             $kanjiPerPage = max(1, floor($availableContentHeight / $kanjiSectionHeight));
         } else {
-            // Single size mode
+            // Single size mode - use calculated grid_size from form
             $cellSize = $cellSizes[$practiceSize];
             $gridsPerRow = $cellSize['grids_per_row'];
             $rowsNeeded = ceil($gridSize / $gridsPerRow);
@@ -292,7 +317,7 @@
             <div class="vocabulary-header">
                 {{ $item['vocabulary']->word_japanese }} - {{ $item['vocabulary']->word_english }}
             </div>
-            
+<!--             
             @if($item['vocabulary']->part_of_speech || $item['vocabulary']->jlpt_level)
                 <div class="vocabulary-info">
                     @if($item['vocabulary']->part_of_speech)
@@ -302,7 +327,7 @@
                         | JLPT Level: {{ $item['vocabulary']->jlpt_level }}
                     @endif
                 </div>
-            @endif
+            @endif -->
 
             @foreach($item['kanji'] as $kanjiInfo)
                 <table style="width: 100%; margin-bottom: 15px; border-collapse: collapse;">
@@ -334,39 +359,47 @@
                         {{-- Practice grids on the right --}}
                         <td style="vertical-align: top;">
                             @if($practiceSize === 'mixed')
-                                {{-- Mixed mode: one row each of large, medium, small --}}
+                                {{-- Mixed mode: full rows of large, medium, and small --}}
                                 @php
-                                    $mixedSizes = ['large', 'medium', 'small'];
-                                    $cellsPerSize = ceil($gridSize / 3); // Distribute cells across sizes
+                                    $practiceRows = ceil($gridSize / $mixedTotalGrids);
+                                    $largePerRow = $isLandscape ? $gridsPerRowLandscape['large'] : 5;
+                                    $mediumPerRow = $isLandscape ? $gridsPerRowLandscape['medium'] : 7;
+                                    $smallPerRow = $isLandscape ? $gridsPerRowLandscape['small'] : 10;
+                                    $mixedSizes = [
+                                        ['size' => 'large', 'count' => $largePerRow, 'opacity' => 0.3],
+                                        ['size' => 'medium', 'count' => $mediumPerRow, 'opacity' => 0.2],
+                                        ['size' => 'small', 'count' => $smallPerRow, 'opacity' => 0.1]
+                                    ];
                                 @endphp
                                 
-                                @foreach($mixedSizes as $currentSize)
-                                    <div style="margin-bottom: 10px;">
-                                        <table style="border-collapse: collapse;">
-                                            <tr>
-                                                @for($i = 0; $i < $cellsPerSize; $i++)
-                                                    <td style="padding-right: 4px; padding-bottom: 4px;">
-                                                        <div class="kanji-cell-container">
-                                                            <div class="kanji-cell practice size-{{ $currentSize }}">
-                                                                @if($i === 0 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
-                                                                    {{-- First grid in each row: show SVG at opacity --}}
-                                                                    @php
-                                                                        $opacity = $currentSize === 'large' ? 0.3 : ($currentSize === 'medium' ? 0.2 : 0.1);
-                                                                        $cellDim = $cellSizes[$currentSize]['width'];
-                                                                    @endphp
-                                                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: {{ $opacity }}; z-index: 1;">
-                                                                        <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: {{ $cellDim }}px; height: {{ $cellDim }}px;">
-                                                                    </div>
-                                                                @endif
-                                                                <div class="practice-grid"></div>
+                                @for($row = 0; $row < $practiceRows; $row++)
+                                    @foreach($mixedSizes as $sizeInfo)
+                                        <div style="margin-bottom: 8px;">
+                                            <table style="border-collapse: collapse;">
+                                                <tr>
+                                                    @for($i = 0; $i < $sizeInfo['count']; $i++)
+                                                        <td style="padding-right: 4px; padding-bottom: 4px;">
+                                                            <div class="kanji-cell-container">
+                                                                <div class="kanji-cell practice size-{{ $sizeInfo['size'] }}">
+                                                                    @if($i === 0 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
+                                                                        {{-- First grid in each row: show SVG at opacity --}}
+                                                                        @php
+                                                                            $cellDim = $cellSizes[$sizeInfo['size']]['width'];
+                                                                        @endphp
+                                                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: {{ $sizeInfo['opacity'] }}; z-index: 5;">
+                                                                            <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: {{ $cellDim }}px; height: {{ $cellDim }}px;">
+                                                                        </div>
+                                                                    @endif
+                                                                    <div class="practice-grid"></div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </td>
-                                                @endfor
-                                            </tr>
-                                        </table>
-                                    </div>
-                                @endforeach
+                                                        </td>
+                                                    @endfor
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    @endforeach
+                                @endfor
                             @else
                                 {{-- Single size mode --}}
                                 <table style="border-collapse: collapse;">
@@ -392,11 +425,11 @@
                                                             @php
                                                                 $cellDim = $cellSize['width'];
                                                             @endphp
-                                                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.3; z-index: 1;">
+                                                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.3; z-index: 5;">
                                                                 <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: {{ $cellDim }}px; height: {{ $cellDim }}px;">
                                                             </div>
                                                         @elseif($gridInCurrentRow === 1 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
-                                                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; z-index: 1;">
+                                                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; z-index: 5;">
                                                                 <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: {{ $cellDim }}px; height: {{ $cellDim }}px;">
                                                             </div>
                                                         @endif
