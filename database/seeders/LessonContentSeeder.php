@@ -14,6 +14,7 @@ use App\Models\Worksheet;
 use App\Models\Exercise;
 use App\Models\Section;
 use App\Models\Page;
+use App\Models\Article;
 
 class LessonContentSeeder extends Seeder
 {
@@ -157,6 +158,20 @@ class LessonContentSeeder extends Seeder
                     $bookRef = ucfirst($page->book_reference);
                     $contentCount = count($pageData['content'] ?? []);
                     $this->command->info("  ✓ Page: {$bookRef} p.{$page->page_number} ({$contentCount} items)");
+                }
+            }
+        }
+
+        // Import articles
+        $articlesFile = resource_path("data/articles/lesson-{$paddedNumber}.json");
+        if (File::exists($articlesFile)) {
+            $articlesData = json_decode(File::get($articlesFile), true);
+            if (isset($articlesData['articles'])) {
+                foreach ($articlesData['articles'] as $articleData) {
+                    $article = $this->createArticle($articleData);
+                    $vocabCount = count($articleData['covered_vocabulary_ids'] ?? []);
+                    $hasContent = file_exists(resource_path("data/notes/articles/{$article->id}.md")) ? " 📝" : "";
+                    $this->command->info("  ✓ Article: {$article->title} ({$vocabCount} vocab items){$hasContent}");
                 }
             }
         }
@@ -340,6 +355,19 @@ class LessonContentSeeder extends Seeder
                 'page_number' => $data['page_number'],
                 'book_reference' => $data['book_reference'],
                 'content_list' => $data['content'] ?? [],
+            ]
+        );
+    }
+
+    private function createArticle($data)
+    {
+        return Article::updateOrCreate(
+            ['id' => $data['id']], // Unique identifier
+            [
+                'lesson_id' => $data['lesson_id'],
+                'title' => $data['title'],
+                'subtitle' => $data['subtitle'] ?? null,
+                'covered_vocabulary_ids' => $data['covered_vocabulary_ids'] ?? [],
             ]
         );
     }

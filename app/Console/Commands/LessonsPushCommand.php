@@ -85,7 +85,7 @@ class LessonsPushCommand extends Command
     private function showFilesToProcess()
     {
         $dataPath = resource_path('data');
-        $contentTypes = ['lessons', 'vocabulary', 'grammar', 'questions', 'tests', 'worksheets', 'exercises', 'sections', 'pages'];
+        $contentTypes = ['lessons', 'vocabulary', 'grammar', 'questions', 'tests', 'worksheets', 'exercises', 'sections', 'pages', 'articles'];
         
         $this->info('Files that would be processed:');
         $this->line('');

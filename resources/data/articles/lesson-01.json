@@ -1,0 +1,23 @@
+{
+  "articles": [
+    {
+      "id": "mnn-01-article-001",
+      "lesson_id": "mnn-lesson-01",
+      "title": "Understanding Japanese Pronouns",
+      "subtitle": "A deeper look at first-person pronouns beyond 私 (watashi)",
+      "covered_vocabulary_ids": [
+        "mnn-01-001"
+      ]
+    },
+    {
+      "id": "mnn-01-article-002", 
+      "lesson_id": "mnn-lesson-01",
+      "title": "Politeness Levels in Japanese",
+      "subtitle": "When to use です (desu) and other formality markers",
+      "covered_vocabulary_ids": [
+        "mnn-01-001",
+        "mnn-01-002"
+      ]
+    }
+  ]
+}

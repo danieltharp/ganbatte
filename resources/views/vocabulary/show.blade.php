@@ -133,6 +133,31 @@
             </div>
         @endif
 
+        <!-- Notes -->
+        @if($vocabulary->hasMarkdownNote())
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 flex items-center">
+                            <span class="mr-2">📝</span>
+                            Notes
+                        </h2>
+                    </div>
+                    <div class="prose dark:prose-invert max-w-none 
+                        prose-headings:text-gray-900 dark:prose-headings:text-gray-100
+                        prose-p:text-gray-700 dark:prose-p:text-gray-300
+                        prose-strong:text-gray-900 dark:prose-strong:text-gray-100
+                        prose-code:text-blue-600 dark:prose-code:text-blue-400
+                        prose-code:bg-gray-100 dark:prose-code:bg-gray-800
+                        prose-blockquote:border-blue-500 dark:prose-blockquote:border-blue-400
+                        prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
+                        prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:hover:text-blue-800 dark:prose-a:hover:text-blue-200">
+                        {!! $vocabulary->getMarkdownNote() !!}
+                    </div>
+                </div>
+            </div>
+        @endif
+
         <!-- Mnemonics -->
         @if($vocabulary->mnemonics && count($vocabulary->mnemonics) > 0)
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -200,6 +225,48 @@
                             <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-gray-200">
                                 {{ $tag }}
                             </span>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        <!-- Related Articles -->
+        @php
+            $relatedArticles = \App\Models\Article::coveringVocabulary($vocabulary->id);
+        @endphp
+        @if($relatedArticles->count() > 0)
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <span class="mr-2">📖</span>
+                        Related Articles ({{ $relatedArticles->count() }})
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        @foreach($relatedArticles as $article)
+                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                                            <a href="{{ route('articles.show', $article->id) }}" class="hover:text-blue-600 dark:hover:text-blue-400">{{ $article->title }}</a>
+                                        </h3>
+                                        @if($article->subtitle)
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">{{ $article->subtitle }}</p>
+                                        @endif
+                                        
+                                        <div class="flex items-center space-x-3 text-sm text-gray-500 dark:text-gray-400">
+                                            <span>📚 {{ $article->lesson->title_english }}</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-2 ml-4">
+                                        <a href="{{ route('articles.show', $article->id) }}" class="inline-flex items-center px-3 py-1.5 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md transition-colors">
+                                            Read Article →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         @endforeach
                     </div>
                 </div>

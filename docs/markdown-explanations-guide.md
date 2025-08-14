@@ -10,10 +10,10 @@ Grammar points can now have rich markdown explanations instead of just plain tex
 
 Markdown explanation files are stored in:
 ```
-resources/data/grammar/explanations/{grammar_id}.md
+resources/data/notes/grammar/{grammar_id}.md
 ```
 
-Example: `resources/data/grammar/explanations/mnn-01-grammar-001.md`
+Example: `resources/data/notes/grammar/mnn-01-grammar-001.md`
 
 ## Features
 
@@ -158,4 +158,4 @@ Uses Tailwind Typography plugin with custom prose classes:
 
 ## Examples
 
-See `resources/data/grammar/explanations/mnn-01-grammar-001.md` for a complete example of a rich markdown explanation. 
+See `resources/data/notes/grammar/mnn-01-grammar-001.md` for a complete example of a rich markdown explanation. 

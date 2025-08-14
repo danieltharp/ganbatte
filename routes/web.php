@@ -10,6 +10,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\WorksheetController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -35,6 +36,8 @@ Route::post('/vocabulary-quiz/submit', [VocabularyQuizController::class, 'submit
 
 Route::get('/grammar', [GrammarController::class, 'index'])->name('grammar.index');
 Route::get('/grammar/{grammar}', [GrammarController::class, 'show'])->name('grammar.show');
+
+Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
 Route::get('/questions', [QuestionController::class, 'index'])->name('questions.index');
 Route::get('/questions/{question}', [QuestionController::class, 'show'])->name('questions.show');

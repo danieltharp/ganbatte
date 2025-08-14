@@ -48,6 +48,15 @@
                             @endforeach
                         </div>
                     @endif
+                    
+                    @if($vocab->hasMarkdownNote())
+                        <div class="mt-3 pt-3 border-t border-blue-200">
+                            <p class="text-sm font-medium text-gray-700 mb-2">📝 Notes:</p>
+                            <div class="text-sm text-gray-600 prose prose-sm max-w-none">
+                                {!! $vocab->getMarkdownNote() !!}
+                            </div>
+                        </div>
+                    @endif
                 </div>
                 @endforeach
             </div>

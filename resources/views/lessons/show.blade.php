@@ -130,6 +130,58 @@
             </div>
         @endif
 
+        <!-- Articles Section -->
+        @if($lesson->articles->count() > 0)
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 flex items-center">
+                            <span class="mr-2">📖</span>
+                            Supplementary Articles ({{ $lesson->articles->count() }})
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        @foreach($lesson->articles as $article)
+                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                                            <a href="{{ route('articles.show', $article->id) }}" class="hover:text-blue-600 dark:hover:text-blue-400">{{ $article->title }}</a>
+                                        </h3>
+                                        @if($article->subtitle)
+                                            <p class="text-gray-600 dark:text-gray-400 mb-3">{{ $article->subtitle }}</p>
+                                        @endif
+                                        
+                                        @if($article->covered_vocabulary_ids && count($article->covered_vocabulary_ids) > 0)
+                                            <div class="flex items-center space-x-2 mb-2">
+                                                <span class="text-sm text-gray-500 dark:text-gray-400">Covers:</span>
+                                                <div class="flex flex-wrap gap-1">
+                                                    @foreach($article->coveredVocabulary() as $vocab)
+                                                        <a href="{{ route('vocabulary.show', $vocab->id) }}">
+                                                            <span class="inline-flex items-center px-2 py-1 rounded text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                                                                {{ $vocab->word_japanese }}
+                                                            </span>
+                                                        </a>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-2 ml-4">
+                                        <a href="{{ route('articles.show', $article->id) }}" class="inline-flex items-center px-3 py-1.5 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md transition-colors">
+                                            Read Article →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endif
+
         <!-- Vocabulary Section -->
         @if($lesson->vocabulary->count() > 0)
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">

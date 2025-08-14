@@ -1,0 +1,14 @@
+{
+  "articles": [
+    {
+      "id": "mnn-XX-article-001",
+      "lesson_id": "mnn-lesson-XX",
+      "title": "Article Title",
+      "subtitle": "Brief description or subtitle",
+      "covered_vocabulary_ids": [
+        "mnn-XX-001",
+        "mnn-XX-002"
+      ]
+    }
+  ]
+}
