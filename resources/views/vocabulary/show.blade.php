@@ -290,16 +290,6 @@
                             Lesson Vocabulary
                         </a>
                     @endif
-                    
-                    @if($vocabulary->include_in_kanji_worksheet)
-                        <a href="{{ route('vocabulary.kanji-worksheet', ['lesson_id' => $vocabulary->lesson_id ?? '']) }}" class="block w-full bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded text-center">
-                            Kanji Practice
-                        </a>
-                    @endif
-                    
-                    <button onclick="addToStudyList()" class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center">
-                        Add to Study List
-                    </button>
                 </div>
             </div>
         </div>
@@ -441,12 +431,5 @@
         font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
     }
 </style>
-
-<script>
-function addToStudyList() {
-    // Placeholder for adding to study list
-    alert('Added to study list! (Feature coming soon)');
-}
-</script>
 
 @endsection
