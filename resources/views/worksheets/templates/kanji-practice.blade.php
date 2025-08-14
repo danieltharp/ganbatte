@@ -11,7 +11,7 @@
         body {
             font-family: "M PLUS 2", 'courier', sans-serif;
             margin: 0;
-            padding: 15px;
+            padding: 10px;
             font-size: 12px;
             color: #333;
         }
@@ -23,28 +23,22 @@
         
         .kanji-character {
             font-family: 'M PLUS 2', 'courier', sans-serif !important;
-            font-size: 48px !important;
             line-height: 1;
         }
-
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
+        
+        .kanji-character.size-large {
+            font-size: 40px !important;
+        }
+        
+        .kanji-character.size-medium {
+            font-size: 32px !important;
+        }
+        
+        .kanji-character.size-small {
+            font-size: 22px !important;
         }
 
-        .header h1 {
-            font-size: 24px;
-            font-weight: normal;
-            margin: 0 0 10px 0;
-        }
 
-        .header .subtitle {
-            font-size: 14px;
-            color: #666;
-            margin: 5px 0;
-        }
 
         .kanji-grid {
             display: grid;
@@ -95,12 +89,26 @@
         }
 
         .kanji-cell {
-            width: 100px;
-            height: 100px;
             border: 2px solid #333;
             position: relative;
             margin: 0 auto;
             background: white;
+        }
+        
+        /* Size variations */
+        .kanji-cell.size-large {
+            width: 92px;
+            height: 92px;
+        }
+        
+        .kanji-cell.size-medium {
+            width: 69px;
+            height: 69px;
+        }
+        
+        .kanji-cell.size-small {
+            width: 46px;
+            height: 46px;
         }
 
         .kanji-cell.practice {
@@ -108,19 +116,32 @@
         }
 
         .kanji-stroke-order {
-            width: 100px;
-            height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
         }
+        
+        .kanji-stroke-order.size-large {
+            width: 92px;
+            height: 92px;
+        }
+        
+        .kanji-stroke-order.size-medium {
+            width: 69px;
+            height: 69px;
+        }
+        
+        .kanji-stroke-order.size-small {
+            width: 46px;
+            height: 46px;
+        }
 
         .kanji-stroke-order svg {
-            width: 100px !important;
-            height: 100px !important;
-            max-width: 100px;
-            max-height: 100px;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100%;
+            max-height: 100%;
         }
 
         .practice-grid {
@@ -165,18 +186,20 @@
             page-break-before: always;
         }
 
-        .footer {
+        .worksheet-footer {
             position: fixed;
-            bottom: 10px;
-            left: 0;
-            right: 0;
+            bottom: 0mm;
+            left: 15mm;
+            right: 15mm;
             text-align: center;
-            font-size: 10px;
+            font-size: 12px;
             color: #999;
+            background: white;
+            z-index: 999;
         }
 
         @page {
-            margin: 15mm 15mm 15mm 15mm;
+            margin: 15mm;
             size: {{ $settings['paper_size'] ?? 'A4' }} {{ $settings['orientation'] ?? 'portrait' }};
         }
 
@@ -196,35 +219,72 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>{{ $worksheet->name }}</h1>
-        <div class="subtitle">{{ $worksheet->lesson->title_english ?? 'Custom Worksheet' }}</div>
-        <div class="subtitle">Generated on {{ now()->format('F j, Y') }}</div>
-    </div>
+
 
     @php
-        // Calculate optimal page breaks based on content size
+        // Calculate optimal page breaks based on content size and practice size
         $gridSize = $settings['grid_size'] ?? 6;
         $isLandscape = ($settings['orientation'] ?? 'portrait') === 'landscape';
+        $practiceSize = $settings['practice_size'] ?? 'large';
         
-        // Estimate heights (in approximate pixels for DomPDF)
-        $headerHeight = 80;
-        $kanjiHeaderHeight = 45; // vocabulary header + info
-        $practiceRowHeight = 110; // 100px grid + margins
+        // Cell dimensions for different sizes
+        $cellSizes = [
+            'large' => ['width' => 92, 'height' => 92, 'grids_per_row' => $isLandscape ? 7 : 5],
+            'medium' => ['width' => 69, 'height' => 69, 'grids_per_row' => $isLandscape ? 9 : 7],
+            'small' => ['width' => 46, 'height' => 46, 'grids_per_row' => $isLandscape ? 13 : 10],
+        ];
         
-        // Calculate rows needed for grid size
-        $gridsPerRow = $isLandscape ? 7 : 5;
-        $rowsNeeded = ceil($gridSize / $gridsPerRow);
+        // Precise DomPDF calculations at 96 DPI
+        $paperSize = $settings['paper_size'] ?? 'A4';
         
-        // Total height per kanji section
-        $kanjiSectionHeight = $kanjiHeaderHeight + ($practiceRowHeight * $rowsNeeded) + 20; // +margin
+        // Paper dimensions in inches, then convert to pixels at 96 DPI
+        $paperDimensions = [
+            'A4' => ['width' => 8.27, 'height' => 11.69], // 210×297mm
+            'Letter' => ['width' => 8.5, 'height' => 11.0],
+            'Legal' => ['width' => 8.5, 'height' => 14.0]
+        ];
         
-        // Available page height (rough estimates for A4)
-        $pageHeight = $isLandscape ? 520 : 750; // Landscape vs Portrait usable height
-        $availableHeight = $pageHeight - $headerHeight;
+        $dpi = 96;
+        $marginInches = 15 / 25.4; // 15mm margins converted to inches (0.591")
+        $footerMarginInches = 20 / 25.4; // 20mm bottom margin for footer (0.787")
         
-        // How many kanji fit per page
-        $kanjiPerPage = max(1, floor($availableHeight / $kanjiSectionHeight));
+        $paperWidth = $paperDimensions[$paperSize]['width'] * $dpi;
+        $paperHeight = $paperDimensions[$paperSize]['height'] * $dpi;
+        $marginPixels = $marginInches * $dpi; // ~57 pixels
+        $footerMarginPixels = $footerMarginInches * $dpi; // ~95 pixels
+        
+        // Usable area after margins (asymmetric - larger bottom margin for footer)
+        $usableWidth = $paperWidth - (2 * $marginPixels);
+        $usableHeight = $paperHeight - $marginPixels - $footerMarginPixels;
+        
+        // Swap dimensions for landscape
+        if ($isLandscape) {
+            [$usableWidth, $usableHeight] = [$usableHeight, $usableWidth];
+        }
+        
+        // Component heights (measured in pixels)
+        $kanjiHeaderHeight = 55; // vocabulary header + info
+        $footerHeight = 25; // footer space
+        $availableContentHeight = $usableHeight - $footerHeight;
+        
+        if ($practiceSize === 'mixed') {
+            // Mixed mode: one row of each size
+            $practiceRowHeight = 92 + 69 + 46 + 30; // large + medium + small + margins
+            $kanjiSectionHeight = $kanjiHeaderHeight + $practiceRowHeight + 20;
+            $kanjiPerPage = max(1, floor($availableContentHeight / $kanjiSectionHeight));
+        } else {
+            // Single size mode
+            $cellSize = $cellSizes[$practiceSize];
+            $gridsPerRow = $cellSize['grids_per_row'];
+            $rowsNeeded = ceil($gridSize / $gridsPerRow);
+            $practiceRowHeight = ($cellSize['height'] + 10) * $rowsNeeded; // cell height + margins
+            
+            // Total height per kanji section
+            $kanjiSectionHeight = $kanjiHeaderHeight + $practiceRowHeight + 20;
+            
+            // Calculate how many kanji fit per page
+            $kanjiPerPage = max(1, floor($availableContentHeight / $kanjiSectionHeight));
+        }
     @endphp
 
     @foreach($kanjiData as $index => $item)
@@ -250,15 +310,19 @@
                         {{-- Example kanji on the left --}}
                         <td style="width: 120px; vertical-align: top; padding-right: 10px;">
                             <div class="kanji-cell-container">
-                                <div class="kanji-cell">
+                                <div class="kanji-cell size-{{ $practiceSize === 'mixed' ? 'large' : $practiceSize }}">
                                     @if($kanjiInfo['svg_available'] && $item['include_stroke_order'] && $kanjiInfo['svg_content'])
                                         {{-- Show SVG stroke order --}}
-                                        <div class="kanji-stroke-order">
-                                            <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Stroke Order" style="width: 100px; height: 100px;">
+                                        <div class="kanji-stroke-order size-{{ $practiceSize === 'mixed' ? 'large' : $practiceSize }}">
+                                            <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Stroke Order" height="100%" width="100%">
                                         </div>
                                     @else
                                         {{-- Show character --}}
-                                        <div class="kanji-character" style="display: table-cell; vertical-align: middle; text-align: center; height: 100px; width: 100px; color: #333; font-size: 36px; font-family: 'M PLUS 2', 'courier', sans-serif;">
+                                        @php
+                                            $exampleSize = $practiceSize === 'mixed' ? 'large' : $practiceSize;
+                                            $cellDimension = $cellSizes[$exampleSize]['width'];
+                                        @endphp
+                                        <div class="kanji-character size-{{ $exampleSize }}" style="display: table-cell; vertical-align: middle; text-align: center; height: {{ $cellDimension }}px; width: {{ $cellDimension }}px; color: #333;">
                                             {{ $kanjiInfo['character'] }}
                                         </div>
                                     @endif
@@ -269,56 +333,93 @@
 
                         {{-- Practice grids on the right --}}
                         <td style="vertical-align: top;">
-                            <table style="border-collapse: collapse;">
+                            @if($practiceSize === 'mixed')
+                                {{-- Mixed mode: one row each of large, medium, small --}}
                                 @php
-                                    $isLandscape = ($settings['orientation'] ?? 'portrait') === 'landscape';
-                                    $firstRowMax = $isLandscape ? 7 : 5;
-                                    $subsequentRowMax = $isLandscape ? 7 : 5;
-                                    $totalGrids = $settings['grid_size'];
-                                    $currentGrid = 0;
-                                    $currentRow = 0;
+                                    $mixedSizes = ['large', 'medium', 'small'];
+                                    $cellsPerSize = ceil($gridSize / 3); // Distribute cells across sizes
                                 @endphp
                                 
-                                <tr>
-                                    @for($i = 0; $i < $totalGrids; $i++)
-                                        @php
-                                            $currentRowMax = ($currentRow === 0) ? $firstRowMax : $subsequentRowMax;
-                                            $gridInCurrentRow = $currentGrid % $currentRowMax;
-                                        @endphp
-                                        
-                                        <td style="padding-right: 4px; padding-bottom: 4px;">
-                                            <div class="kanji-cell-container">
-                                                <div class="kanji-cell practice">
-                                                    @if($gridInCurrentRow === 0 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
-                                                        {{-- First grid in row: show SVG at half opacity --}}
-                                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.3; z-index: 1;">
-                                                            <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: 100px; height: 100px;">
+                                @foreach($mixedSizes as $currentSize)
+                                    <div style="margin-bottom: 10px;">
+                                        <table style="border-collapse: collapse;">
+                                            <tr>
+                                                @for($i = 0; $i < $cellsPerSize; $i++)
+                                                    <td style="padding-right: 4px; padding-bottom: 4px;">
+                                                        <div class="kanji-cell-container">
+                                                            <div class="kanji-cell practice size-{{ $currentSize }}">
+                                                                @if($i === 0 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
+                                                                    {{-- First grid in each row: show SVG at opacity --}}
+                                                                    @php
+                                                                        $opacity = $currentSize === 'large' ? 0.3 : ($currentSize === 'medium' ? 0.2 : 0.1);
+                                                                        $cellDim = $cellSizes[$currentSize]['width'];
+                                                                    @endphp
+                                                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: {{ $opacity }}; z-index: 1;">
+                                                                        <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: {{ $cellDim }}px; height: {{ $cellDim }}px;">
+                                                                    </div>
+                                                                @endif
+                                                                <div class="practice-grid"></div>
+                                                            </div>
                                                         </div>
-                                                    @elseif($gridInCurrentRow === 1 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
-                                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; z-index: 1;">
-                                                            <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: 100px; height: 100px;">
-                                                        </div>
-                                                    @endif
-                                                    <div class="practice-grid">
+                                                    </td>
+                                                @endfor
+                                            </tr>
+                                        </table>
+                                    </div>
+                                @endforeach
+                            @else
+                                {{-- Single size mode --}}
+                                <table style="border-collapse: collapse;">
+                                    @php
+                                        $cellSize = $cellSizes[$practiceSize];
+                                        $gridsPerRow = $cellSize['grids_per_row'];
+                                        $totalGrids = $gridSize;
+                                        $currentGrid = 0;
+                                        $currentRow = 0;
+                                    @endphp
+                                    
+                                    <tr>
+                                        @for($i = 0; $i < $totalGrids; $i++)
+                                            @php
+                                                $gridInCurrentRow = $currentGrid % $gridsPerRow;
+                                            @endphp
+                                            
+                                            <td style="padding-right: 4px; padding-bottom: 4px;">
+                                                <div class="kanji-cell-container">
+                                                    <div class="kanji-cell practice size-{{ $practiceSize }}">
+                                                        @if($gridInCurrentRow === 0 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
+                                                            {{-- First grid in row: show SVG at opacity --}}
+                                                            @php
+                                                                $cellDim = $cellSize['width'];
+                                                            @endphp
+                                                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.3; z-index: 1;">
+                                                                <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: {{ $cellDim }}px; height: {{ $cellDim }}px;">
+                                                            </div>
+                                                        @elseif($gridInCurrentRow === 1 && $kanjiInfo['svg_available'] && $kanjiInfo['svg_content'])
+                                                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; z-index: 1;">
+                                                                <img src="{{ public_path('svg/'.$kanjiInfo['codepoint'].'.svg') }}" alt="Kanji Reference" style="width: {{ $cellDim }}px; height: {{ $cellDim }}px;">
+                                                            </div>
+                                                        @endif
+                                                        <div class="practice-grid"></div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        
-                                        @php $currentGrid++; @endphp
-                                        
-                                        {{-- Break to new row when we hit the limit for current row --}}
-                                        @if($gridInCurrentRow === ($currentRowMax - 1) && $i < ($totalGrids - 1))
-                                </tr>
-                                <tr>
-                                            @php 
-                                                $currentRow++; 
-                                                $currentGrid = 0;
-                                            @endphp
-                                        @endif
-                                    @endfor
-                                </tr>
-                            </table>
+                                            </td>
+                                            
+                                            @php $currentGrid++; @endphp
+                                            
+                                            {{-- Break to new row when we hit the limit --}}
+                                            @if($gridInCurrentRow === ($gridsPerRow - 1) && $i < ($totalGrids - 1))
+                                    </tr>
+                                    <tr>
+                                                @php 
+                                                    $currentRow++; 
+                                                    $currentGrid = 0;
+                                                @endphp
+                                            @endif
+                                        @endfor
+                                    </tr>
+                                </table>
+                            @endif
                         </td>
                     </tr>
                 </table>
@@ -326,8 +427,10 @@
         </div>
     @endforeach
 
-    <div class="footer">
-        Generated by Ganbatte - Japanese Learning Platform | KanjiVG Project
+    {{-- Global footer for all pages --}}
+    <div class="worksheet-footer">
+        {{ $worksheet->name }} | Generated {{ now()->format('M j, Y') }} | Ganbatte.io
     </div>
+
 </body>
 </html>

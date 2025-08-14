@@ -130,6 +130,7 @@ class WorksheetController extends Controller
             'paper_size' => 'required|in:A4,Letter,Legal',
             'orientation' => 'required|in:portrait,landscape',
             'grid_size' => 'nullable|integer|min:1|max:20',
+            'practice_size' => 'required|in:small,medium,large,mixed',
             'include_stroke_order' => 'boolean',
             'include_readings' => 'boolean',
             'vocabulary_ids' => 'nullable|array',
@@ -186,6 +187,7 @@ class WorksheetController extends Controller
             'paper_size' => $validated['paper_size'],
             'orientation' => $validated['orientation'],
             'grid_size' => $validated['grid_size'] ?? 6,
+            'practice_size' => $validated['practice_size'] ?? 'large',
         ];
 
         // Generate PDF

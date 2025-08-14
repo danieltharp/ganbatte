@@ -61,6 +61,17 @@
                                             </select>
                                             <p class="mt-1 text-sm text-gray-500">Includes 1 example + practice cells</p>
                                         </div>
+                                        
+                                        <div>
+                                            <label for="practice_size" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Practice Cell Size</label>
+                                            <select name="practice_size" id="practice_size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100">
+                                                <option value="large" selected>Large</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="small">Small</option>
+                                                <option value="mixed">Mixed</option>
+                                            </select>
+                                            <p class="mt-1 text-sm text-gray-500">Size affects practice space and page layout</p>
+                                        </div>
                                     </div>
                                 </div>
 
