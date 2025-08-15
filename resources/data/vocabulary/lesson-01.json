@@ -766,6 +766,38 @@
       "include_in_kanji_worksheet": false
     },
     {
+      "id": "mnn-01-085",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "英語",
+        "furigana": "{英語|えい|ご}",
+        "english": "English"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["language"],
+      "also_accepted":{
+        "english": ["English language"]
+      },
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-086",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "日本語",
+        "furigana": "{日本語|に|ほん|ご}",
+        "english": "Japanese"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["language"],
+      "also_accepted":{
+        "english": ["Japanese language"]
+      },
+      "include_in_kanji_worksheet": false
+    },
+    {
       "id": "mnn-01-x-001",
       "lesson_id": "mnn-lesson-01",
       "word": {
