@@ -1,0 +1,15 @@
+{
+    "lesson": {
+      "id": "mnn-lesson-00",
+      "chapter": 0,
+      "title": {
+        "japanese": "第0課",
+        "furigana": "{第0課|だい|れい|か}",
+        "english": "Lesson 0"
+      },
+      "description": "Things you need to know before beginning Minna No Nihongo.",
+      "difficulty": "beginner",
+      "estimated_time_minutes": 45,
+      "prerequisites": []
+    }
+  } 

@@ -1,0 +1,23 @@
+{
+    "articles": [
+      {
+        "id": "mnn-00-article-001",
+        "lesson_id": "mnn-lesson-00",
+        "title": "Hiragana and Katakana",
+        "subtitle": "Minna No Nihongo assumes knowledge of hiragana and katakana."
+      },
+      {
+        "id": "mnn-00-article-002", 
+        "lesson_id": "mnn-lesson-00",
+        "title": "Understanding the Minna No Nihongo Books",
+        "subtitle": "Covers which books you need to buy and what they contain."
+      },
+      {
+        "id": "mnn-00-article-003", 
+        "lesson_id": "mnn-lesson-00",
+        "title": "What is Ganbatte?",
+        "subtitle": "How to use this website to its fullest potential."
+      }
+    ]
+  }
+  
