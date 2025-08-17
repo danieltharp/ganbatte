@@ -42,12 +42,6 @@
                             <x-nav-link :href="route('grammar.index')" :active="request()->routeIs('grammar.*')">
                                 {{ __('Grammar') }}
                             </x-nav-link>
-                            <x-nav-link :href="route('questions.index')" :active="request()->routeIs('questions.*')">
-                                {{ __('Practice') }}
-                            </x-nav-link>
-                            <x-nav-link :href="route('tests.index')" :active="request()->routeIs('tests.*')">
-                                {{ __('Tests') }}
-                            </x-nav-link>
                             <x-nav-link :href="route('worksheets.index')" :active="request()->routeIs('worksheets.*')">
                                 {{ __('Worksheets') }}
                             </x-nav-link>
