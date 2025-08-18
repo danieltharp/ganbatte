@@ -3,8 +3,8 @@
     {
       "id": "mnn-01-article-001",
       "lesson_id": "mnn-lesson-01",
-      "title": "Understanding Japanese Pronouns",
-      "subtitle": "A deeper look at first-person pronouns beyond 私 (watashi)",
+      "title": "は versus が (topic marker vs. subject marker)",
+      "subtitle": "A deeper look at the difference between は and が.",
       "covered_vocabulary_ids": [
         "mnn-01-001"
       ]
@@ -12,8 +12,8 @@
     {
       "id": "mnn-01-article-002", 
       "lesson_id": "mnn-lesson-01",
-      "title": "Politeness Levels in Japanese",
-      "subtitle": "When to use です (desu) and other formality markers",
+      "title": "Additional info not covered in Lesson 1",
+      "subtitle": "There are some useful pages in the grammar notes that aren't within the lesson 1 section.",
       "covered_vocabulary_ids": [
         "mnn-01-001",
         "mnn-01-002"

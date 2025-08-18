@@ -1,66 +1,43 @@
-# Understanding Japanese Pronouns
+I consider Minna No Nihongo to have done learners a disservice by only talking about the が particle for three pages in the grammar notes, in an optional article in the back of the book.
 
-While **私 (watashi)** is typically the first pronoun students learn, the landscape of Japanese first-person pronouns is much richer and more nuanced than introductory materials suggest.
+が is perhaps the most important piece of Japanese grammar you will ever learn, and it's not because it's in every single sentence.
 
-## The Reality of Pronoun Usage
+It's because it *is* in every single sentence, *whether or not it's written*.
 
-Japanese has numerous first-person pronouns, each carrying different connotations about the speaker's:
-- **Gender identity**
-- **Age and social status** 
-- **Relationship with the listener**
-- **Regional background**
-- **Personality and self-image**
+You see, が is the subject marker in Japanese. And like English, every sentence has a subject, even if it's not visible in the sentence. We use context to determine the subject many, many times in both languages.
 
-## Common First-Person Pronouns
+Let me give you an example. Say it's February and you go outside with your friend. You're bundled up, but it's not doing much good. You shiver, scrunch up your face, rub your arms, turn to your friend and simply say, "...cold."
 
-### 私 (watashi) - Universal but Gendered
-- **Usage**: Most formal and widely acceptable
-- **Gender tendency**: Slightly feminine in casual contexts
-- **Formality**: Works in all formal situations
-- **Statistics**: Used by 81% of university-age women, 22% of university-age men in stranger interactions
+Thanks to all the contextual clues, we know that you're talking about yourself being cold. In many cases where we omit the subject, we're referring to ourselves, but there are plenty of times where that's not the case. Say you're walking downtown somewhere with your brother. You point at a skyscraper and go, "Big, huh?" Your pointing was all the context we needed to know that the subject of the sentence was the building and not yourself, or your brother, or some guy on the street.
 
-### 僕 (boku) - Humble Masculine
-- **Usage**: Masculine but humble and friendly
-- **Gender**: Primarily used by males
-- **Age**: Common among boys and young men
-- **Tone**: Less assertive than 俺 (ore)
+Hopefully you get what I'm saying here, but thankfully I have another resource that I can share with you that agrees that が is the most important particle in Japanese.
 
-### 俺 (ore) - Assertive Masculine  
-- **Usage**: Very masculine and assertive
-- **Context**: Casual situations only
-- **Caution**: Never use in formal/business contexts
-- **Impression**: Can seem rough or overly confident
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P3n8n0u3LHA?si=VU2ECgDmhYU-0fQP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### 自分 (jibun) - Gender Neutral
-- **Usage**: Completely gender-neutral option
-- **Contexts**: Sports teams, military, casual conversation
-- **Meaning**: Literally "oneself"
-- **Benefit**: Safe choice for any gender
+This is Cure Dolly, and she has forgotten more about Japanese grammar than I might ever learn. As she mentioned, there's a default state for what が refers to, and it is yourself. In the exact same way that you might say "...cold" in English and be understood, you could do the exact same thing in Japanese with "。。。さむい。"
 
-## Cultural Implications
+The main thing I want to get at with this page is that there is a clear, distinct difference between the が particle and the は particle. If you have already seen the は particle, I want you to temporarily forget everything you know about it and start clean in case there's any confusion:
 
-The choice of pronoun immediately signals social information about the speaker. Foreign learners using only 私 may sound:
-- Overly formal in casual settings (when used by males)
-- Somewhat feminine (in very casual contexts)
-- Like textbook Japanese rather than natural speech
+- が marks the **subject** of a sentence.
+- は marks the **topic** of a sentence.
 
-## Practical Advice
+You might wonder what the difference is. In many cases this is very fair as the topic and subject can be the same thing. Let's look at a few of the differences.
 
-For **male learners**, consider incorporating:
-- 僕 (boku) for casual but polite situations
-- 自分 (jibun) as a neutral backup option
+- A topic is generally much broader in nature and prompts the listener as to what the rest of the sentence will be about in broad terms. "As far as apples go, **(<- topic)** I **(<- subject)** am a fan of them."
+- A subject is more specific and can actually do things or possess qualities. A topic exists only to introduce what we'll be discussing. "As for turtles, **(<-topic)** they **(<--subject, same as the topic)** live in water and have a thin shell."
+- A topic is not necessary for a sentence to be complete and comprehensible. "My farm **(<-subject)** grows corn and soybeans."
+- A topic must be clearly defined via nouns, a subject can be implied with no concrete definition necessary.
+	- "As for California, **(<--topic)**, I think their oranges are overrated."
+	- "Overall, it **(<-subject)** was a good movie."
 
-For **female learners**, 私 (watashi) remains the best default choice across all contexts.
+I hope that kind of conveys the difference here. You use topic markers occasionally when you're switching up the conversation, that you're talking about something different from the way the conversation was previously flowing. But every sentence has a subject whether visible or inferred via context. **You can never imply a new topic via a solely spoken context without seriously confusing the other party.**
 
-## Beyond the Textbook
+> "Great game **(<- subject)** last night, huh?"
+>
+> 	"Yeah, amazing, down to the wire." **(subject was implied via conversational flow as 'game')**
+>
+> "I DVR'd it **(<-subject, now simplified to 'it')** and I'm going to watch it **(<-subject)** again tonight just to take in the beauty of it **(<-subject)**."
+>
+> 	"Nice. They're **(<-- subject)** waterproof, aren't they?" **(topic was changed but the generic 'it/they' was retained, causing confusion. Are we talking about DVRs, or their uniforms, or those boxes over there, or what even??)**
 
-Most Japanese textbooks focus heavily on 私 because it's safe and universally appropriate. However, real Japanese conversation includes this variety. Pay attention to pronoun usage in:
-- **Anime and dramas** (though be cautious of exaggerated speech)
-- **Natural conversation** with Japanese speakers
-- **Different age groups** and social situations
-
-Remember: mastering pronoun selection is an advanced skill that develops over time. When in doubt, 私 remains a safe and respected choice.
-
----
-
-*Further reading: [Wikipedia - Japanese Pronouns](https://en.wikipedia.org/wiki/Japanese_pronouns#Use_and_etymology)*
+Just keep this sort of thing in mind as you continue to learn. There's a distinct difference between a subject and a topic, and if you can intuit the difference, you will save yourself weeks or months of headache trying to keep the が subject marker and the は topic marker separate, because this is an area that a **lot** of people struggle with.
