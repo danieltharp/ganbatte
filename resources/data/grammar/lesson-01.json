@@ -41,7 +41,7 @@
       },
       "pattern": "N1 は N2 じゃ (では) ありません",
       "usage": "Negative form of the basic 'X is Y' pattern",
-      "explanation": "ではありません (dewa arimasen) is the polite negative form of です (desu)",
+      "explanation": "The book isn't super clear on this, but you either say ではありません or じゃありません, they mean the same thing.",
       "jlpt_level": "N5",
       "examples": [
         {
@@ -64,7 +64,7 @@
       },
       "pattern": "N1 は N2 ですか。",
       "usage": "Question form of the basic 'X is Y' pattern",
-      "explanation": "ですか (desu ka) is the polite form of です (desu) used in questions",
+      "explanation": "Note that the か in ですか is said with a rising intonation, much like asking a question in English. Note also that you use a period to ask a question in Japanese rather than a question mark.",
       "jlpt_level": "N5",
       "examples": [
         {
@@ -87,7 +87,7 @@
       },
       "pattern": "N も",
       "usage": "Adding 'also' to a sentence",
-      "explanation": "も (mo) is used to add 'also' to a sentence",
+      "explanation": "This is the first of a few unrelated usages of the も particle. This is used in a follow-up sentence to indicate that something is the same between two people or things.",
       "jlpt_level": "N5",
       "examples": [
         {
@@ -110,7 +110,7 @@
       },
       "pattern": "N1 の N2",
       "usage": "N1 modifies N2 (N1's N2)",
-      "explanation": "One usage of の is to indicate possession (N1's N2)",
+      "explanation": "It's okay to think of の as N1's N2, but it can be occasionally confusing because of how Japanese is ordered. For example, The Legend of Zelda is translated from ゼルダの伝説, more literally 'Zelda's legend'.",
       "jlpt_level": "N5",
       "examples": [
         {
@@ -133,7 +133,7 @@
       },
       "pattern": "〜さん",
       "usage": "Adding 'Mr.' or 'Ms.' to a name",
-      "explanation": "〜さん (san) is used to add 'Mr.' or 'Ms.' to a name",
+      "explanation": "See the lesson article about honorifics for more information.",
       "jlpt_level": "N5",
       "examples": [
         {

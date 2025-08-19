@@ -5,7 +5,7 @@ This is the first grammar point taught by many instructional resources, includin
 If you didn't know this going in, there are two pronunciation-related things to know about this sentence.
 
 1. The は, when used in this way (as a topic marker), is pronounced わ. In fact, the majority of the time you see a は in a sentence as hiragana, it's likely going to be pronounced わ.
-2. The です ending is pronounced with the final う sound omitted, so closer to "des" than "desu". Another time you will see this in the future is with ます, which is attached to verbs in their polite form, so quite frequently. The う sound is omitted there as well.
+2. The です ending is pronounced with the final う sound omitted, so closer to "des" than "desu". Another time you will see this in the future is with ます, which is attached to verbs in their polite form, so quite frequently. The う sound is omitted there as well. There's some further reading on this devoicing on page 5 of your Grammar Notes book, point 7.
 
 Japanese doesn't actually have a ton of exceptions and irregularities like this, they're mostly centered around some of the oldest and most commonly used parts of the language. In fact, there are only three irregular verbs in the entire language, and they're "to come", "to go", and "to do."
 
