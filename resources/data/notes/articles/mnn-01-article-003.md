@@ -1,0 +1,3 @@
+Lesson one introduces 〜さん and 〜ちゃん, and then goes quite a long time before introducing any other honorifics. For a tourist or for speaking with strangers, you really can't go wrong with さん as an honorific. That said, if you're also consuming anime or manga, you've probably encountered some others.
+
+[Wikipedia](https://en.wikipedia.org/wiki/Japanese_honorifics#Common_honorifics) does a good job covering this so I'm not going to attempt to reinvent their wheel. If you read the whole thing you'll even get a little sneak peek of Lesson 7.

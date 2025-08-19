@@ -311,7 +311,7 @@
                         Study Vocabulary
                     </a>
                     @if($lesson->vocabulary->where('include_in_kanji_worksheet', true)->count() > 0)
-                        <a href="{{ route('vocabulary.kanji-worksheet', ['lesson_id' => $lesson->id]) }}" class="block w-full bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded text-center">
+                        <a href="{{ route('worksheets.index', ['lesson_id' => $lesson->id, 'type' => 'kanji_practice']) }}" class="block w-full bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded text-center">
                             Kanji Practice
                         </a>
                     @endif

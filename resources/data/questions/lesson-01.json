@@ -1026,6 +1026,168 @@
         "english": "Your answer should look something like this: ダニエル・アメリカ"
       },
       "tags": ["free_response"]
+    },
+    {
+      "id": "mnn-01-x-q001",
+      "lesson_id": "mnn-lesson-01",
+      "type": "multiple_choice",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "True or false: The は particle is used to introduce the topic of a sentence."
+      },
+      "options": [
+        {
+          "english": "True"
+        },
+        {
+          "english": "False"
+        }
+      ],
+      "correct_answer": 0
+    },
+    {
+      "id": "mnn-01-x-q002",
+      "lesson_id": "mnn-lesson-01",
+      "type": "multiple_choice",
+      "difficulty": "intermediate",
+      "points": 1,
+      "question": {
+        "english": "True or false: The は particle is used to introduce the grammatical subject of a sentence."
+      },
+      "options": [
+        {
+          "english": "True",
+          "explanation": "Not quite. The は particle is used to introduce the topic of a sentence, not the subject."
+        },
+        {
+          "english": "False"
+        }
+      ],
+      "correct_answer": 1
+    },
+    {
+      "id": "mnn-01-x-q003",
+      "lesson_id": "mnn-lesson-01",
+      "type": "multiple_choice",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "True or false: You use 「ですか」 to ask a question."
+      },
+      "options": [
+        {
+          "english": "True"
+        },
+        {
+          "english": "False"
+        }
+      ],
+      "correct_answer": 0
+    },
+    {
+      "id": "mnn-01-x-q004",
+      "lesson_id": "mnn-lesson-01",
+      "type": "multiple_choice",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "True or false: The の particle is used to introduce the object of a sentence."
+      },
+      "options": [
+        {
+          "english": "True",
+          "explanation": "Not quite. The の particle is used to indicate possession, not the object of a sentence."
+        },
+        {
+          "english": "False"
+        }
+      ],
+      "correct_answer": 1
+    },
+    {
+      "id": "mnn-01-x-q005",
+      "lesson_id": "mnn-lesson-01",
+      "type": "multiple_choice",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "Select the correct sentence from the possible choices."
+      },
+      "options": [
+        {
+          "japanese": "私は先生です。",
+          "furigana": "{私|わたし}は{先生|せん|せい}です。",
+          "explanation": "Incorrect. It is considered immodest to refer to oneself as 先生."
+        },
+        {
+          "japanese": "私は教師です。",
+          "furigana": "{私|わたし}は{教師|きょう|し}です。",
+          "explanation": "Correct. 教師 is the correct term for a teacher to call themselves."
+        },
+        {
+          "japanese": "私は大学です。",
+          "furigana": "{私|わたし}は{大学|だい|がく}です。",
+          "explanation": "Incorrect. This reads 'I am a university.'"
+        }
+      ],
+      "correct_answer": 1
+    },
+    {
+      "id": "mnn-01-x-q006",
+      "lesson_id": "mnn-lesson-01",
+      "type": "multiple_choice",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "One of these sentences makes no sense. Select it."
+      },
+      "options": [
+        {
+          "japanese": "私は銀行員です。",
+          "furigana": "{私|わたし}は{銀行員|ぎん|こう|いん}です。",
+          "explanation": "Incorrect. This reads 'I am a bank employee.'"
+        },
+        {
+          "japanese": "私は病院です。",
+          "furigana": "{私|わたし}は{病院|びょう|いん}です。",
+          "explanation": "Correct. This reads 'I am a hospital.'"
+        },
+        {
+          "japanese": "私は会社員です。",
+          "furigana": "{私|わたし}は{会社員|かい|しゃ|いん}です。",
+          "explanation": "Incorrect. This reads 'I am a company employee.'"
+        }
+      ],
+      "correct_answer": 1
+    },
+    {
+      "id": "mnn-01-x-q007",
+      "lesson_id": "mnn-lesson-01",
+      "type": "multiple_choice",
+      "difficulty": "beginner",
+      "points": 1,
+      "question": {
+        "english": "You are a student. You are asked the following question: 「あなたは研究者ですか。」 Select the correct answer from the possible choices."
+      },
+      "options": [
+        {
+          "japanese": "はい、私は研究者です。",
+          "furigana": "{はい|はい}、{私|わたし}は{研究者|けん|きゅう|しゃ}です。",
+          "explanation": "Incorrect. This reads 'Yes, I am a researcher.'"
+        },
+        {
+          "japanese": "いいえ、私は研究者ではありません。",
+          "furigana": "{いいえ|いいえ}、{私|わたし}は{研究者|けん|きゅう|しゃ}ではありません。",
+          "explanation": "Correct. This reads 'No, I am not a researcher.'"
+        },
+        {
+          "japanese": "いいえ、私は研究者です。",
+          "furigana": "{いいえ|いいえ}、{私|わたし}は{研究者|けん|きゅう|しゃ}です。",
+          "explanation": "Incorrect. This reads 'No, I am a researcher.'"
+        }
+      ],
+      "correct_answer": 1
     }
   ]
 } 
