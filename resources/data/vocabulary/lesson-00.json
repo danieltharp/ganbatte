@@ -8,10 +8,10 @@
           "furigana": "{始|はじ}めましょう",
           "english": "Let's begin."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 388,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["let's start"],
           "japanese": ["はじめましょう"]
@@ -26,10 +26,10 @@
           "furigana": "{終|お}わりましょう",
           "english": "Let's finish."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 200,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["let's end", "let's stop"],
           "japanese": ["おわりましょう"]
@@ -44,10 +44,10 @@
           "furigana": "{休|やす}みましょう",
           "english": "Let's take a break."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 1385,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["let's rest", "let's pause"],
           "japanese": ["やすみましょう"]
@@ -62,10 +62,10 @@
           "furigana": "{分|わ}かりますか。",
           "english": "Do you understand?"
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 105,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["do you understand", "do you get it", "do you follow"],
           "japanese": ["わかりますか"]
@@ -80,10 +80,10 @@
           "furigana": "はい、{分|わ}かります。",
           "english": "Yes, I understand."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 105,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["yes, I understand", "yes, I get it", "yes, I follow"],
           "japanese": ["はい、わかります", "わかりました", "分かりました"]
@@ -98,10 +98,10 @@
           "furigana": "いいえ、{分|わ}かりません。",
           "english": "No, I don't understand."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 105,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["no, I don't understand", "no, I don't get it", "no, I don't follow"],
           "japanese": ["いいえ、わかりません", "わかりません", "分かりません"]
@@ -116,10 +116,10 @@
           "furigana": "もう{一度|いち|ど} [お{願|ねが}いします]",
           "english": "Once more [please]."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 350,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["say it again please", "once more", "once more please", "once more, please"],
           "japanese": ["もう一度", "もう一度お願いします。"]
@@ -134,10 +134,10 @@
           "furigana": "いいです。",
           "english": "That's fine."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 70,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["that's fine", "that's good", "that's great", "that's okay"],
           "japanese": ["いいです"]
@@ -155,7 +155,7 @@
         "part_of_speech": "verb",
         "jlpt_level": "N5",
         "frequency_rank": 186,
-        "tags": ["Classroom Phrases"],
+        "tags": ["Classroom expressions"],
         "also_accepted": {
           "english": ["that's wrong", "incorrect", "wrong", "to be different", "to be wrong"]
         },
@@ -270,7 +270,7 @@
           "japanese": "おはようございます。",
           "english": "Good morning."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 4410,
         "tags": ["Everyday Greetings and Expressions"],
@@ -286,7 +286,7 @@
           "japanese": "こんにちは",
           "english": "Hello."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "frequency_rank": 4446,
         "tags": ["Everyday Greetings and Expressions"],
@@ -302,7 +302,7 @@
           "japanese": "こんばんは",
           "english": "Good evening."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "tags": ["Everyday Greetings and Expressions"],
         "also_accepted": {
@@ -318,7 +318,7 @@
           "furigana": "お{休|やす}みなさい。",
           "english": "Good night."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "tags": ["Everyday Greetings and Expressions"],
         "also_accepted": {
@@ -334,7 +334,7 @@
           "furigana": "さようなら。",
           "english": "Goodbye."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "tags": ["Everyday Greetings and Expressions"],
         "also_accepted": {
@@ -350,7 +350,7 @@
           "furigana": "ありがとう　ございます。",
           "english": "Thank you."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "tags": ["Everyday Greetings and Expressions"],
         "also_accepted": {
@@ -367,7 +367,7 @@
           "furigana": "すみません。",
           "english": "Excuse me./Sorry."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "tags": ["Everyday Greetings and Expressions"],
         "also_accepted": {
@@ -384,7 +384,7 @@
           "furigana": "お{願|ねが}いします。",
           "english": "Please."
         },
-        "part_of_speech": "phrase",
+        "part_of_speech": "expression",
         "jlpt_level": "N5",
         "tags": ["Everyday Greetings and Expressions"],
         "also_accepted": {
