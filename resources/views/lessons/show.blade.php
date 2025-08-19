@@ -121,7 +121,10 @@
                                                             </a>
                                                             
                                                             @if($exerciseCompleted)
-                                                                <span class="text-xs text-gray-500">({{ $exerciseAttempt->percentage }}%)</span>
+                                                                <a href="{{ route('exercises.results', $exerciseAttempt->id) }}" class="text-xs text-gray-500 hover:text-blue-600">({{ $exerciseAttempt->percentage }}%)</a>
+                                                                @if($exerciseAttempt->hasManualCorrections())
+                                                                    <span class="text-xs text-blue-500" title="Includes manual corrections">✎</span>
+                                                                @endif
                                                             @endif
                                                             
                                                         @elseif($contentItem->type === 'worksheet')

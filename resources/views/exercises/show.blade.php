@@ -118,6 +118,49 @@
 
     <!-- Sidebar -->
     <div class="space-y-6">
+        @auth
+            @if($userAttempts->isNotEmpty())
+                <!-- Previous Attempts Summary -->
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                            <span class="mr-2">🏆</span>
+                            Your Best Score
+                        </h3>
+                        
+                        @php 
+                            $bestAttempt = $userAttempts->where('is_completed', true)->sortByDesc('score')->first();
+                            $completedCount = $userAttempts->where('is_completed', true)->count();
+                        @endphp
+                        
+                        @if($bestAttempt)
+                            <div class="text-center">
+                                <div class="text-3xl font-bold mb-1 {{ $bestAttempt->is_passed ? 'text-green-500' : 'text-orange-500' }}">
+                                    {{ $bestAttempt->percentage }}%
+                                </div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                    {{ $bestAttempt->score }}/{{ $bestAttempt->total_points }} points
+                                    @if($bestAttempt->hasManualCorrections())
+                                        (includes {{ $bestAttempt->manual_correction_count }} manual corrections)
+                                    @endif
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                    {{ $completedCount }} {{ $completedCount === 1 ? 'attempt' : 'attempts' }} • Best on {{ $bestAttempt->completed_at->format('M j') }}
+                                </div>
+                                <a href="{{ route('exercises.results', $bestAttempt->id) }}" class="inline-block mt-2 bg-orange-500 hover:bg-orange-700 text-white font-medium py-1 px-3 rounded text-sm">
+                                    📊 View Results
+                                </a>
+                            </div>
+                        @else
+                            <div class="text-center text-gray-500">
+                                No completed attempts yet
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            @endif
+        @endauth
+
         <!-- Exercise Info -->
         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6">
@@ -301,14 +344,194 @@ document.addEventListener('DOMContentLoaded', function() {
     quizEngine.init();
 });
 
+@auth
+function showSubmissionError(message) {
+    const errorHtml = `
+        <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6 text-center">
+            <h3 class="text-xl font-semibold text-red-800 dark:text-red-200 mb-4">Submission Failed</h3>
+            <p class="text-red-700 dark:text-red-300 mb-4">${message}</p>
+            <div class="space-x-4">
+                <button onclick="location.reload()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    Try Again
+                </button>
+                <a href="{{ route('lessons.show', $exercise->lesson->id) }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded inline-block">
+                    Back to Lesson
+                </a>
+            </div>
+        </div>
+    `;
+    
+    document.getElementById('question-container').innerHTML = errorHtml;
+}
+@endauth
+
+function showLocalResults(results) {
+    // Local results for guest users (no database submission)
+    let correctCount = 0;
+    let totalPoints = 0;
+    let earnedPoints = 0;
+    
+    Object.values(results.answers).forEach((answer, index) => {
+        const question = questions[index];
+        if (answer.isCorrect) {
+            correctCount++;
+            earnedPoints += question.points || 1;
+        }
+        totalPoints += question.points || 1;
+    });
+    
+    const percentage = totalPoints > 0 ? Math.round((earnedPoints / totalPoints) * 100) : 0;
+    
+    const resultsHtml = `
+        <div class="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-800 rounded-lg p-6 text-center">
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Exercise Complete!</h3>
+            <div class="text-3xl font-bold text-gray-600 dark:text-gray-400 mb-2">${percentage}%</div>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                You scored ${earnedPoints} out of ${totalPoints} points
+                <br>
+                (${correctCount} out of ${questions.length} questions correct)
+            </p>
+            <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 mb-4">
+                <p class="text-sm text-blue-700 dark:text-blue-300">
+                    🔒 Sign in to save your progress and access detailed results with manual correction options!
+                </p>
+            </div>
+            <div class="space-x-4">
+                <button onclick="location.reload()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                    Try Again
+                </button>
+                <a href="{{ route('lessons.show', $exercise->lesson->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">
+                    Back to Lesson
+                </a>
+            </div>
+        </div>
+    `;
+    
+    document.getElementById('question-container').innerHTML = resultsHtml;
+}
+
 // Submit exercise
 function submitExercise() {
     const results = quizEngine.submit();
-    // If user is authenticated, we could save results to the server here
+    // If user is authenticated, save results to the server
     @auth
-        // saveResultsToServer(results);
+        saveResultsToServer(results);
+    @else
+        // Guest user - show local results only
+        displayResults(results);
     @endauth
 }
+
+@auth
+function saveResultsToServer(results) {
+    // Debug log the results structure
+    console.log('Quiz results:', results);
+    console.log('Quiz answers:', results.answers);
+    
+    try {
+        // Show loading state in question container
+        document.getElementById('question-container').innerHTML = `
+            <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 text-center">
+                <div class="animate-spin inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full mb-4"></div>
+                <h3 class="text-xl font-semibold text-blue-800 dark:text-blue-200 mb-2">Submitting Exercise...</h3>
+                <p class="text-blue-700 dark:text-blue-300">Calculating your score and saving progress...</p>
+            </div>
+        `;
+        
+        // Calculate time spent in minutes
+        const timeSpentMinutes = Math.round((Date.now() - quizEngine.startTime) / 1000 / 60);
+        
+        // Prepare responses for submission using the actual results.details structure
+        const responses = {};
+        
+        // The quiz engine returns results.details as an array, not results.answers as an object
+        if (results && results.details && Array.isArray(results.details)) {
+            console.log('Processing', results.details.length, 'question details');
+            
+            results.details.forEach((detail, index) => {
+                // Get question ID from the questions array
+                const question = questions[index];
+                if (question) {
+                    const questionId = question.id;
+                    const userAnswer = detail.userAnswer;
+                    
+                    console.log(`Question ${questionId}:`, userAnswer);
+                    
+                    // Normalize undefined, null, and empty values
+                    if (userAnswer === undefined || userAnswer === null || userAnswer === '') {
+                        responses[questionId] = '';
+                    } else {
+                        responses[questionId] = userAnswer;
+                    }
+                } else {
+                    console.warn(`No question found for index ${index}`);
+                }
+            });
+            
+            console.log('Final responses object:', responses);
+        } else {
+            console.error('Invalid results structure - missing details array:', results);
+            showSubmissionError('Invalid quiz results. Please try again.');
+            return;
+        }
+    
+    // Submit to backend
+    fetch('{{ route('exercises.submit', $exercise->id) }}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            responses: responses,
+            time_spent_minutes: timeSpentMinutes
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Show success and provide options
+            const resultsHtml = `
+                <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold text-green-800 dark:text-green-200 mb-4">Exercise Complete!</h3>
+                    <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">${data.percentage}%</div>
+                    <p class="text-green-700 dark:text-green-300 mb-4">
+                        You scored ${data.points_earned} out of ${data.points_available} points
+                        <br>
+                        ${data.message}
+                    </p>
+                    <div class="mt-4 space-x-2">
+                        <a href="${data.results_url}" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded inline-block">
+                            📊 View Detailed Results
+                        </a>
+                        <button onclick="location.reload()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                            🔄 Try Again
+                        </button>
+                        <a href="{{ route('lessons.show', $exercise->lesson->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">
+                            📚 Back to Lesson
+                        </a>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('question-container').innerHTML = resultsHtml;
+        } else {
+            // Handle error
+            showSubmissionError(data.message || 'Failed to submit exercise');
+        }
+    })
+    .catch(error => {
+        console.error('Submission error:', error);
+        showSubmissionError('Network error occurred. Please try again.');
+    });
+    
+    } catch (error) {
+        console.error('JavaScript error in saveResultsToServer:', error);
+        showSubmissionError('Error processing quiz results. Please try again.');
+    }
+}
+@endauth
 
 // Display results
 function displayResults(results) {

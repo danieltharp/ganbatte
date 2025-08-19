@@ -16,10 +16,13 @@ class ExerciseAttempt extends Model
         'started_at',
         'completed_at',
         'score',
+        'original_score',
         'total_points',
         'time_spent_seconds',
         'answers',
         'question_results',
+        'manual_corrections',
+        'last_corrected_at',
         'is_completed',
     ];
 
@@ -27,10 +30,13 @@ class ExerciseAttempt extends Model
         'started_at' => 'datetime',
         'completed_at' => 'datetime',
         'score' => 'integer',
+        'original_score' => 'integer',
         'total_points' => 'integer',
         'time_spent_seconds' => 'integer',
         'answers' => 'array',
         'question_results' => 'array',
+        'manual_corrections' => 'array',
+        'last_corrected_at' => 'datetime',
         'is_completed' => 'boolean',
     ];
 
@@ -130,5 +136,45 @@ class ExerciseAttempt extends Model
             ->orderBy('score', 'desc')
             ->orderBy('time_spent_seconds', 'asc') // Prefer faster completion on ties
             ->first();
+    }
+
+    /**
+     * Check if this attempt has manual corrections
+     */
+    public function hasManualCorrections(): bool
+    {
+        return !empty($this->manual_corrections);
+    }
+
+    /**
+     * Get the number of manually corrected answers
+     */
+    public function getManualCorrectionCountAttribute(): int
+    {
+        return count($this->manual_corrections ?? []);
+    }
+
+    /**
+     * Check if a specific question was manually corrected
+     */
+    public function isQuestionManuallyCorrected($questionId): bool
+    {
+        return in_array($questionId, $this->manual_corrections ?? []);
+    }
+
+    /**
+     * Get the improvement from manual corrections
+     */
+    public function getManualImprovementAttribute(): int
+    {
+        return $this->score - $this->original_score;
+    }
+
+    /**
+     * Get the original percentage before manual corrections
+     */
+    public function getOriginalPercentageAttribute(): float
+    {
+        return $this->total_points > 0 ? round(($this->original_score / $this->total_points) * 100, 2) : 0;
     }
 }

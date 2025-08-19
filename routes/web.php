@@ -78,6 +78,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/exercises/{exercise}/submit', [ExerciseController::class, 'submit'])->name('exercises.submit');
     Route::get('/exercises/{exercise}/stats', [ExerciseController::class, 'getStats'])->name('exercises.stats');
     
+    // Exercise manual correction endpoints
+    Route::get('/exercise-attempts/{attempt}/results', [ExerciseController::class, 'showResults'])->name('exercises.results');
+    Route::post('/exercise-attempts/{attempt}/accept-answer', [ExerciseController::class, 'acceptAnswer'])->name('exercises.accept-answer');
+    Route::get('/exercise-attempts/{attempt}/results-json', [ExerciseController::class, 'getResults'])->name('exercises.results-json');
+    
     // Test taking endpoints
     Route::post('/tests/{test}/start', [TestController::class, 'start'])->name('tests.start');
     Route::post('/test-attempts/{attempt}/submit', [TestController::class, 'submit'])->name('tests.submit');

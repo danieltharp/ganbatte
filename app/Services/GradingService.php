@@ -26,6 +26,15 @@ class GradingService
      */
     public function calculateQuestionPoints(Question $question, $userAnswer): array
     {
+        // Handle empty/null/skipped answers
+        if ($userAnswer === null || $userAnswer === '' || $userAnswer === []) {
+            return [
+                'is_correct' => false,
+                'points_earned' => 0,
+                'points_available' => $question->points,
+            ];
+        }
+        
         $isCorrect = $this->validateAnswer($question, $userAnswer);
         
         return [
@@ -40,6 +49,11 @@ class GradingService
      */
     public function validateAnswer(Question $question, $userAnswer): bool
     {
+        // Handle empty/null/skipped answers
+        if ($userAnswer === null || $userAnswer === '' || $userAnswer === []) {
+            return false;
+        }
+        
         $correctAnswer = $question->correct_answer;
         
         // Handle different question types
