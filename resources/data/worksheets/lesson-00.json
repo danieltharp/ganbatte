@@ -1,0 +1,25 @@
+{
+    "worksheets": [
+      {
+        "id": "mnn-00-kanji-ws",
+        "name": "Kanji appearing in Lesson 0",
+        "type": "kanji_practice",
+        "lesson_id": "mnn-lesson-00",
+        "content_ids": [
+          "mnn-00-001",
+          "mnn-00-002",
+          "mnn-00-003",
+          "mnn-00-004",
+          "mnn-00-007",
+          "mnn-00-009",
+          "mnn-00-010",
+          "mnn-00-011",
+          "mnn-00-012",
+          "mnn-00-013",
+          "mnn-00-014",
+          "mnn-00-015"
+        ],
+        "template": "kanji_stroke_template"
+      }
+    ]
+  } 

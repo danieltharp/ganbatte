@@ -234,7 +234,7 @@
         "lesson_id": "mnn-lesson-00",
         "word": {
           "japanese": "答え",
-          "furigana": "{答え|こた}え",
+          "furigana": "{答|こた}え",
           "english": "answer"
         },
         "part_of_speech": "noun",
