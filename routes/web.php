@@ -11,6 +11,7 @@ use App\Http\Controllers\WorksheetController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProgressController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -68,6 +69,25 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    // Progress tracking endpoints
+    Route::post('/sections/{section}/complete', [SectionController::class, 'markComplete'])->name('sections.complete');
+    Route::delete('/sections/{section}/complete', [SectionController::class, 'resetCompletion'])->name('sections.reset');
+    
+    // Exercise submission endpoints
+    Route::post('/exercises/{exercise}/submit', [ExerciseController::class, 'submit'])->name('exercises.submit');
+    Route::get('/exercises/{exercise}/stats', [ExerciseController::class, 'getStats'])->name('exercises.stats');
+    
+    // Test taking endpoints
+    Route::post('/tests/{test}/start', [TestController::class, 'start'])->name('tests.start');
+    Route::post('/test-attempts/{attempt}/submit', [TestController::class, 'submit'])->name('tests.submit');
+    Route::get('/test-attempts/{attempt}/results', [TestController::class, 'results'])->name('tests.results');
+    
+    // Progress and grading endpoints
+    Route::get('/progress/dashboard', [ProgressController::class, 'dashboard'])->name('progress.dashboard');
+    Route::get('/progress/lesson/{lesson}', [ProgressController::class, 'getLessonGrade'])->name('progress.lesson');
+    Route::get('/progress/semester/{semesterNumber}', [ProgressController::class, 'getSemesterGrade'])->name('progress.semester');
+    Route::get('/progress/all', [ProgressController::class, 'getAllGrades'])->name('progress.all');
 });
 
 require __DIR__.'/auth.php';

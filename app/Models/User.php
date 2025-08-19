@@ -70,4 +70,36 @@ class User extends Authenticatable
     {
         return $this->hasMany(TestAttempt::class)->passed();
     }
+
+    /**
+     * Get section progress records for this user
+     */
+    public function sectionProgress(): HasMany
+    {
+        return $this->hasMany(UserSectionProgress::class);
+    }
+
+    /**
+     * Get completed section progress records
+     */
+    public function completedSections(): HasMany
+    {
+        return $this->hasMany(UserSectionProgress::class)->completed();
+    }
+
+    /**
+     * Get progress for a specific section
+     */
+    public function getProgressForSection($sectionId): ?UserSectionProgress
+    {
+        return $this->sectionProgress()->where('section_id', $sectionId)->first();
+    }
+
+    /**
+     * Check if user has completed a specific section
+     */
+    public function hasCompletedSection($sectionId): bool
+    {
+        return $this->completedSections()->where('section_id', $sectionId)->exists();
+    }
 }

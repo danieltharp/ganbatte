@@ -21,9 +21,54 @@ class LessonController extends Controller
      */
     public function show(string $id)
     {
-        $lesson = Lesson::with(['vocabulary', 'grammarPoints', 'questions', 'worksheets', 'pages'])
-                       ->findOrFail($id);
+        $lesson = Lesson::with([
+            'vocabulary', 
+            'grammarPoints', 
+            'questions', 
+            'worksheets', 
+            'pages',
+            'articles'
+        ])->findOrFail($id);
         
-        return view('lessons.show', compact('lesson'));
+        // Load user progress if authenticated
+        $sectionProgress = collect();
+        $exerciseProgress = collect();
+        
+        if (auth()->check()) {
+            $user = auth()->user();
+            
+            // Get all section and exercise IDs from lesson pages
+            $sectionIds = collect();
+            $exerciseIds = collect();
+            
+            foreach ($lesson->pages as $page) {
+                // Use the Page model's content attribute which processes content_list
+                $pageContent = $page->content;
+                
+                foreach ($pageContent as $contentItem) {
+                    if ($contentItem->type === 'section') {
+                        $sectionIds->push($contentItem->id);
+                    } elseif ($contentItem->type === 'exercise') {
+                        $exerciseIds->push($contentItem->id);
+                    }
+                }
+            }
+            
+            $sectionIds = $sectionIds->unique();
+            $exerciseIds = $exerciseIds->unique();
+            
+            // Load user's section progress
+            if ($sectionIds->isNotEmpty()) {
+                $sectionProgress = $user->sectionProgress()
+                    ->whereIn('section_id', $sectionIds)
+                    ->get()
+                    ->keyBy('section_id');
+            }
+            
+            // TODO: Load exercise progress when exercise attempts table is created
+            // For now, exerciseProgress remains empty but the structure is ready
+        }
+        
+        return view('lessons.show', compact('lesson', 'sectionProgress', 'exerciseProgress'));
     }
 }
