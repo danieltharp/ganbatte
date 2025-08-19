@@ -381,7 +381,7 @@
       "jlpt_level": "N5",
       "tags": ["greetings"],
       "also_accepted":{
-        "english": ["please be good to me", "please be kind to me"]
+        "english": ["please be good to me", "please be kind to me", "please be nice to me"]
       },
       "include_in_kanji_worksheet": true
     },
@@ -397,7 +397,7 @@
       "jlpt_level": "N5",
       "tags": ["polite"],
       "also_accepted":{
-        "english": ["excuse me", "excuse me, but"]
+        "english": ["excuse me", "excuse me, but", "excuse me but"]
       },
       "include_in_kanji_worksheet": true
     },
@@ -801,17 +801,65 @@
       "id": "mnn-01-x-001",
       "lesson_id": "mnn-lesson-01",
       "word": {
-        "japanese": "〜語",
-        "furigana": "〜{語|ご}",
-        "english": "〜 language"
+        "japanese": "アラビア語",
+        "furigana": "アラビア{語|ご}",
+        "english": "Arabic language"
       },
-      "part_of_speech": "affix",
+      "part_of_speech": "noun",
       "jlpt_level": "N5",
-      "tags": ["language", "suffix"],
+      "tags": ["language"],
       "also_accepted":{
-        "english": ["language"]
+        "english": ["Arabic"]
       },
-      "include_in_kanji_worksheet": true
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-x-002",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "ヒンディー語",
+        "furigana": "ヒンディー{語|ご}",
+        "english": "Hindi language"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["language"],
+      "also_accepted":{
+        "english": ["Hindi"]
+      },
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-x-003",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "英語",
+        "furigana": "{英語|えい|ご}",
+        "english": "English language"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["language"],
+      "also_accepted":{
+        "english": ["English"]
+      },
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-01-x-004",
+      "lesson_id": "mnn-lesson-01",
+      "word": {
+        "japanese": "フィリピノ語",
+        "furigana": "フィリピノ{語|ご}",
+        "english": "Filipino language"
+      },
+      "part_of_speech": "noun",
+      "jlpt_level": "N5",
+      "tags": ["language"],
+      "also_accepted":{
+        "english": ["Filipino"]
+      },
+      "include_in_kanji_worksheet": false
     },
     {
       "id": "mnn-01-k-001",
