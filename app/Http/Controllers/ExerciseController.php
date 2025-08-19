@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exercise;
+use App\Models\ExerciseAttempt;
 use App\Models\Question;
 use App\Services\GradingService;
 use Illuminate\Http\Request;
@@ -75,21 +76,37 @@ class ExerciseController extends Controller
             // Calculate score using the grading service
             $scoreResult = $this->gradingService->scoreExercise(Auth::user(), $exercise, $responses);
 
-            // TODO: Store exercise attempt record when that table is created
-            // For now, we'll just return the calculated scores
+            // Store exercise attempt record
+            $attempt = ExerciseAttempt::create([
+                'user_id' => Auth::id(),
+                'exercise_id' => $exercise->id,
+                'started_at' => now()->subMinutes($timeSpent), // Approximate start time
+                'completed_at' => now(),
+                'score' => $scoreResult['points_earned'],
+                'total_points' => $scoreResult['points_available'],
+                'time_spent_seconds' => $timeSpent * 60, // Convert minutes to seconds
+                'answers' => $responses,
+                'question_results' => $scoreResult['question_results'],
+                'is_completed' => true,
+            ]);
 
             DB::commit();
 
             return response()->json([
                 'success' => true,
+                'attempt_id' => $attempt->id,
                 'exercise_id' => $exercise->id,
                 'exercise_name' => $exercise->name,
-                'points_earned' => $scoreResult['points_earned'],
-                'points_available' => $scoreResult['points_available'],
-                'percentage' => $scoreResult['percentage'],
-                'question_results' => $scoreResult['question_results'],
-                'completed_at' => $scoreResult['completed_at']->toISOString(),
-                'message' => "Exercise completed! Score: {$scoreResult['percentage']}%",
+                'points_earned' => $attempt->score,
+                'points_available' => $attempt->total_points,
+                'percentage' => $attempt->percentage,
+                'is_passed' => $attempt->is_passed,
+                'question_results' => $attempt->question_results,
+                'completed_at' => $attempt->completed_at->toISOString(),
+                'duration' => $attempt->duration,
+                'message' => $attempt->is_passed 
+                    ? "Excellent! You scored {$attempt->percentage}%" 
+                    : "Exercise completed. Score: {$attempt->percentage}%",
             ]);
             
         } catch (\Exception $e) {
@@ -111,15 +128,24 @@ class ExerciseController extends Controller
             return response()->json(['error' => 'Authentication required'], 401);
         }
 
-        // TODO: Implement when exercise attempts table is created
-        // For now, return basic exercise info
-        
         $questions = [];
         if ($exercise->question_ids && count($exercise->question_ids) > 0) {
             $questions = Question::whereIn('id', $exercise->question_ids)->get();
         }
 
         $totalPoints = $questions->sum('points');
+
+        // Get user's attempts for this exercise
+        $userAttempts = Auth::user()->exerciseAttempts()
+            ->where('exercise_id', $exercise->id)
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        $latestAttempt = $userAttempts->first();
+        $bestAttempt = $userAttempts->where('is_completed', true)
+            ->sortByDesc('score')
+            ->sortBy('time_spent_seconds')
+            ->first();
 
         return response()->json([
             'exercise_id' => $exercise->id,
@@ -128,6 +154,13 @@ class ExerciseController extends Controller
             'total_points' => $totalPoints,
             'lesson_id' => $exercise->lesson_id,
             'semester' => $this->gradingService->getSemesterForLesson($exercise->lesson->chapter ?? 0),
+            'user_stats' => [
+                'total_attempts' => $userAttempts->count(),
+                'completed_attempts' => $userAttempts->where('is_completed', true)->count(),
+                'best_score' => $bestAttempt ? $bestAttempt->percentage : null,
+                'latest_score' => $latestAttempt && $latestAttempt->is_completed ? $latestAttempt->percentage : null,
+                'has_completed' => $userAttempts->where('is_completed', true)->isNotEmpty(),
+            ],
         ]);
     }
 }

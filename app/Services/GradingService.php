@@ -245,9 +245,17 @@ class GradingService
     /**
      * Normalize text for comparison (trim, lowercase, remove extra spaces)
      */
-    protected function normalizeText(?string $text): string
+    protected function normalizeText($text): string
     {
         if ($text === null) return '';
+        
+        // Handle arrays by converting to string
+        if (is_array($text)) {
+            $text = implode(' ', $text);
+        }
+        
+        // Convert to string if not already
+        $text = (string) $text;
         
         return trim(strtolower(preg_replace('/\s+/', ' ', $text)));
     }

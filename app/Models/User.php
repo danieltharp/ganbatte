@@ -102,4 +102,52 @@ class User extends Authenticatable
     {
         return $this->completedSections()->where('section_id', $sectionId)->exists();
     }
+
+    /**
+     * Get exercise attempts for this user
+     */
+    public function exerciseAttempts(): HasMany
+    {
+        return $this->hasMany(ExerciseAttempt::class);
+    }
+
+    /**
+     * Get completed exercise attempts
+     */
+    public function completedExerciseAttempts(): HasMany
+    {
+        return $this->hasMany(ExerciseAttempt::class)->completed();
+    }
+
+    /**
+     * Get the latest attempt for a specific exercise
+     */
+    public function getLatestExerciseAttempt($exerciseId): ?ExerciseAttempt
+    {
+        return $this->exerciseAttempts()
+            ->where('exercise_id', $exerciseId)
+            ->orderBy('created_at', 'desc')
+            ->first();
+    }
+
+    /**
+     * Get the best attempt for a specific exercise
+     */
+    public function getBestExerciseAttempt($exerciseId): ?ExerciseAttempt
+    {
+        return $this->exerciseAttempts()
+            ->where('exercise_id', $exerciseId)
+            ->where('is_completed', true)
+            ->orderBy('score', 'desc')
+            ->orderBy('time_spent_seconds', 'asc')
+            ->first();
+    }
+
+    /**
+     * Check if user has completed a specific exercise
+     */
+    public function hasCompletedExercise($exerciseId): bool
+    {
+        return $this->completedExerciseAttempts()->where('exercise_id', $exerciseId)->exists();
+    }
 }

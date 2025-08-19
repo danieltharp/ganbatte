@@ -65,8 +65,18 @@ class LessonController extends Controller
                     ->keyBy('section_id');
             }
             
-            // TODO: Load exercise progress when exercise attempts table is created
-            // For now, exerciseProgress remains empty but the structure is ready
+            // Load user's exercise progress
+            if ($exerciseIds->isNotEmpty()) {
+                $exerciseProgress = $user->exerciseAttempts()
+                    ->whereIn('exercise_id', $exerciseIds)
+                    ->where('is_completed', true)
+                    ->get()
+                    ->groupBy('exercise_id')
+                    ->map(function ($attempts) {
+                        // Get the best attempt for each exercise
+                        return $attempts->sortByDesc('score')->sortBy('time_spent_seconds')->first();
+                    });
+            }
         }
         
         return view('lessons.show', compact('lesson', 'sectionProgress', 'exerciseProgress'));

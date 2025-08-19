@@ -106,12 +106,12 @@
                                                             
                                                         @elseif($contentItem->type === 'exercise')
                                                             @php
-                                                                // TODO: Add exercise progress when exercise attempts table is created
-                                                                $exerciseCompleted = false; // Placeholder
+                                                                $exerciseAttempt = $exerciseProgress->get($contentItem->content->id);
+                                                                $exerciseCompleted = $exerciseAttempt !== null;
                                                             @endphp
                                                             
                                                             @if($exerciseCompleted)
-                                                                <span class="text-green-500">✅</span>
+                                                                <span class="text-green-500" title="Completed {{ $exerciseAttempt->completed_at->format('M j') }} - Score: {{ $exerciseAttempt->percentage }}%">✅</span>
                                                             @else
                                                                 <span class="text-green-600 dark:text-green-400">✏️</span>
                                                             @endif
@@ -119,6 +119,10 @@
                                                             <a href="{{ route('exercises.show', $contentItem->content->id) }}" class="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-200 {{ $exerciseCompleted ? 'line-through opacity-75' : '' }}">
                                                                 {{ $contentItem->content->name ?? $contentItem->content->title ?? 'Exercise' }}
                                                             </a>
+                                                            
+                                                            @if($exerciseCompleted)
+                                                                <span class="text-xs text-gray-500">({{ $exerciseAttempt->percentage }}%)</span>
+                                                            @endif
                                                             
                                                         @elseif($contentItem->type === 'worksheet')
                                                             <span class="text-purple-600 dark:text-purple-400">📋</span>
@@ -356,12 +360,18 @@
                     
                     @auth
                         @php
-                            $totalItems = $lesson->pages->flatMap(fn($page) => $page->content)->whereIn('type', ['section', 'exercise'])->count();
-                            $completedItems = $sectionProgress->where('completed_at', '!=', null)->count();
-                            $overallProgress = $totalItems > 0 ? round(($completedItems / $totalItems) * 100) : 0;
+                            // Count unique items only (sections + exercises can span multiple pages)
+                            $uniqueTotalItems = $lesson->pages
+                                ->flatMap(fn($page) => $page->content)
+                                ->whereIn('type', ['section', 'exercise'])
+                                ->pluck('id')
+                                ->unique()
+                                ->count();
+                            $completedItems = $sectionProgress->where('completed_at', '!=', null)->count() + $exerciseProgress->count();
+                            $overallProgress = $uniqueTotalItems > 0 ? round(($completedItems / $uniqueTotalItems) * 100) : 0;
                         @endphp
                         
-                        @if($totalItems > 0)
+                        @if($uniqueTotalItems > 0)
                             <div class="border-t border-gray-200 dark:border-gray-600 pt-3 mt-4">
                                 <div class="text-center">
                                     <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">Lesson Progress</div>
@@ -389,19 +399,25 @@
                     </h3>
                     
                     @php
-                        $totalSections = $lesson->pages
+                        // Count unique sections and exercises (not page references)
+                        $uniqueSectionIds = $lesson->pages
                             ->flatMap(fn($page) => $page->content)
                             ->where('type', 'section')
-                            ->count();
-                        $completedSections = $sectionProgress->where('completed_at', '!=', null)->count();
-                        $sectionPercentage = $totalSections > 0 ? round(($completedSections / $totalSections) * 100) : 0;
+                            ->pluck('id')
+                            ->unique();
+                        $totalSections = $uniqueSectionIds->count();
                         
-                        $totalExercises = $lesson->pages
+                        $uniqueExerciseIds = $lesson->pages
                             ->flatMap(fn($page) => $page->content)
                             ->where('type', 'exercise')
-                            ->count();
-                        // TODO: Calculate completed exercises when exercise attempts table is created
-                        $completedExercises = 0;
+                            ->pluck('id')
+                            ->unique();
+                        $totalExercises = $uniqueExerciseIds->count();
+                        
+                        $completedSections = $sectionProgress->where('completed_at', '!=', null)->count();
+                        $completedExercises = $exerciseProgress->count();
+                        
+                        $sectionPercentage = $totalSections > 0 ? round(($completedSections / $totalSections) * 100) : 0;
                         $exercisePercentage = $totalExercises > 0 ? round(($completedExercises / $totalExercises) * 100) : 0;
                     @endphp
                     
@@ -436,16 +452,15 @@
                         
                         <!-- Overall Progress -->
                         @php
-                            $totalItems = $totalSections + $totalExercises;
-                            $completedItems = $completedSections + $completedExercises;
-                            $overallPercentage = $totalItems > 0 ? round(($completedItems / $totalItems) * 100) : 0;
+                            $uniqueTotalItems = $uniqueSectionIds->count() + $uniqueExerciseIds->count();
+                            $overallPercentage = $uniqueTotalItems > 0 ? round(($completedItems / $uniqueTotalItems) * 100) : 0;
                         @endphp
                         
-                        @if($totalItems > 0)
+                        @if($uniqueTotalItems > 0)
                             <div class="border-t border-gray-200 dark:border-gray-600 pt-3">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Overall</span>
-                                    <span class="text-sm font-bold dark:text-white">{{ $completedItems }}/{{ $totalItems }}</span>
+                                    <span class="text-sm font-bold dark:text-white">{{ $completedItems }}/{{ $uniqueTotalItems }}</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="bg-indigo-500 h-3 rounded-full transition-all duration-300" style="width: {{ $overallPercentage }}%"></div>
@@ -454,7 +469,7 @@
                             </div>
                         @endif
                         
-                        @if($completedItems === $totalItems && $totalItems > 0)
+                        @if($completedItems === $uniqueTotalItems && $uniqueTotalItems > 0)
                             <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 text-center">
                                 <span class="text-green-600 dark:text-green-400 font-semibold">🎉 Lesson Complete!</span>
                             </div>
