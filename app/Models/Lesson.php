@@ -23,12 +23,14 @@ class Lesson extends Model
         'difficulty',
         'estimated_time_minutes',
         'prerequisites',
+        'is_active',
     ];
 
     protected $casts = [
         'prerequisites' => 'array',
         'chapter' => 'integer',
         'estimated_time_minutes' => 'integer',
+        'is_active' => 'boolean',
     ];
 
     /**

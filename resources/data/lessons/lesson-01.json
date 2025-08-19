@@ -7,9 +7,9 @@
       "furigana": "{第1課|だい|いっ|か}",
       "english": "Lesson 1"
     },
-    "description": "Introduction to basic Japanese greetings and self-introduction",
+    "description": "Basics of self-introduction, common professions and countries.",
     "difficulty": "beginner",
-    "estimated_time_minutes": 45,
-    "prerequisites": []
+    "estimated_time_minutes": 360,
+    "prerequisites": ["mnn-lesson-00"]
   }
 } 
