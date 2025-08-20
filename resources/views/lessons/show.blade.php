@@ -345,6 +345,9 @@
                     <a href="{{ route('vocabulary.index', ['lesson_id' => $lesson->id]) }}" class="block w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-center">
                         📚 Study Vocabulary
                     </a>
+                    <a href="{{ route('vocabulary.quiz.index', ['lesson_from' => $lesson->id, 'lesson_to' => $lesson->id]) }}" class="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center">
+                        🎓 Vocabulary Quiz
+                    </a>
                     @if($lesson->vocabulary->where('include_in_kanji_worksheet', true)->count() > 0)
                         <a href="{{ route('worksheets.index', ['lesson_id' => $lesson->id, 'type' => 'kanji_practice']) }}" class="block w-full bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded text-center">
                             🈂️ Kanji Practice
