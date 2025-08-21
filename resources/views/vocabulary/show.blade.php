@@ -55,7 +55,7 @@
     <div class="lg:col-span-3 space-y-6">
         <!-- Audio Player -->
         @if($vocabulary->audio_filename)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
                         <span class="mr-2">🎧</span>
@@ -158,7 +158,7 @@
 
         <!-- Notes -->
         @if($vocabulary->hasMarkdownNote())
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 flex items-center">
@@ -252,7 +252,7 @@
 
         <!-- Tags -->
         @if($vocabulary->tags && count($vocabulary->tags) > 0)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
                         <span class="mr-2">🏷️</span>
@@ -333,7 +333,7 @@
         </div>
 
         <!-- Word Details -->
-        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
             <div class="p-6">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Details</h3>
                 <div class="space-y-3">
@@ -393,7 +393,7 @@
 
         <!-- Also Accepted -->
         @if($vocabulary->also_accepted && (isset($vocabulary->also_accepted['japanese']) || isset($vocabulary->also_accepted['english'])))
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Also Accepted</h3>
                     <div class="space-y-3">
