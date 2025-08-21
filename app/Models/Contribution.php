@@ -107,12 +107,16 @@ class Contribution extends Model
      */
     public function markAsAccepted(User $reviewer): bool
     {
-        return $this->update([
+        $result = $this->update([
             'status' => self::STATUS_ACCEPTED,
             'reviewer_id' => $reviewer->id,
             'reviewed_at' => now()
         ]);
+        
+        // Increment user's accepted contributions count
         $this->user->incrementAcceptedContributions();
+        
+        return $result;
     }
 
     /**
@@ -120,6 +124,7 @@ class Contribution extends Model
      */
     public function markAsRejected(User $reviewer): bool
     {
+        // Increment user's rejected contributions count before deletion
         $this->user->incrementRejectedContributions();
         return $this->delete();
     }

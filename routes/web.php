@@ -76,6 +76,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/contribute/options', [ContributeController::class, 'getContributionOptions'])->name('contribute.options');
 });
 
+// Contribution management endpoints (staff only)
+Route::middleware(['auth', 'check.role:admin,developer,staff'])->group(function () {
+    Route::get('/contribute/manage', [ContributeController::class, 'manage'])->name('contribute.manage');
+    Route::get('/contributions/{contribution}', [ContributeController::class, 'show'])->name('contributions.show');
+    Route::patch('/contributions/{contribution}/status', [ContributeController::class, 'updateStatus'])->name('contributions.update-status');
+    Route::delete('/contributions/{contribution}', [ContributeController::class, 'destroy'])->name('contributions.destroy');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

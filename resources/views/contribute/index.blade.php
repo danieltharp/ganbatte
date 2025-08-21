@@ -106,6 +106,44 @@
         </div>
     </div>
 
+    <!-- Staff Management Section -->
+    @auth
+        @if(Auth::user()->canManageContributions())
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
+                    <span class="mr-2">⚙️</span>
+                    Staff Tools
+                </h2>
+                
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg border border-indigo-200 dark:border-indigo-700">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">📋</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Manage Contributions</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Review and process community contributions. View submitted suggestions, improvements, and corrections from users across the platform.
+                        </p>
+                        <div class="mb-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">Staff Access</span>
+                                <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">JSON Preview</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <a href="{{ route('contribute.manage') }}" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md font-medium transition-colors">
+                                Open Management Interface →
+                            </a>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">Review & Approve</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+    @endauth
+
     <!-- Other Ways to Contribute -->
     <div class="mb-12">
         <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
@@ -114,6 +152,27 @@
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Page Contributions -->
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <span class="mr-2">💡</span>
+                        Page Contributions
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        The easiest way to contribute! While browsing vocabulary, lessons, or other content, click "Contribute to This Page" 
+                        to suggest improvements, add example sentences, memory aids, or corrections directly from the content you're studying.
+                    </p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                        <li>• Add memory aids and mnemonics for vocabulary</li>
+                        <li>• Suggest example sentences and usage notes</li>
+                        <li>• Propose corrections or alternative meanings</li>
+                        <li>• Share pronunciation tips and cultural context</li>
+                        <li>• <strong>Earn Contributor status in our Discord community!</strong></li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- Content Review -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
@@ -202,11 +261,11 @@
             Ready to contribute? Here's how to get started:
         </p>
         <ol class="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-2">
-            <li>Choose a contribution method that matches your skills and interests</li>
-            <li>For content generation tools, ensure you receive proper training and resources</li>
-            <li>Start with small contributions to familiarize yourself with the process</li>
-            <li>Join our contributor community for support and collaboration</li>
-            <li>Follow quality guidelines to maintain platform standards</li>
+            <li><strong>Start simple:</strong> Browse vocabulary or lessons and use "Contribute to This Page" to suggest improvements</li>
+            <li><strong>Be specific:</strong> Clear, helpful suggestions get approved faster and help other learners more</li>
+            <li><strong>Stay engaged:</strong> Regular contributors earn recognition and Contributor status in our Discord</li>
+            <li><strong>For advanced tools:</strong> Content generation tools require proper training and access to resources</li>
+            <li><strong>Quality matters:</strong> All contributions are reviewed to maintain platform standards</li>
         </ol>
         <div class="mt-6">
             <a href="https://discord.gg/jetpZY8s9w" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition-colors">
@@ -216,7 +275,9 @@
         <div class="mt-6">
             <p class="text-sm text-gray-600 dark:text-gray-400">
                 <strong>Note:</strong> Content generation tools require specific training and access to resources. 
-                Please contact the platform administrators before using these tools to ensure proper setup and guidance.
+                For page contributions (the easiest way to help!), simply look for the "Contribute" button 
+                while browsing content. Regular contributors earn Contributor status and recognition in our 
+                <a href="https://discord.gg/jetpZY8s9w" target="_blank" class="text-blue-500 hover:text-blue-700">Discord community</a>.
             </p>
         </div>
     </div>
