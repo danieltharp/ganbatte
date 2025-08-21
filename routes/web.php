@@ -12,6 +12,7 @@ use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\ContributeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -64,6 +65,10 @@ Route::get('/exercises/{exercise}', [ExerciseController::class, 'show'])->name('
 
 // Custom routes
 Route::get('/vocabulary/kanji-worksheet', [VocabularyController::class, 'kanjiWorksheet'])->name('vocabulary.kanji-worksheet');
+
+// Contribute section
+Route::get('/contribute', [ContributeController::class, 'index'])->name('contribute.index');
+Route::get('/contribute/vocabulary', [ContributeController::class, 'vocabularyGenerator'])->name('contribute.vocabulary.generator');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

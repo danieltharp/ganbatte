@@ -45,6 +45,9 @@
                             <x-nav-link :href="route('worksheets.index')" :active="request()->routeIs('worksheets.*')">
                                 {{ __('Worksheets') }}
                             </x-nav-link>
+                            <x-nav-link :href="route('contribute.index')" :active="request()->routeIs('contribute.*')">
+                                {{ __('Contribute') }}
+                            </x-nav-link>
                         </div>
                     </div>
 
