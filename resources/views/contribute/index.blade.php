@@ -128,7 +128,7 @@
                         </p>
                         <div class="mb-4">
                             <div class="flex flex-wrap gap-2">
-                                <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">Staff Access</span>
+                                <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-blue-200">Staff Access</span>
                                 <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">JSON Preview</span>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                         Page Contributions
                     </h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-4">
-                        The easiest way to contribute! While browsing vocabulary, lessons, or other content, click "Contribute to This Page" 
+                        The easiest way to contribute! While browsing vocabulary, lessons, or other content, click the "Contribute" button 
                         to suggest improvements, add example sentences, memory aids, or corrections directly from the content you're studying.
                     </p>
                     <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
@@ -261,7 +261,7 @@
             Ready to contribute? Here's how to get started:
         </p>
         <ol class="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-2">
-            <li><strong>Start simple:</strong> Browse vocabulary or lessons and use "Contribute to This Page" to suggest improvements</li>
+            <li><strong>Start simple:</strong> Browse vocabulary or lessons and use the "Contribute" button to suggest improvements</li>
             <li><strong>Be specific:</strong> Clear, helpful suggestions get approved faster and help other learners more</li>
             <li><strong>Stay engaged:</strong> Regular contributors earn recognition and Contributor status in our Discord</li>
             <li><strong>For advanced tools:</strong> Content generation tools require proper training and access to resources</li>
