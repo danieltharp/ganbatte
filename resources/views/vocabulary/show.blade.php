@@ -13,9 +13,13 @@
                         {{ $vocabulary->lesson->title_english }}
                     </a>
                 @endif
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                    {{ ucfirst(str_replace('_', ' ', $vocabulary->part_of_speech)) }}
-                </span>
+                @if($vocabulary->part_of_speech && is_array($vocabulary->part_of_speech))
+                    @foreach($vocabulary->part_of_speech as $pos)
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 mr-1">
+                            {{ ucfirst(str_replace('_', ' ', $pos)) }}
+                        </span>
+                    @endforeach
+                @endif
                 @if($vocabulary->jlpt_level)
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium 
                         @if($vocabulary->jlpt_level === 'N5') bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200
@@ -301,7 +305,11 @@
                 <div class="space-y-3">
                     <div class="flex justify-between">
                         <span class="text-gray-600 dark:text-gray-400">Part of Speech</span>
-                        <span class="font-semibold dark:text-white">{{ ucfirst(str_replace('_', ' ', $vocabulary->part_of_speech)) }}</span>
+                        <span class="font-semibold dark:text-white">
+                            @if($vocabulary->part_of_speech && is_array($vocabulary->part_of_speech))
+                                {{ collect($vocabulary->part_of_speech)->map(fn($pos) => ucfirst(str_replace('_', ' ', $pos)))->join(', ') }}
+                            @endif
+                        </span>
                     </div>
                     
                     @if($vocabulary->verb_type)

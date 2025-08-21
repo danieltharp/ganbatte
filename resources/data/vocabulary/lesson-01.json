@@ -8,7 +8,7 @@
         "furigana": "{私|わたし}",
         "english": "I"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "frequency_rank": 42,
       "audio": {
@@ -29,7 +29,7 @@
         "japanese": "あなた",
         "english": "you"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "frequency_rank": 226,
       "audio": {
@@ -51,7 +51,7 @@
         "furigana": "あの{人|ひと}, あの{方|かた}",
         "english": "that person"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_あの人.mp3",
@@ -70,7 +70,7 @@
         "japanese": "〜さん",
         "english": "Mr., Ms., Mrs. 〜"
       },
-      "part_of_speech": "affix",
+      "part_of_speech": ["affix"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_～さん.mp3",
@@ -90,7 +90,7 @@
         "japanese": "〜ちゃん",
         "english": "suffix for child's name"
       },
-      "part_of_speech": "affix",
+      "part_of_speech": ["affix"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_～ちゃん.mp3",
@@ -111,7 +111,7 @@
         "furigana": "〜{人|じん}",
         "english": "suffix for nationality"
       },
-      "part_of_speech": "affix",
+      "part_of_speech": ["affix"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_～人.mp3",
@@ -132,7 +132,7 @@
         "furigana": "{先生|せん|せい}",
         "english": "teacher, instructor; (medical) doctor, medic"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_先生.mp3",
@@ -152,7 +152,7 @@
         "furigana": "{教師|きょう|し}",
         "english": "teacher, instructor (referring to own job)"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_教師.mp3",
@@ -172,7 +172,7 @@
         "furigana": "{学生|がく|せい}",
         "english": "student"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_学生.mp3",
@@ -189,7 +189,7 @@
         "furigana": "{会社員|かい|しゃ|いん}",
         "english": "company employee"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_会社員.mp3",
@@ -209,7 +209,7 @@
         "furigana": "{社員|しゃ|いん}",
         "english": "company employee"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_社員.mp3",
@@ -229,7 +229,7 @@
         "furigana": "{銀行員|ぎん|こう|いん}",
         "english": "bank employee"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_銀行員.mp3",
@@ -249,7 +249,7 @@
         "furigana": "{医者|い|しゃ}",
         "english": "doctor, medic"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_医者.mp3",
@@ -269,7 +269,7 @@
         "furigana": "{研究者|けん|きゅう|しゃ}",
         "english": "researcher"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_研究者.mp3",
@@ -286,7 +286,7 @@
         "furigana": "{大学|だい|がく}",
         "english": "university"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_大学.mp3",
@@ -306,7 +306,7 @@
         "furigana": "{病院|びょう|いん}",
         "english": "hospital"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_病院.mp3",
@@ -326,7 +326,7 @@
         "furigana": "{誰|だれ}, {何方|どなた}",
         "english": "who"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_誰.mp3",
@@ -346,7 +346,7 @@
         "furigana": "〜{歳|さい}",
         "english": "suffix for age"
       },
-      "part_of_speech": "affix",
+      "part_of_speech": ["affix"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_ー歳.mp3",
@@ -366,7 +366,7 @@
         "furigana": "{何歳|なん|さい} (お{幾|いく}つ)",
         "english": "how old"
       },
-      "part_of_speech": "expression",
+      "part_of_speech": ["expression"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_何歳.mp3",
@@ -386,7 +386,7 @@
         "japanese": "はい",
         "english": "yes"
       },
-      "part_of_speech": "interjection",
+      "part_of_speech": ["interjection"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_はい.mp3",
@@ -405,7 +405,7 @@
         "japanese": "いいえ",
         "english": "no"
       },
-      "part_of_speech": "interjection",
+      "part_of_speech": ["interjection"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_いいえ.mp3",
@@ -425,7 +425,7 @@
         "furigana": "{初|はじ}めまして",
         "english": "How do you do?"
       },
-      "part_of_speech": "expression",
+      "part_of_speech": ["expression"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_初めまして.mp3",
@@ -445,7 +445,7 @@
         "furigana": "〜から{来|き}ました",
         "english": "I'm from 〜 (country)."
       },
-      "part_of_speech": "expression",
+      "part_of_speech": ["expression"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_～から来ました。.mp3",
@@ -465,7 +465,7 @@
         "furigana": "「どうぞ」よろしく「お{願|ねが}いします」。",
         "english": "Pleased to meet you."
       },
-      "part_of_speech": "expression",
+      "part_of_speech": ["expression"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_「どうぞ」よろしく「お願いします」。.mp3",
@@ -485,7 +485,7 @@
         "furigana": "{失礼|しつ|れい}ですが",
         "english": "Excuse me, but..."
       },
-      "part_of_speech": "expression",
+      "part_of_speech": ["expression"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_失礼ですが.mp3",
@@ -505,7 +505,7 @@
         "furigana": "お{名前|な|まえ}は？",
         "english": "May I have your name?"
       },
-      "part_of_speech": "expression",
+      "part_of_speech": ["expression"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_お名前は？.mp3",
@@ -525,7 +525,7 @@
         "japanese": "こちらは〜さんです。",
         "english": "This is Mr./Ms. 〜."
       },
-      "part_of_speech": "expression",
+      "part_of_speech": ["expression"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_こちらは～さんです。.mp3",
@@ -544,7 +544,7 @@
         "japanese": "アメリカ",
         "english": "America"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_アメリカ.mp3",
@@ -563,7 +563,7 @@
         "japanese": "イギリス",
         "english": "England"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_イギリス.mp3",
@@ -579,7 +579,7 @@
         "japanese": "インド",
         "english": "India"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_インド.mp3",
@@ -595,7 +595,7 @@
         "japanese": "インドネシア",
         "english": "Indonesia"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_インドネシア.mp3",
@@ -612,7 +612,7 @@
         "furigana": "{韓国|かん|こく}",
         "english": "Korea"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_韓国.mp3",
@@ -631,7 +631,7 @@
         "japanese": "タイ",
         "english": "Thailand"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_タイ.mp3",
@@ -648,7 +648,7 @@
         "furigana": "{中国|ちゅう|ごく}",
         "english": "China"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_中国.mp3",
@@ -664,7 +664,7 @@
         "japanese": "ドイツ",
         "english": "Germany"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_ドイツ.mp3",
@@ -681,7 +681,7 @@
         "furigana": "{日本|に|ほん}",
         "english": "Japan"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_日本.mp3",
@@ -697,7 +697,7 @@
         "japanese": "ブラジル",
         "english": "Brazil"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_ブラジル.mp3",
@@ -713,7 +713,7 @@
         "japanese": "イタリア",
         "english": "Italy"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_イタリア.mp3",
@@ -729,7 +729,7 @@
         "japanese": "イラン",
         "english": "Iran"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["location", "country"],
       "include_in_kanji_worksheet": false
@@ -741,7 +741,7 @@
         "japanese": "エジプト",
         "english": "Egypt"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["location", "country"],
       "include_in_kanji_worksheet": false
@@ -753,7 +753,7 @@
         "japanese": "オーストラリア",
         "english": "Australia"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_オーストラリア.mp3",
@@ -769,7 +769,7 @@
         "japanese": "カナダ",
         "english": "Canada"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["location", "country"],
       "include_in_kanji_worksheet": false
@@ -781,7 +781,7 @@
         "japanese": "サウジアラビア",
         "english": "Saudi Arabia"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_サウジアラビア.mp3",
@@ -797,7 +797,7 @@
         "japanese": "シンガポール",
         "english": "Singapore"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_シンガポール.mp3",
@@ -813,7 +813,7 @@
         "japanese": "スペイン",
         "english": "Spain"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_スペイン.mp3",
@@ -829,7 +829,7 @@
         "japanese": "フランス",
         "english": "France"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_フランス.mp3",
@@ -845,7 +845,7 @@
         "japanese": "フィリピン",
         "english": "Philippines"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["location", "country"],
       "also_accepted":{
@@ -860,7 +860,7 @@
         "japanese": "ベトナム",
         "english": "Vietnam"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_ベトナム.mp3",
@@ -876,7 +876,7 @@
         "japanese": "マレーシア",
         "english": "Malaysia"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["location", "country"],
       "include_in_kanji_worksheet": false
@@ -888,7 +888,7 @@
         "japanese": "メキシコ",
         "english": "Mexico"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_メキシコ.mp3",
@@ -904,7 +904,7 @@
         "japanese": "ロシア",
         "english": "Russia"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_ロシア.mp3",
@@ -921,7 +921,7 @@
         "furigana": "ペルシア{語|ご}",
         "english": "Persian"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["language"],
       "also_accepted":{
@@ -937,7 +937,7 @@
         "furigana": "ポルトガル{語|ご}",
         "english": "Portuguese"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["language"],
       "also_accepted":{
@@ -953,7 +953,7 @@
         "furigana": "{英語|えい|ご}",
         "english": "English"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_英語.mp3",
@@ -973,7 +973,7 @@
         "furigana": "{日本語|に|ほん|ご}",
         "english": "Japanese"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_日本語.mp3",
@@ -993,7 +993,7 @@
         "furigana": "アラビア{語|ご}",
         "english": "Arabic language"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["language"],
       "also_accepted":{
@@ -1009,7 +1009,7 @@
         "furigana": "ヒンディー{語|ご}",
         "english": "Hindi language"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["language"],
       "also_accepted":{
@@ -1025,7 +1025,7 @@
         "furigana": "{英語|えい|ご}",
         "english": "English language"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["language"],
       "also_accepted":{
@@ -1041,7 +1041,7 @@
         "furigana": "フィリピノ{語|ご}",
         "english": "Filipino language"
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "jlpt_level": "N5",
       "tags": ["language"],
       "also_accepted":{
@@ -1057,7 +1057,7 @@
         "furigana": "{日|にち・ヒ}",
         "english": "day, sun"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1070,7 +1070,7 @@
         "furigana": "{月|つき・ゲツ}",
         "english": "moon, month"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1083,7 +1083,7 @@
         "furigana": "{火|ひ・カ}",
         "english": "fire, flame"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1096,7 +1096,7 @@
         "furigana": "{水|みず・スイ}",
         "english": "water"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1109,7 +1109,7 @@
         "furigana": "{木|き・モク}",
         "english": "tree, wood"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1122,7 +1122,7 @@
         "furigana": "{金|きん・キン}",
         "english": "gold, money"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1135,7 +1135,7 @@
         "furigana": "{土|つち・ドウ}",
         "english": "earth, soil"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1148,7 +1148,7 @@
         "furigana": "{山|やま・サン}",
         "english": "mountain"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1161,7 +1161,7 @@
         "furigana": "{川|かわ・セン}",
         "english": "river, stream"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true
@@ -1174,7 +1174,7 @@
         "furigana": "{田|た・デン}",
         "english": "rice paddy"
       },
-      "part_of_speech": "kanji",
+      "part_of_speech": ["kanji"],
       "jlpt_level": "N5",
       "tags": ["kanji"],
       "include_in_kanji_worksheet": true

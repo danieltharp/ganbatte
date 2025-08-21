@@ -174,21 +174,53 @@ class VocabularyJSONGenerator {
             <!-- Linguistic Information -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Part of Speech</label>
-                    <select data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                        <option value="">Select...</option>
-                        <option value="noun">Noun</option>
-                        <option value="verb">Verb</option>
-                        <option value="adjective">Adjective</option>
-                        <option value="adverb">Adverb</option>
-                        <option value="particle">Particle</option>
-                        <option value="conjunction">Conjunction</option>
-                        <option value="interjection">Interjection</option>
-                        <option value="counter">Counter</option>
-                        <option value="expression">Expression</option>
-                        <option value="affix">Affix</option>
-                        <option value="kanji">Kanji</option>
-                    </select>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Part of Speech (select multiple)</label>
+                    <div class="grid grid-cols-2 gap-2 p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700">
+                        <label class="flex items-center">
+                            <input type="checkbox" value="noun" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Noun</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="verb" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Verb</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="adjective" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Adjective</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="adverb" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Adverb</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="particle" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Particle</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="conjunction" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Conjunction</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="interjection" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Interjection</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="counter" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Counter</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="expression" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Expression</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="affix" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Affix</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="kanji" data-field="part_of_speech" data-vocab="${vocabId}" class="vocab-input rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Kanji</span>
+                        </label>
+                    </div>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Verb Type</label>
@@ -330,29 +362,43 @@ class VocabularyJSONGenerator {
         
         inputs.forEach(input => {
             const field = input.dataset.field;
-            let value = input.value.trim();
-            
-            if (!value) return;
-            
-            // Check for required fields
-            if (field === 'word.japanese' || field === 'word.english' || field === 'part_of_speech') {
-                hasRequiredData = true;
-            }
             
             // Handle different field types
             if (field.startsWith('word.')) {
+                let value = input.value.trim();
+                if (!value) return;
                 const wordField = field.split('.')[1];
                 data.word[wordField] = value;
+                
+                // Check for required fields
+                if (field === 'word.japanese' || field === 'word.english') {
+                    hasRequiredData = true;
+                }
             } else if (field.startsWith('audio.')) {
+                let value = input.value.trim();
+                if (!value) return;
                 const audioField = field.split('.')[1];
                 data.audio[audioField] = value;
+            } else if (field === 'part_of_speech') {
+                // Handle multiple part of speech checkboxes
+                if (input.checked) {
+                    if (!data[field]) data[field] = [];
+                    data[field].push(input.value);
+                    hasRequiredData = true; // At least one part of speech selected
+                }
             } else if (field === 'tags') {
+                let value = input.value.trim();
+                if (!value) return;
                 data[field] = value.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
             } else if (field === 'frequency_rank') {
+                let value = input.value.trim();
+                if (!value) return;
                 data[field] = parseInt(value) || 0;
             } else if (field === 'include_in_kanji_worksheet') {
                 data[field] = input.checked;
             } else {
+                let value = input.value.trim();
+                if (!value) return;
                 data[field] = value;
             }
         });

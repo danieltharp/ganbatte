@@ -242,7 +242,11 @@
                                                 @endif
                                             </div>
                                             <div class="text-gray-900 dark:text-gray-100 font-medium">{{ $vocab->word_english }}</div>
-                                            <div class="text-sm text-gray-600 dark:text-gray-400">{{ $vocab->part_of_speech }}</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">
+                                                @if($vocab->part_of_speech && is_array($vocab->part_of_speech))
+                                                    {{ collect($vocab->part_of_speech)->map(fn($pos) => ucfirst(str_replace('_', ' ', $pos)))->join(', ') }}
+                                                @endif
+                                            </div>
                                         </div>
                                         @if($vocab->include_in_kanji_worksheet)
                                             <span class="text-xs bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded">

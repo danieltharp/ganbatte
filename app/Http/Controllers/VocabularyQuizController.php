@@ -37,7 +37,7 @@ class VocabularyQuizController extends Controller
         
         // Get vocabulary items from the lesson range
         $vocabulary = Vocabulary::with('lesson')
-            ->where('part_of_speech', '!=', 'kanji')
+            ->whereJsonDoesntContain('part_of_speech', 'kanji')
             ->whereHas('lesson', function ($query) use ($lessonFrom, $lessonTo) {
                 $query->whereBetween('chapter', [$lessonFrom->chapter, $lessonTo->chapter]);
             })

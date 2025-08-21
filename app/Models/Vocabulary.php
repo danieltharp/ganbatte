@@ -42,6 +42,7 @@ class Vocabulary extends Model
     ];
 
     protected $casts = [
+        'part_of_speech' => 'array',
         'conjugations' => 'array',
         'example_sentences' => 'array',
         'related_words' => 'array',
@@ -97,7 +98,7 @@ class Vocabulary extends Model
      */
     public function isVerb(): bool
     {
-        return $this->part_of_speech === 'verb';
+        return is_array($this->part_of_speech) && in_array('verb', $this->part_of_speech);
     }
 
     /**
@@ -105,7 +106,7 @@ class Vocabulary extends Model
      */
     public function isAdjective(): bool
     {
-        return $this->part_of_speech === 'adjective';
+        return is_array($this->part_of_speech) && in_array('adjective', $this->part_of_speech);
     }
 
     /**
@@ -113,7 +114,7 @@ class Vocabulary extends Model
      */
     public function scopeByPartOfSpeech($query, $pos)
     {
-        return $query->where('part_of_speech', $pos);
+        return $query->whereJsonContains('part_of_speech', $pos);
     }
 
     /**
