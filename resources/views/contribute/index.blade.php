@@ -7,8 +7,9 @@
     <div class="mb-8">
         <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Contribute to Ganbatte</h1>
         <p class="text-lg text-gray-600 dark:text-gray-400">
-            Help improve and expand the Japanese learning platform by creating content using our specialized tools. 
+            Help improve and expand our Japanese learning platform by creating content using our specialized tools. 
             Each tool is designed to make content creation efficient while maintaining consistency and quality.
+            Contributors should start by joining the <a href="https://discord.gg/jetpZY8s9w" target="_blank" class="text-blue-500 hover:text-blue-700">Discord server</a>.
         </p>
     </div>
 
@@ -18,7 +19,11 @@
             <span class="mr-2">🛠️</span>
             Content Generation Tools
         </h2>
-        
+        <p class="text-lg text-gray-600 dark:text-gray-400">
+            These tools are highly specialized and require training, but are the most needed content for the site. 
+            Please join the <a href="https://discord.gg/jetpZY8s9w" target="_blank" class="text-blue-500 hover:text-blue-700">Discord server</a> to get access to the tools and training.
+        </p>
+        <br>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Vocabulary JSON Generator -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
@@ -203,6 +208,11 @@
             <li>Join our contributor community for support and collaboration</li>
             <li>Follow quality guidelines to maintain platform standards</li>
         </ol>
+        <div class="mt-6">
+            <a href="https://discord.gg/jetpZY8s9w" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition-colors">
+                Join Discord →
+            </a>
+        </div>
         <div class="mt-6">
             <p class="text-sm text-gray-600 dark:text-gray-400">
                 <strong>Note:</strong> Content generation tools require specific training and access to resources. 
