@@ -70,6 +70,12 @@ Route::get('/vocabulary/kanji-worksheet', [VocabularyController::class, 'kanjiWo
 Route::get('/contribute', [ContributeController::class, 'index'])->name('contribute.index');
 Route::get('/contribute/vocabulary', [ContributeController::class, 'vocabularyGenerator'])->name('contribute.vocabulary.generator');
 
+// Contribution submission endpoints
+Route::middleware('auth')->group(function () {
+    Route::post('/contribute/store', [ContributeController::class, 'store'])->name('contribute.store');
+    Route::get('/contribute/options', [ContributeController::class, 'getContributionOptions'])->name('contribute.options');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -23,6 +23,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'accepted_contributions',
+        'rejected_contributions',
     ];
 
     /**
@@ -249,5 +251,62 @@ class User extends Authenticatable
     public function canManageContributions(): bool
     {
         return $this->hasAnyRole(['admin', 'developer', 'staff', 'trusted_contributor']);
+    }
+
+    /**
+     * Get total contributions made by user
+     */
+    public function getTotalContributionsAttribute(): int
+    {
+        return $this->accepted_contributions + $this->rejected_contributions;
+    }
+
+    /**
+     * Get contribution acceptance rate as percentage
+     */
+    public function getContributionAcceptanceRateAttribute(): float
+    {
+        $total = $this->total_contributions;
+        return $total > 0 ? round(($this->accepted_contributions / $total) * 100, 1) : 0;
+    }
+
+    /**
+     * Increment accepted contributions count
+     */
+    public function incrementAcceptedContributions(): void
+    {
+        $this->increment('accepted_contributions');
+    }
+
+    /**
+     * Increment rejected contributions count
+     */
+    public function incrementRejectedContributions(): void
+    {
+        $this->increment('rejected_contributions');
+    }
+
+    /**
+     * Check if user has made contributions
+     */
+    public function hasContributions(): bool
+    {
+        return $this->total_contributions > 0;
+    }
+
+    /**
+     * Get all contributions made by this user
+     */
+    public function contributions(): HasMany
+    {
+        return $this->hasMany(Contribution::class);
+    }
+
+    /**
+     * Get contributions reviewed by this user
+     */
+    public function reviewedContributions(): HasMany
+    {
+        return $this->hasMany(Contribution::class, 'reviewer_id');
     }
 }

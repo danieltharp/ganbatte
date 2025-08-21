@@ -33,14 +33,18 @@
             </div>
             
             <div class="mb-4">
-                <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-100 japanese-text mb-2">
+                <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-100 japanese-text mb-2" 
+                    data-contributable="vocabulary" 
+                    data-object-id="{{ $vocabulary->id }}">
                     @if($vocabulary->hasFurigana())
                         <x-furigana-text>{{ $vocabulary->furigana_word }}</x-furigana-text>
                     @else
                         {{ $vocabulary->japanese_word }}
                     @endif
                 </h1>
-                <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-300">{{ $vocabulary->word_english }}</h2>
+                <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-300" 
+                    data-contributable="vocabulary" 
+                    data-object-id="{{ $vocabulary->id }}">{{ $vocabulary->word_english }}</h2>
             </div>
         </div>
     </div>
@@ -112,7 +116,9 @@
                         Example Sentences ({{ count($vocabulary->example_sentences) }})
                     </h2>
                     
-                    <div class="space-y-4">
+                    <div class="space-y-4" 
+                         data-contributable="vocabulary" 
+                         data-object-id="{{ $vocabulary->id }}">
                         @foreach($vocabulary->example_sentences as $example)
                             <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50">
                                 @if(isset($example['japanese']))
@@ -133,6 +139,19 @@
                             </div>
                         @endforeach
                     </div>
+                </div>
+            </div>
+        @else
+            <!-- Empty state for example sentences -->
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6" 
+                     data-contributable="vocabulary" 
+                     data-object-id="{{ $vocabulary->id }}">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <span class="mr-2">📝</span>
+                        Example Sentences
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 italic">No example sentences available yet.</p>
                 </div>
             </div>
         @endif
@@ -171,13 +190,28 @@
                         Memory Aids
                     </h2>
                     
-                    <div class="space-y-3">
+                    <div class="space-y-3" 
+                         data-contributable="vocabulary" 
+                         data-object-id="{{ $vocabulary->id }}">
                         @foreach($vocabulary->mnemonics as $mnemonic)
                             <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
                                 <div class="text-gray-800 dark:text-gray-200">{{ $mnemonic }}</div>
                             </div>
                         @endforeach
                     </div>
+                </div>
+            </div>
+        @else
+            <!-- Empty state for mnemonics -->
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6" 
+                     data-contributable="vocabulary" 
+                     data-object-id="{{ $vocabulary->id }}">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <span class="mr-2">🧠</span>
+                        Memory Aids
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 italic">No memory aids available yet.</p>
                 </div>
             </div>
         @endif
@@ -439,5 +473,18 @@
         font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
     }
 </style>
+
+<!-- Contribution Mode Toggle Button -->
+@auth
+    <button id="contribution-toggle" 
+            class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+        Contribute
+    </button>
+@endauth
+
+<!-- Include Contribution Modal -->
+@auth
+    <x-contribute.modal />
+@endauth
 
 @endsection
