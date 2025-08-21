@@ -86,7 +86,7 @@
 
 <!-- Success notification -->
 <div id="contribution-success" class="fixed top-4 right-4 z-60 hidden">
-    <div class="bg-green-100 dark:bg-green-900/20 border border-green-400 dark:border-green-700 text-green-700 dark:text-green-400 px-4 py-3 rounded shadow-lg">
+    <div class="bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-700 text-green-700 dark:text-green-400 px-4 py-3 rounded shadow-lg">
         <div class="flex">
             <div class="py-1">
                 <svg class="fill-current h-6 w-6 text-green-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
