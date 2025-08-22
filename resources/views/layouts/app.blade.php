@@ -54,6 +54,23 @@
                     <!-- Settings Dropdown -->
                     <div class="hidden sm:flex sm:items-center sm:ml-6">
                         @auth
+                            <!-- Contribution notification -->
+                            @if(Auth::user()->canManageContributions())
+                                @php
+                                    $newContributionsCount = \App\Models\Contribution::where('status', 'new')->count();
+                                @endphp
+                                @if($newContributionsCount > 0)
+                                    <a href="{{ route('contribute.manage') }}" class="relative mr-4">
+                                        <div class="inline-flex items-center px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md transition-colors">
+                                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5H9l-5-5h5V3h6v14z"/>
+                                            </svg>
+                                            {{ $newContributionsCount }} New
+                                        </div>
+                                    </a>
+                                @endif
+                            @endif
+
                             <x-dropdown align="right" width="48">
                                 <x-slot name="trigger">
                                     <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">

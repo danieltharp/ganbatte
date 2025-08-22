@@ -162,6 +162,21 @@ class ContributeController extends Controller
 
         $contributions = $query->paginate(25);
 
+        // Get the object details for context
+        foreach ($contributions as $contribution) {
+            switch ($contribution->object_type) {
+                case 'vocabulary':
+                    $contribution->object_details = Vocabulary::find($contribution->object_id)->word_japanese;
+                    break;
+                case 'lesson':
+                    $contribution->object_details = Lesson::find($contribution->object_id)->title_english;
+                    break;
+                case 'grammar_point':
+                    $contribution->object_details = GrammarPoint::find($contribution->object_id)->name_english;
+                    break;
+            }
+        }
+
         // Get filter options
         $lessons = Lesson::orderBy('chapter')->get();
         $objectTypes = Contribution::select('object_type')

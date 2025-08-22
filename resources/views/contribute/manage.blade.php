@@ -110,7 +110,7 @@
 
                             <div class="mb-3">
                                 <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                                    Contributing to: {{ $contribution->object_id }}
+                                    Contributing to: {{ $contribution->object_id }} ({{ $contribution->object_details }})
                                 </h3>
                                 <p class="text-sm text-gray-600 dark:text-gray-400">
                                     By {{ $contribution->user->name }} • {{ $contribution->created_at->format('M j, Y g:i A') }}
