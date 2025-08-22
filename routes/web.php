@@ -82,6 +82,7 @@ Route::middleware(['auth', 'check.role:admin,developer,staff'])->group(function 
     Route::get('/contributions/{contribution}', [ContributeController::class, 'show'])->name('contributions.show');
     Route::patch('/contributions/{contribution}/status', [ContributeController::class, 'updateStatus'])->name('contributions.update-status');
     Route::delete('/contributions/{contribution}', [ContributeController::class, 'destroy'])->name('contributions.destroy');
+    Route::patch('/admin/users/{user}/toggle-contribute', [ContributeController::class, 'toggleUserContribute'])->name('admin.users.toggle-contribute');
 });
 
 Route::middleware('auth')->group(function () {

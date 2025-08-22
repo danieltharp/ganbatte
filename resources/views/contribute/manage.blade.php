@@ -126,10 +126,30 @@
                             </div>
 
                             <!-- User stats -->
-                            <div class="text-xs text-gray-500 dark:text-gray-400">
-                                Contributor stats: {{ $contribution->user->accepted_contributions }} accepted, 
-                                {{ $contribution->user->rejected_contributions }} rejected 
-                                ({{ $contribution->user->contribution_acceptance_rate }}% acceptance rate)
+                            <div class="flex items-center justify-between">
+                                <div class="text-xs text-gray-500 dark:text-gray-400">
+                                    Contributor stats: {{ $contribution->user->accepted_contributions }} accepted, 
+                                    {{ $contribution->user->rejected_contributions }} rejected 
+                                    ({{ $contribution->user->contribution_acceptance_rate }}% acceptance rate)
+                                    @if(!$contribution->user->can_user_contribute)
+                                        <span class="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
+                                            Blocked from contributing
+                                        </span>
+                                    @endif
+                                </div>
+                                <div class="ml-4">
+                                    @if($contribution->user->can_user_contribute)
+                                        <button onclick="toggleUserContributeStatus({{ $contribution->user->id }}, false)" 
+                                                class="text-xs bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded font-medium transition-colors">
+                                            Block User
+                                        </button>
+                                    @else
+                                        <button onclick="toggleUserContributeStatus({{ $contribution->user->id }}, true)" 
+                                                class="text-xs bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded font-medium transition-colors">
+                                            Unblock User
+                                        </button>
+                                    @endif
+                                </div>
                             </div>
                         </div>
 
@@ -341,6 +361,51 @@ async function deleteCompletedContribution(contributionId) {
     } catch (error) {
         console.error('Error removing contribution:', error);
         showNotification(error.message || 'Failed to remove contribution', 'error');
+        
+        button.disabled = false;
+        button.textContent = originalText;
+    }
+}
+
+async function toggleUserContributeStatus(userId, canContribute) {
+    const action = canContribute ? 'unblock' : 'block';
+    const actionText = canContribute ? 'unblocked' : 'blocked';
+    
+    if (!confirm(`Are you sure you want to ${action} this user from contributing?`)) {
+        return;
+    }
+
+    const button = event.target;
+    const originalText = button.textContent;
+    
+    button.disabled = true;
+    button.textContent = `${canContribute ? 'Unblocking' : 'Blocking'}...`;
+    
+    try {
+        const response = await fetch(`/admin/users/${userId}/toggle-contribute`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+            },
+            body: JSON.stringify({ can_user_contribute: canContribute })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || `Failed to ${action} user`);
+        }
+
+        // Show success message
+        showNotification(`User has been ${actionText} from contributing.`, 'success');
+        
+        // Reload page to show updated status
+        window.location.reload();
+
+    } catch (error) {
+        console.error(`Error ${action}ing user:`, error);
+        showNotification(error.message || `Failed to ${action} user from contributing`, 'error');
         
         button.disabled = false;
         button.textContent = originalText;

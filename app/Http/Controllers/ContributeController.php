@@ -6,6 +6,7 @@ use App\Models\Contribution;
 use App\Models\Vocabulary;
 use App\Models\Lesson;
 use App\Models\GrammarPoint;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
@@ -500,6 +501,43 @@ class ContributeController extends Controller
 
             default:
                 return [];
+        }
+    }
+
+    /**
+     * Toggle user's ability to contribute
+     */
+    public function toggleUserContribute(Request $request, User $user): JsonResponse
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Authentication required'], 401);
+        }
+
+        $currentUser = Auth::user();
+        if (!$currentUser->canManageContributions()) {
+            return response()->json(['error' => 'Insufficient permissions'], 403);
+        }
+
+        $validated = $request->validate([
+            'can_user_contribute' => 'required|boolean',
+        ]);
+
+        try {
+            $user->update([
+                'can_user_contribute' => $validated['can_user_contribute']
+            ]);
+
+            $action = $validated['can_user_contribute'] ? 'unblocked from' : 'blocked from';
+            
+            return response()->json([
+                'message' => "User {$user->name} has been {$action} contributing.",
+                'can_user_contribute' => $user->can_user_contribute
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => 'Failed to update user contribution status.'
+            ], 500);
         }
     }
 }

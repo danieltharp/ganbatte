@@ -25,6 +25,7 @@ class User extends Authenticatable
         'password',
         'accepted_contributions',
         'rejected_contributions',
+        'can_user_contribute',
     ];
 
     /**
@@ -47,6 +48,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'can_user_contribute' => 'boolean',
         ];
     }
 

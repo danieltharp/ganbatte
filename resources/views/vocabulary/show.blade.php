@@ -476,15 +476,19 @@
 
 <!-- Contribution Mode Toggle Button -->
 @auth
-    <button id="contribution-toggle" 
-            class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-        Contribute
-    </button>
+    @if(Auth::user()->can_user_contribute)
+        <button id="contribution-toggle" 
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+            Contribute
+        </button>
+    @endif
 @endauth
 
 <!-- Include Contribution Modal -->
 @auth
-    <x-contribute.modal />
+    @if(Auth::user()->can_user_contribute)
+        <x-contribute.modal />
+    @endif
 @endauth
 
 @endsection
