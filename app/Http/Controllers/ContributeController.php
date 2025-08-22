@@ -514,7 +514,7 @@ class ContributeController extends Controller
         }
 
         $currentUser = Auth::user();
-        if (!$currentUser->canManageContributions()) {
+        if (!$currentUser->isAdmin()) {
             return response()->json(['error' => 'Insufficient permissions'], 403);
         }
 
