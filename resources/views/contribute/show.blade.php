@@ -140,7 +140,8 @@
                             </select>
                         </div>
 
-                        <div>
+                        <!-- Standard field input -->
+                        <div id="standard-input">
                             <label for="field-value" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                 New value:
                             </label>
@@ -149,6 +150,36 @@
                                       placeholder="Enter the new value for this field..."></textarea>
                             <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
                                 For arrays, enter comma-separated values. For objects, use JSON format.
+                            </p>
+                        </div>
+
+                        <!-- Example sentence structured input -->
+                        <div id="example-sentence-input" class="hidden">
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                Example Sentence:
+                            </label>
+                            <div class="space-y-3">
+                                <div>
+                                    <label for="example-japanese" class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Japanese</label>
+                                    <input type="text" id="example-japanese" 
+                                           class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 shadow-sm focus:border-blue-500 focus:ring-blue-500" 
+                                           placeholder="私は学生です。">
+                                </div>
+                                <div>
+                                    <label for="example-furigana" class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Furigana (optional)</label>
+                                    <input type="text" id="example-furigana" 
+                                           class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 shadow-sm focus:border-blue-500 focus:ring-blue-500" 
+                                           placeholder="{私|わたし}は{学生|がく|せい}です。">
+                                </div>
+                                <div>
+                                    <label for="example-english" class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">English</label>
+                                    <input type="text" id="example-english" 
+                                           class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 shadow-sm focus:border-blue-500 focus:ring-blue-500" 
+                                           placeholder="I am a student.">
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
+                                This will be added to the existing example sentences array. Leave furigana blank if not needed.
                             </p>
                         </div>
 
@@ -192,18 +223,62 @@
 <script>
 let currentObject = @json($jsonObject);
 
+// Handle field selection changes
+document.getElementById('target-field').addEventListener('change', function() {
+    const fieldPath = this.value;
+    const standardInput = document.getElementById('standard-input');
+    const exampleInput = document.getElementById('example-sentence-input');
+    
+    if (fieldPath === 'example_sentences') {
+        standardInput.classList.add('hidden');
+        exampleInput.classList.remove('hidden');
+    } else {
+        standardInput.classList.remove('hidden');
+        exampleInput.classList.add('hidden');
+    }
+    
+    // Clear preview when changing fields
+    document.getElementById('preview-json').textContent = 'Enter values and click "Update Preview" to see changes.';
+});
+
 function updatePreview() {
     const fieldPath = document.getElementById('target-field').value;
-    const fieldValue = document.getElementById('field-value').value.trim();
     
     if (!fieldPath) {
         document.getElementById('preview-json').textContent = 'Select a field to preview changes.';
         return;
     }
 
-    if (!fieldValue) {
-        document.getElementById('preview-json').textContent = 'Enter a value to preview changes.';
-        return;
+    let fieldValue;
+    
+    // Handle example sentences differently
+    if (fieldPath === 'example_sentences') {
+        const japanese = document.getElementById('example-japanese').value.trim();
+        const furigana = document.getElementById('example-furigana').value.trim();
+        const english = document.getElementById('example-english').value.trim();
+        
+        if (!japanese || !english) {
+            document.getElementById('preview-json').textContent = 'Both Japanese and English are required for example sentences.';
+            return;
+        }
+        
+        // Create the example sentence object
+        const exampleSentence = {
+            japanese: japanese,
+            english: english
+        };
+        
+        if (furigana) {
+            exampleSentence.furigana = furigana;
+        }
+        
+        fieldValue = [exampleSentence]; // Wrap in array as this will be added to existing array
+    } else {
+        fieldValue = document.getElementById('field-value').value.trim();
+        if (!fieldValue) {
+            document.getElementById('preview-json').textContent = 'Enter a value to preview changes.';
+            return;
+        }
     }
 
     try {
@@ -211,7 +286,15 @@ function updatePreview() {
         const updatedObject = JSON.parse(JSON.stringify(currentObject));
         
         // Apply the field update
-        setNestedValue(updatedObject, fieldPath, parseFieldValue(fieldPath, fieldValue));
+        if (fieldPath === 'example_sentences') {
+            // Add to existing example sentences array
+            if (!updatedObject.example_sentences) {
+                updatedObject.example_sentences = [];
+            }
+            updatedObject.example_sentences.push(fieldValue[0]); // Add the new sentence
+        } else {
+            setNestedValue(updatedObject, fieldPath, parseFieldValue(fieldPath, fieldValue));
+        }
         
         // Display the updated JSON
         document.getElementById('preview-json').textContent = JSON.stringify(updatedObject, null, 2);
