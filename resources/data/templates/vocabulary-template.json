@@ -8,7 +8,7 @@
         "furigana": "",
         "english": ""
       },
-      "part_of_speech": "noun",
+      "part_of_speech": ["noun"],
       "verb_type": "",
       "adjective_type": "",
       "conjugations": {

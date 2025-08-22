@@ -318,10 +318,10 @@
                 {{ $item['vocabulary']->word_japanese }} - {{ $item['vocabulary']->word_english }}
             </div>
 <!--             
-            @if($item['vocabulary']->part_of_speech || $item['vocabulary']->jlpt_level)
+            @if(($item['vocabulary']->part_of_speech && is_array($item['vocabulary']->part_of_speech) && count($item['vocabulary']->part_of_speech) > 0) || $item['vocabulary']->jlpt_level)
                 <div class="vocabulary-info">
-                    @if($item['vocabulary']->part_of_speech)
-                        Part of Speech: {{ ucfirst($item['vocabulary']->part_of_speech) }}
+                    @if($item['vocabulary']->part_of_speech && is_array($item['vocabulary']->part_of_speech) && count($item['vocabulary']->part_of_speech) > 0)
+                        Part of Speech: {{ collect($item['vocabulary']->part_of_speech)->map(fn($pos) => ucfirst(str_replace('_', ' ', $pos)))->join(', ') }}
                     @endif
                     @if($item['vocabulary']->jlpt_level)
                         | JLPT Level: {{ $item['vocabulary']->jlpt_level }}

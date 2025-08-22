@@ -29,7 +29,7 @@
                                     class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
                                 <option value="">Select starting lesson</option>
                                 @foreach($lessons as $lesson)
-                                    <option value="{{ $lesson->id }}" {{ old('lesson_from') == $lesson->id ? 'selected' : '' }}>
+                                    <option value="{{ $lesson->id }}" {{ old('lesson_from') == $lesson->id || $_GET['lesson_from'] == $lesson->id ? 'selected' : '' }}>
                                         Lesson {{ $lesson->chapter }}
                                     </option>
                                 @endforeach
@@ -44,7 +44,7 @@
                                     class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
                                 <option value="">Select ending lesson</option>
                                 @foreach($lessons as $lesson)
-                                    <option value="{{ $lesson->id }}" {{ old('lesson_to') == $lesson->id ? 'selected' : '' }}>
+                                    <option value="{{ $lesson->id }}" {{ old('lesson_to') == $lesson->id || $_GET['lesson_to'] == $lesson->id ? 'selected' : '' }}>
                                         Lesson {{ $lesson->chapter }}
                                     </option>
                                 @endforeach

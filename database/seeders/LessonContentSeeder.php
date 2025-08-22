@@ -190,6 +190,7 @@ class LessonContentSeeder extends Seeder
                 'difficulty' => $data['difficulty'] ?? 'beginner',
                 'estimated_time_minutes' => $data['estimated_time_minutes'] ?? null,
                 'prerequisites' => $data['prerequisites'] ?? [],
+                'is_active' => $data['is_active'] ?? true,
             ]
         );
     }

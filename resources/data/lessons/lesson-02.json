@@ -1,0 +1,16 @@
+{
+    "lesson": {
+      "id": "mnn-lesson-02",
+      "chapter": 2,
+      "title": {
+        "japanese": "第2課",
+        "furigana": "{第2課|だい|に|か}",
+        "english": "Lesson 2"
+      },
+      "description": "Things near and far from the speaker, and common items.",
+      "difficulty": "beginner",
+      "estimated_time_minutes": 300,
+      "prerequisites": ["mnn-lesson-01"],
+      "is_active": false
+    }
+  } 

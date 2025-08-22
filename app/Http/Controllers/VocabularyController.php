@@ -14,7 +14,7 @@ class VocabularyController extends Controller
     public function index(Request $request)
     {
         $query = Vocabulary::with('lesson')
-        ->where('part_of_speech', '!=', 'kanji');
+        ->whereJsonDoesntContain('part_of_speech', 'kanji');
         
         // Filter by lesson if provided
         if ($request->has('lesson_id') && $request->lesson_id != '') {
@@ -23,7 +23,7 @@ class VocabularyController extends Controller
         
         // Filter by part of speech if provided
         if ($request->has('part_of_speech') && $request->part_of_speech != '') {
-            $query->where('part_of_speech', $request->part_of_speech);
+            $query->whereJsonContains('part_of_speech', $request->part_of_speech);
         }
         
         // Filter by JLPT level if provided

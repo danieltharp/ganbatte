@@ -49,9 +49,15 @@
                 </div>
 
                 <div class="flex">
+                    @if($lesson->is_active)
                     <a href="{{ route('lessons.show', $lesson) }}" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center text-sm">
                         Study Lesson
                     </a>
+                    @else
+                        <span class="w-full bg-gray-500 text-white font-bold py-2 px-4 rounded text-center text-sm">
+                            Coming Soon
+                        </span>
+                    @endif
                 </div>
             </div>
         </div>

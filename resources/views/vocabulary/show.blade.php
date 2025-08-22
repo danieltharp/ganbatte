@@ -13,9 +13,13 @@
                         {{ $vocabulary->lesson->title_english }}
                     </a>
                 @endif
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                    {{ ucfirst(str_replace('_', ' ', $vocabulary->part_of_speech)) }}
-                </span>
+                @if($vocabulary->part_of_speech && is_array($vocabulary->part_of_speech))
+                    @foreach($vocabulary->part_of_speech as $pos)
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 mr-1">
+                            {{ ucfirst(str_replace('_', ' ', $pos)) }}
+                        </span>
+                    @endforeach
+                @endif
                 @if($vocabulary->jlpt_level)
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium 
                         @if($vocabulary->jlpt_level === 'N5') bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200
@@ -29,14 +33,18 @@
             </div>
             
             <div class="mb-4">
-                <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-100 japanese-text mb-2">
+                <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-100 japanese-text mb-2" 
+                    data-contributable="vocabulary" 
+                    data-object-id="{{ $vocabulary->id }}">
                     @if($vocabulary->hasFurigana())
                         <x-furigana-text>{{ $vocabulary->furigana_word }}</x-furigana-text>
                     @else
                         {{ $vocabulary->japanese_word }}
                     @endif
                 </h1>
-                <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-300">{{ $vocabulary->word_english }}</h2>
+                <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-300" 
+                    data-contributable="vocabulary" 
+                    data-object-id="{{ $vocabulary->id }}">{{ $vocabulary->word_english }}</h2>
             </div>
         </div>
     </div>
@@ -47,7 +55,7 @@
     <div class="lg:col-span-3 space-y-6">
         <!-- Audio Player -->
         @if($vocabulary->audio_filename)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
                         <span class="mr-2">🎧</span>
@@ -108,7 +116,9 @@
                         Example Sentences ({{ count($vocabulary->example_sentences) }})
                     </h2>
                     
-                    <div class="space-y-4">
+                    <div class="space-y-4" 
+                         data-contributable="vocabulary" 
+                         data-object-id="{{ $vocabulary->id }}">
                         @foreach($vocabulary->example_sentences as $example)
                             <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50">
                                 @if(isset($example['japanese']))
@@ -131,11 +141,24 @@
                     </div>
                 </div>
             </div>
+        @else
+            <!-- Empty state for example sentences -->
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6" 
+                     data-contributable="vocabulary" 
+                     data-object-id="{{ $vocabulary->id }}">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <span class="mr-2">📝</span>
+                        Example Sentences
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 italic">No example sentences available yet.</p>
+                </div>
+            </div>
         @endif
 
         <!-- Notes -->
         @if($vocabulary->hasMarkdownNote())
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 flex items-center">
@@ -167,13 +190,28 @@
                         Memory Aids
                     </h2>
                     
-                    <div class="space-y-3">
+                    <div class="space-y-3" 
+                         data-contributable="vocabulary" 
+                         data-object-id="{{ $vocabulary->id }}">
                         @foreach($vocabulary->mnemonics as $mnemonic)
                             <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
                                 <div class="text-gray-800 dark:text-gray-200">{{ $mnemonic }}</div>
                             </div>
                         @endforeach
                     </div>
+                </div>
+            </div>
+        @else
+            <!-- Empty state for mnemonics -->
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6" 
+                     data-contributable="vocabulary" 
+                     data-object-id="{{ $vocabulary->id }}">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <span class="mr-2">🧠</span>
+                        Memory Aids
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 italic">No memory aids available yet.</p>
                 </div>
             </div>
         @endif
@@ -214,7 +252,7 @@
 
         <!-- Tags -->
         @if($vocabulary->tags && count($vocabulary->tags) > 0)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
                         <span class="mr-2">🏷️</span>
@@ -295,13 +333,17 @@
         </div>
 
         <!-- Word Details -->
-        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
             <div class="p-6">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Details</h3>
                 <div class="space-y-3">
                     <div class="flex justify-between">
                         <span class="text-gray-600 dark:text-gray-400">Part of Speech</span>
-                        <span class="font-semibold dark:text-white">{{ ucfirst(str_replace('_', ' ', $vocabulary->part_of_speech)) }}</span>
+                        <span class="font-semibold dark:text-white">
+                            @if($vocabulary->part_of_speech && is_array($vocabulary->part_of_speech))
+                                {{ collect($vocabulary->part_of_speech)->map(fn($pos) => ucfirst(str_replace('_', ' ', $pos)))->join(', ') }}
+                            @endif
+                        </span>
                     </div>
                     
                     @if($vocabulary->verb_type)
@@ -351,7 +393,7 @@
 
         <!-- Also Accepted -->
         @if($vocabulary->also_accepted && (isset($vocabulary->also_accepted['japanese']) || isset($vocabulary->also_accepted['english'])))
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" data-contributable="vocabulary" data-object-id="{{ $vocabulary->id }}">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Also Accepted</h3>
                     <div class="space-y-3">
@@ -431,5 +473,22 @@
         font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
     }
 </style>
+
+<!-- Contribution Mode Toggle Button -->
+@auth
+    @if(Auth::user()->can_user_contribute)
+        <button id="contribution-toggle" 
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+            Contribute
+        </button>
+    @endif
+@endauth
+
+<!-- Include Contribution Modal -->
+@auth
+    @if(Auth::user()->can_user_contribute)
+        <x-contribute.modal />
+    @endif
+@endauth
 
 @endsection

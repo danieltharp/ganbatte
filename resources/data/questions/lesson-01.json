@@ -452,7 +452,7 @@
       "difficulty": "beginner",
       "points": 1,
       "question": {
-        "english": "山田さんは錦江員です。イーさんも銀行員ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
+        "english": "山田さんは銀行員です。イーさんも銀行員ですか。 Answer in the format matching the example, using kanji and katakana when appropriate."
       },
       "correct_answer": [
         "いいえ、イーさんは銀行員ではありません。",

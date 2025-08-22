@@ -63,7 +63,11 @@
                         @endif
                     </div>
                     <div class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">{{ $vocab->word_english }}</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">{{ ucfirst($vocab->part_of_speech) }}</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                        @if($vocab->part_of_speech && is_array($vocab->part_of_speech))
+                            {{ collect($vocab->part_of_speech)->map(fn($pos) => ucfirst(str_replace('_', ' ', $pos)))->join(', ') }}
+                        @endif
+                    </div>
                     
                     @if($vocab->jlpt_level)
                         <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">

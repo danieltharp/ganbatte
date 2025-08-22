@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('difficulty', ['beginner', 'elementary', 'intermediate', 'advanced'])->default('beginner');
             $table->integer('estimated_time_minutes')->nullable();
             $table->json('prerequisites')->nullable(); // Array of lesson IDs
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
 
             $table->index(['chapter', 'difficulty']);

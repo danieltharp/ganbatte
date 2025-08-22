@@ -97,7 +97,11 @@
                             @endif
                         </div>
                         <div class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">{{ $vocab->word_english }}</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">{{ ucfirst($vocab->part_of_speech) }}</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                            @if($vocab->part_of_speech && is_array($vocab->part_of_speech))
+                                {{ collect($vocab->part_of_speech)->map(fn($pos) => ucfirst(str_replace('_', ' ', $pos)))->join(', ') }}
+                            @endif
+                        </div>
                     </div>
                     
                     <div class="flex flex-col space-y-1">

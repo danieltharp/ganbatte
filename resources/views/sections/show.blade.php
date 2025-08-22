@@ -218,9 +218,28 @@
                     @endif
                     @auth
                         @if($section->completion_trackable)
-                            <button class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center" onclick="markComplete()">
-                                Mark Complete
-                            </button>
+                            @if($userProgress && $userProgress->isCompleted())
+                                <div class="block w-full bg-green-500 text-white font-bold py-2 px-4 rounded text-center">
+                                    ✅ Completed {{ $userProgress->completed_at->format('M j, Y') }}
+                                    @if($userProgress->attempts > 1)
+                                        <div class="text-xs opacity-75">({{ $userProgress->attempts }} attempts)</div>
+                                    @endif
+                                </div>
+                                <button class="block w-full bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded text-center mt-2" onclick="resetCompletion()">
+                                    Reset Progress
+                                </button>
+                            @else
+                                <button id="complete-btn" class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center" onclick="markComplete()">
+                                    <span id="complete-text">Mark Complete</span>
+                                    <span id="complete-spinner" class="hidden">
+                                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        Completing...
+                                    </span>
+                                </button>
+                            @endif
                         @endif
                     @endauth
                 </div>
@@ -295,15 +314,98 @@
 </div>
 
 <script>
+let startTime = Date.now();
+
 function markComplete() {
-    // This would typically make an AJAX call to mark the section as complete
-    // For now, just show a simple alert
-    alert('Section marked as complete!');
+    const btn = document.getElementById('complete-btn');
+    const textSpan = document.getElementById('complete-text');
+    const spinnerSpan = document.getElementById('complete-spinner');
     
-    // In a real implementation, you might want to:
-    // 1. Make an AJAX call to update user progress
-    // 2. Update the UI to show completion status
-    // 3. Possibly redirect to the next section
+    // Calculate time spent in minutes
+    const timeSpentMinutes = Math.round((Date.now() - startTime) / 1000 / 60);
+    
+    // Show loading state
+    textSpan.classList.add('hidden');
+    spinnerSpan.classList.remove('hidden');
+    btn.disabled = true;
+    
+    // Make AJAX call to mark section complete
+    fetch(`{{ route('sections.complete', $section->id) }}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            time_spent_minutes: timeSpentMinutes,
+            notes: null
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Show success message briefly
+            textSpan.textContent = '✅ Completed!';
+            textSpan.classList.remove('hidden');
+            spinnerSpan.classList.add('hidden');
+            btn.classList.remove('bg-orange-500', 'hover:bg-orange-700');
+            btn.classList.add('bg-green-500');
+            
+            // Redirect back to lesson after short delay
+            setTimeout(() => {
+                window.location.href = '{{ route('lessons.show', $section->lesson->id) }}';
+            }, 1500);
+        } else {
+            // Handle error
+            alert('Error: ' + (data.message || 'Failed to mark section complete'));
+            resetButton();
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Network error occurred. Please try again.');
+        resetButton();
+    });
+}
+
+function resetCompletion() {
+    if (!confirm('Are you sure you want to reset your progress for this section?')) {
+        return;
+    }
+    
+    fetch(`{{ route('sections.reset', $section->id) }}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Reload page to show updated state
+            window.location.reload();
+        } else {
+            alert('Error: ' + (data.message || 'Failed to reset progress'));
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Network error occurred. Please try again.');
+    });
+}
+
+function resetButton() {
+    const btn = document.getElementById('complete-btn');
+    const textSpan = document.getElementById('complete-text');
+    const spinnerSpan = document.getElementById('complete-spinner');
+    
+    textSpan.textContent = 'Mark Complete';
+    textSpan.classList.remove('hidden');
+    spinnerSpan.classList.add('hidden');
+    btn.disabled = false;
 }
 </script>
 

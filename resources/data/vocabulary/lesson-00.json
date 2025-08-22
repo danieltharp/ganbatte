@@ -1,0 +1,397 @@
+{
+    "vocabulary": [
+      {
+        "id": "mnn-00-001",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "始めましょう",
+          "furigana": "{始|はじ}めましょう",
+          "english": "Let's begin."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 388,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["let's start"],
+          "japanese": ["はじめましょう"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-002",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "終わりましょう",
+          "furigana": "{終|お}わりましょう",
+          "english": "Let's finish."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 200,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["let's end", "let's stop"],
+          "japanese": ["おわりましょう"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-003",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "休みましょう",
+          "furigana": "{休|やす}みましょう",
+          "english": "Let's take a break."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 1385,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["let's rest", "let's pause"],
+          "japanese": ["やすみましょう"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-004",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "分かりますか。",
+          "furigana": "{分|わ}かりますか。",
+          "english": "Do you understand?"
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 105,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["do you understand", "do you get it", "do you follow"],
+          "japanese": ["わかりますか"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-005",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "はい、分かります。",
+          "furigana": "はい、{分|わ}かります。",
+          "english": "Yes, I understand."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 105,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["yes, I understand", "yes, I get it", "yes, I follow"],
+          "japanese": ["はい、わかります", "わかりました", "分かりました"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-006",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "いいえ、分かりません。",
+          "furigana": "いいえ、{分|わ}かりません。",
+          "english": "No, I don't understand."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 105,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["no, I don't understand", "no, I don't get it", "no, I don't follow"],
+          "japanese": ["いいえ、わかりません", "わかりません", "分かりません"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-007",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "もう一度 [お願いします]",
+          "furigana": "もう{一度|いち|ど} [お{願|ねが}いします]",
+          "english": "Once more [please]."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 350,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["say it again please", "once more", "once more please", "once more, please"],
+          "japanese": ["もう一度", "もう一度お願いします。"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-008",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "いいです。",
+          "furigana": "いいです。",
+          "english": "That's fine."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 70,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["that's fine", "that's good", "that's great", "that's okay"],
+          "japanese": ["いいです"]
+        },
+        "include_in_kanji_worksheet": false
+      },
+      {
+        "id": "mnn-00-009",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "違います",
+          "furigana": "{違|ちが}います",
+          "english": "No, that's wrong."
+        },
+        "part_of_speech": "verb",
+        "jlpt_level": "N5",
+        "frequency_rank": 186,
+        "tags": ["Classroom expressions"],
+        "also_accepted": {
+          "english": ["that's wrong", "incorrect", "wrong", "to be different", "to be wrong"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-010",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "名前",
+          "furigana": "{名前|な|まえ}",
+          "english": "name"
+        },
+        "part_of_speech": "noun",
+        "jlpt_level": "N5",
+        "frequency_rank": 337,
+        "tags": ["Parts of Classwork"],
+        "also_accepted": {
+          "english": ["name", "first name", "last name"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-011",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "試験",
+          "furigana": "{試験|しけん}",
+          "english": "test"
+        },
+        "part_of_speech": "noun",
+        "jlpt_level": "N5",
+        "frequency_rank": 1448,
+        "tags": ["Parts of Classwork"],
+        "also_accepted": {
+          "english": ["quiz", "exam", "examination"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-012",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "宿題",
+          "furigana": "{宿題|しゅく|だい}",
+          "english": "homework"
+        },
+        "part_of_speech": "noun",
+        "jlpt_level": "N5",
+        "frequency_rank": 4120,
+        "tags": ["Parts of Classwork"],
+        "also_accepted": {
+          "english": ["homework", "assignment", "task"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-013",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "質問",
+          "furigana": "{質問|しつもん}",
+          "english": "question"
+        },
+        "part_of_speech": "noun",
+        "jlpt_level": "N5",
+        "frequency_rank": 506,
+        "tags": ["Parts of Classwork"],
+        "also_accepted": {
+          "english": ["problem"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-014",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "答え",
+          "furigana": "{答|こた}え",
+          "english": "answer"
+        },
+        "part_of_speech": "noun",
+        "jlpt_level": "N5",
+        "frequency_rank": 1269,
+        "tags": ["Parts of Classwork"],
+        "also_accepted": {
+          "english": ["response", "reply", "solution"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-015",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "例",
+          "furigana": "{例|れい}",
+          "english": "example"
+        },
+        "part_of_speech": "noun",
+        "jlpt_level": "N5",
+        "frequency_rank": 592,
+        "tags": ["Parts of Classwork"],
+        "also_accepted": {
+          "english": ["sample"]
+        },
+        "include_in_kanji_worksheet": true
+      },
+      {
+        "id": "mnn-00-016",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "おはようございます。",
+          "english": "Good morning."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 4410,
+        "tags": ["Everyday Greetings and Expressions"],
+        "also_accepted": {
+          "japanese": ["おはようございます！"]
+        },
+        "include_in_kanji_worksheet": false
+      },
+      {
+        "id": "mnn-00-017",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "こんにちは",
+          "english": "Hello."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "frequency_rank": 4446,
+        "tags": ["Everyday Greetings and Expressions"],
+        "also_accepted": {
+          "japanese": ["今日は"]
+        },
+        "include_in_kanji_worksheet": false
+      },
+      {
+        "id": "mnn-00-018",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "こんばんは",
+          "english": "Good evening."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "tags": ["Everyday Greetings and Expressions"],
+        "also_accepted": {
+          "japanese": ["今晩は"]
+        },
+        "include_in_kanji_worksheet": false
+      },
+      {
+        "id": "mnn-00-019",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "お休みなさい。",
+          "furigana": "お{休|やす}みなさい。",
+          "english": "Good night."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "tags": ["Everyday Greetings and Expressions"],
+        "also_accepted": {
+          "japanese": ["お休み", "おやすみ"]
+        },
+        "include_in_kanji_worksheet": false
+      },
+      {
+        "id": "mnn-00-020",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "さようなら。",
+          "furigana": "さようなら。",
+          "english": "Goodbye."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "tags": ["Everyday Greetings and Expressions"],
+        "also_accepted": {
+          "japanese": ["さようなら"]
+        },
+        "include_in_kanji_worksheet": false
+      },
+      {
+        "id": "mnn-00-021",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "ありがとう　ございます。",
+          "furigana": "ありがとう　ございます。",
+          "english": "Thank you."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "tags": ["Everyday Greetings and Expressions"],
+        "also_accepted": {
+          "english": ["thank you", "thank you very much"],
+          "japanese": ["ありがとうございます", "ありがとう", "どうも"]
+        },
+        "include_in_kanji_worksheet": false
+      },
+      {
+        "id": "mnn-00-022",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "すみません。",
+          "furigana": "すみません。",
+          "english": "Excuse me./Sorry."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "tags": ["Everyday Greetings and Expressions"],
+        "also_accepted": {
+          "english": ["excuse me", "sorry"],
+          "japanese": ["すみません", "ごめんなさい"]
+        },
+        "include_in_kanji_worksheet": false
+      },
+      {
+        "id": "mnn-00-023",
+        "lesson_id": "mnn-lesson-00",
+        "word": {
+          "japanese": "お願いします。",
+          "furigana": "お{願|ねが}いします。",
+          "english": "Please."
+        },
+        "part_of_speech": "expression",
+        "jlpt_level": "N5",
+        "tags": ["Everyday Greetings and Expressions"],
+        "also_accepted": {
+          "english": ["please", "please help me", "please help"],
+          "japanese": ["おねがいします", "おねがい"]
+        },
+        "include_in_kanji_worksheet": false
+      }
+    ]
+}

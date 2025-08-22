@@ -11,6 +11,8 @@ use App\Http\Controllers\WorksheetController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\ContributeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -64,10 +66,53 @@ Route::get('/exercises/{exercise}', [ExerciseController::class, 'show'])->name('
 // Custom routes
 Route::get('/vocabulary/kanji-worksheet', [VocabularyController::class, 'kanjiWorksheet'])->name('vocabulary.kanji-worksheet');
 
+// Contribute section
+Route::get('/contribute', [ContributeController::class, 'index'])->name('contribute.index');
+Route::get('/contribute/vocabulary', [ContributeController::class, 'vocabularyGenerator'])->name('contribute.vocabulary.generator');
+
+// Contribution submission endpoints
+Route::middleware('auth')->group(function () {
+    Route::post('/contribute/store', [ContributeController::class, 'store'])->name('contribute.store');
+    Route::get('/contribute/options', [ContributeController::class, 'getContributionOptions'])->name('contribute.options');
+});
+
+// Contribution management endpoints (staff only)
+Route::middleware(['auth', 'check.role:admin,developer,staff'])->group(function () {
+    Route::get('/contribute/manage', [ContributeController::class, 'manage'])->name('contribute.manage');
+    Route::get('/contributions/{contribution}', [ContributeController::class, 'show'])->name('contributions.show');
+    Route::patch('/contributions/{contribution}/status', [ContributeController::class, 'updateStatus'])->name('contributions.update-status');
+    Route::delete('/contributions/{contribution}', [ContributeController::class, 'destroy'])->name('contributions.destroy');
+    Route::patch('/admin/users/{user}/toggle-contribute', [ContributeController::class, 'toggleUserContribute'])->name('admin.users.toggle-contribute');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    // Progress tracking endpoints
+    Route::post('/sections/{section}/complete', [SectionController::class, 'markComplete'])->name('sections.complete');
+    Route::delete('/sections/{section}/complete', [SectionController::class, 'resetCompletion'])->name('sections.reset');
+    
+    // Exercise submission endpoints
+    Route::post('/exercises/{exercise}/submit', [ExerciseController::class, 'submit'])->name('exercises.submit');
+    Route::get('/exercises/{exercise}/stats', [ExerciseController::class, 'getStats'])->name('exercises.stats');
+    
+    // Exercise manual correction endpoints
+    Route::get('/exercise-attempts/{attempt}/results', [ExerciseController::class, 'showResults'])->name('exercises.results');
+    Route::post('/exercise-attempts/{attempt}/accept-answer', [ExerciseController::class, 'acceptAnswer'])->name('exercises.accept-answer');
+    Route::get('/exercise-attempts/{attempt}/results-json', [ExerciseController::class, 'getResults'])->name('exercises.results-json');
+    
+    // Test taking endpoints
+    Route::post('/tests/{test}/start', [TestController::class, 'start'])->name('tests.start');
+    Route::post('/test-attempts/{attempt}/submit', [TestController::class, 'submit'])->name('tests.submit');
+    Route::get('/test-attempts/{attempt}/results', [TestController::class, 'results'])->name('tests.results');
+    
+    // Progress and grading endpoints
+    Route::get('/progress/dashboard', [ProgressController::class, 'dashboard'])->name('progress.dashboard');
+    Route::get('/progress/lesson/{lesson}', [ProgressController::class, 'getLessonGrade'])->name('progress.lesson');
+    Route::get('/progress/semester/{semesterNumber}', [ProgressController::class, 'getSemesterGrade'])->name('progress.semester');
+    Route::get('/progress/all', [ProgressController::class, 'getAllGrades'])->name('progress.all');
 });
 
 require __DIR__.'/auth.php';

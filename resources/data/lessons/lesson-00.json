@@ -7,9 +7,9 @@
         "furigana": "{第0課|だい|れい|か}",
         "english": "Lesson 0"
       },
-      "description": "Things you need to know before beginning Minna No Nihongo.",
+      "description": "Greetings, common expressions, and things you need to know before beginning Minna No Nihongo.",
       "difficulty": "beginner",
-      "estimated_time_minutes": 45,
+      "estimated_time_minutes": 240,
       "prerequisites": []
     }
   } 

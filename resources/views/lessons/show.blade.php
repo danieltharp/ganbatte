@@ -82,27 +82,62 @@
                                     <div class="space-y-2">
                                         @foreach($page->content->take(3) as $contentItem)
                                             @if($contentItem->content)
-                                                <div class="text-sm">
-                                                    @if($contentItem->type === 'section')
-                                                        <span class="text-blue-600 dark:text-blue-400">📄</span>
-                                                        <a href="{{ route('sections.show', $contentItem->content->id) }}" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200">
-                                                            {{ $contentItem->content->name }}
-                                                        </a>
-                                                    @elseif($contentItem->type === 'exercise')
-                                                        <span class="text-green-600 dark:text-green-400">✏️</span>
-                                                        <a href="{{ route('exercises.show', $contentItem->content->id) }}" class="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-200">
-                                                            {{ $contentItem->content->name ?? $contentItem->content->title ?? 'Exercise' }}
-                                                        </a>
-                                                    @elseif($contentItem->type === 'worksheet')
-                                                        <span class="text-purple-600 dark:text-purple-400">📋</span>
-                                                        @if($contentItem->content->id)
-                                                            <a href="{{ route('worksheets.show', $contentItem->content->id) }}" class="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-200">
-                                                                {{ $contentItem->content->title }}
+                                                <div class="text-sm flex items-center justify-between">
+                                                    <div class="flex items-center space-x-2">
+                                                        @if($contentItem->type === 'section')
+                                                            @php
+                                                                $progress = $sectionProgress->get($contentItem->content->id);
+                                                                $isCompleted = $progress && $progress->isCompleted();
+                                                            @endphp
+                                                            
+                                                            @if($isCompleted)
+                                                                <span class="text-green-500" title="Completed {{ $progress->completed_at->format('M j') }}">✅</span>
+                                                            @else
+                                                                <span class="text-blue-600 dark:text-blue-400">📄</span>
+                                                            @endif
+                                                            
+                                                            <a href="{{ route('sections.show', $contentItem->content->id) }}" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 {{ $isCompleted ? 'line-through opacity-75' : '' }}">
+                                                                {{ $contentItem->content->name }}
                                                             </a>
-                                                        @else
-                                                            <span class="text-gray-700 dark:text-gray-300">{{ $contentItem->content->title }}</span>
+                                                            
+                                                            @if($isCompleted && $progress->attempts > 1)
+                                                                <span class="text-xs text-gray-500">({{ $progress->attempts }}× attempts)</span>
+                                                            @endif
+                                                            
+                                                        @elseif($contentItem->type === 'exercise')
+                                                            @php
+                                                                $exerciseAttempt = $exerciseProgress->get($contentItem->content->id);
+                                                                $exerciseCompleted = $exerciseAttempt !== null;
+                                                            @endphp
+                                                            
+                                                            @if($exerciseCompleted)
+                                                                <span class="text-green-500" title="Completed {{ $exerciseAttempt->completed_at->format('M j') }} - Score: {{ $exerciseAttempt->percentage }}%">✅</span>
+                                                            @else
+                                                                <span class="text-green-600 dark:text-green-400">✏️</span>
+                                                            @endif
+                                                            
+                                                            <a href="{{ route('exercises.show', $contentItem->content->id) }}" class="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-200 {{ $exerciseCompleted ? 'line-through opacity-75' : '' }}">
+                                                                {{ $contentItem->content->name ?? $contentItem->content->title ?? 'Exercise' }}
+                                                            </a>
+                                                            
+                                                            @if($exerciseCompleted)
+                                                                <a href="{{ route('exercises.results', $exerciseAttempt->id) }}" class="text-xs text-gray-500 hover:text-blue-600">({{ $exerciseAttempt->percentage }}%)</a>
+                                                                @if($exerciseAttempt->hasManualCorrections())
+                                                                    <span class="text-xs text-blue-500" title="Includes manual corrections">✎</span>
+                                                                @endif
+                                                            @endif
+                                                            
+                                                        @elseif($contentItem->type === 'worksheet')
+                                                            <span class="text-purple-600 dark:text-purple-400">📋</span>
+                                                            @if($contentItem->content->id)
+                                                                <a href="{{ route('worksheets.show', $contentItem->content->id) }}" class="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-200">
+                                                                    {{ $contentItem->content->title }}
+                                                                </a>
+                                                            @else
+                                                                <span class="text-gray-700 dark:text-gray-300">{{ $contentItem->content->title }}</span>
+                                                            @endif
                                                         @endif
-                                                    @endif
+                                                    </div>
                                                 </div>
                                             @endif
                                         @endforeach
@@ -207,7 +242,11 @@
                                                 @endif
                                             </div>
                                             <div class="text-gray-900 dark:text-gray-100 font-medium">{{ $vocab->word_english }}</div>
-                                            <div class="text-sm text-gray-600 dark:text-gray-400">{{ $vocab->part_of_speech }}</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">
+                                                @if($vocab->part_of_speech && is_array($vocab->part_of_speech))
+                                                    {{ collect($vocab->part_of_speech)->map(fn($pos) => ucfirst(str_replace('_', ' ', $pos)))->join(', ') }}
+                                                @endif
+                                            </div>
                                         </div>
                                         @if($vocab->include_in_kanji_worksheet)
                                             <span class="text-xs bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded">
@@ -308,26 +347,147 @@
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Quick Actions</h3>
                 <div class="space-y-3">
                     <a href="{{ route('vocabulary.index', ['lesson_id' => $lesson->id]) }}" class="block w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-center">
-                        Study Vocabulary
+                        📚 Study Vocabulary
+                    </a>
+                    <a href="{{ route('vocabulary.quiz.index', ['lesson_from' => $lesson->id, 'lesson_to' => $lesson->id]) }}" class="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center">
+                        🎓 Vocabulary Quiz
                     </a>
                     @if($lesson->vocabulary->where('include_in_kanji_worksheet', true)->count() > 0)
                         <a href="{{ route('worksheets.index', ['lesson_id' => $lesson->id, 'type' => 'kanji_practice']) }}" class="block w-full bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded text-center">
-                            Kanji Practice
+                            🈂️ Kanji Practice
                         </a>
                     @endif
                     @if($lesson->questions->count() > 0)
                         <a href="{{ route('questions.index', ['lesson_id' => $lesson->id]) }}" class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center">
-                            Practice Questions
+                            ❓ Practice Questions
                         </a>
                     @endif
                     @if($lesson->worksheets->count() > 0)
                         <a href="{{ route('worksheets.index', ['lesson_id' => $lesson->id]) }}" class="block w-full bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded text-center">
-                            Worksheets
+                            📋 Worksheets
                         </a>
                     @endif
+                    
+                    @auth
+                        @php
+                            // Count unique items only (sections + exercises can span multiple pages)
+                            $uniqueTotalItems = $lesson->pages
+                                ->flatMap(fn($page) => $page->content)
+                                ->whereIn('type', ['section', 'exercise'])
+                                ->pluck('id')
+                                ->unique()
+                                ->count();
+                            $completedItems = $sectionProgress->where('completed_at', '!=', null)->count() + $exerciseProgress->count();
+                            $overallProgress = $uniqueTotalItems > 0 ? round(($completedItems / $uniqueTotalItems) * 100) : 0;
+                        @endphp
+                        
+                        @if($uniqueTotalItems > 0)
+                            <div class="border-t border-gray-200 dark:border-gray-600 pt-3 mt-4">
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">Lesson Progress</div>
+                                    <div class="text-2xl font-bold mb-1 {{ $overallProgress === 100 ? 'text-green-500' : 'text-indigo-500' }}">
+                                        {{ $overallProgress }}%
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="h-2 rounded-full transition-all duration-500 {{ $overallProgress === 100 ? 'bg-green-500' : 'bg-indigo-500' }}" style="width: {{ $overallProgress }}%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endauth
                 </div>
             </div>
         </div>
+
+        @auth
+            <!-- Progress Summary -->
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <span class="mr-2">📊</span>
+                        Your Progress
+                    </h3>
+                    
+                    @php
+                        // Count unique sections and exercises (not page references)
+                        $uniqueSectionIds = $lesson->pages
+                            ->flatMap(fn($page) => $page->content)
+                            ->where('type', 'section')
+                            ->pluck('id')
+                            ->unique();
+                        $totalSections = $uniqueSectionIds->count();
+                        
+                        $uniqueExerciseIds = $lesson->pages
+                            ->flatMap(fn($page) => $page->content)
+                            ->where('type', 'exercise')
+                            ->pluck('id')
+                            ->unique();
+                        $totalExercises = $uniqueExerciseIds->count();
+                        
+                        $completedSections = $sectionProgress->where('completed_at', '!=', null)->count();
+                        $completedExercises = $exerciseProgress->count();
+                        
+                        $sectionPercentage = $totalSections > 0 ? round(($completedSections / $totalSections) * 100) : 0;
+                        $exercisePercentage = $totalExercises > 0 ? round(($completedExercises / $totalExercises) * 100) : 0;
+                    @endphp
+                    
+                    <div class="space-y-4">
+                        <!-- Section Progress -->
+                        @if($totalSections > 0)
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm text-gray-600 dark:text-gray-400">Sections</span>
+                                    <span class="text-sm font-semibold dark:text-white">{{ $completedSections }}/{{ $totalSections }}</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-blue-500 h-2 rounded-full transition-all duration-300" style="width: {{ $sectionPercentage }}%"></div>
+                                </div>
+                                <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">{{ $sectionPercentage }}% completed</div>
+                            </div>
+                        @endif
+                        
+                        <!-- Exercise Progress -->
+                        @if($totalExercises > 0)
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm text-gray-600 dark:text-gray-400">Exercises</span>
+                                    <span class="text-sm font-semibold dark:text-white">{{ $completedExercises }}/{{ $totalExercises }}</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-green-500 h-2 rounded-full transition-all duration-300" style="width: {{ $exercisePercentage }}%"></div>
+                                </div>
+                                <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">{{ $exercisePercentage }}% completed</div>
+                            </div>
+                        @endif
+                        
+                        <!-- Overall Progress -->
+                        @php
+                            $uniqueTotalItems = $uniqueSectionIds->count() + $uniqueExerciseIds->count();
+                            $overallPercentage = $uniqueTotalItems > 0 ? round(($completedItems / $uniqueTotalItems) * 100) : 0;
+                        @endphp
+                        
+                        @if($uniqueTotalItems > 0)
+                            <div class="border-t border-gray-200 dark:border-gray-600 pt-3">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Overall</span>
+                                    <span class="text-sm font-bold dark:text-white">{{ $completedItems }}/{{ $uniqueTotalItems }}</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-indigo-500 h-3 rounded-full transition-all duration-300" style="width: {{ $overallPercentage }}%"></div>
+                                </div>
+                                <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">{{ $overallPercentage }}% lesson completion</div>
+                            </div>
+                        @endif
+                        
+                        @if($completedItems === $uniqueTotalItems && $uniqueTotalItems > 0)
+                            <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 text-center">
+                                <span class="text-green-600 dark:text-green-400 font-semibold">🎉 Lesson Complete!</span>
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        @endauth
 
         <!-- Lesson Stats -->
         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">

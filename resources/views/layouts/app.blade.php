@@ -12,7 +12,7 @@
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/furigana.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/furigana.js', 'resources/js/contribution-mode.js'])
 </head>
 <body class="font-sans antialiased bg-gray-50 dark:bg-gray-900">
     <div class="min-h-screen">
@@ -45,12 +45,32 @@
                             <x-nav-link :href="route('worksheets.index')" :active="request()->routeIs('worksheets.*')">
                                 {{ __('Worksheets') }}
                             </x-nav-link>
+                            <x-nav-link :href="route('contribute.index')" :active="request()->routeIs('contribute.*')">
+                                {{ __('Contribute') }}
+                            </x-nav-link>
                         </div>
                     </div>
 
                     <!-- Settings Dropdown -->
                     <div class="hidden sm:flex sm:items-center sm:ml-6">
                         @auth
+                            <!-- Contribution notification -->
+                            @if(Auth::user()->canManageContributions())
+                                @php
+                                    $newContributionsCount = \App\Models\Contribution::where('status', 'new')->count();
+                                @endphp
+                                @if($newContributionsCount > 0)
+                                    <a href="{{ route('contribute.manage') }}" class="relative mr-4">
+                                        <div class="inline-flex items-center px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md transition-colors">
+                                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5H9l-5-5h5V3h6v14z"/>
+                                            </svg>
+                                            {{ $newContributionsCount }} New
+                                        </div>
+                                    </a>
+                                @endif
+                            @endif
+
                             <x-dropdown align="right" width="48">
                                 <x-slot name="trigger">
                                     <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
