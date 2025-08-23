@@ -87,7 +87,9 @@
                                             </div>
                                             <div class="text-gray-600 dark:text-gray-400">{{ $vocab->word_english }}</div>
                                             <div class="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                                                {{ ucfirst(str_replace('_', ' ', $vocab->part_of_speech)) }}
+                                                @foreach($vocab->part_of_speech as $part_of_speech)
+                                                    {{ ucfirst(str_replace('_', ' ', $part_of_speech)) }}
+                                                @endforeach
                                                 @if($vocab->jlpt_level)
                                                     • {{ $vocab->jlpt_level }}
                                                 @endif

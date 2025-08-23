@@ -99,7 +99,7 @@
                         <a href="{{ route('vocabulary.index') }}" class="block w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-center transition-colors">
                             Browse Vocabulary
                         </a>
-                        <a href="{{ route('vocabulary.kanji-worksheet') }}" class="block w-full bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded text-center transition-colors">
+                        <a href="{{ route('worksheets.index') }}" class="block w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-center transition-colors">
                             Kanji Practice
                         </a>
                     </div>
@@ -131,9 +131,11 @@
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-4">Practice with interactive questions and exercises.</p>
                     <div class="space-y-2">
-                        <a href="{{ route('questions.index') }}" class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center transition-colors">
+                        <!-- Coming Soon -->
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Coming Soon</p>
+                        <!-- <a href="{{ route('questions.index') }}" class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center transition-colors">
                             Start Practice
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -147,9 +149,11 @@
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-4">Take comprehensive tests to assess your progress.</p>
                     <div class="space-y-2">
-                        <a href="{{ route('tests.index') }}" class="block w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded text-center transition-colors">
+                        <!-- Coming Soon -->
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Coming Soon</p>
+                        <!-- <a href="{{ route('tests.index') }}" class="block w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded text-center transition-colors">
                             View Tests
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>

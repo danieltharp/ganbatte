@@ -357,11 +357,11 @@
                             🈂️ Kanji Practice
                         </a>
                     @endif
-                    @if($lesson->questions->count() > 0)
+                    <!-- @if($lesson->questions->count() > 0)
                         <a href="{{ route('questions.index', ['lesson_id' => $lesson->id]) }}" class="block w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center">
                             ❓ Practice Questions
                         </a>
-                    @endif
+                    @endif -->
                     @if($lesson->worksheets->count() > 0)
                         <a href="{{ route('worksheets.index', ['lesson_id' => $lesson->id]) }}" class="block w-full bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded text-center">
                             📋 Worksheets
