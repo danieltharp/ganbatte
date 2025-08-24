@@ -22,7 +22,9 @@
                 @endif
             </div>
             
-            <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100" 
+                data-contributable="lesson" 
+                data-object-id="{{ $lesson->id }}">
                 @if($lesson->title_japanese)
                     <div class="japanese-text text-4xl mb-2">
                         <x-furigana-text>{{ $lesson->furigana_title }}</x-furigana-text>
@@ -32,7 +34,9 @@
             </h1>
             
             @if($lesson->description)
-                <p class="text-gray-600 dark:text-gray-400 mt-2">{{ $lesson->description }}</p>
+                <p class="text-gray-600 dark:text-gray-400 mt-2" 
+                   data-contributable="lesson" 
+                   data-object-id="{{ $lesson->id }}">{{ $lesson->description }}</p>
             @endif
         </div>
     </div>
@@ -167,7 +171,9 @@
 
         <!-- Articles Section -->
         @if($lesson->articles->count() > 0)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" 
+                 data-contributable="lesson" 
+                 data-object-id="{{ $lesson->id }}">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 flex items-center">
@@ -219,7 +225,9 @@
 
         <!-- Vocabulary Section -->
         @if($lesson->vocabulary->count() > 0)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" 
+                 data-contributable="lesson" 
+                 data-object-id="{{ $lesson->id }}">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Vocabulary ({{ $lesson->vocabulary->count() }})</h2>
@@ -272,7 +280,9 @@
 
         <!-- Grammar Section -->
         @if($lesson->grammarPoints->count() > 0)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" 
+                 data-contributable="lesson" 
+                 data-object-id="{{ $lesson->id }}">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Grammar Points ({{ $lesson->grammarPoints->count() }})</h2>
@@ -521,4 +531,28 @@
         </div>
     </div>
 </div>
+
+<style>
+    .japanese-text {
+        font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+    }
+</style>
+
+<!-- Contribution Mode Toggle Button -->
+@auth
+    @if(Auth::user()->can_user_contribute)
+        <button id="contribution-toggle" 
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+            Contribute
+        </button>
+    @endif
+@endauth
+
+<!-- Include Contribution Modal -->
+@auth
+    @if(Auth::user()->can_user_contribute)
+        <x-contribute.modal />
+    @endif
+@endauth
+
 @endsection 
