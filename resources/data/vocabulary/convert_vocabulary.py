@@ -16,13 +16,13 @@ from pathlib import Path
 def parse_audio_filename(audio_field):
     """Extract audio filename from [sound:filename.mp3] format."""
     if not audio_field or audio_field.strip() == "":
-        return ""
+        return None
     
     # Find all [sound:...] patterns and take the first one
     matches = re.findall(r'\[sound:([^\]]+)\]', audio_field)
     if matches:
         return matches[0]  # Take the first match if multiple exist
-    return ""
+    return None
 
 
 def clean_html_tags(text):
@@ -36,12 +36,13 @@ def clean_html_tags(text):
 
 def transform_furigana_format(furigana_text):
     """
-    Transform furigana from format 'kanji[reading] kanji[reading]' 
-    to format '{kanjikanji|reading|reading}'.
+    Transform furigana from format 'kanji[reading] kanji[reading]ひらがな' 
+    to format '{kanjikanji|reading|reading}ひらがな'.
     
     Examples:
     - '辞[じ] 書[しょ]' → '{辞書|じ|しょ}'
     - '本[ほん]' → '{本|ほん}'
+    - '違[ちが]います。' → '{違|ちが}います。'
     - '時計[とけい]' → '{時計|とけい}'
     """
     if not furigana_text or furigana_text.strip() == "":
@@ -51,20 +52,34 @@ def transform_furigana_format(furigana_text):
     if '[' not in furigana_text:
         return furigana_text
     
-    # Extract all kanji[reading] patterns
+    # Extract all kanji[reading] patterns and any remaining text
+    result_text = furigana_text
+    kanji_parts = []
+    reading_parts = []
+    
+    # Find all kanji[reading] patterns
     pattern = r'([^[\s]+)\[([^\]]+)\]'
     matches = re.findall(pattern, furigana_text)
     
     if not matches:
         return furigana_text
     
-    # Separate kanji and readings
-    all_kanji = ''.join(match[0] for match in matches)
-    all_readings = [match[1] for match in matches]
+    # Extract kanji and readings
+    for kanji, reading in matches:
+        kanji_parts.append(kanji)
+        reading_parts.append(reading)
     
-    # Create the new format: {kanji|reading1|reading2|...}
-    if all_kanji and all_readings:
-        return '{' + all_kanji + '|' + '|'.join(all_readings) + '}'
+    # Build the replacement - combine all kanji and all readings
+    if kanji_parts and reading_parts:
+        all_kanji = ''.join(kanji_parts)
+        furigana_part = '{' + all_kanji + '|' + '|'.join(reading_parts) + '}'
+        
+        # Replace all kanji[reading] patterns with the new format
+        # This preserves any hiragana/text that comes after
+        replacement_pattern = r'([^[\s]+\[[^\]]+\]\s*)+'
+        result_text = re.sub(replacement_pattern, furigana_part, furigana_text, count=1)
+        
+        return result_text
     
     return furigana_text
 
@@ -128,40 +143,40 @@ def parse_tsv_line(line, lesson_number):
             "english": english
         },
         "part_of_speech": [],
-        "verb_type": "",
-        "adjective_type": "",
+        "verb_type": None,
+        "adjective_type": None,
         "conjugations": {
             "past": {
-                "japanese": "",
-                "furigana": "",
-                "english": ""
+                "japanese": None,
+                "furigana": None,
+                "english": None
             },
             "negative": {
-                "japanese": "",
-                "furigana": "",
-                "english": ""
+                "japanese": None,
+                "furigana": None,
+                "english": None
             },
             "past_negative": {
-                "japanese": "",
-                "furigana": "",
-                "english": ""
+                "japanese": None,
+                "furigana": None,
+                "english": None
             },
             "te_form": {
-                "japanese": "",
-                "furigana": "",
-                "english": ""
+                "japanese": None,
+                "furigana": None,
+                "english": None
             }
         },
-        "pitch_accent": "",
+        "pitch_accent": None,
         "jlpt_level": "N5",
         "frequency_rank": 0,
         "example_sentences": [],
         "audio": {
             "filename": parse_audio_filename(audio_field),
-            "duration": 0,
-            "speaker": ""
+            "duration": None,
+            "speaker": None
         },
-        "mnemonics": "",
+        "mnemonics": None,
         "related_words": [],
         "tags": [],
         "include_in_kanji_worksheet": False
@@ -171,8 +186,8 @@ def parse_tsv_line(line, lesson_number):
     if example_sentence:
         vocab_entry["example_sentences"].append({
             "japanese": example_sentence,
-            "furigana": "",
-            "english": ""
+            "furigana": None,
+            "english": None
         })
     
     return vocab_entry
