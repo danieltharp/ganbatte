@@ -1,0 +1,2103 @@
+{
+  "vocabulary": [
+    {
+      "id": "mnn-02-054",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "これ",
+        "furigana": "これ",
+        "english": "this (thing here)"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_これ.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-055",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "それ",
+        "furigana": "それ",
+        "english": "that (thing near the listener)"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_それ.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-056",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "あれ",
+        "furigana": "あれ",
+        "english": "that (thing over there)"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_あれ.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-057",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "この～",
+        "furigana": "この～",
+        "english": "this ～, this ～ here"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_この～.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-058",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "その～",
+        "furigana": "その～",
+        "english": "that ～, that ～ near the listener"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_その～.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-059",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "あの～",
+        "furigana": "あの～",
+        "english": "that ～, that ～ over there"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_あの～.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-060",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "本",
+        "furigana": "{本|ほん}",
+        "english": "book"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_本.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-061",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "辞書",
+        "furigana": "{辞書|じ|しょ}",
+        "english": "dictionary"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "辞書で日本語を勉強しました。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_辞書.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-062",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "雑誌",
+        "furigana": "{雑誌|ざっ|し}",
+        "english": "magazine"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "母は雑誌を読んでいる。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_雑誌.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-063",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "新聞",
+        "furigana": "{新聞|しん|ぶん}",
+        "english": "newspaper"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "父は新聞を読んでいる。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_新聞.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-064",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "ノート",
+        "furigana": "ノート",
+        "english": "notebook"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_ノート.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-065",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "手帳",
+        "furigana": "{手帳|て|ちょう}",
+        "english": "personal organizer"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "僕は彼女の電話番号を手帳に書きました。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_手帳.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-066",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "名刺",
+        "furigana": "{名刺|めい|し}",
+        "english": "business card"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "社員の名刺はとても大切。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_名刺.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-067",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "カード",
+        "furigana": "カード",
+        "english": "(credit) card"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_カード.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-068",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "鉛筆",
+        "furigana": "{鉛筆|えん|ぴつ}",
+        "english": "pencil"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "この鉛筆が古いですが、いいです。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_鉛筆.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-069",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "ボールペン",
+        "furigana": "ボールペン",
+        "english": "ballpoint pen"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_ボールペン.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-070",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "シャープペンシル",
+        "furigana": "シャープペンシル",
+        "english": "mechanical pencil, propelling pencil"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_シャープペンシル.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-071",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "鍵",
+        "furigana": "{鍵|かぎ}",
+        "english": "key"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "今朝、家に鍵を忘れた。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_鍵.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-072",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "時計",
+        "furigana": "{時計|とけい}",
+        "english": "watch, clock"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "新しい時計買いたい。しかし、高いです。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_時計.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-073",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "傘",
+        "furigana": "{傘|かさ}",
+        "english": "umbrella"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_傘.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-074",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "鞄",
+        "furigana": "{鞄|かばん}",
+        "english": "bag, briefcase"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "この鞄は誰の？",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_鞄.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-075",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "テレビ",
+        "furigana": "テレビ",
+        "english": "television"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_テレビ.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-076",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "ラジオ",
+        "furigana": "ラジオ",
+        "english": "radio"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_ラジオ.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-077",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "カメラ",
+        "furigana": "カメラ",
+        "english": "camera"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_カメラ.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-078",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "コンピューター",
+        "furigana": "コンピューター",
+        "english": "computer"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_コンピューター.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-079",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "車",
+        "furigana": "{車|くるま}",
+        "english": "car, vehicle"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "僕の車が赤いです。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_車.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-080",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "机",
+        "furigana": "{机|つくえ}",
+        "english": "desk"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "机の上には猫がいる。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_机.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-081",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "椅子",
+        "furigana": "{椅子|い|す}",
+        "english": "chair"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "父の椅子は重いです。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_椅子.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-082",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "チョコレート",
+        "furigana": "チョコレート",
+        "english": "chocolate"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_チョコレート.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-083",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "コーヒー",
+        "furigana": "コーヒー",
+        "english": "coffee"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_コーヒー.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-084",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "「お」土産",
+        "furigana": "「お」 {土産|みやげ}",
+        "english": "souvenir, present"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [
+        {
+          "japanese": "彼はお土産をもって帰った。",
+          "furigana": null,
+          "english": null
+        }
+      ],
+      "audio": {
+        "filename": "MNN_「お」土産.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-087",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "～語",
+        "furigana": "～ {語|ご}",
+        "english": "～ language"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_～語.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-088",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "何（何）",
+        "furigana": "{何何|なん|なに}（ 何[なに]）",
+        "english": "what"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_何_1.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-089",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "そう",
+        "furigana": "そう",
+        "english": "so"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_そう.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-090",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "あのう",
+        "furigana": "あのう",
+        "english": "Err… (used to show hesitation)"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_あのう.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-091",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "えっ",
+        "furigana": "えっ",
+        "english": "Oh? What! (hearing something unexpected)"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_えっ.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-092",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "どうぞ。",
+        "furigana": "どうぞ。",
+        "english": "Here you are. (offering someone something)"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_どうぞ。.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-093",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "どうもありがとうございます。",
+        "furigana": "どうもありがとうございます。",
+        "english": "Thank you very much."
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_どうもありがとうございます。.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-094",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "そうですか。",
+        "furigana": "そうですか。",
+        "english": "I see."
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_そうですか。.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-095",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "違います。",
+        "furigana": "{違|ちが}います。",
+        "english": "No, it isn't./You are wrong."
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_違います。.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-096",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "あっ",
+        "furigana": "あっ",
+        "english": "Oh! (used when become aware of something)"
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_あっ.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-097",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "これからお世話になります。",
+        "furigana": "これからお {世話|せ|わ}になります。",
+        "english": "Thank you in advance for your kindness."
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_これからお世話になります。.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-098",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "こちらこそ「どうぞ」よろしく「お願いします」。",
+        "furigana": "こちらこそ「どうぞ」よろしく「お {願|ねが}いします」。",
+        "english": "Pleased to meet you, too."
+      },
+      "part_of_speech": [],
+      "verb_type": null,
+      "adjective_type": null,
+      "conjugations": {
+        "past": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "past_negative": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        },
+        "te_form": {
+          "japanese": null,
+          "furigana": null,
+          "english": null
+        }
+      },
+      "pitch_accent": null,
+      "jlpt_level": "N5",
+      "frequency_rank": 0,
+      "example_sentences": [],
+      "audio": {
+        "filename": "MNN_こちらこそ「どうぞ」よろしく「お願いします」。.mp3",
+        "duration": null,
+        "speaker": null
+      },
+      "mnemonics": null,
+      "related_words": [],
+      "tags": [],
+      "include_in_kanji_worksheet": false
+    }
+  ]
+}
