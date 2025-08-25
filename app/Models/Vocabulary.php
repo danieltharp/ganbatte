@@ -26,7 +26,7 @@ class Vocabulary extends Model
         'part_of_speech',
         'verb_type',
         'adjective_type',
-        'conjugations',
+
         'pitch_accent',
         'jlpt_level',
         'frequency_rank',
@@ -43,7 +43,7 @@ class Vocabulary extends Model
 
     protected $casts = [
         'part_of_speech' => 'array',
-        'conjugations' => 'array',
+
         'example_sentences' => 'array',
         'related_words' => 'array',
         'tags' => 'array',

@@ -145,28 +145,7 @@ def parse_tsv_line(line, lesson_number):
         "part_of_speech": [],
         "verb_type": None,
         "adjective_type": None,
-        "conjugations": {
-            "past": {
-                "japanese": None,
-                "furigana": None,
-                "english": None
-            },
-            "negative": {
-                "japanese": None,
-                "furigana": None,
-                "english": None
-            },
-            "past_negative": {
-                "japanese": None,
-                "furigana": None,
-                "english": None
-            },
-            "te_form": {
-                "japanese": None,
-                "furigana": None,
-                "english": None
-            }
-        },
+
         "pitch_accent": None,
         "jlpt_level": "N5",
         "frequency_rank": 0,
