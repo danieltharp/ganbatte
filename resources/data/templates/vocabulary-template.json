@@ -8,7 +8,7 @@
         "furigana": "",
         "english": ""
       },
-      "part_of_speech": ["noun"],
+      "part_of_speech": [],
       "verb_type": "",
       "adjective_type": "",
       "conjugations": {
@@ -46,7 +46,7 @@
       "audio": {
         "filename": "",
         "duration": 0,
-        "speaker": "female"
+        "speaker": ""
       },
       "mnemonics": "",
       "related_words": [],
