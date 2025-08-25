@@ -1,0 +1,213 @@
+{
+    "grammar_points": [
+      {
+        "id": "mnn-02-grammar-001",
+        "lesson_id": "mnn-lesson-02",
+        "name": {
+          "japanese": "これ・それ・あれ",
+          "english": "this / that / that over there"
+        },
+        "pattern": "これは〇〇です。",
+        "usage": "Used to describe people or things based on their proximity.",
+        "explanation": "Remember in all of the こ・そ・あ words, the こ is near the speaker, the そ is near the listener, and the あ is far away from both.",
+        "jlpt_level": "N5",
+        "examples": [
+          {
+            "sentence": {
+              "japanese": "それは雑誌ですか。",
+              "furigana": "それは{雑誌|ざっ|し}ですか。",
+              "english": "Is that a magazine?"
+            },
+            "context": "Asking about something near the listener",
+            "notes": "Look at the illustration on grammar page 20 for an intuitive example."
+          },
+          {
+            "sentence": {
+              "japanese": "これは誰の本ですか。",
+              "furigana": "これは{誰|だれ}の{本|ほん}ですか。",
+              "english": "Whose book is this?"
+            },
+            "context": "Identifying objects near the speaker",
+            "notes": "Look at the illustration on grammar page 20 for an intuitive example."
+          }
+        ],
+        "related_grammar": ["mnn-02-grammar-002"]
+      },
+      {
+        "id": "mnn-02-grammar-002",
+        "lesson_id": "mnn-lesson-02",
+        "name": {
+          "japanese": "この N・その N・あの N",
+          "english": "this N / that N / that N over there"
+        },
+        "pattern": "このNは〇〇です。",
+        "usage": "Used to describe modify a noun based on its proximity.",
+        "explanation": "The difference between これはN and このNは is the same as the difference between \" This is an N\" and \"This N is...\" Remember in all of the こ・そ・あ words, the こ is near the speaker, the そ is near the listener, and the あ is far away from both.",
+        "jlpt_level": "N5",
+        "examples": [
+          {
+            "sentence": {
+              "japanese": "この傘は私のです。",
+              "furigana": "この{傘|かさ}は{私|わたし}のです。",
+              "english": "This umbrella is mine."
+            },
+            "context": "Identifying objects near the speaker",
+            "notes": "Look at the illustration on grammar page 20 for an intuitive example."
+          },
+          {
+            "sentence": {
+              "japanese": "あの人は学生です。",
+              "furigana": "あの{人|ひと}は{学生|がく|せい}です。",
+              "english": "That person over there is a student."
+            },
+            "context": "Identifying objects far from the speaker and listener",
+            "notes": "Look at the illustration on grammar page 20 for an intuitive example."
+          }
+        ],
+        "related_grammar": ["mnn-02-grammar-001"]
+      },
+      {
+        "id": "mnn-02-grammar-003",
+        "lesson_id": "mnn-lesson-02",
+        "name": {
+          "japanese": "そうです",
+          "english": "That's right. / It is so."
+        },
+        "pattern": "はい、そうです。",
+        "usage": "Used to answer yes to a yes/no question.",
+        "explanation": "This is the polite form of そうだ. In both cases you're answering yes to the question.",
+        "jlpt_level": "N5",
+        "examples": [
+          {
+            "sentence": {
+              "japanese": "「それはボウルペンですか。」「はい、そうです。」",
+              "furigana": "「それはボウルペンですか。」「はい、そうです。」",
+              "english": "Is that a ballpoint pen? Yes, it is."
+            },
+            "context": "Answering yes to a yes/no question"
+          }
+        ],
+        "related_grammar": ["mnn-02-grammar-008"]
+      },
+      {
+        "id": "mnn-02-grammar-004",
+        "lesson_id": "mnn-lesson-02",
+        "name": {
+          "japanese": "〜か、〜か",
+          "english": "or"
+        },
+        "pattern": "〜か、〜か",
+        "usage": "Used to express a choice between two options.",
+        "explanation": "You can chain か together to express more than two options.",
+        "jlpt_level": "N5",
+        "examples": [
+          {
+            "sentence": {
+              "japanese": "これはペンですか、鉛筆ですか。",
+              "furigana": "これはペンですか、{鉛筆|えん|ぴつ}ですか。",
+              "english": "Is this a pen or a pencil?"
+            },
+            "context": "Expressing a choice between two options",
+            "notes": "Just the same as you wouldn't answer 'yes' to a multiple choice question in English, avoid using はい or いいえ to answer a question with 〜か、〜か."
+          }
+        ],
+        "related_grammar": []
+      },
+      {
+        "id": "mnn-02-grammar-005",
+        "lesson_id": "mnn-lesson-02",
+        "name": {
+          "japanese": "N1 の N2",
+          "english": "N2 has the properties of N1"
+        },
+        "pattern": "N1 の N2",
+        "usage": "Used to describe a property of a noun.",
+        "explanation": "This pattern is used to clarify or be more specific about a noun. This isn't quite the same as the pure possessive quality we already knew about の. の is super versatile.",
+        "jlpt_level": "N5",
+        "examples": [
+          {
+            "sentence": {
+              "japanese": "これはコーヒーの雑誌です。",
+              "furigana": "これはコーヒーの{雑誌|ざっ|し}です。",
+              "english": "This is a magazine about coffee."
+            },
+            "context": "Describing a property of a noun",
+            "notes": "When used in this way, の can actually be repeated to describe more and more specific properties of a noun."
+          }
+        ],
+        "related_grammar": ["mnn-02-grammar-006"]
+      },
+      {
+        "id": "mnn-02-grammar-006",
+        "lesson_id": "mnn-lesson-02",
+        "name": {
+          "japanese": "の substituting for a noun",
+          "english": "の substituting for a noun"
+        },
+        "pattern": "N1 の [omitted N2]",
+        "usage": "Used to avoid repeating an established noun.",
+        "explanation": "This pattern is used to avoid repeating an established noun. This is a common verbal shortcut.",
+        "jlpt_level": "N5",
+        "examples": [
+          {
+            "sentence": {
+              "japanese": "「この本は誰のですか。」「私のです。」",
+              "furigana": "「この{本|ほん}は{誰|だれ}のですか。」「{私|わたし}のです。」",
+              "english": "Whose book is this? It's mine."
+            },
+            "context": "Avoiding repeating an established noun",
+            "notes": "Note we're using this shortcut twice in the example. Both the second and third usages of の in this sentence could be expanded to 「の本」 but it's already understood what we're talking about."
+          }
+        ],
+        "related_grammar": ["mnn-02-grammar-005"]
+      },
+      {
+        "id": "mnn-02-grammar-007",
+        "lesson_id": "mnn-lesson-02",
+        "name": {
+          "japanese": "お〜",
+          "english": "Honored ~"
+        },
+        "pattern": "お〜",
+        "usage": "Used situationally for an object that is treated with respect.",
+        "explanation": "Certain places and things are treated with respect in Japanese. This is a common way to show respect in Japanese, but it's advised you don't use it for every object.",
+        "jlpt_level": "N5",
+        "examples": [
+          {
+            "sentence": {
+              "japanese": "これはお酒です。",
+              "furigana": "これはお{酒|さけ}です。",
+              "english": "This is sake (or alcohol)."
+            },
+            "context": "Treating an object with respect",
+            "notes": "There are many examples like this, but it's best to only use it if you've heard a native speaker use it."
+          }
+        ],
+        "related_grammar": []
+      },
+      {
+        "id": "mnn-02-grammar-008",
+        "lesson_id": "mnn-lesson-02",
+        "name": {
+          "japanese": "そうですか",
+          "english": "Is that so? / I see."
+        },
+        "pattern": "そうですか。",
+        "usage": "Used to confirm or ask for confirmation.",
+        "explanation": "Depending on the intonation, this can be roughly equivalent to \"Is that so?\" if said with a rising intonation, or \"I see.\" if said with a falling intonation.",
+        "jlpt_level": "N5",
+        "examples": [
+          {
+            "sentence": {
+              "japanese": "「あなたは学生ですか。」「いいえ、銀行員です。」「そうですか。」",
+              "furigana": "「あなたは{学生|がく|せい}ですか。」「いいえ、{銀行員|ぎん|こう|いん}です。」「そうですか。」",
+              "english": "Are you a student? No, I'm a bank employee. Ah, I see."
+            },
+            "context": "Confirming understanding.",
+            "notes": "The nature of the intonation is quite important for the feel of your statement. The falling intonation is closer to confirming understanding than being surprised by the information, and the rising intonation is the opposite."
+          }
+        ],
+        "related_grammar": ["mnn-02-grammar-003"]
+      }
+    ]
+}

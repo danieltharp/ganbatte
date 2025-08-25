@@ -40,7 +40,7 @@
                     <option value="">All Lessons</option>
                     @foreach($lessons as $lesson)
                         <option value="{{ $lesson->id }}" {{ request('lesson_id') == $lesson->id ? 'selected' : '' }}>
-                            Lesson {{ $lesson->chapter }}: {{ $lesson->title_english }}
+                            Lesson {{ $lesson->chapter }}
                         </option>
                     @endforeach
                 </select>
@@ -132,7 +132,7 @@
                     <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-500 mb-4">
                         <span>
                             @if($grammar->lesson)
-                                Lesson {{ $grammar->lesson->chapter }}: {{ $grammar->lesson->title_english }}
+                                Lesson {{ $grammar->lesson->chapter }}
                             @else
                                 No lesson assigned
                             @endif
