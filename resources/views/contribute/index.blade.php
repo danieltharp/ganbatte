@@ -78,8 +78,8 @@
                 </div>
             </div>
 
-            <!-- Question Generator - Coming Soon -->
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg border border-gray-200 dark:border-gray-700 opacity-60">
+            <!-- Question Generator -->
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg border border-gray-200 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-400 transition-colors">
                 <div class="p-6">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mr-4">
@@ -88,17 +88,18 @@
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Question Generator</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-4">
-                        Create quiz questions and exercises for vocabulary and grammar testing. Generate multiple question types with proper answer formatting.
+                        Create quiz questions and exercises for vocabulary and grammar testing. Supports fill-blank and multiple-choice questions with optional audio for listening exercises, dynamic management, and proper answer formatting.
                     </p>
                     <div class="mb-4">
                         <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200">Coming Soon</span>
+                            <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Ready to Use</span>
+                            <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Training Required</span>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
-                        <button disabled class="bg-gray-400 text-white px-4 py-2 rounded-md font-medium cursor-not-allowed">
-                            Coming Soon
-                        </button>
+                        <a href="{{ route('contribute.questions.generator') }}" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md font-medium transition-colors">
+                            Open Generator →
+                        </a>
                         <span class="text-sm text-gray-500 dark:text-gray-400">JSON Export</span>
                     </div>
                 </div>

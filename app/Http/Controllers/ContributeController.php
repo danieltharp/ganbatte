@@ -31,6 +31,14 @@ class ContributeController extends Controller
     }
 
     /**
+     * Show the question JSON generator
+     */
+    public function questionGenerator()
+    {
+        return view('contribute.questions.generator');
+    }
+
+    /**
      * Store a new contribution
      */
     public function store(Request $request): JsonResponse
