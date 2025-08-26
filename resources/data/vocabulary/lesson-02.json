@@ -8,7 +8,7 @@
         "furigana": "これ",
         "english": "this (thing here)"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["pronoun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -35,7 +35,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 51,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_これ.mp3",
@@ -55,7 +55,7 @@
         "furigana": "それ",
         "english": "that (thing near the listener)"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["pronoun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -82,7 +82,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 44,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_それ.mp3",
@@ -102,7 +102,7 @@
         "furigana": "あれ",
         "english": "that (thing over there)"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["pronoun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -129,7 +129,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 313,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_あれ.mp3",
@@ -149,7 +149,7 @@
         "furigana": "この～",
         "english": "this ～, this ～ here"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["adjective"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -176,7 +176,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 46,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_この～.mp3",
@@ -196,7 +196,7 @@
         "furigana": "その～",
         "english": "that ～, that ～ near the listener"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["adjective"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -223,7 +223,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 30,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_その～.mp3",
@@ -243,7 +243,7 @@
         "furigana": "あの～",
         "english": "that ～, that ～ over there"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["adjective"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -270,7 +270,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 247,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_あの～.mp3",
@@ -290,7 +290,7 @@
         "furigana": "{本|ほん}",
         "english": "book"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -317,7 +317,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 327,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_本.mp3",
@@ -337,7 +337,7 @@
         "furigana": "{辞書|じ|しょ}",
         "english": "dictionary"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -364,7 +364,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 3697,
       "example_sentences": [
         {
           "japanese": "辞書で日本語を勉強しました。",
@@ -390,7 +390,7 @@
         "furigana": "{雑誌|ざっ|し}",
         "english": "magazine"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -417,7 +417,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 838,
       "example_sentences": [
         {
           "japanese": "母は雑誌を読んでいる。",
@@ -443,7 +443,7 @@
         "furigana": "{新聞|しん|ぶん}",
         "english": "newspaper"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -470,7 +470,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 643,
       "example_sentences": [
         {
           "japanese": "父は新聞を読んでいる。",
@@ -496,7 +496,7 @@
         "furigana": "ノート",
         "english": "notebook"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -523,7 +523,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 2781,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_ノート.mp3",
@@ -543,7 +543,7 @@
         "furigana": "{手帳|て|ちょう}",
         "english": "personal organizer"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -596,7 +596,7 @@
         "furigana": "{名刺|めい|し}",
         "english": "business card"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -649,7 +649,7 @@
         "furigana": "カード",
         "english": "(credit) card"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -676,7 +676,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 2090,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_カード.mp3",
@@ -696,7 +696,7 @@
         "furigana": "{鉛筆|えん|ぴつ}",
         "english": "pencil"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -723,7 +723,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 3791,
       "example_sentences": [
         {
           "japanese": "この鉛筆が古いですが、いいです。",
@@ -749,7 +749,7 @@
         "furigana": "ボールペン",
         "english": "ballpoint pen"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -796,7 +796,7 @@
         "furigana": "シャープペンシル",
         "english": "mechanical pencil, propelling pencil"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -843,7 +843,7 @@
         "furigana": "{鍵|かぎ}",
         "english": "key"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -870,7 +870,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 2031,
       "example_sentences": [
         {
           "japanese": "今朝、家に鍵を忘れた。",
@@ -896,7 +896,7 @@
         "furigana": "{時計|とけい}",
         "english": "watch, clock"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -923,7 +923,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 2452,
       "example_sentences": [
         {
           "japanese": "新しい時計買いたい。しかし、高いです。",
@@ -949,7 +949,7 @@
         "furigana": "{傘|かさ}",
         "english": "umbrella"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -976,7 +976,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 4276,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_傘.mp3",
@@ -996,7 +996,7 @@
         "furigana": "{鞄|かばん}",
         "english": "bag, briefcase"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1023,7 +1023,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 4284,
       "example_sentences": [
         {
           "japanese": "この鞄は誰の？",
@@ -1049,7 +1049,7 @@
         "furigana": "テレビ",
         "english": "television"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1076,7 +1076,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 408,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_テレビ.mp3",
@@ -1096,7 +1096,7 @@
         "furigana": "ラジオ",
         "english": "radio"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1123,7 +1123,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1674,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_ラジオ.mp3",
@@ -1143,7 +1143,7 @@
         "furigana": "カメラ",
         "english": "camera"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1170,7 +1170,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1755,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_カメラ.mp3",
@@ -1190,7 +1190,7 @@
         "furigana": "コンピューター",
         "english": "computer"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1217,7 +1217,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1422,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_コンピューター.mp3",
@@ -1237,7 +1237,7 @@
         "furigana": "{車|くるま}",
         "english": "car, vehicle"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1264,7 +1264,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 283,
       "example_sentences": [
         {
           "japanese": "僕の車が赤いです。",
@@ -1290,7 +1290,7 @@
         "furigana": "{机|つくえ}",
         "english": "desk"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1317,7 +1317,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 2201,
       "example_sentences": [
         {
           "japanese": "机の上には猫がいる。",
@@ -1343,7 +1343,7 @@
         "furigana": "{椅子|い|す}",
         "english": "chair"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1370,7 +1370,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1440,
       "example_sentences": [
         {
           "japanese": "父の椅子は重いです。",
@@ -1396,7 +1396,7 @@
         "furigana": "チョコレート",
         "english": "chocolate"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1423,7 +1423,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 4654,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_チョコレート.mp3",
@@ -1443,7 +1443,7 @@
         "furigana": "コーヒー",
         "english": "coffee"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1470,7 +1470,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1641,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_コーヒー.mp3",
@@ -1490,7 +1490,7 @@
         "furigana": "「お」 {土産|みやげ}",
         "english": "souvenir, present"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1517,7 +1517,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 2694,
       "example_sentences": [
         {
           "japanese": "彼はお土産をもって帰った。",
@@ -1543,7 +1543,7 @@
         "furigana": "～ {語|ご}",
         "english": "～ language"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["affix"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1590,7 +1590,7 @@
         "furigana": "{何何|なん|なに}（ 何[なに]）",
         "english": "what"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["pronoun"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1617,7 +1617,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 40,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_何_1.mp3",
@@ -1637,7 +1637,7 @@
         "furigana": "そう",
         "english": "so"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["adverb"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1664,7 +1664,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 39,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_そう.mp3",
@@ -1684,7 +1684,7 @@
         "furigana": "あのう",
         "english": "Err… (used to show hesitation)"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["interjection"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1711,7 +1711,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 21,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_あのう.mp3",
@@ -1731,7 +1731,7 @@
         "furigana": "えっ",
         "english": "Oh? What! (hearing something unexpected)"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["interjection"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1758,7 +1758,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 18,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_えっ.mp3",
@@ -1778,7 +1778,7 @@
         "furigana": "どうぞ。",
         "english": "Here you are. (offering someone something)"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["adverb"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1805,7 +1805,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1793,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_どうぞ。.mp3",
@@ -1825,7 +1825,7 @@
         "furigana": "どうもありがとうございます。",
         "english": "Thank you very much."
       },
-      "part_of_speech": [],
+      "part_of_speech": ["interjection"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1852,7 +1852,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1084,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_どうもありがとうございます。.mp3",
@@ -1872,7 +1872,7 @@
         "furigana": "そうですか。",
         "english": "I see."
       },
-      "part_of_speech": [],
+      "part_of_speech": ["expression"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1919,8 +1919,8 @@
         "furigana": "{違|ちが}います。",
         "english": "No, it isn't./You are wrong."
       },
-      "part_of_speech": [],
-      "verb_type": null,
+      "part_of_speech": ["verb"],
+      "verb_type": "godan",
       "adjective_type": null,
       "conjugations": {
         "past": {
@@ -1946,7 +1946,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 186,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_違います。.mp3",
@@ -1966,7 +1966,7 @@
         "furigana": "あっ",
         "english": "Oh! (used when become aware of something)"
       },
-      "part_of_speech": [],
+      "part_of_speech": ["interjection"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -1993,7 +1993,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1916,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_あっ.mp3",
@@ -2013,7 +2013,7 @@
         "furigana": "これからお {世話|せ|わ}になります。",
         "english": "Thank you in advance for your kindness."
       },
-      "part_of_speech": [],
+      "part_of_speech": ["expression"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -2060,7 +2060,7 @@
         "furigana": "こちらこそ「どうぞ」よろしく「お {願|ねが}いします」。",
         "english": "Pleased to meet you, too."
       },
-      "part_of_speech": [],
+      "part_of_speech": ["expression"],
       "verb_type": null,
       "adjective_type": null,
       "conjugations": {
@@ -2087,7 +2087,7 @@
       },
       "pitch_accent": null,
       "jlpt_level": "N5",
-      "frequency_rank": 0,
+      "frequency_rank": 1253,
       "example_sentences": [],
       "audio": {
         "filename": "MNN_こちらこそ「どうぞ」よろしく「お願いします」。.mp3",

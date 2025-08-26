@@ -8,7 +8,7 @@
         "furigana": "{私|わたし}",
         "english": "I"
       },
-      "part_of_speech": ["noun"],
+      "part_of_speech": ["pronoun"],
       "jlpt_level": "N5",
       "frequency_rank": 42,
       "audio": {
@@ -29,7 +29,7 @@
         "japanese": "あなた",
         "english": "you"
       },
-      "part_of_speech": ["noun"],
+      "part_of_speech": ["pronoun"],
       "jlpt_level": "N5",
       "frequency_rank": 226,
       "audio": {
@@ -51,7 +51,7 @@
         "furigana": "あの{人|ひと}, あの{方|かた}",
         "english": "that person"
       },
-      "part_of_speech": ["noun"],
+      "part_of_speech": ["pronoun"],
       "jlpt_level": "N5",
       "audio": {
         "filename": "MNN_あの人.mp3",
