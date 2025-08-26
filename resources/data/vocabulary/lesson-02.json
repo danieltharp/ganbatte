@@ -1586,8 +1586,8 @@
       "id": "mnn-02-088",
       "lesson_id": "mnn-lesson-02",
       "word": {
-        "japanese": "何（何）",
-        "furigana": "{何何|なん|なに}（ 何[なに]）",
+        "japanese": "何",
+        "furigana": "{何|なん・なに}",
         "english": "what"
       },
       "part_of_speech": ["pronoun"],
@@ -2098,6 +2098,188 @@
       "related_words": [],
       "tags": [],
       "include_in_kanji_worksheet": false
+    },
+    {
+      "id": "mnn-02-k-001",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "一",
+        "furigana": "{一|いち}",
+        "english": "one"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-002",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "二",
+        "furigana": "{二|に}",
+        "english": "two"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-003",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "三",
+        "furigana": "{三|さん}",
+        "english": "three"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-004",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "四",
+        "furigana": "{四|し}",
+        "english": "four"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-005",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "五",
+        "furigana": "{五|ご}",
+        "english": "five"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-006",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "六",
+        "furigana": "{六|ろく}",
+        "english": "six"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-007",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "七",
+        "furigana": "{七|しち}",
+        "english": "seven"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-008",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "八",
+        "furigana": "{八|はち}",
+        "english": "eight"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-009",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "九",
+        "furigana": "{九|きゅう}",
+        "english": "nine"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-010",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "十",
+        "furigana": "{十|じゅう}",
+        "english": "ten"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-011",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "百",
+        "furigana": "{百|ひゃく}",
+        "english": "hundred"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-012",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "千",
+        "furigana": "{千|せん}",
+        "english": "thousand"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-013",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "万",
+        "furigana": "{万|まん}",
+        "english": "ten thousand"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
+    },
+    {
+      "id": "mnn-02-k-014",
+      "lesson_id": "mnn-lesson-02",
+      "word": {
+        "japanese": "円",
+        "furigana": "{円|えん}",
+        "english": "yen"
+      },
+      "part_of_speech": ["kanji"],
+      "jlpt_level": "N5",
+      "tags": ["kanji"],
+      "include_in_kanji_worksheet": true
     }
   ]
 }

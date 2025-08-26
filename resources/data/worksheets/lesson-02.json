@@ -1,0 +1,41 @@
+{
+    "worksheets": [
+      {
+        "id": "mnn-02-hiragana-ws",
+        "name": "Other Kanji appearing in Lesson 2",
+        "type": "kanji_practice",
+        "lesson_id": "mnn-lesson-02",
+        "content_ids": [
+          "mnn-02-060",
+          "mnn-02-061",
+          "mnn-02-062",
+          "mnn-02-063",
+          "mnn-02-065",
+          "mnn-01-066",
+          "mnn-01-068",
+          "mnn-01-071",
+          "mnn-01-072",
+          "mnn-01-073",
+          "mnn-01-074",
+          "mnn-01-079",
+          "mnn-01-080",
+          "mnn-01-081",
+          "mnn-01-084",
+          "mnn-01-087",
+          "mnn-01-088",
+          "mnn-01-095",
+          "mnn-01-097",
+          "mnn-01-098"
+        ],
+        "template": "kanji_stroke_template"
+      },
+      {
+        "id": "mnn-02-vocab-ws",
+        "name": "Unit 1 Kanji, Lesson 2 Content",
+        "type": "kanji_practice",
+        "lesson_id": "mnn-lesson-02",
+        "content_ids": ["mnn-02-k-001", "mnn-02-k-002", "mnn-02-k-003", "mnn-02-k-004", "mnn-02-k-005", "mnn-02-k-006", "mnn-02-k-007", "mnn-02-k-008", "mnn-02-k-009", "mnn-02-k-010", "mnn-02-k-011", "mnn-02-k-012", "mnn-02-k-013", "mnn-02-k-014", "mnn-02-k-015", "mnn-02-k-016", "mnn-02-k-017", "mnn-02-k-018", "mnn-02-k-019", "mnn-02-k-020", "mnn-02-k-021", "mnn-02-k-022", "mnn-02-k-023", "mnn-02-k-024"],
+        "template": "kanji_stroke_template"
+      }
+    ]
+  } 
