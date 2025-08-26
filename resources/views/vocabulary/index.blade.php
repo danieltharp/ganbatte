@@ -18,7 +18,10 @@
 <!-- Filters -->
 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-6">
     <div class="p-6">
-        <form method="GET" action="{{ route('vocabulary.index') }}" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <form method="GET" action="{{ route('vocabulary.index') }}" class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            @if(request('kanji_worksheet'))
+                <input type="hidden" name="kanji_worksheet" value="{{ request('kanji_worksheet') }}">
+            @endif
             <div>
                 <label for="lesson_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Lesson</label>
                 <select name="lesson_id" id="lesson_id" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
@@ -55,6 +58,15 @@
                     <option value="N3" {{ request('jlpt_level') == 'N3' ? 'selected' : '' }}>N3</option>
                     <option value="N2" {{ request('jlpt_level') == 'N2' ? 'selected' : '' }}>N2</option>
                     <option value="N1" {{ request('jlpt_level') == 'N1' ? 'selected' : '' }}>N1</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="per_page" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Per Page</label>
+                <select name="per_page" id="per_page" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
+                    <option value="30" {{ request('per_page', 30) == 30 ? 'selected' : '' }}>30</option>
+                    <option value="50" {{ request('per_page') == 50 ? 'selected' : '' }}>50</option>
+                    <option value="100" {{ request('per_page') == 100 ? 'selected' : '' }}>100</option>
                 </select>
             </div>
             
@@ -146,6 +158,23 @@
     @endforelse
 </div>
 
+<!-- Pagination -->
+@if($vocabulary->hasPages())
+    <div class="mt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+        <div class="text-sm text-gray-700 dark:text-gray-300">
+            Showing {{ $vocabulary->firstItem() }} to {{ $vocabulary->lastItem() }} of {{ $vocabulary->total() }} results
+        </div>
+        
+        <div class="flex-1 flex justify-center">
+            {{ $vocabulary->links() }}
+        </div>
+        
+        <div class="text-sm text-gray-500 dark:text-gray-400">
+            {{ $vocabulary->perPage() }} per page
+        </div>
+    </div>
+@endif
+
 <script>
 function toggleKanjiFilter(checkbox) {
     const url = new URL(window.location);
@@ -154,6 +183,8 @@ function toggleKanjiFilter(checkbox) {
     } else {
         url.searchParams.delete('kanji_worksheet');
     }
+    // Reset to first page when filtering changes
+    url.searchParams.delete('page');
     window.location = url;
 }
 </script>

@@ -36,7 +36,15 @@ class VocabularyController extends Controller
             $query->forKanjiWorksheet();
         }
         
-        $vocabulary = $query->orderBy('lesson_id')->orderBy('id')->get();
+        // Get per page value, default to 30
+        $perPage = $request->get('per_page', 30);
+        if (!in_array($perPage, [30, 50, 100])) {
+            $perPage = 30;
+        }
+        
+        $vocabulary = $query->orderBy('lesson_id')->orderBy('id')->paginate($perPage);
+        $vocabulary->appends($request->query());
+        
         $lessons = Lesson::orderBy('chapter')->get();
         
         return view('vocabulary.index', compact('vocabulary', 'lessons'));
