@@ -17,79 +17,80 @@
 
 <!-- Filters -->
 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-6">
-    <div class="p-6">
-        <form method="GET" action="{{ route('vocabulary.index') }}" class="grid grid-cols-1 md:grid-cols-5 gap-4">
+    <div class="p-4">
+        <form method="GET" action="{{ route('vocabulary.index') }}">
             @if(request('kanji_worksheet'))
                 <input type="hidden" name="kanji_worksheet" value="{{ request('kanji_worksheet') }}">
             @endif
-            <div>
-                <label for="lesson_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Lesson</label>
-                <select name="lesson_id" id="lesson_id" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
-                    <option value="">All Lessons</option>
-                    @foreach($lessons as $lesson)
-                        <option value="{{ $lesson->id }}" {{ request('lesson_id') == $lesson->id ? 'selected' : '' }}>
-                            {{ $lesson->title_english }}
-                        </option>
-                    @endforeach
-                </select>
-            </div>
             
-            <div>
-                <label for="part_of_speech" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Part of Speech</label>
-                <select name="part_of_speech" id="part_of_speech" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
-                    <option value="">All Types</option>
-                    <option value="noun" {{ request('part_of_speech') == 'noun' ? 'selected' : '' }}>Noun</option>
-                    <option value="verb" {{ request('part_of_speech') == 'verb' ? 'selected' : '' }}>Verb</option>
-                    <option value="adjective" {{ request('part_of_speech') == 'adjective' ? 'selected' : '' }}>Adjective</option>
-                    <option value="adverb" {{ request('part_of_speech') == 'adverb' ? 'selected' : '' }}>Adverb</option>
-                    <option value="particle" {{ request('part_of_speech') == 'particle' ? 'selected' : '' }}>Particle</option>
-                    <option value="expression" {{ request('part_of_speech') == 'expression' ? 'selected' : '' }}>Expression</option>
-                    <option value="affix" {{ request('part_of_speech') == 'affix' ? 'selected' : '' }}>Prefix/Suffix</option>
-                    <option value="counter" {{ request('part_of_speech') == 'counter' ? 'selected' : '' }}>Counter</option>
-                </select>
-            </div>
-            
-            <div>
-                <label for="jlpt_level" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">JLPT Level</label>
-                <select name="jlpt_level" id="jlpt_level" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
-                    <option value="">All Levels</option>
-                    <option value="N5" {{ request('jlpt_level') == 'N5' ? 'selected' : '' }}>N5</option>
-                    <option value="N4" {{ request('jlpt_level') == 'N4' ? 'selected' : '' }}>N4</option>
-                    <option value="N3" {{ request('jlpt_level') == 'N3' ? 'selected' : '' }}>N3</option>
-                    <option value="N2" {{ request('jlpt_level') == 'N2' ? 'selected' : '' }}>N2</option>
-                    <option value="N1" {{ request('jlpt_level') == 'N1' ? 'selected' : '' }}>N1</option>
-                </select>
-            </div>
-            
-            <div>
-                <label for="per_page" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Per Page</label>
-                <select name="per_page" id="per_page" class="block w-full text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm">
-                    <option value="30" {{ request('per_page', 30) == 30 ? 'selected' : '' }}>30</option>
-                    <option value="50" {{ request('per_page') == 50 ? 'selected' : '' }}>50</option>
-                    <option value="100" {{ request('per_page') == 100 ? 'selected' : '' }}>100</option>
-                </select>
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">&nbsp;</label>
+            <!-- Main filters row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-3 items-end">
+                <div>
+                    <label for="lesson_id" class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">Lesson</label>
+                    <select name="lesson_id" id="lesson_id" class="block w-full text-sm text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm py-1.5">
+                        <option value="">All Lessons</option>
+                        @foreach($lessons as $lesson)
+                            <option value="{{ $lesson->id }}" {{ request('lesson_id') == $lesson->id ? 'selected' : '' }}>
+                                {{ $lesson->title_english }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="part_of_speech" class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">Part of Speech</label>
+                    <select name="part_of_speech" id="part_of_speech" class="block w-full text-sm text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm py-1.5">
+                        <option value="">All Types</option>
+                        <option value="noun" {{ request('part_of_speech') == 'noun' ? 'selected' : '' }}>Noun</option>
+                        <option value="verb" {{ request('part_of_speech') == 'verb' ? 'selected' : '' }}>Verb</option>
+                        <option value="adjective" {{ request('part_of_speech') == 'adjective' ? 'selected' : '' }}>Adjective</option>
+                        <option value="adverb" {{ request('part_of_speech') == 'adverb' ? 'selected' : '' }}>Adverb</option>
+                        <option value="particle" {{ request('part_of_speech') == 'particle' ? 'selected' : '' }}>Particle</option>
+                        <option value="expression" {{ request('part_of_speech') == 'expression' ? 'selected' : '' }}>Expression</option>
+                        <option value="affix" {{ request('part_of_speech') == 'affix' ? 'selected' : '' }}>Prefix/Suffix</option>
+                        <option value="counter" {{ request('part_of_speech') == 'counter' ? 'selected' : '' }}>Counter</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="jlpt_level" class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">JLPT Level</label>
+                    <select name="jlpt_level" id="jlpt_level" class="block w-full text-sm text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm py-1.5">
+                        <option value="">All Levels</option>
+                        <option value="N5" {{ request('jlpt_level') == 'N5' ? 'selected' : '' }}>N5</option>
+                        <option value="N4" {{ request('jlpt_level') == 'N4' ? 'selected' : '' }}>N4</option>
+                        <option value="N3" {{ request('jlpt_level') == 'N3' ? 'selected' : '' }}>N3</option>
+                        <option value="N2" {{ request('jlpt_level') == 'N2' ? 'selected' : '' }}>N2</option>
+                        <option value="N1" {{ request('jlpt_level') == 'N1' ? 'selected' : '' }}>N1</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="per_page" class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">Per Page</label>
+                    <select name="per_page" id="per_page" class="block w-full text-sm text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm py-1.5">
+                        <option value="30" {{ request('per_page', 30) == 30 ? 'selected' : '' }}>30</option>
+                        <option value="50" {{ request('per_page') == 50 ? 'selected' : '' }}>50</option>
+                        <option value="100" {{ request('per_page') == 100 ? 'selected' : '' }}>100</option>
+                    </select>
+                </div>
+                
                 <div class="flex space-x-2">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1.5 px-3 rounded text-sm">
                         Filter
                     </button>
-                    <a href="{{ route('vocabulary.index') }}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
+                    <a href="{{ route('vocabulary.index') }}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-1.5 px-3 rounded text-sm">
                         Clear
                     </a>
                 </div>
+                
+                <div class="flex items-center">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" {{ request('kanji_worksheet') == '1' ? 'checked' : '' }} 
+                               onchange="toggleKanjiFilter(this)" class="rounded border-gray-300 text-purple-600 shadow-sm">
+                        <span class="ml-2 text-xs text-gray-700 dark:text-gray-300">Kanji Practice</span>
+                    </label>
+                </div>
             </div>
         </form>
-        
-        <div class="mt-4 flex space-x-2">
-            <label class="inline-flex items-center">
-                <input type="checkbox" {{ request('kanji_worksheet') == '1' ? 'checked' : '' }} 
-                       onchange="toggleKanjiFilter(this)" class="rounded border-gray-300 text-purple-600 shadow-sm">
-                <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Kanji Practice Items Only</span>
-            </label>
-        </div>
     </div>
 </div>
 
