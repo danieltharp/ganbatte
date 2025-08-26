@@ -174,33 +174,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Recent Activity -->
-        <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Recent Lessons</h3>
-                <div class="space-y-3">
-                    @forelse(\App\Models\Lesson::orderBy('chapter')->limit(5)->get() as $lesson)
-                        <div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded">
-                            <div>
-                                <h4 class="font-medium text-gray-900 dark:text-gray-100">
-                                    @if($lesson->title_japanese)
-                                        <x-furigana-text>{{ $lesson->furigana_title }}</x-furigana-text>
-                                    @endif
-                                    {{ $lesson->title_english }}
-                                </h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Chapter {{ $lesson->chapter }}</p>
-                            </div>
-                            <a href="{{ route('lessons.show', $lesson) }}" class="text-blue-500 hover:text-blue-700">
-                                View →
-                            </a>
-                        </div>
-                    @empty
-                        <p class="text-gray-600 dark:text-gray-400">No lessons available yet.</p>
-                    @endforelse
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 @endsection
