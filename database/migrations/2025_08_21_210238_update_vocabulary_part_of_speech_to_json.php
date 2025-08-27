@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('vocabulary', function (Blueprint $table) {
-            // Add part_of_speech as json column to allow multiple parts of speech
-            // The original migration didn't actually create this column
-            $table->json('part_of_speech')->nullable()->after('word_english');
+            // Change the part_of_speech column to be a json column
+            $table->json('part_of_speech')->nullable()->change();
         });
     }
 
@@ -24,7 +23,11 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('vocabulary', function (Blueprint $table) {
-            $table->dropColumn('part_of_speech');
+            $table->enum('part_of_speech', [
+                'noun', 'verb', 'adjective', 'adverb', 'particle', 
+                'conjunction', 'interjection', 'counter', 'expression',
+                'affix', 'kanji'
+            ])->nullable()->change();
         });
     }
 };
