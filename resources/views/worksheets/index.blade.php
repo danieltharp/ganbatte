@@ -78,9 +78,6 @@
                 
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                     {{ $worksheet->lesson->title_english ?? 'Custom Worksheet' }}
-                    @if($worksheet->lesson)
-                        <span class="text-gray-400">• Lesson {{ $worksheet->lesson->chapter }}</span>
-                    @endif
                 </p>
 
                 <div class="flex items-center justify-between">

@@ -73,40 +73,6 @@
             </div>
         @endif
 
-        <!-- Conjugations (for verbs and adjectives) -->
-        @if($vocabulary->conjugations && count($vocabulary->conjugations) > 0)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
-                        <span class="mr-2">🔄</span>
-                        Conjugations
-                    </h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                        @foreach($vocabulary->conjugations as $form => $conjugation)
-                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50">
-                                <div class="font-medium text-gray-900 dark:text-gray-100 mb-2">
-                                    {{ ucfirst(str_replace('_', ' ', $form)) }}
-                                </div>
-                                <div class="japanese-text text-lg text-gray-800 dark:text-gray-200 font-medium">
-                                    @if(is_array($conjugation) && isset($conjugation['furigana']))
-                                        <x-furigana-text>{{ $conjugation['furigana'] }}</x-furigana-text>
-                                    @elseif(is_array($conjugation) && isset($conjugation['japanese']))
-                                        {{ $conjugation['japanese'] }}
-                                    @else
-                                        {{ $conjugation }}
-                                    @endif
-                                </div>
-                                @if(is_array($conjugation) && isset($conjugation['english']))
-                                    <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">{{ $conjugation['english'] }}</div>
-                                @endif
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        @endif
-
         <!-- Example Sentences -->
         @if($vocabulary->example_sentences && count($vocabulary->example_sentences) > 0)
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">

@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('vocabulary', function (Blueprint $table) {
-            // Change the part_of_speech column to be a json column
-            $table->json('part_of_speech')->nullable()->change();
+            $table->dropColumn('conjugations');
         });
     }
 
@@ -23,11 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('vocabulary', function (Blueprint $table) {
-            $table->enum('part_of_speech', [
-                'noun', 'verb', 'adjective', 'adverb', 'particle', 
-                'conjunction', 'interjection', 'counter', 'expression',
-                'affix', 'kanji'
-            ])->nullable()->change();
+            $table->json('conjugations')->nullable();
         });
     }
 };

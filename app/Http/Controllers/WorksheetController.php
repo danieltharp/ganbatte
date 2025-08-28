@@ -35,7 +35,7 @@ class WorksheetController extends Controller
             $query->byType($request->type);
         }
         
-        $worksheets = $query->orderBy('created_at', 'desc')->get();
+        $worksheets = $query->orderBy('id', 'asc')->get();
         $lessons = Lesson::orderBy('chapter')->get();
         
         return view('worksheets.index', compact('worksheets', 'lessons'));

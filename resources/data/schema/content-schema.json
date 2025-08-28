@@ -68,18 +68,7 @@
             "type": "string",
             "enum": ["i_adjective", "na_adjective"]
           },
-          "conjugations": {
-            "type": "object",
-            "properties": {
-              "past": {"$ref": "#/definitions/japanese_text"},
-              "negative": {"$ref": "#/definitions/japanese_text"},
-              "past_negative": {"$ref": "#/definitions/japanese_text"},
-              "te_form": {"$ref": "#/definitions/japanese_text"},
-              "potential": {"$ref": "#/definitions/japanese_text"},
-              "passive": {"$ref": "#/definitions/japanese_text"},
-              "causative": {"$ref": "#/definitions/japanese_text"}
-            }
-          },
+
           "pitch_accent": {"type": "string"},
           "jlpt_level": {"$ref": "#/definitions/jlpt_level"},
           "frequency_rank": {"type": "integer"},

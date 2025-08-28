@@ -46,7 +46,9 @@
     <!-- Main Content -->
     <div class="lg:col-span-3 space-y-6">
         <!-- Pattern -->
-        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" 
+             data-contributable="grammar_point" 
+             data-object-id="{{ $grammarPoint->id }}">
             <div class="p-6">
                 <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Pattern</h2>
                 <div class="japanese-text text-2xl font-mono bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500 text-gray-900 dark:text-gray-100">
@@ -57,7 +59,9 @@
 
         <!-- Usage -->
         @if($grammarPoint->usage)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" 
+                 data-contributable="grammar_point" 
+                 data-object-id="{{ $grammarPoint->id }}">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Usage</h2>
                     <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -69,7 +73,9 @@
 
         <!-- Explanation -->
         @if($grammarPoint->getExplanationContent())
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" 
+                 data-contributable="grammar_point" 
+                 data-object-id="{{ $grammarPoint->id }}">
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Explanation</h2>
@@ -95,7 +101,9 @@
 
         <!-- Examples -->
         @if($grammarPoint->examples && count($grammarPoint->examples) > 0)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" 
+                 data-contributable="grammar_point" 
+                 data-object-id="{{ $grammarPoint->id }}">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                         Examples ({{ count($grammarPoint->examples) }})
@@ -263,4 +271,28 @@
         @endif
     </div>
 </div>
+
+<style>
+    .japanese-text {
+        font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+    }
+</style>
+
+<!-- Contribution Mode Toggle Button -->
+@auth
+    @if(Auth::user()->can_user_contribute)
+        <button id="contribution-toggle" 
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+            Contribute
+        </button>
+    @endif
+@endauth
+
+<!-- Include Contribution Modal -->
+@auth
+    @if(Auth::user()->can_user_contribute)
+        <x-contribute.modal />
+    @endif
+@endauth
+
 @endsection 

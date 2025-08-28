@@ -207,7 +207,7 @@ class LessonContentSeeder extends Seeder
                 'part_of_speech' => $data['part_of_speech'],
                 'verb_type' => $data['verb_type'] ?? null,
                 'adjective_type' => $data['adjective_type'] ?? null,
-                'conjugations' => $data['conjugations'] ?? null,
+
                 'pitch_accent' => $data['pitch_accent'] ?? null,
                 'jlpt_level' => $data['jlpt_level'] ?? null,
                 'frequency_rank' => $data['frequency_rank'] ?? null,

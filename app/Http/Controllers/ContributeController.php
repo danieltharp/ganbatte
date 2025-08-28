@@ -31,6 +31,14 @@ class ContributeController extends Controller
     }
 
     /**
+     * Show the question JSON generator
+     */
+    public function questionGenerator()
+    {
+        return view('contribute.questions.generator');
+    }
+
+    /**
      * Store a new contribution
      */
     public function store(Request $request): JsonResponse
@@ -167,13 +175,16 @@ class ContributeController extends Controller
         foreach ($contributions as $contribution) {
             switch ($contribution->object_type) {
                 case 'vocabulary':
-                    $contribution->object_details = Vocabulary::find($contribution->object_id)->word_japanese;
+                    $vocab = Vocabulary::find($contribution->object_id);
+                    $contribution->object_details = $vocab ? $vocab->word_japanese : 'Unknown';
                     break;
                 case 'lesson':
-                    $contribution->object_details = Lesson::find($contribution->object_id)->title_english;
+                    $lesson = Lesson::find($contribution->object_id);
+                    $contribution->object_details = $lesson ? $lesson->title_english : 'Unknown';
                     break;
                 case 'grammar_point':
-                    $contribution->object_details = GrammarPoint::find($contribution->object_id)->name_english;
+                    $grammarPoint = GrammarPoint::find($contribution->object_id);
+                    $contribution->object_details = $grammarPoint ? $grammarPoint->name_english : 'Unknown';
                     break;
             }
         }
@@ -308,6 +319,16 @@ class ContributeController extends Controller
                     'lesson_id' => $lesson->id
                 ];
 
+            case 'grammar_point':
+                $grammarPoint = GrammarPoint::with('lesson')->find($objectId);
+                if (!$grammarPoint) return null;
+                
+                return [
+                    'title' => $grammarPoint->name_english . ($grammarPoint->name_japanese ? ' - ' . $grammarPoint->name_japanese : ''),
+                    'subtitle' => 'Grammar from ' . ($grammarPoint->lesson->title_english ?? 'Lesson'),
+                    'lesson_id' => $grammarPoint->lesson_id
+                ];
+
             default:
                 return [
                     'title' => ucfirst($objectType) . ': ' . $objectId,
@@ -328,7 +349,7 @@ class ContributeController extends Controller
             case 'lesson':
                 return Lesson::find($objectId);
             case 'grammar_point':
-                return GrammarPoint::find($objectId);
+                return GrammarPoint::with('lesson')->find($objectId);
             default:
                 return null;
         }
@@ -369,6 +390,19 @@ class ContributeController extends Controller
                     'difficulty' => 'Difficulty',
                     'estimated_time_minutes' => 'Estimated Time (minutes)',
                     'prerequisites' => 'Prerequisites (array)'
+                ];
+
+            case 'grammar_point':
+                return [
+                    'name_japanese' => 'Japanese Name',
+                    'name_furigana' => 'Name Furigana',
+                    'name_english' => 'English Name',
+                    'pattern' => 'Pattern',
+                    'usage' => 'Usage',
+                    'explanation' => 'Explanation',
+                    'examples' => 'Examples (array)',
+                    'jlpt_level' => 'JLPT Level',
+                    'related_grammar' => 'Related Grammar (array)'
                 ];
 
             default:
@@ -499,6 +533,47 @@ class ContributeController extends Controller
 
                 return $json;
 
+            case 'grammar_point':
+                $json = [
+                    'id' => $object->id,
+                    'lesson_id' => $object->lesson_id,
+                    'name_english' => $object->name_english
+                ];
+
+                if ($object->name_japanese) {
+                    $json['name_japanese'] = $object->name_japanese;
+                }
+
+                if ($object->name_furigana) {
+                    $json['name_furigana'] = $object->name_furigana;
+                }
+
+                if ($object->pattern) {
+                    $json['pattern'] = $object->pattern;
+                }
+
+                if ($object->usage) {
+                    $json['usage'] = $object->usage;
+                }
+
+                if ($object->explanation) {
+                    $json['explanation'] = $object->explanation;
+                }
+
+                if ($object->examples && is_array($object->examples) && count($object->examples) > 0) {
+                    $json['examples'] = $object->examples;
+                }
+
+                if ($object->jlpt_level) {
+                    $json['jlpt_level'] = $object->jlpt_level;
+                }
+
+                if ($object->related_grammar && is_array($object->related_grammar) && count($object->related_grammar) > 0) {
+                    $json['related_grammar'] = $object->related_grammar;
+                }
+
+                return $json;
+
             default:
                 return [];
         }
@@ -514,7 +589,7 @@ class ContributeController extends Controller
         }
 
         $currentUser = Auth::user();
-        if (!$currentUser->canManageContributions()) {
+        if (!$currentUser->isAdmin()) {
             return response()->json(['error' => 'Insufficient permissions'], 403);
         }
 

@@ -69,6 +69,7 @@ Route::get('/vocabulary/kanji-worksheet', [VocabularyController::class, 'kanjiWo
 // Contribute section
 Route::get('/contribute', [ContributeController::class, 'index'])->name('contribute.index');
 Route::get('/contribute/vocabulary', [ContributeController::class, 'vocabularyGenerator'])->name('contribute.vocabulary.generator');
+Route::get('/contribute/questions', [ContributeController::class, 'questionGenerator'])->name('contribute.questions.generator');
 
 // Contribution submission endpoints
 Route::middleware('auth')->group(function () {
@@ -82,6 +83,9 @@ Route::middleware(['auth', 'check.role:admin,developer,staff'])->group(function 
     Route::get('/contributions/{contribution}', [ContributeController::class, 'show'])->name('contributions.show');
     Route::patch('/contributions/{contribution}/status', [ContributeController::class, 'updateStatus'])->name('contributions.update-status');
     Route::delete('/contributions/{contribution}', [ContributeController::class, 'destroy'])->name('contributions.destroy');
+});
+
+Route::middleware(['auth', 'check.role:admin'])->group(function () {
     Route::patch('/admin/users/{user}/toggle-contribute', [ContributeController::class, 'toggleUserContribute'])->name('admin.users.toggle-contribute');
 });
 
