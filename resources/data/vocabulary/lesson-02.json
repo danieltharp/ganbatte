@@ -11,28 +11,6 @@
       "part_of_speech": ["pronoun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 51,
@@ -58,28 +36,6 @@
       "part_of_speech": ["pronoun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 44,
@@ -105,28 +61,6 @@
       "part_of_speech": ["pronoun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 313,
@@ -152,28 +86,6 @@
       "part_of_speech": ["adjective"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 46,
@@ -199,28 +111,6 @@
       "part_of_speech": ["adjective"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 30,
@@ -246,28 +136,6 @@
       "part_of_speech": ["adjective"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 247,
@@ -293,28 +161,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 327,
@@ -340,28 +186,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 3697,
@@ -393,28 +217,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 838,
@@ -446,28 +248,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 643,
@@ -499,28 +279,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 2781,
@@ -546,28 +304,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 0,
@@ -599,28 +335,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 0,
@@ -652,28 +366,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 2090,
@@ -699,28 +391,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 3791,
@@ -752,28 +422,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 0,
@@ -799,28 +447,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 0,
@@ -846,28 +472,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 2031,
@@ -899,28 +503,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 2452,
@@ -952,28 +534,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 4276,
@@ -999,28 +559,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 4284,
@@ -1052,28 +590,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 408,
@@ -1099,28 +615,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1674,
@@ -1146,28 +640,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1755,
@@ -1193,28 +665,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1422,
@@ -1240,28 +690,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 283,
@@ -1293,28 +721,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 2201,
@@ -1346,28 +752,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1440,
@@ -1399,28 +783,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 4654,
@@ -1446,28 +808,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1641,
@@ -1493,28 +833,6 @@
       "part_of_speech": ["noun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 2694,
@@ -1546,28 +864,6 @@
       "part_of_speech": ["affix"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 0,
@@ -1593,28 +889,6 @@
       "part_of_speech": ["pronoun"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 40,
@@ -1640,28 +914,6 @@
       "part_of_speech": ["adverb"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 39,
@@ -1687,28 +939,6 @@
       "part_of_speech": ["interjection"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 21,
@@ -1734,28 +964,6 @@
       "part_of_speech": ["interjection"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 18,
@@ -1781,28 +989,6 @@
       "part_of_speech": ["adverb"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1793,
@@ -1828,28 +1014,6 @@
       "part_of_speech": ["interjection"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1084,
@@ -1875,28 +1039,6 @@
       "part_of_speech": ["expression"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 0,
@@ -1922,28 +1064,6 @@
       "part_of_speech": ["verb"],
       "verb_type": "godan",
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 186,
@@ -1969,28 +1089,6 @@
       "part_of_speech": ["interjection"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1916,
@@ -2016,28 +1114,6 @@
       "part_of_speech": ["expression"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 0,
@@ -2063,28 +1139,6 @@
       "part_of_speech": ["expression"],
       "verb_type": null,
       "adjective_type": null,
-      "conjugations": {
-        "past": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "past_negative": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        },
-        "te_form": {
-          "japanese": null,
-          "furigana": null,
-          "english": null
-        }
-      },
       "pitch_accent": null,
       "jlpt_level": "N5",
       "frequency_rank": 1253,
